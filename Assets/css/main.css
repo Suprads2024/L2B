@@ -1,0 +1,359 @@
+/* Estilos generales */
+.main-content {
+    display: grid;
+    padding-bottom: 0px;
+    gap: 20px; /* Espacio entre las filas */
+ 
+    padding: 20px 20px 20px 20px;
+    
+   
+    
+    margin: 0 auto;
+}
+
+/* Estilos para las filas */
+.main-row {
+    display: grid;
+    grid-template-columns: 70% 30%; /* Primera fila: imagen 70%, carrusel 30% */
+    gap: 20px; /* Espacio entre columnas */
+  padding-right: 20px;
+
+}
+
+/* Imagen a la izquierda que ocupa el 70% */
+.main-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+   
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.overlay-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.overlay-text p {
+    margin: 5px 0 0;
+}
+
+/* Carrusel de la derecha que ocupa el 30% */
+.main-carousel {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* carousel */
+.carousel{
+    position: relative;
+ }
+ 
+ .carousel_inner{
+    width: 100%;
+    overflow: hidden;
+ }
+ 
+ .carousel_inner::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+ 
+ .carousel_item{
+    position: relative;
+    float: left;
+    display: none;
+    width: 100%;
+    margin-right: -100%;
+ }
+ 
+ /* slide effect */
+ .carousel_item__active,
+ .carousel_item__pos_prev,
+ .carousel_item__pos_next{
+    display: block;
+ }
+ 
+ .carousel_item__pos_prev{
+    left: -100%;
+ }
+ 
+ .carousel_item__pos_next{
+    left: 100%;
+ }
+ 
+ .carousel_item__prev{
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+ }
+ 
+ .carousel_item__next{
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out;
+ }
+ 
+ /* fade effect */
+ .carousel__fade .carousel_item__pos_prev,
+ .carousel__fade .carousel_item__pos_next{
+    left: 0;
+    opacity: 0;
+ }
+ 
+ .carousel__fade .carousel_item__prev,
+ .carousel__fade .carousel_item__next{
+    transform: none;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+ }
+ 
+ .carousel__fade .carousel_item__active.carousel_item__prev,
+ .carousel__fade .carousel_item__active.carousel_item__next{
+    opacity: 0;
+ }
+ 
+ /* carousel */
+ .carousel_img{
+    display: block;
+    width: 100%;
+
+ }
+ 
+ .carousel_caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+
+    
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+ }
+ 
+ .carousel_title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+ }
+ 
+ .carousel_description{
+    margin-top: .75rem;
+    line-height: 150%;
+ }
+ 
+ .carousel_indicator{
+    position: absolute;
+    bottom: 1rem;
+    left: 15%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    z-index: 1;
+ }
+ 
+ .carousel_dot{
+    display: block;
+    padding: .25rem;
+    background-color: rgba(255, 255, 255, .25);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+ }
+ 
+ .carousel_dot__active{
+    background-color: lightskyblue;
+    cursor: default;
+    pointer-events: none;
+ }
+ 
+ .carousel_control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .carousel_button{
+    display: block;
+    padding-inline: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.375rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, .25);
+    border: none;
+    cursor: pointer;
+    transition: color .25s;
+    z-index: 1;
+ }
+ 
+ .carousel_button:hover{
+    color: rgba(135, 206, 250, .75);
+ }
+/* Segunda fila (imagen 60% y texto 40%) */
+.main-row:nth-child(2) {
+    grid-template-columns: 60% 40%; /* Segunda fila: imagen 60%, texto 40% */
+}
+
+/* Imagen en la segunda fila (60%) */
+.main-info {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main-info img {
+    width: 100%;
+ 
+    object-fit: cover;
+}
+
+.main-info .overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Bloque de texto en la segunda fila (40%) */
+.main-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-cta h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-cta p {
+    font-size: 16px;
+}
+/* Indicadores (puntos) del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+/* Contenedor que simula la imagen */
+.hover-image {
+    width: 100%;
+
+    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Apagado.png');
+    background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
+    background-position: center;
+    border-radius: 10px;
+    transition: background-image 0.3s ease; /* Transición suave para el cambio */
+    cursor: pointer;
+}
+
+/* Cambiar la imagen cuando se hace hover */
+.hover-image:hover {
+    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Encendido.png');
+}
+
+@media (max-width: 768px) {
+
+    .main-row {
+        padding-right: 0px;
+        padding-left: 0px; /* Aseguramos que no haya padding lateral que afecte el ancho */
+    }
+
+    /* Apilamos el contenido en la primera fila */
+    .main-row:nth-child(1) {
+        grid-template-columns: 1fr; /* Ocupa todo el ancho en pantallas pequeñas */
+        gap: 20px;
+    }
+
+    /* Segunda fila: Apilar el carrusel y el texto uno debajo del otro */
+    .main-row:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr; /* Carrusel y "NO TE QUEDES CON LA DUDA" uno debajo del otro */
+        gap: 20px; /* Espacio entre ambos */
+        
+    }
+
+    /* La imagen "VIVÍ LA EXPERIENCIA L2B" ocupa el 100% en pantallas pequeñas */
+    .main-row:nth-child(3) {
+        grid-template-columns: 1fr; /* Apilar también esta sección, ocupando todo el ancho */
+        
+    }
+
+    /* Ajustes de tamaño del carrusel y el texto */
+    .main-carousel {
+        width: 100%;
+        height: auto;
+    }
+.main-image img{border-radius: 20px;
+
+}
+    .main-cta {
+        width: 100%;
+        padding: 0px;
+       
+        margin: 0 auto;
+        margin-top: -20px;
+        height: auto;
+        min-height: 250px; /* Establecemos una altura mínima para evitar que se vea comprimida */
+        background-size: contain; /* Aseguramos que toda la imagen de fondo se vea sin recortar */
+        background-position: center;
+        background-repeat: no-repeat;
+       
+    }
+
+
+}

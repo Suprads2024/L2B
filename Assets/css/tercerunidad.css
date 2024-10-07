@@ -1,0 +1,159 @@
+/* Nueva sección de imágenes */
+.image-grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr; /* 3 columnas: izquierda, centro, derecha */
+    gap: 20px; /* Espacio entre columnas */
+   
+    margin: 0 auto;
+    padding: 0px 20px;
+    align-items: stretch; /* Todas las columnas tendrán la misma altura */
+  }
+  
+  .image-box {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
+    overflow: hidden;
+    
+    border-radius: 10px;
+  }
+  
+  .image-box img {
+    border-radius: 20px;
+    width: 100%;
+     /* Mantiene el tamaño para llenar el contenedor */
+    object-fit: cover; /* Mantiene la proporción de las imágenes sin deformarlas */
+    border-radius: 10px;
+  }
+  /* Imagen inicial */
+  .conoce-mas {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Controlar el tamaño máximo del ancho para que no se expanda demasiado */
+    height: auto;
+    max-height: 100%; /* Controlar el tamaño máximo del alto */
+    
+    background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Apagado.png');
+    background-size: contain; /* Asegura que la imagen completa se vea sin que se corte */
+    background-position: center;
+    background-repeat: no-repeat; /* Asegura que no se repita la imagen */
+    border-radius: 10px;
+    transition: background-image 0.3s ease-in-out;
+  }
+  
+  /* Cambiar la imagen al hacer hover */
+  .conoce-mas:hover {
+    background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Encendido.png');
+  }
+  
+  /* Columna izquierda y derecha: dos imágenes de igual tamaño (50% cada una) */
+  .left-column, .right-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Dos filas iguales */
+    gap: 20px; /* Espacio entre las imágenes */
+    height: 100%; /* Asegura que la altura de estas columnas sea igual a la central */
+  }
+  
+  /* Columna central: una imagen que ocupa todo el alto de la columna */
+  .center-column {
+    height: 100%; /* Asegura que la imagen central ocupe el mismo alto que las demás */
+    display: flex;
+    align-items: stretch; /* Asegura que la imagen llene toda la columna */
+  }
+  
+  .center-column .image-box {
+    height: 100%; /* Asegura que la imagen ocupe todo el alto */
+  }
+  .overlay-text2 {
+    position: absolute;
+    top: 0; /* Asegura que se superponga desde la parte superior */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Cubre toda la imagen */
+    color: white;
+    
+    padding: 20px 40px;
+    display: flex; /* Usamos flexbox para centrar */
+    flex-direction: column; /* Los elementos hijos (texto, botón) se organizan en columna */
+    
+    border-radius: 10px;
+  }
+  
+  .overlay-text2 h3 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .overlay-text2 strong{
+    font-family: 'Eurostile-Heavy';
+  }
+  .overlay-text2 p {
+    font-family: 'Eurostile-Regular';
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Botón de Más Información */
+  .cta-button {
+    font-family: 'Eurostile-Heavy';
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff; /* Texto blanco */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  }
+  
+  .cta-button:hover {
+    background-color: #fff; /* Fondo blanco en hover */
+    color: 
+    #0285cb
+    ; /* Texto azul en hover (el azul del diseño) */
+  }
+  
+  /* Ajuste para que el botón se mantenga con el texto azul y fondo blanco en hover */
+  .image-box .cta-button:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #0285cb; /* Azul del diseño para mantener el contraste */
+  }
+  /* Responsivo para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .image-grid-section {
+   
+      grid-template-columns: 1fr; /* Apilar todas las imágenes en una columna */
+      grid-template-rows: repeat(5, auto); /* 5 filas para cada imagen */
+      margin-bottom: 50px;
+      
+    }
+  
+    .left-column  {
+      gap: 20px;
+      grid-template-rows: 1fr; /* Elimina las filas en las columnas izquierda y derecha */
+    }
+
+    .right-column {
+      gap: 00px;
+      grid-template-rows: 1fr; /* Elimina las filas en las columnas izquierda y derecha */
+    }
+    
+    .center-column .image-box {
+      height: 100%; /* Asegura que la imagen ocupe todo el alto */
+    }
+    
+    .center-column {
+      margin-bottom: 0px; /* Añadir espacio inferior entre imágenes */
+    }
+
+    .overlay-text2{
+      padding: 20px;
+    }
+    .overlay-text2 p {
+      
+      font-size: 14px;
+     
+    }
+  }
+  

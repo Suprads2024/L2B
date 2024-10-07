@@ -1,0 +1,107 @@
+/* Footer general */
+.footer {
+  margin-top: -30px;
+    position: relative;
+    background-image: url('../Footer/L2B_\ Footer_\ Sin\ texto.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+
+    padding: 40px 0;
+    color: white;
+  }
+  
+  
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: start; /* Alineación superior de los contenidos */
+  }
+  
+  /* Columna izquierda: Logo */
+  .footer-logo img {
+    margin-top: 30px;
+    width: 150px; /* Tamaño del logo */
+  }
+  
+  .footer-logo p {
+    
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Columna central: Información y botón de acción */
+  .footer-info p {
+    font-family: 'Eurostile-Regular';
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-info a {
+    
+    color: #fff;
+    text-decoration: none;
+  }
+  
+ /* Botón de contacto: solo borde y texto blanco */
+.cta-button {
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo transparente */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Suaviza el cambio en hover */
+  }
+  
+  .cta-button:hover {
+    background-color: #fff; /* Fondo blanco en hover */
+    color: #000; /* Texto negro en hover */
+  }
+  
+  /* Columna derecha: Artículos recientes */
+  .footer-articles h4 {
+    font-family: 'Eurostile-Heavy';
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .footer-articles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-articles li {
+    font-family: 'Eurostile-Regular';
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Responsivo para pantallas más pequeñas */
+  @media (max-width: 768px) {
+
+    .footer{
+      background-position: center;
+    }
+    .footer-container {
+      margin-top: 20px;
+      grid-template-columns: 1fr; /* Apilar las tres columnas en una fila en dispositivos móviles */
+      text-align: center;
+    }
+    
+    .footer-logo, .footer-info, .footer-articles {
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+      margin: 0 auto;
+    }
+  }
+  

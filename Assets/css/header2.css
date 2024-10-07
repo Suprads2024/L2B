@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+header {
+    display: grid;
+    grid-template-rows: 20% 70%;
+    height: 98vh;
+    padding: 20px 20px 0px 20px;
+    padding-top: 7%; /* Añadimos espacio superior entre el nav y los botones */
+    gap: 15px; /* Añadimos espacio entre la fila de botones y el contenido (GIF y formulario) */
+  
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Añadimos un gap entre los botones */
+}
+
+.boton {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados para los botones */
+}
+
+.boton img {
+    width: 100%;
+  
+    object-fit: cover;
+    border-radius: 15px; /* Bordes redondeados en las imágenes */
+}
+
+.contenido-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; /* Añadimos un gap entre el GIF y el formulario */
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 15px; /* Bordes redondeados */
+  
+    overflow: hidden; /* Para que cualquier exceso no desborde */
+}
+.gif-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video ocupe todo el espacio */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 80px;
+    
+    background-image: url('../Header/Contacto/L2B_\ Obtene\ la\ solucion\ que\ mejor\ se\ adapte.png');
+    background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
+    background-position: center;
+    color: white;
+    height: 65vh; /* Asegura que el formulario también ocupe su 100% del espacio */
+    border-radius: 20px; /* Bordes redondeados para el formulario */
+}
+
+/* Estilo para el título con negritas */
+.formulario h2 {
+  font-family: 'Eurostile-Regular';
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .formulario h2 strong {
+  
+    font-family: 'Eurostile-Heavy';
+    font-weight: 800; /* O 900 para más grosor */
+    color: #ffffff; 
+  }
+  
+  /* Opciones seleccionables */
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-options .option {
+    background: none;
+    font-family: 'Eurostile-Regular';
+    border: 2px solid #666;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-options .option:last-child {
+    margin-right: 0;
+  }
+  
+  /* Estilo para la opción activa (seleccionada) */
+  .form-options .option.active {
+    font-family: 'Eurostile-Bold';
+    border-color: #ff6600; /* Borde naranja para la opción activa */
+  }
+  
+  /* Campos del formulario */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  input, textarea {
+    font-family: 'Eurostile-Regular';
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #9b9a9a;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  input::placeholder,
+textarea::placeholder {
+  color: #999; /* Color gris más claro para el placeholder */
+  font-size: 14px;
+  transition: all 0.3s ease; /* Transición suave cuando cambia el contenido */
+}
+
+  input:focus, textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+  }
+  
+  /* Estilo para el botón Enviar */
+  .submit-btn {
+    font-family: 'Eurostile-Bold';
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff6600;
+    background-color: transparent;
+    color: #ff6600;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff6600;
+    color: #000;
+  }
+  
+  /* Mensajes de éxito y error (inicialmente ocultos) */
+  .success-message, .error-message {
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .success-message {
+    color: #00cc66;
+  }
+  
+  .error-message {
+    color: #ff6666;
+  }
+  /* Estilo cuando los campos obligatorios están completos y son válidos */
+input:valid, textarea:valid {
+    border-color: #ff6600; /* Cambia el borde a naranja cuando está completo */
+  }
+  
+  /* Para el campo de mensaje (que no es obligatorio) */
+  textarea {
+    border-color: #9b9a9a; /* Color inicial */
+  }
+  
+  /* Cambia el borde a naranja solo cuando el campo mensaje tiene contenido */
+  textarea:not(:placeholder-shown) {
+    border-color: #ff6600; /* Naranja si tiene contenido */
+  }
+  /* Responsivo para pantallas más pequeñas */
+  @media (max-width: 1700px) {
+    .formulario {
+       /* Reducimos el ancho máximo del formulario */
+      padding: 60px 60px; /* Ajustamos el padding */
+    }
+  
+    .formulario h2 {
+      font-size: 20px; /* Reducimos el tamaño del título */
+    }
+  
+    .form-options .option {
+      padding: 8px; /* Reducimos el padding de los botones de opción */
+      font-size: 14px; /* Reducimos el tamaño de fuente */
+    }
+  
+    input, textarea {
+      padding: 8px; /* Reducimos el padding de los campos de texto */
+      font-size: 14px; /* Reducimos el tamaño de fuente */
+    }
+  
+    .submit-btn {
+      padding: 10px; /* Reducimos el padding del botón Enviar */
+      font-size: 14px; /* Reducimos el tamaño de fuente */
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .formulario {
+      max-width: 100%; /* Ocupa todo el ancho disponible en pantallas más pequeñas */
+      padding: 15px;
+    }
+  
+    .form-options {
+      flex-direction: column; /* Las opciones se apilan verticalmente en pantallas más pequeñas */
+    }
+  
+    .form-options .option {
+      margin-bottom: 10px;
+      width: 100%; /* Ocupan todo el ancho */
+    }
+  
+    input, textarea {
+      font-size: 12px; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+  
+    .submit-btn {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+/* MEDIA QUERIES para pantallas pequeñas (celulares y tablets) */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding-top: 15vh;
+    }
+
+    .botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos botones por fila, 50% cada uno */
+        gap: 10px;
+    }
+
+    .contenido-header {
+        display: block; /* Bloque para que gif y formulario estén uno debajo del otro */
+    }
+
+    .gif-container {
+        width: 100%; /* El GIF ocupará el ancho completo */
+        height: auto; /* La altura se ajustará automáticamente */
+    }
+
+    .gif-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Mantiene la proporción del GIF */
+    }
+
+    .formulario {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ocultar el video móvil por defecto */
+.video-mobile {
+  display: none;
+}
+
+/* Mostrar el video de escritorio por defecto */
+.video-desktop {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Media query para pantallas de 786px o menos */
+@media (max-width: 786px) {
+  /* Mostrar el video móvil y ocultar el de escritorio */
+  .video-desktop {
+    display: none;
+  }
+  
+  .video-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

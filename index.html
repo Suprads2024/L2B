@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life 2 Better</title>
+  <link rel="shortcut icon" href="Assets/2daUnidad/L2B_Logo menu.png" type="image/x-icon">
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <link rel="stylesheet" href="Assets/css/header2.css">
+  <link rel="stylesheet" href="Assets/css/main.css">
+  <link rel="stylesheet" href="Assets/css/tercerunidad.css">
+  <link rel="stylesheet" href="Assets/css/footer.css">
+
+
+
+
+</head>
+
+<body>
+  <div class="menu__wrapper" id="top">
+    <div class="menu__bar">
+      <a href="#top" title="Logo" class="logo">
+        <img src="Assets/2daUnidad/L2B_Logo menu.png" alt="Logo" class="logo-img2" id="logo-img">
+      </a>
+      <img class="menu-icon" src="Assets/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+        onclick="toggleMenu(this)">
+      <ul class="navigation">
+        <li><a href="#inicio" title="Inicio">Home</a></li>
+        <li><a href="#sobre-nosotros" title="Sobre Nosotros">Soluciones</a></li>
+        <li><a href="#servicios" title="Servicios">Productos</a></li>
+        <li><a href="#servicios" title="Servicios">Blog</a></li>
+        <li><a href="#contacto" title="Contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.navigation a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <style>
+    #logo-img {
+      transition: all 0.3s ease;
+    }
+  </style>
+
+
+
+  <header>
+    <div class="botones">
+      <div class="boton">
+        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
+      </div>
+      <div class="boton">
+        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Ambientacion.png" alt="Ambientación">
+      </div>
+      <div class="boton">
+        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Seguridad.png" alt="Seguridad">
+      </div>
+      <div class="boton">
+        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Confort.png" alt="Confort">
+      </div>
+    </div>
+    <div class="contenido-header">
+      <div class="gif-container">
+        <!-- Video para pantallas grandes -->
+        <video class="video-desktop" autoplay loop muted playsinline>
+          <source src="Assets/Header/Tecnologia y calidad/pc.mp4" type="video/mp4">
+        </video>
+      
+        <!-- Video para pantallas pequeñas -->
+        <video class="video-mobile" autoplay loop muted playsinline>
+          <source src="Assets/Header/Tecnologia y calidad/1070x928_celu.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="formulario" id="contact">
+        <h2>OBTENÉ LA <strong>SOLUCIÓN</strong> QUE MEJOR SE ADAPTE A TUS NECESIDADES.</h2>
+
+        <div class="form-options">
+          <button type="button" class="option active" data-value="Particulares">Particulares</button>
+          <button type="button" class="option" data-value="Empresas">Empresas</button>
+          <button type="button" class="option" data-value="Representante">Representante</button>
+        </div>
+
+        <form id="customForm">
+          <input type="text" id="name" name="name" placeholder="NOMBRE" required>
+
+          <input type="email" id="email" name="email" placeholder="CORREO" required>
+
+          <input type="phone" id="phone" name="phone" placeholder="TELÉFONO" required>
+
+          <textarea id="message" name="message" placeholder="MENSAJE" required></textarea>
+
+          <!-- Campo oculto para almacenar la opción seleccionada -->
+          <input type="hidden" id="selectedOption" name="selectedOption" value="Particulares">
+
+          <button type="submit" class="submit-btn">ENVIAR</button>
+
+          <p class="success-message">¡Formulario enviado con éxito!</p>
+          <p class="error-message">Error al enviar el formulario. Inténtalo nuevamente.</p>
+        </form>
+      </div>
+    </div>
+  </header>
+  <script>
+    // Obtener los botones de opciones y el campo oculto
+    const optionButtons = document.querySelectorAll('.form-options .option');
+    const selectedOptionInput = document.getElementById('selectedOption');
+  
+    // Escuchar los clics en los botones de opciones
+    optionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remover la clase 'active' de todos los botones
+            optionButtons.forEach(btn => btn.classList.remove('active'));
+            // Añadir la clase 'active' al botón clicado
+            this.classList.add('active');
+            // Actualizar el valor del campo oculto con el valor de data-value del botón clicado
+            selectedOptionInput.value = this.getAttribute('data-value');
+        });
+    });
+  
+    document.getElementById('customForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        // Datos del formulario
+        const formData = {
+            fields: [
+                {
+                    name: 'email',
+                    value: document.getElementById('email').value
+                },
+                {
+                    name: 'firstname',
+                    value: document.getElementById('name').value
+                },
+                {
+                    name: 'phone',
+                    value: document.getElementById('phone').value
+                },
+                {
+                    name: 'message',
+                    value: document.getElementById('message').value
+                },
+                {
+                    name: 'tipo_de_cliente',  // Asegúrate de que coincida con el campo en HubSpot
+                    value: document.getElementById('selectedOption').value
+                }
+            ],
+            context: {
+                pageUri: window.location.href,
+                pageName: document.title
+            }
+        };
+  
+        // Hacer la solicitud POST a HubSpot
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/94d49cb8-486d-4cec-b839-268ed0103eef', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.querySelector('.success-message').style.display = 'block';
+                document.querySelector('.error-message').style.display = 'none';
+                document.getElementById('customForm').reset();
+            } else {
+                throw new Error('Error en la respuesta');
+            }
+        })
+        .catch(error => {
+            document.querySelector('.success-message').style.display = 'none';
+            document.querySelector('.error-message').style.display = 'block';
+            console.error('Error:', error);
+        });
+    });
+  </script>
+  
+
+
+  <main class="main-content">
+    <!-- Primera fila -->
+    <section class="main-row">
+      <!-- Imagen grande que ocupa el 70% -->
+      <div class="main-item main-image">
+        <img src="./Assets/2daUnidad/El futuro al alcance de todos/La tecnología al alcance de todos.png"
+          alt="El futuro al alcance de todos">
+
+      </div>
+      <!-- Carrusel que ocupa el 30% -->
+      <div class="main-item main-carousel">
+        <div class="carousel-container">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+
+              <div class="carousel">
+                <div class="carousel_inner">
+                  <div class="carousel_item carousel_item__active">
+                    <img src="./Assets/2daUnidad/Slider/Costosasequibles.png" alt="" class="carousel_img">
+                    <div class="carousel_caption">
+
+                    </div>
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/Soluciones modulares.png" alt="" class="carousel_img">
+                    <div class="carousel_caption">
+                      <!-- <h1 class="carousel_title">Change It As You See Fit</h1>
+                      <p class="carousel_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                        cupiditate
+                        corporis laudantium quae velit quam.</p>-->
+                    </div>
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/Aptopara cualquierespacio.png" alt=""
+                      class="carousel_img">
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/inalabrico.png" alt=""
+                      class="carousel_img">
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/Controlcentralizado.png" alt=""
+                      class="carousel_img">
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/L2B.png" alt=""
+                      class="carousel_img">
+                  </div>
+                </div>
+ <!--
+                <div class="carousel_indicator">
+                  <button class="carousel_dot carousel_dot__active"></button>
+                  <button class="carousel_dot"></button>
+                  <button class="carousel_dot"></button>
+                  <button class="carousel_dot"></button>
+                  <button class="carousel_dot"></button>
+                  <button class="carousel_dot"></button>
+                </div>-->
+
+                <div class="carousel_control">
+                  <button class="carousel_button carousel_button__prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="carousel_button carousel_button__next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- Indicadores (dots) -->
+          <div class="carousel-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="main-row">
+      <!-- Imagen a la izquierda (60%) -->
+      <div class="main-item main-info">
+        <img src="./Assets/2daunidad/Vivi la experiencia L2B/Vivi la experiencia.png"
+          alt="VIVÍ LA EXPERIENCIA L2B">
+      </div>
+
+      <!-- Div que simula la imagen con hover (40%) -->
+      <div class="main-item main-cta hover-image">
+      </div>
+    </section>
+  </main>
+
+
+  <section class="image-grid-section">
+    <!-- Columna izquierda -->
+    <div class="left-column">
+      <div class="image-box">
+        <img src="./Assets/3raunidad/Sos arquitecto/L2B_ Sos arquitecto.png" alt="¿SOS ARQUITECTO O DESARROLLADOR?">
+      </div>
+      <div class="image-box">
+        <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD">
+      </div>
+    </div>
+
+    <!-- Columna central -->
+    <div class="center-column">
+      <div class="image-box">
+        <img src="./Assets/3raunidad/Somos especialistas/especialiste2.png" alt="Cocina">
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="right-column">
+      <div class="image-box conoce-mas">
+
+      </div>
+      <div class="image-box ">
+        <img src="./Assets/3raunidad/Academia Fibaro/L2B_ Academia Fibaro_ Sin texto.png" alt="Academia FIBARO">
+        <div class="overlay-text2">
+          <h3>Academia FIBARO</h3>
+          <p>Convertite en instalador de <strong>Casas inteligentes</strong> con las certificaciones que tenemos para
+            ofrecerte
+            y sumar valor a tus proyectos para diferenciarte e incrementar tu rentabilidad.<br><strong>Sumate al negocio
+              del futuro.</strong></p>
+          <button class="cta-button">MÁS INFORMACIÓN</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+        <!-- Columna izquierda: Logo -->
+        <div class="footer-logo">
+          <a href="#top"><img src="./Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
+
+        </div>
+
+        <!-- Columna central: Información y llamada a la acción -->
+        <div class="footer-info">
+          <p>HQ: Olazabal 1515 Of 204<br>
+            CABA - Buenos Aires - Argentina<br>
+            +54 11-4849-7241<br>
+            <a href="mailto:info@life2better.com">info@life2better.com</a>
+          </p>
+          <a href="#contact"> <button class="cta-button">CONTACTANOS</button></a>
+        </div>
+
+        <!-- Columna derecha: Artículos recientes -->
+        <div class="footer-articles">
+          <h4>Artículos Recientes</h4>
+          <ul>
+            <li>Jardín inteligente.</li>
+            <li>Quick App FIBARO Home center 3 y Yubii Home.</li>
+            <li>Asociaciones ZWave.</li>
+            <li>Escenas de bloque Home Center 3 / Yubii Home.</li>
+            <li>3 Casos concretos por los que deberías instalar domótica en tu hogar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup 1 -->
+  <!-- Popup 1 -->
+
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="java/script.js"></script>
+  <script src="./Assets/java/nav.js"></script>
+  <script src="Assets/java/logo.js"></script>
+  <script src="Assets/java/scrollnav.js"></script>
+  <script src="Assets/java/scrolnav.js"></script>
+  <script src="Assets/java/carrousel.js"></script>
+  
+</body>
+
+</html>
+</body>
+
+</html>
