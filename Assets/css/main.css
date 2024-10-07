@@ -4,7 +4,7 @@
     padding-bottom: 0px;
     gap: 20px; /* Espacio entre las filas */
  
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 20px 20px;
     
    
     
@@ -346,8 +346,7 @@
         padding: 0px;
        
         margin: 0 auto;
-        margin-top: -30px;
-        margin-bottom: -5px;
+        margin-top: -20px;
         height: auto;
         min-height: 250px; /* Establecemos una altura mínima para evitar que se vea comprimida */
         background-size: contain; /* Aseguramos que toda la imagen de fondo se vea sin recortar */
