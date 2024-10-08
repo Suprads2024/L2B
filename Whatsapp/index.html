@@ -100,13 +100,13 @@
       <h1>Contactános</h1>
       <form class="contact-form" id="contact-form">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <input type="text" id="name" name="name" placeholder="" required>
   
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Tu correo" required>
+        <input type="email" id="email" name="email" placeholder="" required>
   
         <label for="phone">Teléfono:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" required>
+        <input type="tel" id="phone" name="phone" placeholder="" required>
   
        
   
@@ -115,9 +115,23 @@
     </section>
   </main>
  
+
+  
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
+  
+        // Validación del número de teléfono
+        const phoneNumber = document.getElementById('phone').value.trim();
+        
+        // Remover espacios y caracteres no numéricos
+        const cleanedNumber = phoneNumber.replace(/\D/g, ''); // Solo números
+  
+        // Verificar que tenga al menos 10 dígitos
+        if (cleanedNumber.length < 10) {
+            alert('Por favor, ingresa un número de teléfono válido con al menos 10 dígitos.');
+            return; // No enviar el formulario si no cumple la validación
+        }
   
         // Recoger los datos del formulario
         const formData = {
@@ -132,9 +146,8 @@
                 },
                 {
                     name: 'phone',
-                    value: document.getElementById('phone').value
+                    value: phoneNumber
                 }
-                
             ],
             context: {
                 pageUri: window.location.href,
@@ -156,9 +169,9 @@
                 document.getElementById('contact-form').reset();
                 
                 // Redirigir a WhatsApp
-                const phoneNumber = "5491164329249"; // Número sin "+" y sin guiones
-                const message = encodeURIComponent("¡Hola! Quisiera obtener más información."); // Mensaje predefinido o puedes tomar el valor del campo mensaje
-                window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+                const whatsappNumber = "5491164329249"; // Número de WhatsApp de destino
+                const message = encodeURIComponent("¡Hola! Quisiera obtener más información."); // Mensaje predefinido o usa el campo mensaje
+                window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
             } else {
                 throw new Error('Error en la respuesta');
             }
@@ -169,7 +182,6 @@
         });
     });
   </script>
-  
   
 
   <footer class="footer">
@@ -188,7 +200,7 @@
             +54 11-4849-7241<br>
             <a href="mailto:info@life2better.com">info@life2better.com</a>
           </p>
-          <button class="cta-button">CONTACTANOS</button>
+          
           <script>
             // Selecciona todos los elementos con las clases .hover-image y .cta-button
 document.querySelectorAll('.hover-image, .cta-button').forEach(element => {

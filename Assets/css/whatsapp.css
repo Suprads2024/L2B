@@ -38,6 +38,7 @@
   }
   
   .contact-form label {
+    font-family: 'Eurostile-Medium';
     margin-top: 15px;
     margin-bottom: 5px;
     color: #333;
@@ -52,12 +53,25 @@
     font-size: 16px;
     margin-bottom: 15px;
     width: 100%;
+    color: rgb(0, 0, 0);
   }
   
   .contact-form textarea {
     resize: vertical;
   }
-  
+  /* Estilo para los campos completados (válidos) */
+.contact-form input:valid,
+.contact-form textarea:valid {
+  background-color: #e8f5e9; /* Fondo verde claro al llenar */
+  border-color: #43a047; /* Borde verde */
+}
+
+/* Estilo para los campos que no han sido completados o están vacíos */
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 /* Estilo del botón Enviar */
 .submit-button {
   margin-top: 30px;
