@@ -5,13 +5,13 @@ window.addEventListener("load", () => {
    startAutoSlide();
 
    const dots = document.querySelectorAll(".carousel_dot");
-   for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", () => {
-         stopAutoSlide();  // Detenemos el autoSlide cuando se interactúa manualmente
+   dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+         stopAutoSlide();
          slide(i);
-         startAutoSlide(); // Reiniciamos el autoSlide después de la interacción
+         startAutoSlide();
       });
-   }
+   });
 
    const buttonPrev = document.querySelector(".carousel_button__prev");
    const buttonNext = document.querySelector(".carousel_button__next");
@@ -30,11 +30,14 @@ window.addEventListener("load", () => {
 function startAutoSlide() {
    intervalId = setInterval(() => {
       slide(getItemActiveIndex() + 1);
-   }, 3000); // Cambiar el tiempo si necesitas ajustar la velocidad del autoSlide
+   }, 3000);
 }
 
 function stopAutoSlide() {
-   clearInterval(intervalId);
+   if (intervalId !== null) {
+      clearInterval(intervalId);
+      intervalId = null;
+   }
 }
 
 function slide(toIndex) {
@@ -46,11 +49,16 @@ function slide(toIndex) {
    const itemActiveIndex = itemsArray.indexOf(itemActive);
    let newItemActive = null;
 
-   // Ajustar toIndex para ciclo infinito
+   // Ciclo infinito: ajustar toIndex al rango correcto
    if (toIndex >= itemsArray.length) toIndex = 0;
    if (toIndex < 0) toIndex = itemsArray.length - 1;
 
    newItemActive = itemsArray[toIndex];
+
+   // Limpia todas las clases de posición antes de aplicar nuevas
+   itemsArray.forEach(item => {
+      item.classList.remove("carousel_item__pos_next", "carousel_item__next", "carousel_item__pos_prev", "carousel_item__prev");
+   });
 
    // Transición hacia la derecha
    if (toIndex > itemActiveIndex) {
@@ -67,10 +75,16 @@ function slide(toIndex) {
       }, 20);
    }
 
-   // Limpieza y reactivación
+   // Temporizador de seguridad para limpiar el estado
+   const safetyTimer = setTimeout(() => {
+      onSlide = false;
+   }, 1000);
+
+   // Limpia clases y reactivación del nuevo item activo
    newItemActive.addEventListener("transitionend", () => {
-      itemActive.className = "carousel_item";
-      newItemActive.className = "carousel_item carousel_item__active";
+      clearTimeout(safetyTimer);
+      itemsArray.forEach(item => item.className = "carousel_item"); // Elimina todas las clases de posición
+      newItemActive.classList.add("carousel_item", "carousel_item__active");
       onSlide = false;
    }, { once: true });
 
