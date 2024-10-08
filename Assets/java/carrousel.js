@@ -1,34 +1,44 @@
-/**
- * Creator           : Coding's Time
- * Youtube Channel   : https://www.youtube.com/channel/UC6dnKqrImGWqMb9ty1n0Ziw
- * Github Profile    : https://github.com/codingstime
- */
-
 let onSlide = false;
+let intervalId = null;
 
 window.addEventListener("load", () => {
-   autoSlide();
+   startAutoSlide();
 
    const dots = document.querySelectorAll(".carousel_dot");
    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", () => slide(i));
+      dots[i].addEventListener("click", () => {
+         stopAutoSlide();  // Detenemos el autoSlide cuando se interactúa manualmente
+         slide(i);
+         startAutoSlide(); // Reiniciamos el autoSlide después de la interacción
+      });
    }
 
    const buttonPrev = document.querySelector(".carousel_button__prev");
    const buttonNext = document.querySelector(".carousel_button__next");
-   buttonPrev.addEventListener("click", () => slide(getItemActiveIndex() - 1));
-   buttonNext.addEventListener("click", () => slide(getItemActiveIndex() + 1));
-})
-
-function autoSlide() {
-   setInterval(() => {
+   buttonPrev.addEventListener("click", () => {
+      stopAutoSlide();
+      slide(getItemActiveIndex() - 1);
+      startAutoSlide();
+   });
+   buttonNext.addEventListener("click", () => {
+      stopAutoSlide();
       slide(getItemActiveIndex() + 1);
-   }, 3000); // slide speed = 3s
+      startAutoSlide();
+   });
+});
+
+function startAutoSlide() {
+   intervalId = setInterval(() => {
+      slide(getItemActiveIndex() + 1);
+   }, 3000); // Cambiar el tiempo si necesitas ajustar la velocidad del autoSlide
+}
+
+function stopAutoSlide() {
+   clearInterval(intervalId);
 }
 
 function slide(toIndex) {
-   if (onSlide)
-      return;
+   if (onSlide) return;
    onSlide = true;
 
    const itemsArray = Array.from(document.querySelectorAll(".carousel_item"));
@@ -36,29 +46,20 @@ function slide(toIndex) {
    const itemActiveIndex = itemsArray.indexOf(itemActive);
    let newItemActive = null;
 
+   // Ajustar toIndex para ciclo infinito
+   if (toIndex >= itemsArray.length) toIndex = 0;
+   if (toIndex < 0) toIndex = itemsArray.length - 1;
+
+   newItemActive = itemsArray[toIndex];
+
+   // Transición hacia la derecha
    if (toIndex > itemActiveIndex) {
-      // check if toIndex exceeds the number of carousel items
-      if (toIndex >= itemsArray.length) {
-         toIndex = 0;
-      }
-
-      newItemActive = itemsArray[toIndex];
-
-      // start transition
       newItemActive.classList.add("carousel_item__pos_next");
       setTimeout(() => {
          newItemActive.classList.add("carousel_item__next");
          itemActive.classList.add("carousel_item__next");
       }, 20);
-   } else {
-      // check if toIndex exceeds the number of carousel items
-      if (toIndex < 0) {
-         toIndex = itemsArray.length - 1;
-      }
-
-      newItemActive = itemsArray[toIndex];
-
-      // start transition
+   } else { // Transición hacia la izquierda
       newItemActive.classList.add("carousel_item__pos_prev");
       setTimeout(() => {
          newItemActive.classList.add("carousel_item__prev");
@@ -66,14 +67,12 @@ function slide(toIndex) {
       }, 20);
    }
 
-   // remove all transition class and switch active class
+   // Limpieza y reactivación
    newItemActive.addEventListener("transitionend", () => {
       itemActive.className = "carousel_item";
       newItemActive.className = "carousel_item carousel_item__active";
       onSlide = false;
-   }, {
-      once: true
-   });
+   }, { once: true });
 
    slideIndicator(toIndex);
 }
@@ -81,8 +80,7 @@ function slide(toIndex) {
 function getItemActiveIndex() {
    const itemsArray = Array.from(document.querySelectorAll(".carousel_item"));
    const itemActive = document.querySelector(".carousel_item__active");
-   const itemActiveIndex = itemsArray.indexOf(itemActive);
-   return itemActiveIndex;
+   return itemsArray.indexOf(itemActive);
 }
 
 function slideIndicator(toIndex) {

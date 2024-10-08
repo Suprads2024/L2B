@@ -177,7 +177,7 @@
  .carousel_indicator{
     position: absolute;
     bottom: 1rem;
-    left: 15%;
+    left: 20%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
@@ -185,21 +185,27 @@
     z-index: 1;
  }
  
- .carousel_dot{
-    display: block;
-    padding: .25rem;
-    background-color: rgba(255, 255, 255, .25);
-    border: none;
-    border-radius: 50%;
+/* Estilos generales para todos los botones de navegación del carrusel */
+.carousel_dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7); /* Blanco con opacidad */
+    border: none; /* Elimina el borde */
+    border-radius: 50%; /* Mantiene los botones inactivos circulares */
     cursor: pointer;
-    transition: background-color .5s ease-in-out;
- }
- 
- .carousel_dot__active{
-    background-color: lightskyblue;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el botón activo con forma alargada */
+.carousel_dot__active {
+    width: 28px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 1); /* Blanco puro */
+    border: none; /* Elimina el borde */
+    border-radius: 10px; /* Alargado para el botón activo */
     cursor: default;
     pointer-events: none;
- }
+}
  
  .carousel_control{
     position: absolute;
@@ -346,7 +352,8 @@
         padding: 0px;
        
         margin: 0 auto;
-        margin-top: -20px;
+        margin-top: -25px;
+        margin-bottom: -25px;
         height: auto;
         min-height: 250px; /* Establecemos una altura mínima para evitar que se vea comprimida */
         background-size: contain; /* Aseguramos que toda la imagen de fondo se vea sin recortar */
@@ -357,3 +364,25 @@
 
 
 }
+
+@media (max-width:431px){
+    .main-cta {
+       
+        margin-top: -20px;
+        margin-bottom: -15px;
+}}
+
+
+@media (max-width:391px){
+    .main-cta {
+       
+        margin-top: -25px;
+        margin-bottom: -20px;
+}}
+
+@media (max-width:376px){
+    .main-cta {
+       
+        margin-top: -30px;
+        margin-bottom: -30px;
+}}
