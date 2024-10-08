@@ -106,6 +106,60 @@
     transform: scaleY(0);
   }
 }
+  /*Whatsapp Flotante */
+.whatsapp-button2 {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+
+}
+
+.whatsapp-button2 a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+}
+
+.whatsapp-button2 img {
+  width: 85px;
+  /* Tamaño del icono de WhatsApp */
+  height: 85px;
+
+}
+
+
+/* Animación de Luz LED con Mayor Intensidad */
+@keyframes ledBlink {
+  0%, 100% {
+    background-color: #43a047;
+    box-shadow: 0 0 10px rgba(67, 160, 71, 0.9), 0 0 20px rgba(67, 160, 71, 0.7);
+  }
+  50% {
+    background-color: #66bb6a;
+    box-shadow: 0 0 15px rgba(102, 187, 106, 1), 0 0 30px rgba(102, 187, 106, 0.9);
+  }
+}
+
+/* Aplicación de la animación al ícono */
+.whatsapp-button2 img {
+  animation: ledBlink 1s ease-in-out infinite;
+  border-radius: 50%; /* Para asegurar que el efecto se ajuste al borde del ícono */
+}
+
+@media (max-width:600px) {
+
+
+
+
+
+  .whatsapp-button2 img {
+      width: 55px;
+      /* Tamaño del icono de WhatsApp */
+      height: 55px;
+
+  }  }
 
 
   /*-----Logo------ */

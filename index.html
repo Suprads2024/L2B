@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life 2 Better</title>
-  <link rel="shortcut icon" href="./Assets/2daUnidad/L2B_Logo menu.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./Assets/Icono_pestaña.png" type="image/x-icon">
   <link rel="stylesheet" href="Assets/css/style.css">
   <link rel="stylesheet" href="Assets/css/header2.css">
   <link rel="stylesheet" href="Assets/css/main.css">
@@ -13,13 +13,16 @@
   <link rel="stylesheet" href="Assets/css/footer.css">
 
   <!-- HTML Meta Tags -->
-  <meta name="description" content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
-  <meta name="keywords" content="domótica, automatización del hogar, tecnología inteligente, ahorro energético, confort, seguridad, control del hogar, L2B">
+  <meta name="description"
+    content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
+  <meta name="keywords"
+    content="domótica, automatización del hogar, tecnología inteligente, ahorro energético, confort, seguridad, control del hogar, L2B">
   <!-- Open Graph (Facebook, LinkedIn, Discord) Meta Tags -->
   <meta property="og:url" content="https://life2better.com/Assets/2daUnidad/L2B_Logo menu.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Life 2 Better">
-  <meta property="og:description" content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
+  <meta property="og:description"
+    content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
   <meta property="og:image" content="https://life2better.com/">
   <meta property="og:image:width" content="528">
   <meta property="og:image:height" content="525">
@@ -29,7 +32,8 @@
   <meta property="twitter:domain" content="life2better.com">
   <meta property="twitter:url" content="https://life2better.com/Assets/2daUnidad/L2B_Logo menu.png">
   <meta name="twitter:title" content="Life 2 Better">
-  <meta name="twitter:description" content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
+  <meta name="twitter:description"
+    content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
   <meta name="twitter:image" content="https://life2better.com/">
 
   <!-- Favicon -->
@@ -42,7 +46,7 @@
 
   <!-- Additional Meta Tags -->
   <meta name="copyright" content="Life 2 Better">
-  
+
 
 </head>
 
@@ -55,7 +59,11 @@
     <div class="bar" style="background-color: #fdd835;"></div> <!-- Amarillo -->
   </div>
 
-
+  <div class="whatsapp-button2">
+    <a href="./Whatsapp/" target="_blank">
+      <img src="Assets/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
   <div class="menu__wrapper" id="top">
     <div class="menu__bar">
       <a href="#top" title="Logo" class="logo">
@@ -112,13 +120,13 @@
         <video class="video-desktop" autoplay loop muted playsinline>
           <source src="Assets/Header/Tecnologia y calidad/pc.mp4" type="video/mp4">
         </video>
-      
+
         <!-- Video para pantallas pequeñas -->
         <video class="video-mobile" autoplay loop muted playsinline>
           <source src="Assets/Header/Tecnologia y calidad/1070x928_celu.mp4" type="video/mp4">
         </video>
       </div>
-      
+
       <div class="formulario" id="contact">
         <h2>OBTENÉ LA <strong>SOLUCIÓN</strong> QUE MEJOR SE ADAPTE A TUS NECESIDADES.</h2>
 
@@ -152,77 +160,77 @@
     // Obtener los botones de opciones y el campo oculto
     const optionButtons = document.querySelectorAll('.form-options .option');
     const selectedOptionInput = document.getElementById('selectedOption');
-  
+
     // Escuchar los clics en los botones de opciones
     optionButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remover la clase 'active' de todos los botones
-            optionButtons.forEach(btn => btn.classList.remove('active'));
-            // Añadir la clase 'active' al botón clicado
-            this.classList.add('active');
-            // Actualizar el valor del campo oculto con el valor de data-value del botón clicado
-            selectedOptionInput.value = this.getAttribute('data-value');
-        });
+      button.addEventListener('click', function () {
+        // Remover la clase 'active' de todos los botones
+        optionButtons.forEach(btn => btn.classList.remove('active'));
+        // Añadir la clase 'active' al botón clicado
+        this.classList.add('active');
+        // Actualizar el valor del campo oculto con el valor de data-value del botón clicado
+        selectedOptionInput.value = this.getAttribute('data-value');
+      });
     });
-  
-    document.getElementById('customForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        // Datos del formulario
-        const formData = {
-            fields: [
-                {
-                    name: 'email',
-                    value: document.getElementById('email').value
-                },
-                {
-                    name: 'firstname',
-                    value: document.getElementById('name').value
-                },
-                {
-                    name: 'phone',
-                    value: document.getElementById('phone').value
-                },
-                {
-                    name: 'message',
-                    value: document.getElementById('message').value
-                },
-                {
-                    name: 'tipo_de_cliente',  // Asegúrate de que coincida con el campo en HubSpot
-                    value: document.getElementById('selectedOption').value
-                }
-            ],
-            context: {
-                pageUri: window.location.href,
-                pageName: document.title
-            }
-        };
-  
-        // Hacer la solicitud POST a HubSpot
-        fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/94d49cb8-486d-4cec-b839-268ed0103eef', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
+
+    document.getElementById('customForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Datos del formulario
+      const formData = {
+        fields: [
+          {
+            name: 'email',
+            value: document.getElementById('email').value
+          },
+          {
+            name: 'firstname',
+            value: document.getElementById('name').value
+          },
+          {
+            name: 'phone',
+            value: document.getElementById('phone').value
+          },
+          {
+            name: 'message',
+            value: document.getElementById('message').value
+          },
+          {
+            name: 'tipo_de_cliente',  // Asegúrate de que coincida con el campo en HubSpot
+            value: document.getElementById('selectedOption').value
+          }
+        ],
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title
+        }
+      };
+
+      // Hacer la solicitud POST a HubSpot
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/94d49cb8-486d-4cec-b839-268ed0103eef', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
         .then(response => {
-            if (response.ok) {
-                document.querySelector('.success-message').style.display = 'block';
-                document.querySelector('.error-message').style.display = 'none';
-                document.getElementById('customForm').reset();
-            } else {
-                throw new Error('Error en la respuesta');
-            }
+          if (response.ok) {
+            document.querySelector('.success-message').style.display = 'block';
+            document.querySelector('.error-message').style.display = 'none';
+            document.getElementById('customForm').reset();
+          } else {
+            throw new Error('Error en la respuesta');
+          }
         })
         .catch(error => {
-            document.querySelector('.success-message').style.display = 'none';
-            document.querySelector('.error-message').style.display = 'block';
-            console.error('Error:', error);
+          document.querySelector('.success-message').style.display = 'none';
+          document.querySelector('.error-message').style.display = 'block';
+          console.error('Error:', error);
         });
     });
   </script>
-  
+
 
 
   <main class="main-content">
@@ -243,7 +251,7 @@
               <div class="carousel">
                 <div class="carousel_inner">
                   <div class="carousel_item carousel_item__active">
-                    <img src="./Assets/2daUnidad/Slider/Costosasequibles.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/L2B.png" alt="" class="carousel_img">
                     <div class="carousel_caption">
 
                     </div>
@@ -258,25 +266,25 @@
                     </div>
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Aptopara cualquierespacio.png" alt=""
-                      class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Apto para cualquier espacio.png" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/inalabrico.png" alt=""
-                      class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Inalámbrico.png" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Controlcentralizado.png" alt=""
-                      class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Control centralizado.png" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/L2B.png" alt=""
-                      class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Costo Asequible.png" alt="" class="carousel_img">
+                  </div>
+                  <div class="carousel_item">
+                    <img src="./Assets/2daUnidad/Slider/Portable.png" alt="" class="carousel_img">
                   </div>
                 </div>
 
                 <div class="carousel_indicator">
                   <button class="carousel_dot carousel_dot__active"></button>
+                  <button class="carousel_dot"></button>
                   <button class="carousel_dot"></button>
                   <button class="carousel_dot"></button>
                   <button class="carousel_dot"></button>
@@ -314,13 +322,24 @@
     <section class="main-row">
       <!-- Imagen a la izquierda (60%) -->
       <div class="main-item main-info">
-        <img src="Assets/2daUnidad/VivilaexperienciaL2B/viviexperiencia.png"
-          alt="VIVÍ LA EXPERIENCIA L2B">
+        <img src="Assets/2daUnidad/VivilaexperienciaL2B/viviexperiencia.png" alt="VIVÍ LA EXPERIENCIA L2B">
       </div>
 
       <!-- Div que simula la imagen con hover (40%) -->
       <div class="main-item main-cta hover-image">
       </div>
+      <script>
+       document.querySelector('.hover-image').addEventListener('click', function() {
+    const contactSection = document.getElementById('contact');
+    const offset = 130; // Ajusta la cantidad de píxeles que deseas
+    const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+        top: contactPosition,
+        behavior: 'smooth'
+    });
+});
+      </script>
     </section>
   </main>
 
@@ -345,9 +364,14 @@
 
     <!-- Columna derecha -->
     <div class="right-column">
-      <div class="image-box conoce-mas">
+      <div class="image-box conoce-mas" id="boton-conoce-mas"></div>
 
-      </div>
+      <script>
+        document.getElementById('boton-conoce-mas').addEventListener('click', function () {
+          window.open('https://life2better.com/arquitectos/', '_blank');
+        });
+
+      </script>
       <div class="image-box ">
         <img src="./Assets/3raunidad/Academia Fibaro/L2B_ Academia Fibaro_ Sin texto.png" alt="Academia FIBARO">
         <div class="overlay-text2">
@@ -357,6 +381,12 @@
             y sumar valor a tus proyectos para diferenciarte e incrementar tu rentabilidad.<br><strong>Sumate al negocio
               del futuro.</strong></p>
           <button class="cta-button">MÁS INFORMACIÓN</button>
+          <script>
+            document.querySelector('.cta-button').addEventListener('click', function () {
+              window.open('https://academia.life2better.com/home', '_blank');
+            });
+
+          </script>
         </div>
       </div>
     </div>
@@ -379,7 +409,28 @@
             +54 11-4849-7241<br>
             <a href="mailto:info@life2better.com">info@life2better.com</a>
           </p>
-          <a href="#contact"> <button class="cta-button">CONTACTANOS</button></a>
+          <button class="cta-button">CONTACTANOS</button>
+          <script>
+            // Selecciona todos los elementos con las clases .hover-image y .cta-button
+document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
+    element.addEventListener('click', function() {
+        scrollToContact();
+    });
+});
+
+// Función para desplazarse al formulario con un offset de 50px
+function scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    const offset = 130;
+    const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+        top: contactPosition,
+        behavior: 'smooth'
+    });
+}
+
+          </script>
         </div>
 
         <!-- Columna derecha: Artículos recientes -->
