@@ -1,8 +1,6 @@
-// Cuando la ventana termina de cargar
+// Espera a que la ventana cargue completamente
 window.addEventListener('load', function() {
-    // Espera a que termine la animación antes de ocultar el preloader
-    setTimeout(function() {
-      document.getElementById('preloader').style.display = 'none';
-      document.getElementById('content').style.display = 'block';
-    }, 600); // 600ms para que coincida con la duración de la animación closeIn
-  });
+  // Al finalizar la carga, ocultar el preloader después de la animación
+  document.getElementById('preloader').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+});
