@@ -380,6 +380,7 @@ html {
   position: absolute;
   left: 0;
   top: 100%;
+  
   background-color: rgba(0, 0, 0, 0.8);
   /* Fondo oscuro para resaltar submenú */
   list-style-type: none;
@@ -411,6 +412,7 @@ html {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+
   color: #666;
   /* Color gris para más sutileza */
 }
@@ -430,12 +432,14 @@ html {
 
 /* Muestra submenús en hover */
 .navigation li:hover>.submenu {
+  
   display: block;
   transition: all 0.3s ease;
 }
 
 /* Fondo oscuro para submenús activos */
 .submenu li:hover {
+  border-radius: 0px 15px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 

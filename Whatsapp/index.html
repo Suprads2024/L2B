@@ -66,15 +66,91 @@
       <a href="../" title="Logo" class="logo">
         <img src="../Assets/2daUnidad/L2B_Logo menu.png" alt="Logo" class="logo-img2" id="logo-img">
       </a>
-      <img class="menu-icon" src="../Assets/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+      <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
       <ul class="navigation">
         <li><a href="#inicio" title="Inicio">Home</a></li>
-        <li><a href="#sobre-nosotros" title="Sobre Nosotros">Soluciones</a></li>
-        <li><a href="#servicios" title="Servicios">Productos</a></li>
-        <li><a href="#servicios" title="Servicios">Blog</a></li>
+        <li>
+          <a href="#" title="Hogar Fibaro">Sistemas <span class="dropdown-arrow">˅</span></a>
+          <ul class="submenu">
+            <li><a href="https://life2better.com/fibaro-argentina/">Sistema Fibaro</a></li>
+            <li><a href="https://life2better.com/z-wave/">Protocolo Z-Wave</a></li>
+            <li><a href="https://life2better.com/partners/">Programa Representantes</a></li>
+            <li><a href="https://life2better.com/arquitectos/">Fibaro para Arquitectos</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" title="Productos">Productos<span class="dropdown-arrow">˅</span> </a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Controladores</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/home-center-3/">Home Center 3</a></li>
+                <li><a href="https://life2better.com/fibaro-home-center-2/">Home Center 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Iluminación</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/fibaro-dimmer-2/">Dimmer 2</a></li>
+                <li><a href="https://life2better.com/single-double-switch/">Switches</a></li>
+                <li><a href="https://life2better.com/rgbw/">RGBW Controller</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Portones y Cortinas</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/roller-shutter-3/">Roller Shutter 3</a></li>
+                <li><a href="https://life2better.com/smart-implant/">Smart Implant</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Calefacción</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/smoke-sensor/">Smoke Sensor</a></li>
+                <li><a href="https://life2better.com/universal-binary-sensor/">Universal Binary Sensor</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Sensor y Seguridad</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/motion-sensor/">Motion Sensor</a></li>
+                <li><a href="https://life2better.com/door-window-sensor/">Door/Window Sensor</a></li>
+                <li><a href="https://life2better.com/flood-sensor/">Flood Sensor</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Activadores</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/fibaro-keyfob/">Keyfob</a></li>
+                <li><a href="https://life2better.com/fibaro-the-button/">The Button</a></li>
+                <li><a href="https://life2better.com/fibaro-swipe/">Swipe</a></li>
+                <li><a href="https://life2better.com/fibaro-home-center-app/">Aplicación Fibaro Home Center</a></li>
+              </ul>
+            </li>
+            <li><a href="https://life2better.com/life2better-life-film/">LifeFilm</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" title="Hogar Fibaro">Smart Home<span class="dropdown-arrow">˅</span></a>
+          <ul class="submenu">
+            <li><a href="https://life2better.com/consumo-electrico/">Ahorro Energético</a></li>
+            <li><a href="https://life2better.com/electrodomesticos-inteligentes/">Home Appliances</a></li>
+            <li><a href="https://life2better.com/portones-y-cortinas/">Portones y Cortinas</a></li>
+            <li>
+              <a href="#">Integraciones</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/smartthings/">Smartthings</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
         <li><a href="#contacto" title="Contacto">Contacto</a></li>
       </ul>
+
     </div>
   </div>
   <script>
@@ -86,6 +162,23 @@
         });
       });
     });
+  </script>
+  <script>
+    // Seleccionamos todos los enlaces dentro de los elementos <li>
+    document.querySelectorAll('.navigation a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        // Obtenemos el valor del atributo href del enlace
+        const url = this.getAttribute('href');
+
+        // Si el enlace tiene un href válido que no sea solo "#", prevenimos el comportamiento por defecto
+        if (url && url !== '#' && !url.startsWith('#')) {
+          event.preventDefault(); // Evitamos la navegación por defecto
+          window.open(url, '_blank'); // Abrimos el enlace en una nueva pestaña o ventana
+        }
+      });
+    });
+
+
   </script>
 
   <style>
@@ -189,7 +282,7 @@
       <div class="footer-container">
         <!-- Columna izquierda: Logo -->
         <div class="footer-logo">
-          <a href="#top"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
+          <a href="../"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
 
         </div>
 
