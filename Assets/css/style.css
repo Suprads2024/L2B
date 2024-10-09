@@ -1,78 +1,80 @@
 @font-face {
-    font-family: 'Eurostile-Bold';
-    src: url('../Font/Eurostile\ -\ Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Eurostile-Heavy';
-    src: url('../Font/Eurostile\ -\ Hea.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  
-  
-  @font-face {
-    font-family: 'Eurostile-Medium';
-    src: url('../Font/Eurostile\ -\ Med.otf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Eurostile-Regular';
-    src: url('../Font/Eurostile\ -\ Regular.otf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  
-  *,
-  :after,
-  :before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  
-  
-  }
-  
-  /* Evitar el scroll horizontal */
-  html,
-  body { 
-   
-    background-color: #000000;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  body {
-    font-family: "Montserrat", sans-serif;
-    background-image: url('../Header/L2B_\ Fondo\ header.jpg');
-    /* Reemplaza con la URL de tu imagen */
-    background-size: cover;
-    /* Asegura que la imagen cubra todo el div */
-    background-position: center;
-    /* Centra la imagen */
-  }
-  
-  html {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.15;
-    scroll-behavior: smooth;
-  }
-  
-  :root {
-    --primary:
+  font-family: 'Eurostile-Bold';
+  src: url('../Font/Eurostile\ -\ Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostile-Heavy';
+  src: url('../Font/Eurostile\ -\ Hea.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Eurostile-Medium';
+  src: url('../Font/Eurostile\ -\ Med.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostile-Regular';
+  src: url('../Font/Eurostile\ -\ Regular.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+/* Evitar el scroll horizontal */
+html,
+body {
+
+  background-color: #000000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url('../Header/L2B_\ Fondo\ header.jpg');
+  /* Reemplaza con la URL de tu imagen */
+  background-size: cover;
+  /* Asegura que la imagen cubra todo el div */
+  background-position: center;
+  /* Centra la imagen */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.15;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary:
     #0673ac;
-    --background: #191919;
-    --navbar-height: 48px;
-  }
+  --background: #191919;
+  --navbar-height: 48px;
+}
+
 /* Fondo del preloader */
 #preloader {
   position: fixed;
@@ -93,7 +95,8 @@
   height: 100px;
   margin: 0 5px;
   opacity: 0.9;
-  transform-origin: center; /* Contracción desde el centro */
+  transform-origin: center;
+  /* Contracción desde el centro */
   animation: closeIn 0.6s ease forwards;
 }
 
@@ -102,11 +105,13 @@
   0% {
     transform: scaleY(1);
   }
+
   100% {
     transform: scaleY(0);
   }
 }
-  /*Whatsapp Flotante */
+
+/*Whatsapp Flotante */
 .whatsapp-button2 {
   position: fixed;
   bottom: 20px;
@@ -123,30 +128,23 @@
 }
 
 .whatsapp-button2 img {
-  width: 85px;
+  width: 65px;
   /* Tamaño del icono de WhatsApp */
-  height: 85px;
+  height: 65px;
+  border-radius: 15px;
 
 }
 
 
-/* Animación de Luz LED con Mayor Intensidad */
-@keyframes ledBlink {
-  0%, 100% {
-    background-color: #43a047;
-    box-shadow: 0 0 10px rgba(67, 160, 71, 0.9), 0 0 20px rgba(67, 160, 71, 0.7);
-  }
-  50% {
-    background-color: #66bb6a;
-    box-shadow: 0 0 15px rgba(102, 187, 106, 1), 0 0 30px rgba(102, 187, 106, 0.9);
-  }
+.whatsapp-button2 img:hover {
+
+  box-shadow: 0px 0px 12px rgba(9, 101, 12, 0.847);
 }
 
-/* Aplicación de la animación al ícono */
-.whatsapp-button2 img {
-  animation: ledBlink 1s ease-in-out infinite;
-  border-radius: 50%; /* Para asegurar que el efecto se ajuste al borde del ícono */
-}
+
+
+
+
 
 @media (max-width:600px) {
 
@@ -155,338 +153,473 @@
 
 
   .whatsapp-button2 img {
-      width: 75px;
-      /* Tamaño del icono de WhatsApp */
-      height: 75px;
-
-  }  }
-
-
-  /*-----Logo------ */
-  .menu__bar {
-    display: flex;
-    align-items: center;
-  
-  
+    width: 55px;
+    /* Tamaño del icono de WhatsApp */
+    height: 55px;
+    border-radius: 15px;
   }
-  
-  .logo {
-    display: block;
-    margin-left: 0;
-    /* Asegura que el logo esté alineado a la izquierda */
-  }
-  
-  
-  /*-----Estilo de NAV------ */
-  
-  .menu__bar {
-    background-color: transparent;
-    
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  
-  
- /* Estilos para el menú después de hacer scroll */
-.menu__bar.scrolled {
-  background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semitransparente */
-  background-image: url('../Header/L2B_\ Fondo\ header.jpg'); /* Ruta de la imagen de fondo */
-  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Posiciona la imagen en el centro */
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra del menú */
 }
-  
-  .menu__bar.scrolled {
-    color: rgb(0, 0, 0) !important;
-    /* Color de los enlaces después de hacer scroll */
-  }
-  
-  
-  
-  .menu__bar.scrolled .logo-img2 {
-    filter: none;
-    /* Elimina el filtro para que el logo conserve su color original */
-  }
-  
-  .menu__wrapper {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    z-index: 2;
-  }
-  .menu__bar {
-    position: fixed;
-    width: 100%; /* Para que ocupe todo el ancho visible */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 0 1.5rem;
-    gap: 2rem;
-    height: 6rem;
-    opacity: 0.9;
-    margin: 0 auto; /* Centra la barra de navegación */
+
+/*-----Logo------ */
+.menu__bar {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.logo {
+  display: block;
+  margin-left: 0;
+  /* Asegura que el logo esté alineado a la izquierda */
+}
+
+
+/*-----Estilo de NAV------ */
+
+.menu__bar {
+  background-color: transparent;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* Estilos para el menú después de hacer scroll */
+.menu__bar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Color de fondo semitransparente */
+  background-image: url('../Header/L2B_\ Fondo\ header.jpg');
+  /* Ruta de la imagen de fondo */
+  background-size: cover;
+  /* Ajusta la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center;
+  /* Posiciona la imagen en el centro */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  /* Sombra del menú */
+}
+
+.menu__bar.scrolled {
+  color: rgb(0, 0, 0) !important;
+  /* Color de los enlaces después de hacer scroll */
+}
+
+
+
+.menu__bar.scrolled .logo-img2 {
+  filter: none;
+  /* Elimina el filtro para que el logo conserve su color original */
+}
+
+.menu__wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.menu__bar {
+  position: fixed;
+  width: 100%;
+  /* Para que ocupe todo el ancho visible */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 1.5rem;
+  gap: 2rem;
+  height: 6rem;
+  opacity: 0.9;
+  margin: 0 auto;
+  /* Centra la barra de navegación */
+  left: 0;
+  right: 0;
+
+}
+
+@media (max-width:786px) {
+  .menu__bar {
+    padding: 0 1rem;
+  }
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  z-index: 1002;
+  /* Asegura que el ícono esté por encima del menú */
+}
+
+.menu__bar .menu-icon {
+  filter: brightness(0) invert(0);
+  transition: filter 0.3s ease;
+  /* Transición suave */
+}
+
+.menu__bar.scrolled .menu-icon {
+  filter: invert(1);
+  /* Hace que el icono sea negro */
+}
+
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  gap: 5rem;
+  padding: 0;
+
+}
+
+.logo svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.navigation>li {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.45rem;
+}
+
+/* Para que la flecha esté en línea y sea más pequeña */
+.navigation a .dropdown-arrow {
+  font-size: 0.8rem;
+  /* Tamaño más pequeño */
+  margin-left: 5px;
+  vertical-align: middle;
+  /* Alineación vertical */
+  color: #666;
+  /* Color gris más sutil */
+  transition: transform 0.3s ease;
+}
+
+
+.navigation>li>a {
+  font-family: 'Eurostile-Bold';
+  color: rgb(255, 249, 249);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 800;
+  background-image: linear-gradient(to right, var(--primary), var(--primary) 50%, rgb(0, 0, 0) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 0.2rem 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu__bar.scrolled .navigation>li>a {
+  color: rgb(0, 0, 0) !important;
+}
+
+.navigation>li>a:before {
+  font-family: 'Eurostile-Heavy';
+  content: '';
+  background: var(--primary);
+  display: block;
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation>li>a:hover {
+  background-position: 0;
+}
+
+.navigation>li>a:hover::before {
+  width: 100%;
+}
+
+
+
+/* Rotar flecha hacia arriba cuando se despliega el submenú */
+.navigation li:hover>a::after {
+  transform: rotate(180deg);
+  /* Rotar la flecha hacia arriba */
+  color: #333;
+  /* Cambiar a un color más oscuro */
+}
+
+/* Mantener el fondo azul en el enlace activo al desplegar el submenú */
+.navigation li:hover>a {
+  background-position: 0;
+  color: #fff;
+}
+
+.navigation>li {
+  position: relative;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+}
+
+/* Estilo para los submenús */
+.submenu {
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fondo oscuro para resaltar submenú */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Estilo para los elementos del submenú */
+.submenu li {
+  position: relative;
+}
+
+.submenu a {
+  font-family: 'Eurostile-Bold';
+  padding: 10px 8px;
+  color: #050505;
+  white-space: nowrap;
+}
+
+/* Flecha hacia la derecha para submenús de segundo nivel */
+.submenu li:has(ul)>a::after {
+  content: '❯';
+  /* Flecha fina hacia la derecha */
+  font-size: 10px;
+  margin-left: 5px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #666;
+  /* Color gris para más sutileza */
+}
+
+/* Estilos adicionales para el hover */
+.navigation>li:hover>a::after,
+.submenu li:hover>a::after {
+  color: #000000;
+  /* Oscurece la flecha cuando se hace hover */
+}
+
+/* Opcional: ajustar margen o padding si es necesario */
+.navigation a {
+  padding-right: 25px;
+  /* Asegura que haya espacio para la flecha */
+}
+
+/* Muestra submenús en hover */
+.navigation li:hover>.submenu {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Fondo oscuro para submenús activos */
+.submenu li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Submenú de segundo nivel (despliega a la derecha) */
+.submenu li .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+}
+
+/* Sombra y transición para el submenú */
+.navigation li:hover>.submenu,
+.submenu li:hover>.submenu {
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 254, 254);
+}
+
+
+
+/*-------- Estilos del botón de WhatsApp--------- */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: float 1s infinite;
+
+
+}
+
+.whatsapp-button a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+}
+
+.whatsapp-button img {
+  width: 85px;
+  /* Tamaño del icono de WhatsApp */
+  height: 85px;
+
+}
+
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .whatsapp-button img {
+    width: 55px;
+    /* Tamaño del icono de WhatsApp */
+    height: 55px;
+
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navigation--mobile {
+    top: 0;
     left: 0;
     right: 0;
-   
-}
-  
-  @media (max-width:786px) {
-    .menu__bar {
-      padding: 0 1rem;
-    }
-  }
-  
-  .menu-icon {
-    cursor: pointer;
+    bottom: 0;
+    position: fixed;
+    /* Cambia a fixed para ocupar toda la pantalla */
     display: flex;
-    height: 2rem;
-    width: 2rem;
-    z-index: 1002;
-    /* Asegura que el ícono esté por encima del menú */
-  }
-  
-  .menu__bar .menu-icon {
-    filter: brightness(0) invert(0);
-    transition: filter 0.3s ease; /* Transición suave */
-}
-  
-  .menu__bar.scrolled .menu-icon {
-    filter: invert(1);
-    /* Hace que el icono sea negro */
-  }
-  
-  
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    align-items: center;
-    gap: 3rem;
     padding: 0;
-  
+    /* Elimina el padding para centrar correctamente */
+    width: 100vw;
+    /* Ocupa el ancho completo de la pantalla */
+    height: 100vh;
+    /* Ocupa el alto completo de la pantalla */
+    /* Asegura que el menú ocupe toda la altura de la pantalla */
+    background-color: rgb(253, 253, 253);
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+
+
+    z-index: 1000;
+    /* Asegura que el menú esté por encima de otros elementos */
   }
-  
-  .logo svg {
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .navigation>li {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-    font-size: 1.45rem;
-  }
-  
-  .navigation>li>a {
-    font-family: 'Eurostile-Bold';
-    color: rgb(255, 249, 249);
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-weight: 800;
-    background-image: linear-gradient(to right,
-        var(--primary),
-        var(--primary) 50%,
-        rgb(0, 0, 0) 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 0.2rem 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  /* Estilo de los enlaces después del scroll */
-  .menu__bar.scrolled .navigation>li>a {
-    
-    color: rgb(0, 0, 0) !important;
-    /* Cambia el color a negro después del scroll */
-  
-    /* Cambia el color del texto a negro */
-  }
-  
-  .navigation>li>a:before {
-    font-family: 'Eurostile-Heavy';
-    content: '';
-    background: var(--primary);
-    display: block;
-    position: absolute;
-    bottom: -0.125rem;
-    left: 0;
-    width: 0;
-    height: 0.2rem;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .navigation>li>a:hover {
-    color: #dd1e1e;
-    
-    background-position: 0;
-  }
-  
-  .navigation>li>a:hover::before {
-    width: 100%;
-  }
-  
-  /* Estilos del botón de WhatsApp */
-  @keyframes float {
-  
-    0%,
+
+  /* Slide down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
     100% {
+      opacity: 1;
       transform: translateY(0);
     }
-  
-    50% {
-      transform: translateY(-10px);
+  }
+
+  .navigation--mobile {
+    animation: slideDown 300ms ease-out forwards;
+  }
+
+  /* Slide up (fade out) animation */
+  @keyframes slideUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
     }
   }
-  
-  .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    animation: float 1s infinite;
-  
-  
+
+  .navigation--mobile--fadeout {
+    animation: slideUp 300ms ease-out forwards;
   }
-  
-  .whatsapp-button a {
-    display: block;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .whatsapp-button img {
-    width: 85px;
-    /* Tamaño del icono de WhatsApp */
-    height: 85px;
-  
-  }
-  
-  @media (min-width: 600px) {
-    .menu-icon {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .whatsapp-button img {
-      width: 55px;
-      /* Tamaño del icono de WhatsApp */
-      height: 55px;
-  
-    }
-  
-    .navigation {
-      display: none;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .navigation--mobile {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      position: fixed;
-      /* Cambia a fixed para ocupar toda la pantalla */
-      display: flex;
-      padding: 0;
-      /* Elimina el padding para centrar correctamente */
-      width: 100vw;
-      /* Ocupa el ancho completo de la pantalla */
-      height: 100vh;
-      /* Ocupa el alto completo de la pantalla */
-      /* Asegura que el menú ocupe toda la altura de la pantalla */
-      background-color: rgb(253, 253, 253);
-      gap: 3rem;
-      flex-direction: column;
-      align-items: center;
-      /* Centra horizontalmente */
-      justify-content: center;
-      /* Centra verticalmente */
-  
-   
-      z-index: 1000;
-      /* Asegura que el menú esté por encima de otros elementos */
-    }
-  /* Slide down animation */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+
+
+.submenu li .submenu {
+    position: relative; /* Cambia a relativo para apilar en móvil */
+    top: 0;
+    left: 0; /* No se desplazará hacia la derecha */
+}
+ /* Ajustes de visualización para abrir submenús hacia abajo */
+ .navigation li:hover > .submenu,
+ .submenu li:hover > .submenu {
+     display: block;
+     margin-left: 20px; /* Aumenta el margen izquierdo para identar subniveles */
+ }
+
 }
 
-.navigation--mobile {
-  animation: slideDown 300ms ease-out forwards;
+
+
+
+
+
+
+
+section>h2 {
+
+  margin-bottom: 1.5rem;
 }
 
-/* Slide up (fade out) animation */
-@keyframes slideUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-.navigation--mobile--fadeout {
-  animation: slideUp 300ms ease-out forwards;
-}
-
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  section>h2 {
-    
-    margin-bottom: 1.5rem;
-  }
-  
-  /*-----Foto header------ */
-  /* 
+/*-----Foto header------ */
+/* 
   ---------------------------------------------
   Banner Style
   --------------------------------------------- 
   */
-  
-  .logo img {
-    max-height: 60px;
-  }
 
-  @media (max-width:786px){
-  
+.logo img {
+  max-height: 60px;
+}
+
+@media (max-width:786px) {
+
   .logo img {
     max-height: 40px;
   }
 
-  }
-  
-
-
-  
-  
- 
-  
+}

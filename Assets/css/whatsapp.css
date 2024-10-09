@@ -74,25 +74,28 @@
 }
 /* Estilo del botón Enviar */
 .submit-button {
-  margin-top: 30px;
+  margin-top: 20px;
   font-family: 'Eurostile-Heavy';
   background-color: #43a047;
   color: #fff;
-  padding: 12px;
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.2s ease; /* Suaviza el cambio de todas las propiedades */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra inicial elevada */
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: auto; /* Ajusta el ancho según el contenido */
+  display: inline-block; /* Asegura que no ocupe el ancho del contenedor */
 }
 
 /* Efecto de tecla presionada en hover */
 .submit-button:hover {
   background-color: #36a139;
-  transform: translateY(2px); /* Se hunde ligeramente hacia abajo */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduce la sombra para el efecto de presión */
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 
   @media (max-width: 768px) {

@@ -73,11 +73,88 @@
         onclick="toggleMenu(this)">
       <ul class="navigation">
         <li><a href="#inicio" title="Inicio">Home</a></li>
-        <li><a href="#sobre-nosotros" title="Sobre Nosotros">Soluciones</a></li>
-        <li><a href="#servicios" title="Servicios">Productos</a></li>
-        <li><a href="#servicios" title="Servicios">Blog</a></li>
+        <li>
+          <a href="#" title="Hogar Fibaro">Fibaro<span class="dropdown-arrow">˅</span></a>
+          <ul class="submenu">
+            <li><a href="https://life2better.com/fibaro-argentina/" target="_blank">Sistema Fibaro</a></li>
+            <li><a href="https://life2better.com/z-wave/" target="_blank">Protocolo Z-Wave</a></li>
+            <li><a href="https://life2better.com/partners/" target="_blank">Programa Representantes</a></li>
+            <li><a href="https://life2better.com/arquitectos/" target="_blank">Fibaro para Arquitectos</a></li>
+           
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" title="Productos">Productos<span class="dropdown-arrow">˅</span> </a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Controladores</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/home-center-3/">Home Center 3</a></li>
+                <li><a href="https://life2better.com/fibaro-home-center-2/">Home Center 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Iluminación</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/fibaro-dimmer-2/">Dimmer 2</a></li>
+                <li><a href="https://life2better.com/single-double-switch/">Switches</a></li>
+                <li><a href="https://life2better.com/rgbw/">RGBW Controller</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Portones y Cortinas</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/roller-shutter-3/">Roller Shutter 3</a></li>
+                <li><a href="https://life2better.com/smart-implant/">Smart Implant</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Calefacción</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/smoke-sensor/">Smoke Sensor</a></li>
+                <li><a href="https://life2better.com/universal-binary-sensor/">Universal Binary Sensor</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Sensor y Seguridad</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/motion-sensor/">Motion Sensor</a></li>
+                <li><a href="https://life2better.com/door-window-sensor/">Door/Window Sensor</a></li>
+                <li><a href="https://life2better.com/flood-sensor/">Flood Sensor</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Activadores</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/fibaro-keyfob/">Keyfob</a></li>
+                <li><a href="https://life2better.com/fibaro-the-button/">The Button</a></li>
+                <li><a href="https://life2better.com/fibaro-swipe/">Swipe</a></li>
+                <li><a href="https://life2better.com/fibaro-home-center-app/">Aplicación Fibaro Home Center</a></li>
+              </ul>
+            </li>
+            <li><a href="https://life2better.com/life2better-life-film/">LifeFilm</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" title="Hogar Fibaro">Hogar Fibaro<span class="dropdown-arrow">˅</span></a>
+          <ul class="submenu">
+            <li><a href="https://life2better.com/consumo-electrico/">Ahorro Energético</a></li>
+            <li><a href="https://life2better.com/electrodomesticos-inteligentes/">Home Appliances</a></li>
+            <li><a href="https://life2better.com/portones-y-cortinas/">Portones y Cortinas</a></li>
+            <li>
+              <a href="#">Integraciones</a>
+              <ul class="submenu">
+                <li><a href="https://life2better.com/smartthings/">Smartthings</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
         <li><a href="#contacto" title="Contacto">Contacto</a></li>
       </ul>
+
     </div>
   </div>
   <script>
@@ -118,12 +195,12 @@
       <div class="gif-container">
         <!-- Video para pantallas grandes -->
         <video class="video-desktop" autoplay loop muted playsinline>
-          <source src="Assets/Header/Tecnologia y calidad/pc.mp4" type="video/mp4">
+          <source src="Assets/Header/Tecnologia y calidad/Gif_590x928.mp4" type="video/mp4">
         </video>
 
         <!-- Video para pantallas pequeñas -->
         <video class="video-mobile" autoplay loop muted playsinline>
-          <source src="Assets/Header/Tecnologia y calidad/1070x928_celu.mp4" type="video/mp4">
+          <source src="Assets/Header/Tecnologia y calidad/Gif.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -277,7 +354,7 @@
                   <div class="carousel_item">
                     <img src="./Assets/2daUnidad/Slider/Costo Asequible.png" alt="" class="carousel_img">
                   </div>
-                 
+
                 </div>
 
                 <div class="carousel_indicator">
@@ -287,7 +364,7 @@
                   <button class="carousel_dot"></button>
                   <button class="carousel_dot"></button>
                   <button class="carousel_dot"></button>
-                  
+
                 </div>
 
                 <div class="carousel_control">
@@ -327,16 +404,16 @@
       <div class="main-item main-cta hover-image">
       </div>
       <script>
-       document.querySelector('.hover-image').addEventListener('click', function() {
-    const contactSection = document.getElementById('contact');
-    const offset = 130; // Ajusta la cantidad de píxeles que deseas
-    const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+        document.querySelector('.hover-image').addEventListener('click', function () {
+          const contactSection = document.getElementById('contact');
+          const offset = 130; // Ajusta la cantidad de píxeles que deseas
+          const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    window.scrollTo({
-        top: contactPosition,
-        behavior: 'smooth'
-    });
-});
+          window.scrollTo({
+            top: contactPosition,
+            behavior: 'smooth'
+          });
+        });
       </script>
     </section>
   </main>
@@ -410,23 +487,23 @@
           <button class="cta-button">CONTACTANOS</button>
           <script>
             // Selecciona todos los elementos con las clases .hover-image y .cta-button
-document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
-    element.addEventListener('click', function() {
-        scrollToContact();
-    });
-});
+            document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
+              element.addEventListener('click', function () {
+                scrollToContact();
+              });
+            });
 
-// Función para desplazarse al formulario con un offset de 50px
-function scrollToContact() {
-    const contactSection = document.getElementById('contact');
-    const offset = 130;
-    const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+            // Función para desplazarse al formulario con un offset de 50px
+            function scrollToContact() {
+              const contactSection = document.getElementById('contact');
+              const offset = 130;
+              const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    window.scrollTo({
-        top: contactPosition,
-        behavior: 'smooth'
-    });
-}
+              window.scrollTo({
+                top: contactPosition,
+                behavior: 'smooth'
+              });
+            }
 
           </script>
         </div>
