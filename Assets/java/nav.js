@@ -2,7 +2,7 @@ const toggleMenu = () => {
     const navigation = document.querySelector(".navigation");
     const burgerMenu = document.querySelector(".menu-icon");
     const src = burgerMenu.getAttribute("src");
-  
+
     // Cambia el ícono del menú hamburguesa
     const isBurger = src.includes("burger-menu.svg");
     const iconName = isBurger ? src.replace("burger-menu.svg", "close.svg") : src.replace("close.svg", "burger-menu.svg");
@@ -18,19 +18,20 @@ const toggleMenu = () => {
         navigation.classList.remove("navigation--mobile--fadeout");
         navigation.classList.toggle("navigation--mobile");
     }
-};
+  };
 
-// Evento para abrir/cerrar submenús al hacer clic en elementos con submenú
-document.querySelectorAll('.navigation > li:has(ul) > a').forEach(link => {
+  // Evento para abrir/cerrar submenús al hacer clic en elementos con submenú
+  document.querySelectorAll('.navigation > li:has(ul) > a').forEach(link => {
     link.addEventListener('click', (event) => {
-        // Evitar redirección
-        event.preventDefault();
+        const hasTargetBlank = event.target.getAttribute("target") === "_blank";
         
-        // Evitar cerrar el menú si el enlace tiene un submenú
-        event.stopPropagation();
-        
-        const parentLi = event.target.parentElement;
+        // Solo evita la redirección si no es target="_blank"
+        if (!hasTargetBlank) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
 
+        const parentLi = event.target.parentElement;
         // Alternar el submenú
         parentLi.classList.toggle('open-submenu');
 
@@ -40,10 +41,10 @@ document.querySelectorAll('.navigation > li:has(ul) > a').forEach(link => {
             arrow.classList.toggle('rotate-arrow');
         }
     });
-});
+  });
 
-// Evento para cerrar el menú al hacer clic en un enlace sin submenú
-document.querySelectorAll('.navigation a').forEach(link => {
+  // Evento para cerrar el menú al hacer clic en un enlace sin submenú
+  document.querySelectorAll('.navigation a').forEach(link => {
     link.addEventListener('click', (event) => {
         const parentLi = event.target.closest('li');
         const hasSubmenu = parentLi && parentLi.querySelector('.submenu');
@@ -53,4 +54,4 @@ document.querySelectorAll('.navigation a').forEach(link => {
             toggleMenu();
         }
     });
-});
+  });
