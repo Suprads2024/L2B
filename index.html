@@ -72,7 +72,7 @@
       <img class="menu-icon" src="Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
       <ul class="navigation">
-        <li><a href="#inicio" title="Inicio">Home</a></li>
+        <li><a href="#top" title="Inicio">Home</a></li>
         <li>
           <a href="#" title="Hogar Fibaro">Sistemas <span class="dropdown-arrow">˅</span></a>
           <ul class="submenu">
@@ -151,7 +151,7 @@
           </ul>
         </li>
 
-        <li><a href="#contacto" title="Contacto">Contacto</a></li>
+        <li><a href="#contact" title="Contacto">Contacto</a></li>
       </ul>
 
     </div>
@@ -502,22 +502,23 @@
           </p>
           <button class="cta-button">CONTACTANOS</button>
           <script>
-            // Selecciona todos los elementos con las clases .hover-image y .cta-button
-            document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
-              element.addEventListener('click', function () {
-                scrollToContact();
+            // Selecciona todos los elementos que deben llevar al formulario, incluyendo el enlace de contacto
+            document.querySelectorAll('.hover-image, .cta-button, a[href="#contact"]').forEach(element => {
+              element.addEventListener('click', function (event) {
+                event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+                scrollToContact(); // Llama a la función para desplazarse al formulario
               });
             });
 
-            // Función para desplazarse al formulario con un offset de 50px
+            // Función para desplazarse al formulario con un offset de 130px
             function scrollToContact() {
               const contactSection = document.getElementById('contact');
-              const offset = 130;
+              const offset = 130; // Ajuste de desplazamiento para una mejor vista
               const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
               window.scrollTo({
                 top: contactPosition,
-                behavior: 'smooth'
+                behavior: 'smooth' // Desplazamiento suave
               });
             }
 

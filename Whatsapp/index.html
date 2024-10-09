@@ -69,7 +69,7 @@
       <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
       <ul class="navigation">
-        <li><a href="#inicio" title="Inicio">Home</a></li>
+        <li><a href="../" title="Inicio" class="same-tab">Home</a></li>
         <li>
           <a href="#" title="Hogar Fibaro">Sistemas <span class="dropdown-arrow">˅</span></a>
           <ul class="submenu">
@@ -148,7 +148,7 @@
           </ul>
         </li>
 
-        <li><a href="#contacto" title="Contacto">Contacto</a></li>
+        <li><a href="" class="contact-button">Contacto</a></li>
       </ul>
 
     </div>
@@ -162,6 +162,17 @@
         });
       });
     });
+  </script>
+
+  <script>
+    // Selecciona todos los enlaces que deben abrirse en la misma pestaña
+document.querySelectorAll('.same-tab').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Previene cualquier comportamiento de otro script
+    const url = this.getAttribute('href'); // Obtiene la URL del enlace
+    window.open(url, '_self'); // Abre el enlace en la misma pestaña
+  });
+});
   </script>
   <script>
     // Seleccionamos todos los enlaces dentro de los elementos <li>
