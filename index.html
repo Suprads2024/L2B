@@ -165,7 +165,23 @@
       });
     });
   </script>
+<script>
+// Seleccionamos todos los enlaces dentro de los elementos <li>
+  document.querySelectorAll('.navigation a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Obtenemos el valor del atributo href del enlace
+    const url = this.getAttribute('href');
+    
+    // Si el enlace tiene un href válido que no sea solo "#", prevenimos el comportamiento por defecto
+    if (url && url !== '#' && !url.startsWith('#')) {
+      event.preventDefault(); // Evitamos la navegación por defecto
+      window.open(url, '_blank'); // Abrimos el enlace en una nueva pestaña o ventana
+    }
+  });
+});
 
+
+</script>
 
   <style>
     #logo-img {
