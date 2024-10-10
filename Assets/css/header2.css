@@ -63,9 +63,7 @@ header {
     justify-content: center;
     padding: 120px 80px;
     
-    background-image: url('../Header/Contacto/fondo.png');
-    background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
-    background-position: center;
+   
     color: white;
     height: 65vh; /* Asegura que el formulario también ocupe su 100% del espacio */
     border-radius: 20px; /* Bordes redondeados para el formulario */

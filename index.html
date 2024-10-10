@@ -222,16 +222,23 @@
       <div class="gif-container">
         <!-- Video para pantallas grandes -->
         <video class="video-desktop" autoplay loop muted playsinline>
-          <source src="Assets/Header/Tecnologia y calidad/Gif_590x928.mp4" type="video/mp4">
+            <source src="Assets/Header/Tecnologia y calidad/Gif_590x928.mp4" type="video/mp4">
+            <source src="Assets/Header/Tecnologia y calidad/Gif_590x928.webm" type="video/webm">
+            <source src="Assets/Header/Tecnologia y calidad/Gif_590x928.mov" type="video/quicktime">
         </video>
-
+    
         <!-- Video para pantallas pequeñas -->
         <video class="video-mobile" autoplay loop muted playsinline>
-          <source src="Assets/Header/Tecnologia y calidad/Gif.mp4" type="video/mp4">
+            <source src="Assets/Header/Tecnologia y calidad/Gif.mp4" type="video/mp4">
+            <source src="Assets/Header/Tecnologia y calidad/Gif.webm" type="video/webm">
+            <source src="Assets/Header/Tecnologia y calidad/Gif.mov" type="video/quicktime">
         </video>
-      </div>
+    </div>
+    
 
-      <div class="formulario" id="contact">
+      <div class="formulario" id="contact" style=" background-image: url('./Assets/Header/Contacto/fondo.png');
+      background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
+      background-position: center;">
         <h2>OBTENÉ LA <strong>SOLUCIÓN</strong> QUE MEJOR SE ADAPTE A TUS NECESIDADES.</h2>
 
         <div class="form-options">
@@ -564,9 +571,7 @@
   <script src="Assets/java/scrolnav.js"></script>
   <script src="Assets/java/carrousel.js"></script>
   <script src="Assets/java/preloader.js"></script>
-</body>
-
-</html>
+  <script src="Assets/java/cargadevideo.js"></script>
 </body>
 
 </html>
