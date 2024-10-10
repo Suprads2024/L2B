@@ -287,9 +287,29 @@ html {
   cursor: pointer;
   font-size: 1.45rem;
 }
+/* Estilo para la flecha desplegable */
+.dropdown-arrow {
+  width: 12px; /* Ajusta el tamaño según prefieras */
+  height: auto;
+  margin-left: 5px; /* Espacio entre el texto y la flecha */
+  vertical-align: middle; /* Alinea la imagen con el texto */
+  transition: transform 0.3s ease;
+}
+.dropdown-link:hover {
+  color: #0673ac; /* Color del texto al hacer hover */
+}
 
+/* Cambiar color del SVG al pasar el mouse */
+.dropdown-link:hover .dropdown-arrow {
+  filter: invert(24%) sepia(94%) saturate(2625%) hue-rotate(185deg) brightness(95%) contrast(102%);
+}
+/* Girar la flecha cuando el submenú esté desplegado */
+.navigation li.open-submenu > a .dropdown-arrow {
+  transform: rotate(180deg); /* Rotación hacia arriba */
+}
 /* Para que la flecha esté en línea y sea más pequeña */
 .navigation a .dropdown-arrow {
+  
   font-size: 0.8rem;
   /* Tamaño más pequeño */
   margin-left: 5px;
@@ -374,7 +394,7 @@ html {
 
 /* Estilo para los submenús */
 .submenu {
-  border-radius: 0px 15px;
+  border-radius: 15px 15px;
   font-size: 1rem;
   display: none;
   position: absolute;
@@ -439,7 +459,7 @@ html {
 
 /* Fondo oscuro para submenús activos */
 .submenu li:hover {
-  border-radius: 0px 15px;
+  border-radius: 15px 15px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
