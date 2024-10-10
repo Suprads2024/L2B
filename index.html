@@ -2,10 +2,17 @@
 <html lang="es">
 
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PX4ST8T');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life 2 Better</title>
-  <link rel="shortcut icon" href="./Assets/Icono_pestaña.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Assets/Icono_pestaña.png" type="image/x-icon">
   <link rel="stylesheet" href="Assets/css/style.css">
   <link rel="stylesheet" href="Assets/css/header2.css">
   <link rel="stylesheet" href="Assets/css/main.css">
@@ -36,8 +43,6 @@
     content="Mejorá tu calidad de vida con las soluciones tecnológicas que solo L2b te puede brindar.">
   <meta name="twitter:image" content="https://life2better.com/">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="https://life2better.com/Assets/2daUnidad/L2B_Logo menu.png" type="image/x-icon">
 
   <!-- iOS Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,7 +56,10 @@
 </head>
 
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id="preloader">
     <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
     <div class="bar" style="background-color: #ff5716;"></div> <!-- Naranja -->
@@ -198,16 +206,16 @@
   <header>
     <div class="botones">
       <div class="boton">
-        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
+        <img src="Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
       </div>
       <div class="boton">
-        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Ambientacion.png" alt="Ambientación">
+        <img src="Assets/Header/Decoracion_Boton/L2B_ boton Ambientacion.png" alt="Ambientación">
       </div>
       <div class="boton">
-        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Seguridad.png" alt="Seguridad">
+        <img src="Assets/Header/Decoracion_Boton/L2B_ boton Seguridad.png" alt="Seguridad">
       </div>
       <div class="boton">
-        <img src="./Assets/Header/Decoracion_Boton/L2B_ boton Confort.png" alt="Confort">
+        <img src="Assets/Header/Decoracion_Boton/L2B_ boton Confort.png" alt="Confort">
       </div>
     </div>
     <div class="contenido-header">
@@ -256,22 +264,19 @@
     // Obtener los botones de opciones y el campo oculto
     const optionButtons = document.querySelectorAll('.form-options .option');
     const selectedOptionInput = document.getElementById('selectedOption');
-
+  
     // Escuchar los clics en los botones de opciones
     optionButtons.forEach(button => {
       button.addEventListener('click', function () {
-        // Remover la clase 'active' de todos los botones
-        optionButtons.forEach(btn => btn.classList.remove('active'));
-        // Añadir la clase 'active' al botón clicado
-        this.classList.add('active');
-        // Actualizar el valor del campo oculto con el valor de data-value del botón clicado
-        selectedOptionInput.value = this.getAttribute('data-value');
+        optionButtons.forEach(btn => btn.classList.remove('active')); // Remover la clase 'active' de todos los botones
+        this.classList.add('active'); // Añadir la clase 'active' al botón clicado
+        selectedOptionInput.value = this.getAttribute('data-value'); // Actualizar el campo oculto
       });
     });
-
+  
     document.getElementById('customForm').addEventListener('submit', function (event) {
       event.preventDefault();
-
+  
       // Datos del formulario
       const formData = {
         fields: [
@@ -292,7 +297,7 @@
             value: document.getElementById('message').value
           },
           {
-            name: 'tipo_de_cliente',  // Asegúrate de que coincida con el campo en HubSpot
+            name: 'tipo_de_cliente',
             value: document.getElementById('selectedOption').value
           }
         ],
@@ -301,7 +306,7 @@
           pageName: document.title
         }
       };
-
+  
       // Hacer la solicitud POST a HubSpot
       fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/94d49cb8-486d-4cec-b839-268ed0103eef', {
         method: 'POST',
@@ -310,22 +315,26 @@
         },
         body: JSON.stringify(formData)
       })
-        .then(response => {
-          if (response.ok) {
-            document.querySelector('.success-message').style.display = 'block';
-            document.querySelector('.error-message').style.display = 'none';
-            document.getElementById('customForm').reset();
-          } else {
-            throw new Error('Error en la respuesta');
-          }
-        })
-        .catch(error => {
-          document.querySelector('.success-message').style.display = 'none';
-          document.querySelector('.error-message').style.display = 'block';
-          console.error('Error:', error);
-        });
+      .then(response => {
+        if (response.ok) {
+          document.querySelector('.success-message').style.display = 'block';
+          document.querySelector('.error-message').style.display = 'none';
+          document.getElementById('customForm').reset();
+  
+          // Redirigir a la página de "Gracias"
+          window.location.href = 'https://life2better.com/gracias/'; // Reemplaza con la URL de tu página de "Gracias"
+        } else {
+          throw new Error('Error en la respuesta');
+        }
+      })
+      .catch(error => {
+        document.querySelector('.success-message').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'block';
+        console.error('Error:', error);
+      });
     });
   </script>
+  
 
 
 

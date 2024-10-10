@@ -63,7 +63,7 @@ header {
     justify-content: center;
     padding: 120px 80px;
     
-    background-image: url('../Header/Contacto/L2B_\ Obtene\ la\ solucion\ que\ mejor\ se\ adapte.png');
+    background-image: url('../Header/Contacto/fondo.png');
     background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
     background-position: center;
     color: white;
