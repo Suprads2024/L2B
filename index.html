@@ -3,21 +3,26 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PX4ST8T');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PX4ST8T');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life 2 Better</title>
   <link rel="shortcut icon" href="Assets/Icono_pestaña.png" type="image/x-icon">
-  <link rel="stylesheet" href="Assets/css/style.css">
-  <link rel="stylesheet" href="Assets/css/header2.css">
-  <link rel="stylesheet" href="Assets/css/main.css">
-  <link rel="stylesheet" href="Assets/css/tercerunidad.css">
-  <link rel="stylesheet" href="Assets/css/footer.css">
+  <link rel="stylesheet" href="Assets/css/style.css?v=1.1">
+  <link rel="stylesheet" href="Assets/css/header2.css?v=1.1">
+  <link rel="stylesheet" href="Assets/css/main.css?v=1.1">
+  <link rel="stylesheet" href="Assets/css/tercerunidad.css?v=1.1">
+  <link rel="stylesheet" href="Assets/css/footer.css?v=1.1">
+  <link rel="stylesheet" href="Assets/css/video.css">
+
 
   <!-- HTML Meta Tags -->
   <meta name="description"
@@ -56,9 +61,9 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="preloader">
     <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
@@ -84,7 +89,7 @@
         <li>
           <a href="#" title="Hogar Fibaro" class="dropdown-link">Sistemas
             <img src="Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
-        </a>
+          </a>
 
           <ul class="submenu">
             <li><a href="https://life2better.com/fibaro-argentina/">Sistema Fibaro</a></li>
@@ -95,7 +100,8 @@
         </li>
 
         <li>
-          <a href="#" title="Productos" class="dropdown-link">Productos<img src="Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar"></a>
+          <a href="#" title="Productos" class="dropdown-link">Productos<img src="Assets/Flecha_Abajo.svg"
+              class="dropdown-arrow" alt="Desplegar"></a>
           <ul class="submenu">
             <li>
               <a href="#">Controladores</a>
@@ -148,9 +154,12 @@
         </li>
 
         <li>
-          <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img src="Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar"></a>
+          <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img src="Assets/Flecha_Abajo.svg"
+              class="dropdown-arrow" alt="Desplegar"></a>
           <ul class="submenu">
+            <li><a href="https://life2better.com/blog/">Blog</a></li>
             <li><a href="https://life2better.com/consumo-electrico/">Ahorro Energético</a></li>
+
             <li><a href="https://life2better.com/electrodomesticos-inteligentes/">Home Appliances</a></li>
             <li><a href="https://life2better.com/portones-y-cortinas/">Portones y Cortinas</a></li>
             <li>
@@ -219,23 +228,133 @@
       </div>
     </div>
     <div class="contenido-header">
+
       <div class="gif-container">
         <!-- Video para pantallas grandes -->
-        <video class="video-desktop" autoplay loop muted playsinline>
-            <source src="Assets/Gif_590x928.mp4" type="video/mp4">
-            <source src="Assets/Gif_590x928.webm" type="video/webm">
-            <source src="Assets/Gif_590x928.mov" type="video/quicktime">
-        </video>
-    
-        <!-- Video para pantallas pequeñas -->
-        <video class="video-mobile" autoplay loop muted playsinline>
-            <source src="Assets/Gif.mp4" type="video/mp4">
-            <source src="Assets/Gif.webm" type="video/webm">
-            <source src="Assets/Gif.mov" type="video/quicktime">
-        </video>
-    </div>
-    
+        <img class="image-mobile" src="Assets/Header/Tecnologia y calidad/portada.jpg"
+          alt="Tecnología y calidad de vida">
 
+        <!-- Overlay oscuro -->
+        <div class="text-overlay-darken"></div>
+
+        <!-- Contenedor del texto -->
+        <div class="text-overlay-experience">
+          <h1 class="top-text">TECNOLOGÍA Y CALIDAD DE VIDA</h1>
+          <p class="bottom-text">TRANSFORMÁ TUS ESPACIOS CON TECNOLOGÍA INTELIGENTE</p>
+        </div>
+
+
+      </div>
+
+      <style>
+        .gif-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          /* Asegura que el contenedor tenga una altura fija para expandir la imagen */
+        }
+
+        .image-mobile-container {
+          display: none;
+          position: relative;
+        }
+
+        .image-mobile {
+          width: 100%;
+          height: 100%;
+          /* Expande la imagen para que rellene todo el contenedor */
+          object-fit: cover;
+          /* Asegura que la imagen cubra todo el espacio del contenedor */
+        }
+
+        /* Overlay oscuro */
+        .text-overlay-darken {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          /* Oscurecer la imagen */
+          z-index: 1;
+        }
+
+        /* Texto superpuesto */
+        .text-overlay-experience {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          /* Espaciado entre los elementos de arriba y abajo */
+          align-items: center;
+          text-align: center;
+          color: white;
+          z-index: 2;
+          padding: 50px;
+          /* Espacio adicional alrededor del texto */
+        }
+
+        /* Ajustes de tamaño y separación del texto */
+        .text-overlay-experience h1 {
+          font-family: 'Eurostile-Bold', Arial, sans-serif;
+          font-size: 2rem;
+          /* Tamaño ajustado para h1 */
+          margin: 0;
+          padding-bottom: 20px;
+          /* Espacio debajo del h1 */
+          line-height: 1.2;
+          /* Espaciado entre líneas */
+        }
+
+        .text-overlay-experience p {
+
+          font-family: 'Eurostile-Medium', Arial, sans-serif;
+          font-size: 1.2rem;
+          /* Tamaño ajustado para p */
+          margin: 0;
+          padding-top: 20px;
+          /* Espacio arriba del párrafo */
+          line-height: 1.5;
+
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+          .video-desktop {
+            display: none;
+            /* Ocultar el video en pantallas pequeñas */
+          }
+
+          .image-mobile-container {
+            display: block;
+            /* Mostrar la imagen en pantallas pequeñas */
+          }
+
+          .text-overlay-experience h1 {
+            font-size: 20px;
+            /* Reducir el tamaño del texto en móviles */
+            padding-bottom: 15px;
+          }
+
+          /* Texto superpuesto */
+          .text-overlay-experience {
+
+            padding: 20px;
+            /* Espacio adicional alrededor del texto */
+          }
+
+          .text-overlay-experience p {
+
+            font-size: 14px;
+            /* Reducir el tamaño del párrafo en móviles */
+            padding-top: 15px;
+          }
+        }
+      </style>
       <div class="formulario" id="contact" style=" background-image: url('./Assets/Header/Contacto/fondo.png');
       background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
       background-position: center;">
@@ -271,7 +390,7 @@
     // Obtener los botones de opciones y el campo oculto
     const optionButtons = document.querySelectorAll('.form-options .option');
     const selectedOptionInput = document.getElementById('selectedOption');
-  
+
     // Escuchar los clics en los botones de opciones
     optionButtons.forEach(button => {
       button.addEventListener('click', function () {
@@ -280,10 +399,10 @@
         selectedOptionInput.value = this.getAttribute('data-value'); // Actualizar el campo oculto
       });
     });
-  
+
     document.getElementById('customForm').addEventListener('submit', function (event) {
       event.preventDefault();
-  
+
       // Datos del formulario
       const formData = {
         fields: [
@@ -313,7 +432,7 @@
           pageName: document.title
         }
       };
-  
+
       // Hacer la solicitud POST a HubSpot
       fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/94d49cb8-486d-4cec-b839-268ed0103eef', {
         method: 'POST',
@@ -322,37 +441,40 @@
         },
         body: JSON.stringify(formData)
       })
-      .then(response => {
-        if (response.ok) {
-          document.querySelector('.success-message').style.display = 'block';
-          document.querySelector('.error-message').style.display = 'none';
-          document.getElementById('customForm').reset();
-  
-          // Redirigir a la página de "Gracias"
-          window.location.href = 'https://life2better.com/gracias/'; // Reemplaza con la URL de tu página de "Gracias"
-        } else {
-          throw new Error('Error en la respuesta');
-        }
-      })
-      .catch(error => {
-        document.querySelector('.success-message').style.display = 'none';
-        document.querySelector('.error-message').style.display = 'block';
-        console.error('Error:', error);
-      });
+        .then(response => {
+          if (response.ok) {
+            document.querySelector('.success-message').style.display = 'block';
+            document.querySelector('.error-message').style.display = 'none';
+            document.getElementById('customForm').reset();
+
+            // Redirigir a la página de "Gracias"
+            window.location.href = 'https://life2better.com/gracias/'; // Reemplaza con la URL de tu página de "Gracias"
+          } else {
+            throw new Error('Error en la respuesta');
+          }
+        })
+        .catch(error => {
+          document.querySelector('.success-message').style.display = 'none';
+          document.querySelector('.error-message').style.display = 'block';
+          console.error('Error:', error);
+        });
     });
   </script>
-  
+
 
 
 
   <main class="main-content">
     <!-- Primera fila -->
     <section class="main-row">
-      <!-- Imagen grande que ocupa el 70% -->
       <div class="main-item main-image">
-        <img src="./Assets/2daUnidad/El futuro al alcance de todos/L2B_ El futuro al alcance de todos v3.png"
-          alt="El futuro al alcance de todos">
-
+        <div class="image-text-overlay">
+          <img src="./Assets/2daUnidad/futuro/futuro.png" alt="El futuro al alcance de todos">
+          <div class="text-overlay">
+            <h1>EL FUTURO<br>AL ALCANCE DE TODOS.</h1>
+            <p>La domótica dejó de ser algo complejo y lejano.</p>
+          </div>
+        </div>
       </div>
       <!-- Carrusel que ocupa el 30% -->
       <div class="main-item main-carousel">
@@ -431,8 +553,20 @@
 
     <section class="main-row">
       <!-- Imagen a la izquierda (60%) -->
+      <!-- Segunda Sección: Vivi la Experiencia L2B -->
       <div class="main-item main-info">
-        <img src="Assets/2daUnidad/VivilaexperienciaL2B/viviexperiencia.png" alt="VIVÍ LA EXPERIENCIA L2B">
+        <div class="experience-image-overlay"> <!-- Cambia a un nombre único -->
+          <img src="Assets/2daUnidad/VivilaexperienciaL2B/Vivi la experiencia_Sintexto.png"
+            alt="VIVÍ LA EXPERIENCIA L2B">
+          <div class="experience-content">
+            <div class="experience-text">
+              <h1>VIVÍ LA EXPERIENCIA L2B</h1>
+              <p>Reducción significativa del consumo energético, aumento del confort, incremento de la seguridad,
+                incluso estando lejos de casa. Nuestras soluciones son aptas para todo tipo de
+                espacios, siendo tecnología inalámbrica de calidad garantizada y rápida aplicación.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Div que simula la imagen con hover (40%) -->
@@ -455,22 +589,48 @@
 
 
   <section class="image-grid-section">
-    <!-- Columna izquierda -->
-    <div class="left-column">
-      <div class="image-box">
-        <img src="./Assets/3raunidad/Sos arquitecto/L2B_ Sos arquitecto.png" alt="¿SOS ARQUITECTO O DESARROLLADOR?">
-      </div>
-      <div class="image-box">
-        <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD">
-      </div>
+  <!-- Columna izquierda -->
+<div class="left-column">
+  <!-- Primera imagen: intacta -->
+  <div class="image-box">
+    <img src="./Assets/3raunidad/Sosarquitecto/Sos arquitecto con texto.png" class="arquitecto" alt="¿SOS ARQUITECTO O DESARROLLADOR?">
+    <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
+    <div class="text-overlay-community">
+      <h1>¿SOS ARQUITECTO O DESARROLLADOR?</h1>
+      
+      <p>Suma nuestras soluciones, <br> agrega valor a tus proyectos.</p>
     </div>
+  </div>
+
+  <!-- Segunda imagen: cambia en pantallas pequeñas con texto superpuesto -->
+  <div class="image-box image-text-overlay-community">
+    <!-- Imagen original sin texto para pantallas grandes -->
+    <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD" class="image-community">
+    
+    <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
+    <div class="text-overlay-community">
+      <h1>SUMATE</h1>
+      <h2>A LA COMUNIDAD</h2>
+      <p>Convertite en Representante Life2Better.</p>
+    </div>
+  </div>
+</div>
+
+
 
     <!-- Columna central -->
     <div class="center-column">
       <div class="image-box">
-        <img src="./Assets/3raunidad/Somos especialistas/especialiste2.png" alt="Cocina">
+        <img src="./Assets/3raunidad/Somos especialistas/Somos especialistas v2.png" alt="Cocina" class="image-specialist">
+        <div class="text-overlay-specialist">
+          <p>Somos especialistas en tecnología para casas y edificios inteligentes. Ofrecemos soluciones que se adaptan
+            a cada proyecto, beneficiando al inversor y al consumidor final. Conocé más sobre nuestra propuesta. Agregá
+            valor a tus proyectos.</p>
+        </div>
       </div>
     </div>
+    
+
 
     <!-- Columna derecha -->
     <div class="right-column">
@@ -483,7 +643,7 @@
 
       </script>
       <div class="image-box ">
-        <img src="./Assets/3raunidad/Academia Fibaro/L2B_ Academia Fibaro_ Sin texto.png" alt="Academia FIBARO">
+        <img src="./Assets/3raunidad/AcademiaFibaro/L2B_ Academia Fibaro_ Sin texto.png" class="academia" alt="Academia FIBARO">
         <div class="overlay-text2">
           <h3>Academia FIBARO</h3>
           <p>Convertite en instalador de <strong>Casas inteligentes</strong> con las certificaciones que tenemos para
@@ -548,17 +708,34 @@
         <div class="footer-articles">
           <h4>Artículos Recientes</h4>
           <ul>
-            <li>Jardín inteligente.</li>
-            <li>Quick App FIBARO Home center 3 y Yubii Home.</li>
-            <li>Asociaciones ZWave.</li>
-            <li>Escenas de bloque Home Center 3 / Yubii Home.</li>
-            <li>3 Casos concretos por los que deberías instalar domótica en tu hogar.</li>
+            <li><a href="https://life2better.com/jardin-inteligente-fibaro/" target="_blank">Jardín inteligente.</a>
+            </li>
+            <li><a href="https://life2better.com/quick-app-fibaro-home-center-3-y-yubii-home/" target="_blank">Quick App
+                FIBARO Home center 3 y Yubii Home.</a></li>
+            <li><a href="https://life2better.com/asociacion-z-wave/" target="_blank">Asociaciones Z-Wave.</a></li>
+            <li><a href="https://life2better.com/escenas-de-bloque-home-center-3-yubii-home/" target="_blank">Escenas de
+                bloque Home Center 3 / Yubii Home.</a></li>
+            <li><a href="https://life2better.com/3-casos-concretos-por-los-que-deberias-instalar-domotica-en-tu-hogar/"
+                target="_blank">3 Casos concretos por los que deberías instalar domótica en tu hogar.</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+  <style>
+    .footer-articles ul li a {
+      text-decoration: none;
+      /* Quita el subrayado */
+      color: inherit;
+      /* Mantiene el color del texto predeterminado */
+      transition: color 0.3s ease;
+    }
 
+    .footer-articles ul li a:hover {
+      color: #fec200;
+      /* Cambia a amarillo en hover */
+    }
+  </style>
   <!-- Popup 1 -->
   <!-- Popup 1 -->
 
@@ -572,7 +749,7 @@
   <script src="Assets/java/carrousel.js"></script>
   <script src="Assets/java/preloader.js"></script>
   <script src="Assets/java/cargadevideo.js"></script>
-  
+
 </body>
 
 </html>

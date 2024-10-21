@@ -1,169 +1,394 @@
 /* Nueva sección de imágenes */
 .image-grid-section {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr; /* 3 columnas: izquierda, centro, derecha */
-    gap: 20px; /* Espacio entre columnas */
-   
-    margin: 0 auto;
-    padding: 0px 20px;
-    align-items: stretch; /* Todas las columnas tendrán la misma altura */
-  }
-  
-  .image-box {
-    position: relative;
-    width: 100%;
-    height: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
-    overflow: hidden;
-    
-    border-radius: 10px;
-  }
-  
-  .image-box img {
-    border-radius: 20px;
-    width: 100%;
-     /* Mantiene el tamaño para llenar el contenedor */
-    object-fit: cover; /* Mantiene la proporción de las imágenes sin deformarlas */
-    border-radius: 10px;
-  }
-  /* Imagen inicial */
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  /* 3 columnas: izquierda, centro, derecha */
+  gap: 20px;
+  /* Espacio entre columnas */
+
+  margin: 0 auto;
+  padding: 0px 20px;
+  align-items: stretch;
+  /* Todas las columnas tendrán la misma altura */
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* Asegura que las imágenes ocupen todo el contenedor */
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.image-box img {
+  border-radius: 20px;
+  width: 100%;
+  /* Mantiene el tamaño para llenar el contenedor */
+  object-fit: cover;
+  /* Mantiene la proporción de las imágenes sin deformarlas */
+  border-radius: 10px;
+}
+
+/* Imagen inicial */
+.conoce-mas {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  /* Controlar el tamaño máximo del ancho para que no se expanda demasiado */
+  height: auto;
+  max-height: 100%;
+  /* Controlar el tamaño máximo del alto */
+
+  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Apagado.png');
+  background-size: contain;
+  /* Asegura que la imagen completa se vea sin que se corte */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Asegura que no se repita la imagen */
+  border-radius: 10px;
+  transition: background-image 0.3s ease-in-out;
+}
+
+/* Cambiar la imagen al hacer hover */
+.conoce-mas:hover {
+  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Encendido.png');
+}
+
+@media (max-width: 768px) {
   .conoce-mas {
-    cursor: pointer;
-    position: relative;
+
+    background-size: cover;
+    /* Ajustar para que ocupe todo el contenedor */
     width: 100%;
-    max-width: 100%; /* Controlar el tamaño máximo del ancho para que no se expanda demasiado */
-    height: auto;
-    max-height: 100%; /* Controlar el tamaño máximo del alto */
-    
-    background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Apagado.png');
-    background-size: contain; /* Asegura que la imagen completa se vea sin que se corte */
-    background-position: center;
-    background-repeat: no-repeat; /* Asegura que no se repita la imagen */
-    border-radius: 10px;
-    transition: background-image 0.3s ease-in-out;
+    /* Asegura que ocupe todo el ancho */
+    height: 250px;
+    /* Ajusta la altura para pantallas pequeñas */
+    max-width: 100%;
+    /* Para evitar restricciones de ancho */
+    max-height: none;
+    /* Permite que ocupe la altura completa */
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 2px solid #ff5716; /* Borde fino color naranja */
+    box-sizing: border-box; /* Asegura que el borde no cambie el tamaño del elemento */
   }
+
   
-  /* Cambiar la imagen al hacer hover */
-  .conoce-mas:hover {
-    background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Encendido.png');
-  }
-  @media (max-width: 768px) {
-    .conoce-mas {
-      background-size: cover; /* Ajustar para que ocupe todo el contenedor */
-      width: 100%; /* Asegura que ocupe todo el ancho */
-      height: 250px; /* Ajusta la altura para pantallas pequeñas */
-      max-width: 100%; /* Para evitar restricciones de ancho */
-      max-height: none; /* Permite que ocupe la altura completa */
-      margin-bottom: 20px;
-      border-radius: 20px;
-    }
-  }
-  /* Columna izquierda y derecha: dos imágenes de igual tamaño (50% cada una) */
-  .left-column, .right-column {
-    display: grid;
-    grid-template-rows: 1fr 1fr; /* Dos filas iguales */
-    gap: 20px; /* Espacio entre las imágenes */
-    height: 100%; /* Asegura que la altura de estas columnas sea igual a la central */
-  }
+}
+
+/* Columna izquierda y derecha: dos imágenes de igual tamaño (50% cada una) */
+.left-column,
+.right-column {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  /* Dos filas iguales */
+  gap: 20px;
+  /* Espacio entre las imágenes */
+  height: 100%;
+  /* Asegura que la altura de estas columnas sea igual a la central */
+}
+
+/* Columna central: una imagen que ocupa todo el alto de la columna */
+.center-column {
+  height: 100%;
+  /* Asegura que la imagen central ocupe el mismo alto que las demás */
+  display: flex;
+  align-items: stretch;
+  /* Asegura que la imagen llene toda la columna */
+}
+
+.center-column .image-box {
+  height: 100%;
+  /* Asegura que la imagen ocupe todo el alto */
+}
+
+.image-box {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden; /* Para que el contenido no desborde */
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Superposición de texto */
+.text-overlay-specialist {
+
+  position: absolute;
+  bottom: 25%; /* Ubica el texto a un 25% desde la parte inferior */
+  left: 10px;
+  right: 20px;
+  color: rgb(0, 0, 0);
   
-  /* Columna central: una imagen que ocupa todo el alto de la columna */
-  .center-column {
-    height: 100%; /* Asegura que la imagen central ocupe el mismo alto que las demás */
-    display: flex;
-    align-items: stretch; /* Asegura que la imagen llene toda la columna */
-  }
+  padding: 30px;
+  border-radius: 10px;
   
-  .center-column .image-box {
-    height: 100%; /* Asegura que la imagen ocupe todo el alto */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  transform: translateY(13%); /* Ajuste para centrar mejor el texto */
+}
+.text-overlay-specialist p{
+  font-family: 'Eurostile-Bold';
+}
+
+/* SUMATE A LA COMUNIDAD NUEVO.*/
+/* Mantener la estructura de las dos imágenes */
+.left-column .image-box {
+
+  position: relative; /* Para posicionar el texto correctamente */
+  width: 100%;
+}
+
+/* Imagen ajustada al contenedor */
+.image-community {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-radius: 10px;
+}
+
+/* Ocultar texto superpuesto por defecto */
+.text-overlay-community {
+  display: none; /* El texto no se muestra en pantallas grandes */
+}
+
+/* Media query para pantallas pequeñas (menos de 568px) */
+@media (max-width: 568px) {
+  /* Cambiar la imagen para dispositivos móviles */
+  .image-community {
+      content: url('../3raunidad/Sumate a la comunidad/Responsive_\ \ No\ te\ quedes\ con\ la\ duda.png'); /* Nueva imagen para móviles */
   }
-  .overlay-text2 {
-    position: absolute;
-    top: 0; /* Asegura que se superponga desde la parte superior */
-    left: 0;
-    right: 0;
-    bottom: 0; /* Cubre toda la imagen */
-    color: white;
-    
-    padding: 20px 40px;
-    display: flex; /* Usamos flexbox para centrar */
-    flex-direction: column; /* Los elementos hijos (texto, botón) se organizan en columna */
-    
-    border-radius: 10px;
-  }
-  
-  .overlay-text2 h3 {
+
+  /* Mostrar el texto solo en pantallas pequeñas */
+/* Mostrar el texto solo en pantallas pequeñas */
+.text-overlay-community {
+  display: flex;
+  position: absolute;
+  bottom: 20px; /* Mover el texto hacia abajo */
+  left: 10px; /* Mover el texto hacia la izquierda */
+  width: auto; /* Ajustar el ancho */
+  height: auto; /* Ajustar la altura */
+  flex-direction: column;
+  align-items: flex-start; /* Alinear texto a la izquierda */
+  text-align: left; /* Alinear texto a la izquierda */
+  color: black;
+  padding: 10px;
+  font-family: 'Eurostile-Bold', Arial, sans-serif;
+}
+
+  .text-overlay-community h1 {
     font-family: 'Eurostile-Heavy';
-    font-size: 24px;
-    margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 800;
   }
-  .overlay-text2 strong{
-    font-family: 'Eurostile-Heavy';
+
+  .text-overlay-community h2 {
+    font-family: 'Eurostile-Medium';
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: 600;
   }
-  .overlay-text2 p {
+
+  .text-overlay-community p {
     font-family: 'Eurostile-Regular';
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+      font-size: 1rem;
+      margin: 10px 0 0;
+      font-weight: 400;
   }
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 1600px) {
+  .text-overlay-specialist {
+    font-size: 1.2rem;
+    transform: translateY(25%); /* Ajuste para centrar mejor el texto */
+  }
+  .text-overlay-specialist p{
+    font-family: 'Eurostile-Bold';
+  }
+}
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+
+   /* Cambia la imagen cuando la pantalla sea menor o igual a 586px */
+   .image-specialist {
+    content: url('../3raunidad/Somos especialistas/Responsive_\ Somos\ especialistas.png');
+    /* Reemplaza la imagen por la versión para móviles */
+}
+
+/* Ajuste de tamaño del texto en móviles si es necesario */
+.text-overlay-specialist {
+    bottom: 10px; /* Ajusta la posición del texto */
+    left: 15px;
+    padding: 8px;
+    font-size: 16px;
+    padding: 10px;
+    bottom: 10%; /* Ubica el texto a un 25% desde la parte inferior */
+}
+
+.text-overlay-specialist p {
+    font-size:16px; /* Tamaño del texto más pequeño en móviles */
+}
+ .arquitecto {
+  content: url('../3raunidad/Sosarquitecto/Responsive_\ Sos\ arquitecto.png');
+  /* Reemplaza la imagen por la versión para móviles */
+ }
+  /* Cambia la imagen cuando la pantalla sea menor o igual a 586px */
+  .academia {
+    content: url('../3raunidad/AcademiaFibaro/Responsive_\ Academia\ Fibaro.png');
+    /* Reemplaza la imagen por la versión para móviles */
+}
+}
+
+
+.overlay-text2 {
+  position: absolute;
+  top: 10%;
+  /* Asegura que se superponga desde la parte superior */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Cubre toda la imagen */
+  color: white;
+
+  padding: 20px 40px;
+  display: flex;
+  /* Usamos flexbox para centrar */
+  flex-direction: column;
+  /* Los elementos hijos (texto, botón) se organizan en columna */
+
+  border-radius: 10px;
   
-  /* Botón de Más Información */
-  .cta-button {
-    font-family: 'Eurostile-Heavy';
-    padding: 10px 20px;
-    background-color: transparent;
-    color: #fff; /* Texto blanco */
-    border: 2px solid #fff; /* Borde blanco */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+/* Ajustes específicos para pantallas grandes */
+@media (max-width: 1600px) {
+  .overlay-text2 {
+    
+    top: 0%; /* Ajusta el texto para pantallas grandes */
+    left: 0%; 
+    right: 0%;
+    font-size: 1.2rem;
   }
-  
-  .cta-button:hover {
-    background-color: #fff; /* Fondo blanco en hover */
-    color: 
-    #0285cb
-    ; /* Texto azul en hover (el azul del diseño) */
-  }
-  
-  /* Ajuste para que el botón se mantenga con el texto azul y fondo blanco en hover */
-  .image-box .cta-button:hover {
-    background-color: #fff; /* Fondo blanco */
-    color: #0285cb; /* Azul del diseño para mantener el contraste */
-  }
-  /* Responsivo para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    .image-grid-section {
+}
+@media (max-width: 431px) {
+  .overlay-text2 {
+    padding: 20px;
+    top: 13%;/* Ajusta el texto para pantallas grandes */
    
-      grid-template-columns: 1fr; /* Apilar todas las imágenes en una columna */
-      grid-template-rows: repeat(5, auto); /* 5 filas para cada imagen */
-      margin-bottom: 50px;
-      
-    }
-  
-    .left-column  {
-      gap: 20px;
-      grid-template-rows: 1fr; /* Elimina las filas en las columnas izquierda y derecha */
-    }
-
-    .right-column {
-      gap: 00px;
-      grid-template-rows: 1fr; /* Elimina las filas en las columnas izquierda y derecha */
-    }
-    
-    .center-column .image-box {
-      height: 100%; /* Asegura que la imagen ocupe todo el alto */
-    }
-    
-    .center-column {
-      margin-bottom: 0px; /* Añadir espacio inferior entre imágenes */
-    }
-
-    .overlay-text2{
-      padding: 20px;
-    }
-    .overlay-text2 p {
-      
-      font-size: 14px;
-     
-    }
   }
-  
+}
+@media (max-width: 415px) {
+  .overlay-text2 {
+    padding: 20px;
+    top: 10%;/* Ajusta el texto para pantallas grandes */
+    
+  }
+}
+@media (max-width: 391px) {
+  .overlay-text2 {
+    padding: 20px;
+    
+   
+  }
+}
+
+
+.overlay-text2 h3 {
+  font-family: 'Eurostile-Heavy';
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.overlay-text2 strong {
+  font-family: 'Eurostile-Heavy';
+}
+
+.overlay-text2 p {
+  font-family: 'Eurostile-Regular';
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Botón de Más Información */
+.cta-button {
+  font-family: 'Eurostile-Heavy';
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  /* Texto blanco */
+  border: 2px solid #fff;
+  /* Borde blanco */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  /* Transición suave */
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  /* Fondo blanco en hover */
+  color:
+    #0285cb;
+  /* Texto azul en hover (el azul del diseño) */
+}
+
+/* Ajuste para que el botón se mantenga con el texto azul y fondo blanco en hover */
+.image-box .cta-button:hover {
+  background-color: #fff;
+  /* Fondo blanco */
+  color: #0285cb;
+  /* Azul del diseño para mantener el contraste */
+}
+
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-grid-section {
+
+    grid-template-columns: 1fr;
+    /* Apilar todas las imágenes en una columna */
+    grid-template-rows: repeat(5, auto);
+    /* 5 filas para cada imagen */
+    margin-bottom: 50px;
+
+  }
+
+  .left-column {
+    gap: 20px;
+    grid-template-rows: 1fr;
+    /* Elimina las filas en las columnas izquierda y derecha */
+  }
+
+  .right-column {
+    gap: 00px;
+    grid-template-rows: 1fr;
+    /* Elimina las filas en las columnas izquierda y derecha */
+  }
+
+  .center-column .image-box {
+    height: 100%;
+    /* Asegura que la imagen ocupe todo el alto */
+  }
+
+  .center-column {
+    margin-bottom: 0px;
+    /* Añadir espacio inferior entre imágenes */
+  }
+
+
+
+  .overlay-text2 p {
+    
+    font-size: 16px;
+
+  }
+}

@@ -2,21 +2,24 @@
 .main-content {
     display: grid;
     padding-bottom: 0px;
-    gap: 20px; /* Espacio entre las filas */
- 
-    padding: 20px 20px 20px 20px;
-    
-   
-    
+    gap: 20px;
+    /* Espacio entre las filas */
+
+    padding: 25px 20px 20px 20px;
+
+
+
     margin: 0 auto;
 }
 
 /* Estilos para las filas */
 .main-row {
     display: grid;
-    grid-template-columns: 70% 30%; /* Primera fila: imagen 70%, carrusel 30% */
-    gap: 20px; /* Espacio entre columnas */
-  padding-right: 20px;
+    grid-template-columns: 70.5% 29.5%;
+    /* Primera fila: imagen 70%, carrusel 30% */
+    gap: 20px;
+    /* Espacio entre columnas */
+    padding-right: 20px;
 
 }
 
@@ -29,9 +32,73 @@
 
 .main-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 20px;
     object-fit: cover;
+}
+
+/* Contenedor del texto */
+.text-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #ffffff;
+    text-align: left;
+    max-width: 60%;
+}
+
+/* Estilos para el título */
+.text-overlay h1 {
+    font-size: 2.5rem;
+    font-family: 'Eurostile-Bold', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Estilos para el párrafo */
+.text-overlay p {
+    font-size: 1.2rem;
+    font-family: 'Eurostile-Regular', sans-serif;
+    margin-top: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  
+
+    .text-overlay p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        bottom: 15%;
+        left: 5%;
+        max-width: 90%;
+    }
+
+    .text-overlay h1 {
+        font-size: 28px;
+    }
+
+    .text-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo general para la imagen */
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query para pantallas de 586px o menos */
+@media (max-width: 586px) {
+    .responsive-image {
+        content: url('../2daUnidad/futuro/futurocelu.png');
+    }
 }
 
 .overlay-text {
@@ -39,7 +106,7 @@
     bottom: 20px;
     left: 20px;
     color: white;
-   
+
     padding: 10px;
     border-radius: 5px;
 }
@@ -74,81 +141,81 @@
 }
 
 /* carousel */
-.carousel{
+.carousel {
     position: relative;
- }
- 
- .carousel_inner{
+}
+
+.carousel_inner {
     width: 100%;
     overflow: hidden;
- }
- 
- .carousel_inner::after{
+}
+
+.carousel_inner::after {
     content: "";
     display: block;
     clear: both;
- }
- 
- .carousel_item{
+}
+
+.carousel_item {
     position: relative;
     float: left;
     display: none;
     width: 100%;
     margin-right: -100%;
- }
- 
- /* slide effect */
- .carousel_item__active,
- .carousel_item__pos_prev,
- .carousel_item__pos_next{
+}
+
+/* slide effect */
+.carousel_item__active,
+.carousel_item__pos_prev,
+.carousel_item__pos_next {
     display: block;
- }
- 
- .carousel_item__pos_prev{
+}
+
+.carousel_item__pos_prev {
     left: -100%;
- }
- 
- .carousel_item__pos_next{
+}
+
+.carousel_item__pos_next {
     left: 100%;
- }
- 
- .carousel_item__prev{
+}
+
+.carousel_item__prev {
     transform: translateX(100%);
     transition: transform .5s ease-in-out;
- }
- 
- .carousel_item__next{
+}
+
+.carousel_item__next {
     transform: translateX(-100%);
     transition: transform .5s ease-in-out;
- }
- 
- /* fade effect */
- .carousel__fade .carousel_item__pos_prev,
- .carousel__fade .carousel_item__pos_next{
+}
+
+/* fade effect */
+.carousel__fade .carousel_item__pos_prev,
+.carousel__fade .carousel_item__pos_next {
     left: 0;
     opacity: 0;
- }
- 
- .carousel__fade .carousel_item__prev,
- .carousel__fade .carousel_item__next{
+}
+
+.carousel__fade .carousel_item__prev,
+.carousel__fade .carousel_item__next {
     transform: none;
     opacity: 1;
     transition: opacity .5s ease-in-out;
- }
- 
- .carousel__fade .carousel_item__active.carousel_item__prev,
- .carousel__fade .carousel_item__active.carousel_item__next{
+}
+
+.carousel__fade .carousel_item__active.carousel_item__prev,
+.carousel__fade .carousel_item__active.carousel_item__next {
     opacity: 0;
- }
- 
- /* carousel */
- .carousel_img{
+}
+
+/* carousel */
+.carousel_img {
     display: block;
     width: 100%;
 
- }
- 
- .carousel_caption{
+}
+
+.carousel_caption {
     position: absolute;
     top: 0;
     left: 0;
@@ -156,42 +223,45 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    
 
-    
+
+
     text-align: center;
     color: #fff;
     z-index: 1;
- }
- 
- .carousel_title{
+}
+
+.carousel_title {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
- }
- 
- .carousel_description{
+}
+
+.carousel_description {
     margin-top: .75rem;
     line-height: 150%;
- }
- 
- .carousel_indicator{
+}
+
+.carousel_indicator {
     position: absolute;
     bottom: 1rem;
-    left: 20%;
+    left: 23%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     gap: .5rem;
     z-index: 1;
- }
- 
+}
+
 /* Estilos generales para todos los botones de navegación del carrusel */
 .carousel_dot {
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.7); /* Blanco con opacidad */
-    border: none; /* Elimina el borde */
-    border-radius: 50%; /* Mantiene los botones inactivos circulares */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Blanco con opacidad */
+    border: none;
+    /* Elimina el borde */
+    border-radius: 50%;
+    /* Mantiene los botones inactivos circulares */
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -200,14 +270,17 @@
 .carousel_dot__active {
     width: 28px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 1); /* Blanco puro */
-    border: none; /* Elimina el borde */
-    border-radius: 10px; /* Alargado para el botón activo */
+    background-color: rgba(255, 255, 255, 1);
+    /* Blanco puro */
+    border: none;
+    /* Elimina el borde */
+    border-radius: 10px;
+    /* Alargado para el botón activo */
     cursor: default;
     pointer-events: none;
 }
- 
- .carousel_control{
+
+.carousel_control {
     position: absolute;
     top: 0;
     left: 0;
@@ -216,9 +289,9 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
- }
- 
- .carousel_button{
+}
+
+.carousel_button {
     display: block;
     padding-inline: 1rem;
     font-family: "Raleway", sans-serif;
@@ -229,16 +302,122 @@
     cursor: pointer;
     transition: color .25s;
     z-index: 1;
- }
- 
- .carousel_button:hover{
-    color: rgba(135, 206, 250, .75);
- }
-/* Segunda fila (imagen 60% y texto 40%) */
-.main-row:nth-child(2) {
-    grid-template-columns: 60% 40%; /* Segunda fila: imagen 60%, texto 40% */
 }
 
+.carousel_button:hover {
+    color: rgba(135, 206, 250, .75);
+}
+
+
+
+
+
+
+
+/* Segunda fila (imagen 60% y texto 40%) */
+.main-row:nth-child(2) {
+    grid-template-columns: 60% 40%;
+    /* Segunda fila: imagen 60%, texto 40% */
+}
+/* Contenedor principal de imagen y texto */
+.image-text-overlay {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.image-text-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+/* Media query específica para la segunda imagen en pantallas pequeñas */
+@media (max-width: 560px) {
+   
+    .experience-image-overlay img { /* Usa la nueva clase única */
+        content: url('../2daUnidad/VivilaexperienciaL2B/Responsive_\ Vivi\ la\ exp\ mas\ grande.png');
+        border-radius: 15px;
+    }
+}
+/* Contenedor del contenido (icono y texto) */
+.experience-content {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+
+/* Contenedor del texto */
+.experience-text {
+    max-width: 90%;
+}
+
+/* Estilo para el encabezado */
+.experience-text h1 {
+    font-family: 'Eurostile-heavy';
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+    color: #24261b;
+}
+
+/* Estilo para el párrafo */
+.experience-text p {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #24261b;
+    margin: 0;
+}
+@media (max-width: 586px) {
+    /* Contenedor del contenido (icono y texto) */
+    .experience-content {
+      
+        position: absolute;
+        top: 69%;
+        left: 0%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: flex-start; /* Mantiene el texto alineado a la izquierda */
+        justify-content: flex-start;
+        flex-direction: row; /* Mantiene la disposición horizontal */
+       padding: 10px 15px 10px 5px;
+        color: #000;
+    }
+
+    /* Ajuste del texto para que se mantenga en una sola línea y a la izquierda */
+    .experience-text {
+        max-width: 100%;
+        margin-left: 15px; /* Espacio entre el icono y el texto */
+    }
+
+    /* Encabezado en móviles */
+    .experience-text h1 {
+        font-size: 1.8rem; /* Tamaño más pequeño para móviles */
+        margin: 0 0 5px; /* Ajusta el margen inferior */
+    }
+
+    /* Párrafo en móviles */
+    .experience-text p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        hyphens: auto;
+        word-break: break-word;
+        line-height: 1.3; /* Ajusta el interlineado */
+        margin: 0;
+    }
+}
+@media (max-width: 376px) {
+  
+    /* Párrafo en móviles */
+    .experience-text p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        line-height: 1.3; /* Ajusta el interlineado */
+        margin: 0;
+    }
+}
 /* Imagen en la segunda fila (60%) */
 .main-info {
     position: relative;
@@ -248,7 +427,7 @@
 
 .main-info img {
     width: 100%;
- 
+
     object-fit: cover;
 }
 
@@ -285,6 +464,7 @@
 .main-cta p {
     font-size: 16px;
 }
+
 /* Indicadores (puntos) del carrusel */
 .carousel-indicators {
     position: absolute;
@@ -300,10 +480,12 @@
     width: 100%;
 
     background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Apagado.png');
-    background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
+    background-size: cover;
+    /* Asegura que la imagen de fondo ocupe todo el contenedor */
     background-position: center;
     border-radius: 10px;
-    transition: background-image 0.3s ease; /* Transición suave para el cambio */
+    transition: background-image 0.3s ease;
+    /* Transición suave para el cambio */
     cursor: pointer;
 }
 
@@ -316,27 +498,32 @@
 
     .main-row {
         padding-right: 0px;
-        padding-left: 0px; /* Aseguramos que no haya padding lateral que afecte el ancho */
+        padding-left: 0px;
+        /* Aseguramos que no haya padding lateral que afecte el ancho */
     }
 
     /* Apilamos el contenido en la primera fila */
     .main-row:nth-child(1) {
-        grid-template-columns: 1fr; /* Ocupa todo el ancho en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        /* Ocupa todo el ancho en pantallas pequeñas */
         gap: 20px;
     }
 
     /* Segunda fila: Apilar el carrusel y el texto uno debajo del otro */
     .main-row:nth-child(2) {
         display: grid;
-        grid-template-columns: 1fr; /* Carrusel y "NO TE QUEDES CON LA DUDA" uno debajo del otro */
-        gap: 20px; /* Espacio entre ambos */
-        
+        grid-template-columns: 1fr;
+        /* Carrusel y "NO TE QUEDES CON LA DUDA" uno debajo del otro */
+        gap: 20px;
+        /* Espacio entre ambos */
+
     }
 
     /* La imagen "VIVÍ LA EXPERIENCIA L2B" ocupa el 100% en pantallas pequeñas */
     .main-row:nth-child(3) {
-        grid-template-columns: 1fr; /* Apilar también esta sección, ocupando todo el ancho */
-        
+        grid-template-columns: 1fr;
+        /* Apilar también esta sección, ocupando todo el ancho */
+
     }
 
     /* Ajustes de tamaño del carrusel y el texto */
@@ -344,28 +531,34 @@
         width: 100%;
         height: auto;
     }
-.main-image img{border-radius: 20px;
 
-}
+    .main-image img {
+        border-radius: 20px;
+
+    }
+
     .main-cta {
         width: 100%;
         padding: 0px;
-       
+
         margin: 0 auto;
         margin-top: -25px;
         margin-bottom: -25px;
         height: auto;
-        min-height: 250px; /* Establecemos una altura mínima para evitar que se vea comprimida */
-        background-size: contain; /* Aseguramos que toda la imagen de fondo se vea sin recortar */
+        min-height: 250px;
+        /* Establecemos una altura mínima para evitar que se vea comprimida */
+        background-size: contain;
+        /* Aseguramos que toda la imagen de fondo se vea sin recortar */
         background-position: center;
         background-repeat: no-repeat;
-       
+
     }
 
 
 }
-@media (max-width:570px){
-    .carousel_indicator{
+
+@media (max-width:570px) {
+    .carousel_indicator {
         position: absolute;
         bottom: 0.5rem;
         left: 27%;
@@ -374,26 +567,33 @@
         flex-direction: row;
         gap: .5rem;
         z-index: 1;
-     }}
+    }
 
-@media (max-width:431px){
+
+    
+}
+
+@media (max-width:431px) {
     .main-cta {
-       
+
         margin-top: -20px;
         margin-bottom: -15px;
-}}
+    }
+}
 
 
-@media (max-width:391px){
+@media (max-width:391px) {
     .main-cta {
-       
+
         margin-top: -25px;
         margin-bottom: -20px;
-}}
+    }
+}
 
-@media (max-width:376px){
+@media (max-width:376px) {
     .main-cta {
-       
+
         margin-top: -30px;
         margin-bottom: -30px;
-}}
+    }
+}
