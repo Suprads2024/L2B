@@ -87,6 +87,14 @@
         font-size: 0.9rem;
     }
 }
+@media (max-width:391px) {
+    
+    .text-overlay h1 {
+        font-size: 24px;
+    }
+
+  
+}
 
 /* Estilo general para la imagen */
 .responsive-image {

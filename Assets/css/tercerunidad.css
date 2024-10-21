@@ -299,6 +299,13 @@
    
   }
 }
+@media (max-width: 376px) {
+  .overlay-text2 {
+    padding: 20px;
+    top: 3%;
+   
+  }
+}
 
 
 .overlay-text2 h3 {
