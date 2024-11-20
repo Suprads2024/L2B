@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Assets/css/main.css?v=1.1">
   <link rel="stylesheet" href="Assets/css/tercerunidad.css?v=1.1">
   <link rel="stylesheet" href="Assets/css/footer.css?v=1.1">
-  <link rel="stylesheet" href="Assets/css/video.css">
+  <link rel="stylesheet" href="Assets/css/carouselheader.css">
 
 
   <!-- HTML Meta Tags -->
@@ -94,7 +94,7 @@
           <ul class="submenu">
             <li><a href="https://life2better.com/fibaro-argentina/">Sistema Fibaro</a></li>
             <li><a href="https://life2better.com/z-wave/">Protocolo Z-Wave</a></li>
-            <li><a href="https://life2better.com/partners/">Programa Representantes</a></li>
+            <li><a href="https://domoticafibaro.com.ar/">Programa Representantes</a></li>
             <li><a href="https://life2better.com/arquitectos/">Fibaro para Arquitectos</a></li>
           </ul>
         </li>
@@ -149,7 +149,7 @@
                 <li><a href="https://life2better.com/fibaro-home-center-app/">Aplicación Fibaro Home Center</a></li>
               </ul>
             </li>
-            <li><a href="https://life2better.com/life2better-life-film/">LifeFilm</a></li>
+          
           </ul>
         </li>
 
@@ -229,22 +229,39 @@
     </div>
     <div class="contenido-header">
 
-      <div class="gif-container">
-        <!-- Video para pantallas grandes -->
-        <img class="image-mobile" src="Assets/Header/Tecnologia y calidad/portada.jpg"
-          alt="Tecnología y calidad de vida">
-
-        <!-- Overlay oscuro -->
-        <div class="text-overlay-darken"></div>
-
-        <!-- Contenedor del texto -->
-        <div class="text-overlay-experience">
-          <h1 class="top-text">TECNOLOGÍA Y CALIDAD DE VIDA</h1>
-          <p class="bottom-text">TRANSFORMÁ TUS ESPACIOS CON TECNOLOGÍA INTELIGENTE</p>
+      <div class="carousel-container2">
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-item-active">
+            <img src="Assets/Header/Tecnologia y calidad/928x590 Pc_ 2.jpg" alt="Imagen 1">
+            <div class="carousel-text">
+              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
+              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/Header/Tecnologia y calidad/620x480_ cel 1.jpg" alt="Imagen 2">
+            <div class="carousel-text">
+              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
+              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/Header/Tecnologia y calidad/928x590 Pc_ 3.jpg" alt="Imagen 3">
+            <div class="carousel-text">
+              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
+              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
+            </div>
+          </div>
         </div>
 
-
+        <!-- Controles -->
+        <div class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="carousel-control next" onclick="moveSlide(1)">&#10095;</div>
       </div>
+
+
+
+
 
       <style>
         .gif-container {
@@ -493,10 +510,7 @@
                   <div class="carousel_item">
                     <img src="./Assets/2daUnidad/Slider/Soluciones modulares.png" alt="" class="carousel_img">
                     <div class="carousel_caption">
-                      <!-- <h1 class="carousel_title">Change It As You See Fit</h1>
-                      <p class="carousel_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                        cupiditate
-                        corporis laudantium quae velit quam.</p>-->
+
                     </div>
                   </div>
                   <div class="carousel_item">
@@ -589,39 +603,42 @@
 
 
   <section class="image-grid-section">
-  <!-- Columna izquierda -->
-<div class="left-column">
-  <!-- Primera imagen: intacta -->
-  <div class="image-box">
-    <img src="./Assets/3raunidad/Sosarquitecto/Sos arquitecto con texto.png" class="arquitecto" alt="¿SOS ARQUITECTO O DESARROLLADOR?">
-    <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
-    <div class="text-overlay-community">
-      <h1>¿SOS ARQUITECTO O DESARROLLADOR?</h1>
-      
-      <p>Suma nuestras soluciones, <br> agrega valor a tus proyectos.</p>
-    </div>
-  </div>
+    <!-- Columna izquierda -->
+    <div class="left-column">
+      <!-- Primera imagen: intacta -->
+      <div class="image-box">
+        <img src="./Assets/3raunidad/Sosarquitecto/Sos arquitecto con texto.png" class="arquitecto"
+          alt="¿SOS ARQUITECTO O DESARROLLADOR?">
+        <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
+        <div class="text-overlay-community">
+          <h1>¿SOS ARQUITECTO O DESARROLLADOR?</h1>
 
-  <!-- Segunda imagen: cambia en pantallas pequeñas con texto superpuesto -->
-  <div class="image-box image-text-overlay-community">
-    <!-- Imagen original sin texto para pantallas grandes -->
-    <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD" class="image-community">
-    
-    <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
-    <div class="text-overlay-community">
-      <h1>SUMATE</h1>
-      <h2>A LA COMUNIDAD</h2>
-      <p>Convertite en Representante Life2Better.</p>
+          <p>Suma nuestras soluciones, <br> agrega valor a tus proyectos.</p>
+        </div>
+      </div>
+
+      <a href="https://domoticafibaro.com.ar/" class="image-link" target="_blank">
+        <div class="image-box image-text-overlay-community">
+          <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD"
+            class="image-community">
+          <div class="text-overlay-community">
+            <h1>SUMATE</h1>
+            <h2>A LA COMUNIDAD</h2>
+            <p>Convertite en Representante Life2Better.</p>
+          </div>
+        </div>
+      </a>
+      
+
     </div>
-  </div>
-</div>
 
 
 
     <!-- Columna central -->
     <div class="center-column">
       <div class="image-box">
-        <img src="./Assets/3raunidad/Somos especialistas/Somos especialistas v2.png" alt="Cocina" class="image-specialist">
+        <img src="./Assets/3raunidad/Somos especialistas/Somos especialistas v2.png" alt="Cocina"
+          class="image-specialist">
         <div class="text-overlay-specialist">
           <p>Somos especialistas en tecnología para casas y edificios inteligentes. Ofrecemos soluciones que se adaptan
             a cada proyecto, beneficiando al inversor y al consumidor final. Conocé más sobre nuestra propuesta. Agregá
@@ -629,7 +646,7 @@
         </div>
       </div>
     </div>
-    
+
 
 
     <!-- Columna derecha -->
@@ -643,7 +660,8 @@
 
       </script>
       <div class="image-box ">
-        <img src="./Assets/3raunidad/AcademiaFibaro/L2B_ Academia Fibaro_ Sin texto.png" class="academia" alt="Academia FIBARO">
+        <img src="./Assets/3raunidad/AcademiaFibaro/L2B_ Academia Fibaro_ Sin texto.png" class="academia"
+          alt="Academia FIBARO">
         <div class="overlay-text2">
           <h3>Academia FIBARO</h3>
           <p>Convertite en instalador de <strong>Casas inteligentes</strong> con las certificaciones que tenemos para
@@ -749,6 +767,7 @@
   <script src="Assets/java/carrousel.js"></script>
   <script src="Assets/java/preloader.js"></script>
   <script src="Assets/java/cargadevideo.js"></script>
+  <script src="Assets/java/carouselheader.js"></script>
 
 </body>
 

@@ -5,15 +5,21 @@
     font-family: Arial, sans-serif;
 }
 
-
+/* Botones de navegación */
+header .botones {
+ 
+  justify-content: space-around;
+  height: 15vh;
+ margin-top: 10px;
+}
 
 header {
     display: grid;
     grid-template-rows: 20% 70%;
     height: 98vh;
     padding: 20px 20px 0px 20px;
-    padding-top: 7%; /* Añadimos espacio superior entre el nav y los botones */
-    gap: 15px; /* Añadimos espacio entre la fila de botones y el contenido (GIF y formulario) */
+    padding-top: 5%; /* Añadimos espacio superior entre el nav y los botones */
+    gap: 10px; /* Añadimos espacio entre la fila de botones y el contenido (GIF y formulario) */
   
 }
 
@@ -31,6 +37,7 @@ header {
 
 .boton img {
     width: 100%;
+    height: 100%;
   
     object-fit: cover;
     border-radius: 15px; /* Bordes redondeados en las imágenes */
@@ -247,7 +254,7 @@ input:valid, textarea:valid {
         flex-direction: column;
         height: auto;
         gap: 20px;
-        padding-top: 15vh;
+        padding-top: 12vh;
     }
 
     .botones {

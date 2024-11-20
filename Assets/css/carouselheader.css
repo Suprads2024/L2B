@@ -1,0 +1,146 @@
+/* Contenedor del carrusel */
+.carousel-container2 {
+    position: relative;
+    width: 100%;
+    height: 65vh; /* Ocupa todo el alto de la ventana para asegurar que no queden espacios grises */
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Estilo interno para alinear las imágenes horizontalmente */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%; /* Asegura que el contenedor interior también tenga el 100% de altura */
+}
+
+/* Cada elemento del carrusel ocupa el 100% del contenedor */
+.carousel-item {
+    flex: 0 0 100%;
+    display: none;
+    height: 100%; /* Asegura que cada ítem del carrusel ocupe el 100% de la altura */
+    text-align: center;
+}
+
+/* La imagen activa se muestra */
+.carousel-item-active {
+    display: block;
+}
+
+/* Ajustes de imagen para que mantengan proporción y cubran todo el contenedor */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene todo el contenedor, aunque se recorte */
+    display: block;
+}
+
+/* Controles de navegación */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    z-index: 10;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilos para el texto en cada imagen */
+.carousel-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos (h1 arriba, h2 abajo) */
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    z-index: 1;
+}
+
+.carousel-text h1 {
+    font-family: 'Eurostile-Bold';
+    font-size: 2.5rem;
+    margin: 0;
+    align-self: center; /* Coloca el título en la parte superior */
+}
+
+.carousel-text h2 {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.5rem;
+    margin: 0;
+    align-self: center; /* Coloca el subtítulo en la parte inferior */
+    margin-bottom: 20px; /* Añade espacio entre el subtítulo y el borde inferior */
+}
+
+/* Fondo oscuro semitransparente solo detrás del texto */
+.carousel-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro para mejorar visibilidad del texto */
+    z-index: -1; /* Envía el fondo oscuro detrás del texto */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .carousel-text h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-text h2 {
+        font-size: 1.2rem;
+    }
+}
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustes para el contenedor */
+    .carousel-container2 {
+        height: 60vh; /* Reducimos la altura del carrusel en móviles */
+    }
+
+    /* Ajustes para el texto */
+    .carousel-text {
+        padding: 10px; /* Reducimos el padding para adaptarlo mejor al móvil */
+    }
+
+    .carousel-text h1 {
+        font-size: 1.5rem; /* Reducimos el tamaño del título */
+        
+        margin-top: 10px;
+    }
+
+    .carousel-text h2 {
+        font-size: 1rem; /* Reducimos el tamaño del subtítulo */
+    
+        margin-bottom: 10px; /* Espacio inferior ajustado */
+    }
+
+    /* Ajustes para las imágenes */
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen siga cubriendo todo sin distorsión */
+    }
+}

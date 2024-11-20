@@ -1,0 +1,479 @@
+/* Estructura principal del grid */
+.seccion-testimonios-contacto {
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    /* Dos filas: 50% superior y 50% inferior */
+    height: 100vh;
+    /* Ocupa toda la pantalla */
+    gap: 10px;
+    /* Separación uniforme entre los bloques */
+    margin-bottom: 200px;
+    padding: 10px 20px 0px 20px;
+}
+
+/* Bloques superiores: Imagen amarilla con texto y testimonios */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas iguales */
+    height: 50vh;
+
+    gap: 10px;
+    /* Separación entre columnas */
+}
+
+/* Bloque Izquierdo: Imagen amarilla con texto */
+.bloque-imagen-texto {
+    position: relative;
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: background-image 0.3s ease-in-out;
+    /* Transición para hover */
+    cursor: pointer;
+}
+
+/* Cambiar la imagen de fondo y agregar sombra al contenedor al hacer hover */
+.bloque-imagen-texto:hover {
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v2.png');
+    /* Imagen negra al hacer hover */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    /* Sombra blanca suave */
+}
+
+/* Cambiar el color del texto al hacer hover */
+.bloque-imagen-texto:hover h3,
+.bloque-imagen-texto:hover p {
+    color: #fff;
+    /* Cambia el texto a blanco */
+}
+
+.bloque-imagen-texto h3 {
+    font-family: 'Eurostile-Heavy';
+    margin-left: 40px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.bloque-imagen-texto p {
+    font-family: 'Eurostile-Medium';
+    margin-left: 40px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #000;
+    max-width: 80%;
+}
+
+/* Bloque Derecho: Testimonios */
+.bloque-testimonios {
+    position: relative;
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Testimonio.png');
+    background-size: cover;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* Alinea las estrellas a la derecha */
+    gap: 15px;
+}
+
+/* Contenedor del texto de los testimonios */
+.contenido-testimonios {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* El texto queda fijo en su posición original */
+    align-items: flex-start;
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Controles del carrusel (flechas) */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.carousel-control:hover {
+    color: #e64a19;
+}
+
+.carousel-control.prev {
+    left: 10px;
+    /* Ajusta la posición dentro de la imagen */
+}
+
+.carousel-control.next {
+    right: 10px;
+    /* Ajusta la posición dentro de la imagen */
+}
+
+/* Estilo de los ítems del carrusel */
+.carousel-testimonios {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item2 {
+    display: none;
+    /* Oculta todos los ítems inicialmente */
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    /* Asegura que el ítem ocupe todo el ancho del contenedor */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    padding-top: 20px;
+    padding-left: 150px;
+    /* Espaciado interno desde el borde izquierdo */
+    padding-right: 20px;
+    /* Espaciado interno desde el borde derecho para consistencia */
+}
+
+
+
+.carousel-item2.active {
+    display: block;
+    /* Muestra el ítem activo */
+    opacity: 1;
+    /* Transición suave */
+    position: relative;
+}
+
+/* Estilo del título */
+.contenido-testimonios h3 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Estilo del párrafo */
+.contenido-testimonios p {
+    font-family: 'Eurostile-Regular';
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #000;
+}
+
+/* Imagen de las estrellas */
+.bloque-testimonios .estrellas {
+    width: 120px;
+    height: auto;
+
+}
+
+/* Bloque Inferior: Formulario */
+.seccion-formulario {
+    border-radius: 15px;
+    position: relative;
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Formulario.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas: texto y formulario */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: 65vh;
+}
+
+.seccion-formulario h3 {
+    margin-left: 30px;
+    font-family: 'Eurostile-Regular';
+    font-size: 2.3rem;
+    color: #000;
+}
+
+.seccion-formulario h3 strong {
+    font-family: 'Eurostile-Heavy';
+    font-size: 2.3rem;
+    color: #000;
+}
+
+.seccion-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.seccion-formulario input,
+.seccion-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Estilo inicial del botón */
+.seccion-formulario button {
+    font-family: 'Eurostile-Heavy';
+    background-color: transparent;
+    /* Botón transparente */
+    color: #ff5722;
+    /* Texto naranja */
+    padding: 10px 20px;
+    border: 1.5px solid #ff5722;
+    /* Borde naranja */
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* Transición suave para cambios de color y fondo */
+}
+
+/* Hover: Botón completamente naranja */
+.seccion-formulario button:hover {
+    background-color: #ff5722;
+    /* Fondo naranja */
+    color: #fff;
+    /* Texto blanco */
+}
+
+@media (max-width:1780px) {
+
+    .bloque-imagen-texto h3 {
+        font-size: 2rem;
+    }
+
+    .bloque-imagen-texto p {
+        font-size: 1rem;
+    }
+
+    .contenido-testimonios h3 {
+        font-size: 2rem;
+    }
+
+    .contenido-testimonios p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-item2 {
+
+        padding-top: 10px;
+        padding-left: 50px;
+        /* Espaciado interno desde el borde izquierdo */
+        /* Espaciado interno desde el borde derecho para consistencia */
+    }
+
+    .contenido-testimonios {
+        margin-top: 30px;
+    }
+
+    .seccion-formulario h3 {
+
+        font-size: 2rem;
+
+    }
+
+    .seccion-formulario h3 strong {
+
+        font-size: 2rem;
+
+    }
+}
+
+@media (max-width: 786px) {
+
+    /* Estructura principal: Sección testimonios y contacto */
+    .seccion-testimonios-contacto {
+        display: flex;
+        flex-direction: column;
+        /* Los bloques se apilan uno debajo del otro */
+        height: auto;
+        /* Ajusta automáticamente el alto */
+        gap: 20px;
+        /* Separación entre las secciones */
+        margin-bottom: 100px;
+        /* Espaciado inferior */
+        padding: 20px 20px;
+        /* Ajuste del padding */
+    }
+
+    /* Bloques superiores: Imagen amarilla con texto y testimonios */
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        /* Apila las columnas una debajo de la otra */
+        gap: 20px;
+        /* Separación entre los bloques */
+        height: auto;
+        /* Altura dinámica para ajustar contenido */
+    }
+
+    /* Bloque Izquierdo: Imagen amarilla con texto */
+    .bloque-imagen-texto {
+        height: auto;
+        /* Ajusta la altura automáticamente */
+        padding: 15px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bloque-imagen-texto h3 {
+        font-size: 1.2rem;
+        /* Tamaño de texto reducido */
+        margin-left: 0;
+    }
+
+    .bloque-imagen-texto p {
+        font-size: 1rem;
+        /* Tamaño de texto reducido */
+        margin-left: 0;
+        max-width: 100%;
+        /* El texto ocupa todo el ancho del contenedor */
+    }
+
+    /* Bloque Derecho: Testimonios */
+    .bloque-testimonios {
+        height: auto;
+        /* Ajusta la altura automáticamente */
+        flex-direction: column;
+        /* Alinea verticalmente los elementos */
+        padding: 15px;
+    }
+
+    .contenido-testimonios {
+        margin-top: 20px;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .contenido-testimonios h3 {
+        font-size: 1.2rem;
+        /* Tamaño reducido para móviles */
+    }
+
+    .contenido-testimonios p {
+        font-size: 0.8rem;
+        /* Tamaño reducido para móviles */
+    }
+
+    .bloque-testimonios .estrellas {
+        width: 100px;
+        /* Tamaño reducido para móviles */
+        margin: 0 auto;
+        /* Centra la imagen de estrellas */
+    }
+
+    /* Carrusel en móviles */
+    .carousel-testimonios {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        margin: 0;
+    }
+
+    .carousel-item2 {
+        padding-left: 10px;
+        /* Menor espaciado lateral */
+        padding-right: 10px;
+    }
+
+    .carousel-control {
+        font-size: 1.5rem;
+        /* Reduce el tamaño de las flechas */
+        top: 90%;
+        /* Ajusta verticalmente las flechas */
+    }
+
+    /* Bloque Inferior: Formulario */
+    .seccion-formulario {
+        grid-template-columns: 1fr;
+        /* Una sola columna */
+        height: auto;
+        /* Ajusta la altura automáticamente */
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .seccion-formulario h3 {
+        font-size: 1.2rem;
+        /* Tamaño de texto reducido */
+        margin-left: 0;
+    }
+
+    .seccion-formulario h3 strong {
+        font-size: 1.2rem;
+        /* Tamaño de texto reducido */
+        margin-left: 0;
+    }
+
+    .seccion-formulario form {
+        padding: 0;
+        gap: 10px;
+        /* Ajuste del espaciado interno */
+    }
+
+    .seccion-formulario input,
+    .seccion-formulario textarea {
+        font-size: 0.9rem;
+        /* Texto más pequeño */
+        padding: 8px;
+    }
+
+    .seccion-formulario button {
+        font-size: 0.9rem;
+        /* Texto del botón más pequeño */
+    }
+
+    /* Controles del carrusel (flechas) */
+    .carousel-control {
+        position: absolute;
+        top: 50%;
+        /* Coloca las flechas en el 50% del contenedor */
+        transform: translateY(-50%);
+        /* Centra verticalmente la flecha en ese 50% */
+        background: transparent;
+        border: none;
+        color: #000000;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
+        transition: color 0.3s;
+    }
+
+    /* Posición específica para las flechas izquierda y derecha */
+    .carousel-control.prev {
+        left: -8px;
+        /* Espaciado desde el borde izquierdo */
+    }
+
+    .carousel-control.next {
+        right: -8px;
+        /* Espaciado desde el borde derecho */
+    }
+}

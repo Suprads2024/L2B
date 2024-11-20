@@ -3,23 +3,26 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PX4ST8T');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PX4ST8T');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Life 2 Better / Gracias</title>
+  <title>Life 2 Better / Akubela</title>
   <link rel="shortcut icon" href="../Assets/Icono_pestaña.png" type="image/x-icon">
-  <link rel="stylesheet" href="../Assets/css/style.css">
-  <link rel="stylesheet" href="../Assets/css/header2.css">
-  <link rel="stylesheet" href="../Assets/css/main.css">
-  <link rel="stylesheet" href="../Assets/css/tercerunidad.css">
-  <link rel="stylesheet" href="../Assets/css/footer.css">
-  <link rel="stylesheet" href="../Assets/css/whatsapp.css">
-  <link rel="stylesheet" href="../Assets/css/gracias.css">
+  <link rel="stylesheet" href="../Assets/css/style.css?v=1.1">
+  <link rel="stylesheet" href="../Assets/css/header2.css?v=1.1">
+  <link rel="stylesheet" href="../Assets/css/main.css?v=1.1">
+  <link rel="stylesheet" href="../Assets/css/tercerunidad.css?v=1.1">
+  <link rel="stylesheet" href="../Assets/css/footer.css?v=1.1">
+  <link rel="stylesheet" href="../Assets/css/carouselheader.css">
+
 
   <!-- HTML Meta Tags -->
   <meta name="description"
@@ -45,8 +48,6 @@
     content="Mejorá tu calidad de vida con las soluciones tecnológicas que sólo L2B te puede brindar.">
   <meta name="twitter:image" content="https://life2better.com/">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="https://life2better.com/Assets/2daUnidad/L2B_Logo menu.png" type="image/x-icon">
 
   <!-- iOS Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,9 +61,9 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="preloader">
     <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
@@ -71,7 +72,11 @@
     <div class="bar" style="background-color: #fec200;"></div> <!-- Amarillo -->
   </div>
 
-
+  <div class="whatsapp-button2">
+    <a href="./Whatsapp/" target="_blank">
+      <img src="../Assets/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
   <div class="menu__wrapper" id="top">
     <div class="menu__bar">
       <a href="../" title="Logo" class="logo">
@@ -80,19 +85,23 @@
       <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
       <ul class="navigation">
-        <li><a href="../" title="Inicio" class="same-tab">Home</a></li>
+        <li><a href="#top" title="Inicio">Home</a></li>
         <li>
-          <a href="#" title="Hogar Fibaro">Sistemas <span class="dropdown-arrow">↓</span></a>
+          <a href="#" title="Hogar Fibaro" class="dropdown-link">Sistemas
+            <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
+          </a>
+
           <ul class="submenu">
             <li><a href="https://life2better.com/fibaro-argentina/">Sistema Fibaro</a></li>
             <li><a href="https://life2better.com/z-wave/">Protocolo Z-Wave</a></li>
-            <li><a href="https://domoticafibaro.com.ar/">Programa Representantes</a></li>
+            <li><a href="https://life2better.com/partners/">Programa Representantes</a></li>
             <li><a href="https://life2better.com/arquitectos/">Fibaro para Arquitectos</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="#" title="Productos">Productos<span class="dropdown-arrow">↓</span> </a>
+          <a href="#" title="Productos" class="dropdown-link">Productos<img src="../Assets/Flecha_Abajo.svg"
+              class="dropdown-arrow" alt="Desplegar"></a>
           <ul class="submenu">
             <li>
               <a href="#">Controladores</a>
@@ -145,9 +154,12 @@
         </li>
 
         <li>
-          <a href="#" title="Hogar Fibaro">Smart Home<span class="dropdown-arrow">↓</span></a>
+          <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img src="../Assets/Flecha_Abajo.svg"
+              class="dropdown-arrow" alt="Desplegar"></a>
           <ul class="submenu">
+            <li><a href="https://life2better.com/blog/">Blog</a></li>
             <li><a href="https://life2better.com/consumo-electrico/">Ahorro Energético</a></li>
+
             <li><a href="https://life2better.com/electrodomesticos-inteligentes/">Home Appliances</a></li>
             <li><a href="https://life2better.com/portones-y-cortinas/">Portones y Cortinas</a></li>
             <li>
@@ -159,7 +171,7 @@
           </ul>
         </li>
 
-        <li><a href="" class="contact-button">Contacto</a></li>
+        <li><a href="#contact" title="Contacto">Contacto</a></li>
       </ul>
 
     </div>
@@ -173,17 +185,6 @@
         });
       });
     });
-  </script>
-
-  <script>
-    // Selecciona todos los enlaces que deben abrirse en la misma pestaña
-document.querySelectorAll('.same-tab').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault(); // Previene cualquier comportamiento de otro script
-    const url = this.getAttribute('href'); // Obtiene la URL del enlace
-    window.open(url, '_self'); // Abre el enlace en la misma pestaña
-  });
-});
   </script>
   <script>
     // Seleccionamos todos los enlaces dentro de los elementos <li>
@@ -210,23 +211,31 @@ document.querySelectorAll('.same-tab').forEach(link => {
   </style>
 
 
-<main class="thank-you-page">
-    <div class="thank-you-container">
-      <h1>¡Gracias por contactarnos!</h1>
-      <p>Ya recibimos tu mensaje
-        un representante te contactará a la brevedad</p>
-        <p>Por cualquier otra consulta, podés escribirnos por mail a <strong>info@life2better.com</strong>  o por Whatsapp al: <strong>+54 911 36304219</strong></p>
-      <button onclick="window.location.href='../'">Volver a Inicio</button>
+
+  <header>
+    <div class="botones">
+      <div class="boton">
+        <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
+      </div>
+      <div class="boton">
+        <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Ambientacion.png" alt="Ambientación">
+      </div>
+      <div class="boton">
+        <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Seguridad.png" alt="Seguridad">
+      </div>
+      <div class="boton">
+        <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Confort.png" alt="Confort">
+      </div>
     </div>
-  </main>
-  
+    
+</header>
 
   <footer class="footer">
     <div class="footer-overlay">
       <div class="footer-container">
         <!-- Columna izquierda: Logo -->
         <div class="footer-logo">
-          <a href="../"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
+          <a href="#top"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
 
         </div>
 
@@ -237,54 +246,65 @@ document.querySelectorAll('.same-tab').forEach(link => {
             +54 11-4849-7241<br>
             <a href="mailto:info@life2better.com">info@life2better.com</a>
           </p>
-          
+          <button class="cta-button">CONTACTANOS</button>
           <script>
-            // Selecciona todos los elementos con las clases .hover-image y .cta-button
-document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
-    element.addEventListener('click', function() {
-        scrollToContact();
-    });
-});
+            // Selecciona todos los elementos que deben llevar al formulario, incluyendo el enlace de contacto
+            document.querySelectorAll('.hover-image, .cta-button, a[href="#contact"]').forEach(element => {
+              element.addEventListener('click', function (event) {
+                event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+                scrollToContact(); // Llama a la función para desplazarse al formulario
+              });
+            });
 
-// Función para desplazarse al formulario con un offset de 50px
-function scrollToContact() {
-    const contactSection = document.getElementById('contact');
-    const offset = 130;
-    const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+            // Función para desplazarse al formulario con un offset de 130px
+            function scrollToContact() {
+              const contactSection = document.getElementById('contact');
+              const offset = 130; // Ajuste de desplazamiento para una mejor vista
+              const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    window.scrollTo({
-        top: contactPosition,
-        behavior: 'smooth'
-    });
-}
+              window.scrollTo({
+                top: contactPosition,
+                behavior: 'smooth' // Desplazamiento suave
+              });
+            }
 
           </script>
         </div>
 
-     <!-- Columna derecha: Artículos recientes -->
-     <div class="footer-articles">
-      <h4>Artículos Recientes</h4>
-      <ul>
-        <li><a href="https://life2better.com/jardin-inteligente-fibaro/" target="_blank">Jardín inteligente.</a></li>
-        <li><a href="https://life2better.com/quick-app-fibaro-home-center-3-y-yubii-home/"target="_blank">Quick App FIBARO Home center 3 y Yubii Home.</a></li>
-        <li><a href="https://life2better.com/asociacion-z-wave/"target="_blank">Asociaciones Z-Wave.</a></li>
-        <li><a href="https://life2better.com/escenas-de-bloque-home-center-3-yubii-home/"target="_blank">Escenas de bloque Home Center 3 / Yubii Home.</a></li>
-        <li><a href="https://life2better.com/3-casos-concretos-por-los-que-deberias-instalar-domotica-en-tu-hogar/"target="_blank">3 Casos concretos por los que deberías instalar domótica en tu hogar.</a></li>
-      </ul>
+        <!-- Columna derecha: Artículos recientes -->
+        <div class="footer-articles">
+          <h4>Artículos Recientes</h4>
+          <ul>
+            <li><a href="https://life2better.com/jardin-inteligente-fibaro/" target="_blank">Jardín inteligente.</a>
+            </li>
+            <li><a href="https://life2better.com/quick-app-fibaro-home-center-3-y-yubii-home/" target="_blank">Quick App
+                FIBARO Home center 3 y Yubii Home.</a></li>
+            <li><a href="https://life2better.com/asociacion-z-wave/" target="_blank">Asociaciones Z-Wave.</a></li>
+            <li><a href="https://life2better.com/escenas-de-bloque-home-center-3-yubii-home/" target="_blank">Escenas de
+                bloque Home Center 3 / Yubii Home.</a></li>
+            <li><a href="https://life2better.com/3-casos-concretos-por-los-que-deberias-instalar-domotica-en-tu-hogar/"
+                target="_blank">3 Casos concretos por los que deberías instalar domótica en tu hogar.</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</footer>
-<style>.footer-articles ul li a {
-text-decoration: none; /* Quita el subrayado */
-color: inherit; /* Mantiene el color del texto predeterminado */
-transition: color 0.3s ease;
-}
+  </footer>
+  <style>
+    .footer-articles ul li a {
+      text-decoration: none;
+      /* Quita el subrayado */
+      color: inherit;
+      /* Mantiene el color del texto predeterminado */
+      transition: color 0.3s ease;
+    }
 
-.footer-articles ul li a:hover {
-color: #fec200; /* Cambia a amarillo en hover */
-}</style>
-
+    .footer-articles ul li a:hover {
+      color: #fec200;
+      /* Cambia a amarillo en hover */
+    }
+  </style>
+  <!-- Popup 1 -->
+  <!-- Popup 1 -->
 
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -295,9 +315,9 @@ color: #fec200; /* Cambia a amarillo en hover */
   <script src="../Assets/java/scrolnav.js"></script>
   <script src="../Assets/java/carrousel.js"></script>
   <script src="../Assets/java/preloader.js"></script>
-</body>
+  <script src="../Assets/java/cargadevideo.js"></script>
+  <script src="../Assets/java/carouselheader.js"></script>
 
-</html>
 </body>
 
 </html>

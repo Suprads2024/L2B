@@ -1,0 +1,410 @@
+/* Estructura principal del header */
+.header2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+  
+}
+
+/* Botones de navegación */
+.header2 .botones {
+ 
+    justify-content: space-around;
+    height: 15vh;
+   margin-top: 10px;
+}
+
+/* Imagen principal con texto superpuesto */
+.header-main-image {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* Incrementa la altura al 50% de la pantalla */
+    overflow: hidden;
+}
+
+.header-main-image img {
+    border-radius: 15px;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-text {
+    position: absolute;
+    right: 1%;
+    bottom: 30%;
+    color: #000000;
+
+    padding: 20px;
+    max-width: 40%;
+}
+
+.main-text h2 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-text p {
+    font-family: 'Eurostile-Medium';
+    font-size: 1rem;
+}
+
+/* Sección de carruseles inferiores */
+.carousel-section {
+    display: flex;
+    gap: 10px;
+    height: 40vh;
+    /* Reduce la altura total de los carruseles */
+    width: 100%;
+}
+
+/* Carrusel izquierdo con texto superpuesto */
+.carousel-izquierdo {
+    width: 70%;
+    position: relative;
+    height: 100%;
+    /* Ajusta la altura al tamaño reducido */
+    overflow: hidden;
+}
+
+
+/* Configuración de cada slide del carrusel */
+.carousel-izquierdo .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    /* Oculta inicialmente */
+}
+
+/* Imagen del carrusel */
+.carousel-izquierdo img {
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Imagen detrás del texto */
+}
+
+/* Estilos generales del texto */
+.carousel-text2 {
+    position: relative;
+    z-index: 2;
+    /* Coloca el texto sobre la imagen */
+
+    padding: 20px;
+    width: 40%;
+    /* El texto ocupa el 40% del ancho de la imagen */
+    color: #333;
+}
+
+/* Texto alineado a la izquierda (primer slide) */
+.carousel-text2.text-left {
+    margin-left: 20px;
+    /* Ajuste de margen izquierdo */
+    text-align: left;
+    align-self: center;
+    /* Alinea el texto a la izquierda */
+}
+
+/* Texto alineado a la derecha (segundo slide) */
+.carousel-text2.text-right {
+    margin-left: auto;
+    /* Empuja el texto a la derecha */
+    margin-right: 20px;
+    /* Ajuste de margen derecho */
+    text-align: left;
+    align-self: center;
+    /* Alinea el texto a la derecha */
+}
+
+/* Estilos de los títulos */
+.carousel-text2 h3 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #333;
+    /* Título en negro */
+}
+
+/* Estilos de los párrafos */
+.carousel-text2 p {
+    font-family: 'Eurostile-Regular';
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Texto en negrita dentro del párrafo */
+.carousel-text2 p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para la transición de las imágenes */
+.carousel-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen activa, completamente visible */
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 1;
+    /* Asegura que la imagen activa esté encima */
+}
+
+
+
+
+/* Carrusel derecho */
+.carousel-derecho {
+    border-radius: 15px;
+    width: 30%;
+    height: 100%;
+    /* Ajusta la altura para alinearse con el carrusel izquierdo */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* Centra las imágenes verticalmente */
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+}
+
+/* Configuración de la imagen dentro de los carruseles */
+.carousel-izquierdo img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    /* Las imágenes ocupan todo el alto disponible */
+    object-fit: cover;
+    /* Cubre el contenedor sin distorsionarse */
+}
+
+
+/* Contenedor del texto superpuesto */
+.carousel_caption {
+    position: absolute;
+    bottom: -200px;
+    /* Posiciona el texto en la parte inferior */
+    left: 50%;
+    /* Centra el texto horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta la posición al centro exacto */
+    width: 70%;
+    /* Reduce el ancho del texto al 70% del contenedor */
+    text-align: left;
+    /* Centra el texto dentro del contenedor */
+    padding: 0;
+    /* Sin padding adicional */
+    box-sizing: border-box;
+}
+
+/* Estilo del título */
+.carousel_caption .carousel_text {
+    font-family: 'Eurostile-Heavy';
+    /* Fuente definida para títulos */
+    font-size: 1.6rem;
+    /* Tamaño del título */
+    font-weight: bold;
+    margin: 5px 0;
+    /* Espaciado inferior reducido */
+    color: #000;
+    /* Color del texto negro */
+    line-height: 1.2;
+    /* Espaciado entre líneas reducido */
+    text-transform: uppercase;
+    /* Transforma el texto a mayúsculas */
+}
+
+@media (max-width:1780px) {
+    .main-text {
+        bottom:5%;
+    }
+
+    .main-text h2 {
+        font-size: 2.0rem;
+    }
+
+    .main-text p {
+        font-size: 1rem;
+    }
+
+    /* Estilos de los títulos */
+    .carousel-text2 h3 {
+        font-size: 2.0rem;
+    }
+
+    /* Estilos de los párrafos */
+    .carousel-text2 p {
+        font-size: 1rem;
+    }
+
+    /* Contenedor del texto superpuesto */
+    .carousel_caption {
+        position: absolute;
+        bottom: -160px;
+        /* Posiciona el texto en la parte inferior */
+        left: 50%;
+        /* Centra el texto horizontalmente */
+        transform: translateX(-40%);
+    }
+
+    /* Estilo del título */
+    .carousel_caption .carousel_text {
+      
+        /* Fuente definida para títulos */
+        font-size: 1.4rem;
+      
+    }
+}
+
+/* MEDIA QUERIES para pantallas pequeñas (celulares y tablets) */
+@media (max-width: 768px) {
+    .header2 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding-top: 12vh;
+    }
+ 
+    .botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos botones por fila, 50% cada uno */
+        gap: 10px;
+    }
+
+    .contenido-header {
+        display: block; /* Bloque para que gif y formulario estén uno debajo del otro */
+    }
+
+    .gif-container {
+        width: 100%; /* El GIF ocupará el ancho completo */
+        height: auto; /* La altura se ajustará automáticamente */
+    }
+
+    .gif-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Mantiene la proporción del GIF */
+    }
+
+    .formulario {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (celulares y tablets) */
+@media (max-width: 768px) {
+    /* Apilar los divs */
+    .carousel-section {
+        display: flex;
+        flex-direction: column; /* Cambia de horizontal a vertical */
+        gap: 20px; /* Espaciado entre los divs */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    /* Carrusel izquierdo ocupa todo el ancho */
+    .carousel-izquierdo {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 40vh; /* Ajusta la altura */
+    }
+
+    /* Carrusel derecho ocupa todo el ancho */
+    .carousel-derecho {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 40vh; /* Ajusta la altura */
+    }
+
+    /* Texto superpuesto del carrusel */
+    .carousel_caption {
+        bottom: -30%; /* Posiciona el texto un poco más alto en la imagen */
+        left: 65%; /* Ajusta desde el borde izquierdo */
+        width: 90%; /* Ocupa más espacio horizontal */
+        text-align: left; /* Alinea el texto hacia la izquierda */
+    }
+
+    /* Título del texto */
+    .carousel_caption .carousel_text {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+        line-height: 1.3; /* Ajusta el espaciado entre líneas */
+    }
+    .carousel-text2 {
+        position: relative;
+        z-index: 2;
+        /* Coloca el texto sobre la imagen */
+    
+        padding: 20px;
+        width: 80%;
+        /* El texto ocupa el 40% del ancho de la imagen */
+        color: #333;
+    }
+    .carousel-text2.text-left{
+        margin-left: 0px;
+    }
+    .carousel-text2.text-right{
+        margin-right: -10px;
+    }
+    /* Texto del carrusel izquierdo y derecho */
+    .carousel-text2 h3 {
+        font-size: 1.2rem; /* Títulos más pequeños */
+        line-height: 1.2;
+    }
+
+    .carousel-text2 p {
+        font-size: 0.9rem; /* Texto más pequeño */
+        line-height: 1.2;
+    }
+
+    /* Imagen principal con texto superpuesto */
+    .header-main-image {
+        height: 30vh; /* Reduce la altura de la imagen principal */
+    }
+
+    .main-text {
+        bottom: 10%; /* Posiciona el texto más cerca del borde inferior */
+        max-width: 70%; /* Texto ocupa más espacio respecto a la imagen */
+    }
+
+    .main-text h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+
+    .main-text p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        line-height: 1.2;
+    }
+
+}
+
+
+@media (max-width:376px){
+    .main-text {
+        bottom: 1%; /* Posiciona el texto más cerca del borde inferior */
+        
+    }
+}

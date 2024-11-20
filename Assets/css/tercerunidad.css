@@ -356,6 +356,20 @@
   /* Azul del diseño para mantener el contraste */
 }
 
+/* Estilo para el enlace general */
+.image-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Fondo oscuro al pasar el mouse para mejor contraste */
+.image-link:hover .image-community {
+  filter: brightness(0.8); /* Oscurece la imagen al pasar el mouse */
+}
 
 /* Responsivo para pantallas más pequeñas */
 @media (max-width: 768px) {
