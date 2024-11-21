@@ -44,14 +44,14 @@
 .bloque-imagen-texto:hover {
     background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v2.png');
     /* Imagen negra al hacer hover */
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px rgba(243, 200, 10, 0.2);
     /* Sombra blanca suave */
 }
 
 /* Cambiar el color del texto al hacer hover */
 .bloque-imagen-texto:hover h3,
 .bloque-imagen-texto:hover p {
-    color: #fff;
+    color: #eab30e;
     /* Cambia el texto a blanco */
 }
 
@@ -102,7 +102,7 @@
 }
 
 /* Controles del carrusel (flechas) */
-.carousel-control {
+.carousel-control2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -111,20 +111,20 @@
     color: #000000;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 10;
+   
     transition: color 0.3s;
 }
 
-.carousel-control:hover {
+.carousel-control2:hover {
     color: #e64a19;
 }
 
-.carousel-control.prev {
+.carousel-control2.prev {
     left: 10px;
     /* Ajusta la posición dentro de la imagen */
 }
 
-.carousel-control.next {
+.carousel-control2.next {
     right: 10px;
     /* Ajusta la posición dentro de la imagen */
 }
@@ -403,7 +403,7 @@
         padding-right: 10px;
     }
 
-    .carousel-control {
+    .carousel-control2 {
         font-size: 1.5rem;
         /* Reduce el tamaño de las flechas */
         top: 90%;
@@ -451,7 +451,7 @@
     }
 
     /* Controles del carrusel (flechas) */
-    .carousel-control {
+    .carousel-control2 {
         position: absolute;
         top: 50%;
         /* Coloca las flechas en el 50% del contenedor */
@@ -462,18 +462,9 @@
         color: #000000;
         font-size: 2rem;
         cursor: pointer;
-        z-index: 10;
+        
         transition: color 0.3s;
     }
 
-    /* Posición específica para las flechas izquierda y derecha */
-    .carousel-control.prev {
-        left: -8px;
-        /* Espaciado desde el borde izquierdo */
-    }
-
-    .carousel-control.next {
-        right: -8px;
-        /* Espaciado desde el borde derecho */
-    }
+    
 }

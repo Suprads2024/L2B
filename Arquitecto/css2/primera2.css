@@ -317,9 +317,32 @@
         height: auto;
     }
 }
+@media (max-width: 786px) {
+    /* Oscurecer solo las imágenes */
+    .header-main-image img,
+    .carousel-slide img {
+        filter: brightness(50%); /* Oscurece la imagen reduciendo su brillo */
+    }
+
+    /* Asegurarse de que el texto esté visible y nítido */
+    .header-main-image .main-text,
+    .carousel-slide .carousel-text2 {
+      
+      
+        color: #fff; /* Asegura que el texto sea blanco y nítido */
+    }
+    .carousel-text2 h3{
+        color: #fff;
+    }
+    .carousel-text2 p strong{
+        color: #fff;
+    }
+}
+
 
 /* Ajustes para pantallas pequeñas (celulares y tablets) */
 @media (max-width: 768px) {
+    
     /* Apilar los divs */
     .carousel-section {
         display: flex;
@@ -386,7 +409,7 @@
     }
 
     .main-text {
-        bottom: 10%; /* Posiciona el texto más cerca del borde inferior */
+        right: -1%;
         max-width: 70%; /* Texto ocupa más espacio respecto a la imagen */
     }
 
@@ -404,7 +427,8 @@
 
 @media (max-width:376px){
     .main-text {
-        bottom: 1%; /* Posiciona el texto más cerca del borde inferior */
+        padding: 10px;
+        bottom: 0.5%; /* Posiciona el texto más cerca del borde inferior */
         
     }
 }

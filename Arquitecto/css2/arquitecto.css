@@ -42,7 +42,7 @@
   .menu__bar2.scrolled {
     background-color: rgba(255, 255, 255, 0.8);
     /* Color de fondo semitransparente */
-    background-image: url('../ArquitectoAssets/Menu_Negro.jpg');
+    background-image: url('../ArquitectoAssets/MenuNegro.jpg');
     /* Ruta de la imagen de fondo */
     background-size: cover;
     /* Ajusta la imagen para cubrir todo el fondo */
@@ -175,7 +175,7 @@
   }
   
   
-  .navigation2>li>a {
+  .navigation>li>a {
     font-family: 'Eurostile-Bold';
     color: rgb(255, 249, 249)!important;
     border-bottom: 2px solid transparent;
@@ -294,7 +294,7 @@
   /* Estilos adicionales para el hover */
   .navigation2>li:hover>a::after,
   .submenu li:hover>a::after {
-    color: #000000;
+    color: #ffffff;
     /* Oscurece la flecha cuando se hace hover */
   }
   
@@ -392,7 +392,7 @@
       display: block;
     }
   
-    .navigation2--mobile {
+    .navigation--mobile {
       top: 0;
       left: 0;
       right: 0;
@@ -407,7 +407,7 @@
       height: 100vh;
       /* Ocupa el alto completo de la pantalla */
       /* Asegura que el menú ocupe toda la altura de la pantalla */
-      background-color: rgb(253, 253, 253);
+      background-color: rgb(105, 105, 105)!important;
       gap: 3rem;
       flex-direction: column;
       align-items: center;

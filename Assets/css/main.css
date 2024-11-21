@@ -12,6 +12,19 @@
     margin: 0 auto;
 }
 
+@media (max-width:786px){
+    .main-content {
+    
+    
+        padding: 20px 20px 20px 20px;
+    
+    
+    
+    
+    }
+    
+}
+
 /* Estilos para las filas */
 .main-row {
     display: grid;
