@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="../Assets/css/footer.css?v=1.1">
     <link rel="stylesheet" href="../Assets/css/carouselheader.css">
     <!--Clases de arquitecto -->
-    <link rel="stylesheet" href="../arquitecto/css2/arquitecto.css?v=1.5">
-    <link rel="stylesheet" href="../arquitecto/css2/segunda.css?v=1.5">
-    <link rel="stylesheet" href="../arquitecto/css2/primera2.css?v=1.5">
+    <link rel="stylesheet" href="../Desarrolladores/css/desarrollador.css">
+    <link rel="stylesheet" href="../Desarrolladores/css/primeradesarrollador.css">
+    <link rel="stylesheet" href="../Desarrolladores/css/segundadesarrollador.css">
 
 
     <!-- HTML Meta Tags -->
@@ -84,7 +84,8 @@
     <div class="menu__wrapper" id="top">
         <div class="menu__bar2">
             <a href="../" title="Logo" class="logo">
-                <img src="../Assets/Footer/L2B_ Logo B.png" alt="Logo" class="logo-img2" id="logo-img">
+                <img src="../Desarrolladores/AssetsDesarrolladores/Assets/Unidad1/L2B_N_ Tamaño original.png" alt="Logo"
+                    class="logo-img2" id="logo-img">
             </a>
             <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
                 onclick="toggleMenu(this)">
@@ -237,135 +238,165 @@
 
         <!-- Sección de la imagen principal con texto superpuesto -->
         <div class="header-main-image">
-            <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Revolucionatusproyectos.png"
+            <img src="../Desarrolladores/AssetsDesarrolladores/Assets/Unidad1/Web_LandingL2B_Elvalordenuestrassolucionesentusdesarrollos.png"
                 alt="Imagen principal">
             <div class="main-text">
-                <h2>REVOLUCIONÁ <br> TUS PROYECTOS CON L2B.</h2>
-                <p>Ambientación automatizada, seguridad inteligente y ahorro energético son solo algunas de las mejoras
-                    que hoy pueden aplicarse de forma simple y pueden cambiar radicalmente tus espacios. </p>
+                <h2>EL VALOR DE NUESTRAS<br> SOLUCIONES EN TUS DESARROLLOS.</h2>
+                <p>Asesorate con nosotros. Cotia hoy tu control de acceso y benefíciate de la domótica para tus
+                    desarrollos. </p>
             </div>
         </div>
 
-        <!-- Contenedor de los carruseles inferiores -->
-        <div class="carousel-section">
-            <!-- Carrusel izquierdo con texto superpuesto (2 imágenes) -->
-            <div class="carousel-izquierdo">
-                <div class="carousel-slide active">
-                    <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Olvidatedegrandesobras.png"
-                        alt="Imagen Carrusel Izquierdo 1">
-                    <div class="carousel-text2 text-left">
-                        <h3>¡OLVÍDATE DE REFORMAS Y CABLEADOS!</h3>
-                        <p>Hoy transformar tus espacios con tecnología domótica es más fácil y accesible que nunca. <br><br>
-                            Nuestras soluciones permiten a los <strong>estudios de arquitectura</strong> brindarle
-                            grandes mejoras en la
-                            experiencia de los usuarios, utilizando la tecnología para mejorar la calidad de vida.</p>
+        <div class="carousel-fullwidth">
+            <!-- Flecha anterior -->
+            <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+
+            <!-- Pista del carrusel -->
+            <div class="carousel-track">
+                <!-- Imagen 1 -->
+                <div class="carousel-item">
+                    <img src="../Desarrolladores/AssetsDesarrolladores/Assets/Unidad1/WebLandingL2B_Edificio_AccesoPeatonal.png"
+                        alt="Acceso peatonal: E18">
+                    <div class="carousel-caption caption-left"> <!-- Clase específica para la posición izquierda -->
+                        <h3>ACCESO PEATONAL: <br> E18</h3>
+                        <ul>
+                            <li>• Cámara de 2 megapixeles WDR</li>
+                            <li>• Reconocimiento facial</li>
+                            <li>• Display táctil de 7 pulgadas</li>
+                            <li>• Lector de tarjetas, NFC y código</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Comofuncionan.png"
-                        alt="Imagen Carrusel Izquierdo 2">
-                    <div class="carousel-text2 text-right">
-                        <h3>CÓMO FUNCIONAN NUESTRAS SOLUCIONES:</h3>
-                        <p>Teniendo en cuenta los parámetros establecidos por los usuarios, se integran con la
-                            inteligencia artificial del hogar sobre la iluminación, la climatización, la seguridad y
-                            otros, así como a través de dispositivos móviles, pantallas o comandos de voz con asistentes
-                            como <strong>Alexa, Google o Siri</strong>, ya sea de manera <strong>local</strong> o
-                            <strong>remota.</strong>
-                        </p>
+
+                <!-- Imagen 2 -->
+                <div class="carousel-item">
+                    <img src="../Desarrolladores/AssetsDesarrolladores/Assets/Unidad1/WebLandingL2B_Edificio_Hypanel.png"
+                        alt="Unidad interna: Hy Panel">
+                    <div class="carousel-caption caption-right"> <!-- Clase específica para la posición derecha -->
+                        <h3>UNIDAD INTERNA: <br> Hy Panel</h3>
+                        <ul>
+                            <li>• Intercomunicador inteligente</li>
+                            <li>• Display táctil de 4 pulgadas</li>
+                            <li>• Varios sensores integrados</li>
+                            <li>• Opcional: cerradura integrada akubela</li>
+                            <li>• Mobile APP: QR, acceso remoto, <br> códigos temporales (ideal para Air BnB)</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- SCRIPT QUE HACE QUE FUNCIONE EL CARROUSEL DE LAS DOS IMAGENES QUE SE OPACAN -->
-            <script>document.addEventListener("DOMContentLoaded", () => {
-                    const slides = document.querySelectorAll(".carousel-izquierdo .carousel-slide");
-                    const carouselContainer = document.querySelector(".carousel-izquierdo");
-                    let currentSlide = 0;
-                    let intervalId;
-
-                    function showNextSlide() {
-                        slides[currentSlide].classList.remove("active");
-                        currentSlide = (currentSlide + 1) % slides.length;
-                        slides[currentSlide].classList.add("active");
-                    }
-
-                    function startCarousel() {
-                        intervalId = setInterval(showNextSlide, 6000);
-                    }
-
-                    function stopCarousel() {
-                        clearInterval(intervalId);
-                    }
-
-                    // Inicia el carrusel al cargar
-                    startCarousel();
-
-                    // Detiene el carrusel cuando el mouse está sobre el contenedor
-                    carouselContainer.addEventListener("mouseenter", stopCarousel);
-
-                    // Cambia de imagen y reinicia el carrusel al salir el mouse
-                    carouselContainer.addEventListener("mouseleave", () => {
-                        showNextSlide(); // Cambia a la siguiente imagen inmediatamente
-                        startCarousel(); // Reinicia el carrusel
-                    });
-                });
-
-            </script>
-
-
-
-            <!-- Carrusel derecho existente -->
-            <div class="carousel-derecho">
-                <div class="carousel">
-                    <div class="carousel_inner">
-                        <div class="carousel_item carousel_item__active">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Diseñosconmayoralcance _Verde1.png"
-                                alt="Imagen Carrusel Derecho 1">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Diseños con mayor alcance. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Solucionesamedidadelasdemandasdelmercado_Naranja1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Soluciones a medida de <br> las demandas del mercado. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Ofertamás atractiva_Azul1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Oferta más atractiva. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Prestigiodeestaralavanguardia_Amarillo1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Prestigio de estar <br> a la vanguardia. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Nuevo estándar para tus proyectos _Verde2.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Nuevo estándar para <br> tus proyectos. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Complementaciónidealcondiseñodeinteriores_Naranja v2.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Complementación ideal con <br> diseño de interiores.</p>
-                            </div>
-                        </div>
-
-                       
+                <!-- Imagen 3 -->
+                <div class="carousel-item">
+                    <img src="../Desarrolladores/AssetsDesarrolladores/Assets/Unidad1/WebLandingL2B_Edificio_AccesoGarage.png"
+                        alt="Acceso garage: A05">
+                    <div class="carousel-caption caption-left"> <!-- Clase específica para la posición izquierda -->
+                        <h3>ACCESO GARAGE: <br> A05</h3>
+                        <ul>
+                            <li>• Cámara de 2 megapixeles WDR</li>
+                            <li>• Reconocimiento facial</li>
+                            <li>• LCD de 5 pulgadas</li>
+                            <li>• Lector de tarjetas, NFC y código</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
+
+            <!-- Flecha siguiente -->
+            <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
         </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+    const prevButton = document.querySelector(".carousel-control.prev");
+    const nextButton = document.querySelector(".carousel-control.next");
+
+    let currentIndex = 0; // Índice actual
+    const totalItems = items.length;
+
+    // Ajusta dinámicamente el ancho del contenedor y de los elementos
+    track.style.width = `${100 * totalItems}%`;
+
+    items.forEach(item => {
+        item.style.flex = "0 0 100%";
+    });
+
+    // Mover el carrusel
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + totalItems) % totalItems; // Control cíclico
+        const offset = -currentIndex * 100;
+        track.style.transition = "transform 0.5s ease-in-out"; // Transición suave
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Hacer que el carrusel sea infinito (clonación de elementos)
+    function setupInfiniteLoop() {
+        const firstClone = items[0].cloneNode(true);
+        const lastClone = items[items.length - 1].cloneNode(true);
+
+        track.appendChild(firstClone); // Agrega el primer ítem al final
+        track.insertBefore(lastClone, items[0]); // Agrega el último ítem al inicio
+
+        // Ajustar el ancho del track después de agregar clones
+        const updatedItems = document.querySelectorAll(".carousel-item");
+        track.style.width = `${100 * updatedItems.length}%`;
+        currentIndex = 1; // Ajustar índice inicial debido al clon al inicio
+        track.style.transition = "none"; // Sin transición para reposicionar
+        track.style.transform = `translateX(-100%)`; // Posiciona en el primer ítem real
+    }
+
+    // Manejo de transición infinita
+    function handleInfiniteTransition() {
+        const updatedItems = document.querySelectorAll(".carousel-item");
+        if (updatedItems[currentIndex].classList.contains("clone")) {
+            track.style.transition = "none"; // Desactiva la transición
+            currentIndex = currentIndex === 0 ? updatedItems.length - 2 : 1; // Ajusta al ítem real
+            const offset = -currentIndex * 100;
+            track.style.transform = `translateX(${offset}%)`;
+        }
+    }
+
+    // Configuración inicial del loop infinito
+    setupInfiniteLoop();
+
+    // Eventos de los botones
+    prevButton.addEventListener("click", () => moveSlide(-1));
+    nextButton.addEventListener("click", () => moveSlide(1));
+
+    // Listener para manejar la transición infinita
+    track.addEventListener("transitionend", handleInfiniteTransition);
+
+    // Movimiento automático cada 6 segundos
+    setInterval(() => {
+        moveSlide(1);
+    }, 6000);
+
+    // Soporte para gestos de deslizamiento en móviles
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchmove", (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", () => {
+        const threshold = 50; // Distancia mínima para considerar un deslizamiento
+        if (startX - endX > threshold) {
+            moveSlide(1); // Desliza a la derecha
+        } else if (endX - startX > threshold) {
+            moveSlide(-1); // Desliza a la izquierda
+        }
+    });
+});
+
+
+        </script>
     </header>
 
 
@@ -374,87 +405,39 @@
         <div class="grid-container">
             <!-- Bloque Izquierdo: Imagen amarilla con texto -->
             <div class="bloque-imagen-texto">
-                <a href="https://wa.me/5491136304219?text=¡Hola!%20Quisiera%20más%20información%20acerca%20de%20las%20soluciones%20de%20L2B%20para%20arquitectos." target="_blank">
-                    <h3>¡NO ESPERES MÁS Y <br> ASESÓRATE CON NOSOTROS!</h3>
-                    <p>
-                        En L2B te acompañamos en cada instancia de tus proyectos para que puedas sacar el máximo
-                        provecho a
-                        la domótica integrando soluciones inteligentes a tu medida. <br>
-                        <br>
-                        Ofrecemos asesoramientos integrales y capacitaciones sobre todos nuestros productos para que
-                        puedas
-                        agregar tanto valor como prestigio a tu oferta profesional.
-                    </p>
-                </a>
+
             </div>
             <!-- Bloque Derecho: Testimonios -->
+            <!-- Bloque Derecho: Testimonios -->
             <div class="bloque-testimonios">
-                <div class="contenido-testimonios">
-                    <h3>TESTIMONIOS</h3>
-                    <div class="carousel-testimonios">
-                        <div class="carousel-item2 active">
-                            <p>
-                                <strong>Estudio Olivares & Asociados:</strong> <br>
-                                "Desde que empezamos a trabajar con los chicos de L2B, sumarle soluciones inteligentes a
-                                nuestros proyectos fue un golazo. A los clientes les encanta la comodidad y el control
-                                que tienen ahora, desde que se ajusta sola la luz hasta el monitoreo de seguridad en
-                                tiempo real. La domótica de L2B nos permite ofrecer un diseño bien moderno que es justo
-                                lo que busca el mercado hoy en día: eficiencia y ahorro energético. La verdad, ¡un
-                                acierto total!”
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <p>
-                                <strong>Arq. Lucía González:</strong> <br>
-                                "Trabajar con la domótica nos cambió totalmente la forma de pensar los espacios que
-                                diseñamos. Con las soluciones de L2B optimizamos el consumo de energía y al mismo tiempo
-                                pudimos mejorar la comodidad de los usuarios, que ahora pueden manejar todo con
-                                asistentes de voz como Alexa o Siri. Estos sistemas además de aportar valor estético
-                                convierten cada proyecto en una solución que se ajusta a las necesidades de cada
-                                familia."
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <p>
-                                <strong>García-Delgado Arquitectura:</strong> <br>
-                                "Las soluciones de L2B son brillantes para proyectos donde no podés ponerte a hacer
-                                obras o cambiar el cableado que ya está. La domótica se instala fácil. No tenés que
-                                romper paredes ni hacer un lío con cables. Es ideal para renovaciones o incluso si te
-                                mudás, porque podés desmontar el sistema y llevarlo a otro lado sin problema. Esta
-                                tecnología te da la simpleza de instalación y todas las ventajas de un hogar
-                                inteligente, lo que marca una gran diferencia para nuestros clientes."
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <p>
-                                <strong>Arq. Mariano Ledesma:</strong> <br>
-                                "La domótica de L2B fue y es un recurso clave en nuestros proyectos de renovación.
-                                Recientemente, trabajamos con una familia que necesitaba transformar la habitación de un
-                                hijo que se mudó en una oficina moderna y funcional. Con la tecnología de L2B, no sólo
-                                optimizamos el espacio, sino que logramos hacerlo sin alterar la estructura original. La
-                                flexibilidad de estos sistemas permite adaptar cada ambiente a las nuevas necesidades de
-                                los usuarios, integrando automatización en iluminación, climatización y seguridad de
-                                manera rápida y eficiente."
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Controles del carrusel -->
-                    <button class="carousel-control2 prev">‹</button>
-                    <button class="carousel-control2 next">›</button>
+                <!-- Texto e imagen inicial -->
+                <div class="contenido-testimonios default">
+                    <h3 style="color: #ff5716;">INTEGRACIÓN TOTAL <br> PARA TUS DESARROLLOS:</h3>
+                    <p style="color: rgb(158, 158, 158);">Contáctanos y accedé a nuestro asesoramiento personalizado.
+                    </p>
                 </div>
-                <img class="estrellas"
-                    src="../arquitecto/ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_5Estrellas.png"
-                    alt="Estrellas" />
+                <!-- Texto e imagen al hacer hover -->
+                <div class="contenido-testimonios hover">
+                    <h3>TENEMOS TODO LO QUE NECESITÁS:</h3>
+                    <p style="font-family: 'Eurostile-Medium';">
+                        Capacitación, guías y materiales que destacan las ventajas de los intercomunicadores,
+                        controladores inteligentes y más. Con sistemas personalizables que se adaptan a cada proyecto,
+                        te aseguramos una implementación simple y efectiva, pensando en un hogar adaptable y eficiente
+                        para los usuarios. <br><br>
+                        Te acompañamos de principio a fin, en todo el proceso. <br><strong>Contamos con servicio de
+                            post-venta.</strong>
+                    </p>
+                </div>
             </div>
+
 
 
         </div>
 
         <!-- Sección Inferior: Formulario de contacto -->
         <div class="seccion-formulario" id="contact">
-            <h3 style="text-transform: uppercase;">Contactate con nosotros<strong> hoy</strong> y extendé <br>
-                ampliamente el alcance de tus servicios.</h3>
+            <h3 style="text-transform: uppercase;">Contactanos,<strong> sumá nuestras soluciones</strong> <br> y
+                <strong> agrega valor</strong> a tus desarrollos.</h3>
             <form class="contact-form" id="contact-form">
 
                 <input type="text" id="name" name="name" placeholder="NOMBRE" required>
@@ -547,42 +530,6 @@
 
 
 
-    <!-- SCRIPT QUE HACE QUE FUNCIONEN LOS TESTIMONIOS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll(".carousel-item2");
-            const prevButton = document.querySelector(".carousel-control2.prev");
-            const nextButton = document.querySelector(".carousel-control2.next");
-
-            let currentIndex = 0;
-
-            // Función para mostrar el testimonio activo
-            function showTestimonial(index) {
-                items.forEach((item, i) => {
-                    item.classList.remove("active");
-                    if (i === index) {
-                        item.classList.add("active");
-                    }
-                });
-            }
-
-            // Evento para botón "anterior"
-            prevButton.addEventListener("click", () => {
-                currentIndex = (currentIndex - 1 + items.length) % items.length; // Mueve al anterior
-                showTestimonial(currentIndex);
-            });
-
-            // Evento para botón "siguiente"
-            nextButton.addEventListener("click", () => {
-                currentIndex = (currentIndex + 1) % items.length; // Mueve al siguiente
-                showTestimonial(currentIndex);
-            });
-
-            // Muestra el primer testimonio al cargar
-            showTestimonial(currentIndex);
-        });
-
-    </script>
 
     <footer class="footer">
         <div class="footer-overlay">

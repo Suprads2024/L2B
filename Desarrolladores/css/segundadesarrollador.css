@@ -30,7 +30,7 @@ a {
    
     /* Tus estilos existentes */
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v1.png');
+    background-image: url('../AssetsDesarrolladores/Assets/Unidad2/WebDesarrolladorL2B_Desarrolladoras.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,54 +45,77 @@ a {
     
     
 }
-/* Cambiar la imagen de fondo y agregar sombra al contenedor al hacer hover */
-.bloque-imagen-texto:hover {
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v2.png');
-    /* Imagen negra al hacer hover */
-    box-shadow: 0px 0px 15px rgba(243, 200, 10, 0.2);
-    /* Sombra blanca suave */
-}
 
-/* Cambiar el color del texto al hacer hover */
-.bloque-imagen-texto:hover h3,
-.bloque-imagen-texto:hover p {
-    color: #eab30e;
-    /* Cambia el texto a blanco */
-}
-
-.bloque-imagen-texto h3 {
-    font-family: 'Eurostile-Heavy';
-    margin-left: 40px;
-    font-size: 2.3rem;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-.bloque-imagen-texto p {
-    font-family: 'Eurostile-Medium';
-    margin-left: 40px;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    color: #000;
-    max-width: 80%;
-}
-
-/* Bloque Derecho: Testimonios */
+/* Contenedor del bloque de testimonios */
 .bloque-testimonios {
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/testimonio.png');
+    background-image: url('../AssetsDesarrolladores/Assets/Unidad2/WebDesarrolladorL2B_IntegracionTotal_Apagado.png');
     background-size: cover;
-    border-radius: 15px;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 15px;
+    height: 50vh; /* Altura del bloque */
     padding: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    /* Alinea las estrellas a la derecha */
-    gap: 15px;
+    overflow: hidden; /* Asegura que no se salga contenido */
+    cursor: pointer;
+    transition: background-image 0.3s ease-in-out;
 }
+
+/* Imagen al hacer hover */
+.bloque-testimonios:hover {
+    background-image: url('../AssetsDesarrolladores/Assets/Unidad2/WebDesarrolladorL2B_IntegracionTotal_Encendido.png');
+}
+
+/* Contenido por defecto */
+.contenido-testimonios.default {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'Eurostile-Regular';
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Contenido al hacer hover */
+.contenido-testimonios.hover {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #000;
+    font-family: 'Eurostile-Heavy';
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 80%;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el contenido hover y ocultar el contenido por defecto al hacer hover */
+.bloque-testimonios:hover .contenido-testimonios.default {
+    opacity: 0;
+}
+
+.bloque-testimonios:hover .contenido-testimonios.hover {
+    opacity: 1;
+}
+
+/* Estilo del título (h3) */
+.contenido-testimonios h3 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Estilo del párrafo (p) */
+.contenido-testimonios p {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 
 /* Contenedor del texto de los testimonios */
 .contenido-testimonios {
@@ -199,7 +222,7 @@ a {
 .seccion-formulario {
     border-radius: 15px;
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Formulario.png');
+    background-image: url('../AssetsDesarrolladores/Assets/Unidad2/WebDesarrolladorL2B_FormularioFondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -284,7 +307,7 @@ a {
     }
 
     .contenido-testimonios p {
-        font-size: 0.9rem;
+        font-size:1.2rem;
     }
 
     .carousel-item2 {
@@ -301,13 +324,13 @@ a {
 
     .seccion-formulario h3 {
 
-        font-size: 2rem;
+        font-size: 1.8rem;
 
     }
 
     .seccion-formulario h3 strong {
 
-        font-size: 2rem;
+        font-size: 1.8rem;
 
     }
 }
@@ -321,11 +344,11 @@ a {
         /* Los bloques se apilan uno debajo del otro */
         height: auto;
         /* Ajusta automáticamente el alto */
-        gap: 20px;
+        gap: 10px;
         /* Separación entre las secciones */
         margin-bottom: 100px;
         /* Espaciado inferior */
-        padding: 20px 20px;
+        padding: 10px 20px;
         /* Ajuste del padding */
     }
 
@@ -334,7 +357,7 @@ a {
         display: flex;
         flex-direction: column;
         /* Apila las columnas una debajo de la otra */
-        gap: 20px;
+        gap: 10px;
         /* Separación entre los bloques */
         height: auto;
         /* Altura dinámica para ajustar contenido */
@@ -342,7 +365,7 @@ a {
 
     /* Bloque Izquierdo: Imagen amarilla con texto */
     .bloque-imagen-texto {
-        height: auto;
+        height: 30vh;
         /* Ajusta la altura automáticamente */
         padding: 15px;
         background-size: cover;
@@ -365,7 +388,7 @@ a {
 
     /* Bloque Derecho: Testimonios */
     .bloque-testimonios {
-        height: auto;
+        height: 35vh;
         /* Ajusta la altura automáticamente */
         flex-direction: column;
         /* Alinea verticalmente los elementos */
@@ -472,4 +495,15 @@ a {
     }
 
     
+}
+
+@media (max-width:376px){
+      /* Bloque Derecho: Testimonios */
+      .bloque-testimonios {
+        height: 45vh;
+        /* Ajusta la altura automáticamente */
+        flex-direction: column;
+        /* Alinea verticalmente los elementos */
+        padding: 15px;
+    }
 }

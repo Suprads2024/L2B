@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-  
+    height: 99vh;
   
 }
 
@@ -31,211 +31,152 @@
     height: 100%;
     object-fit: cover;
 }
-
 .main-text {
     position: absolute;
-    right: 1%;
-    bottom: 20%;
+    left: 5%; /* Cambia 'right' a 'left' para posicionarlo en el lado izquierdo */
+    bottom: 20%; /* Mantén la distancia inferior */
     color: #000000;
 
     padding: 20px;
-    max-width: 40%;
+    max-width: 40%; /* Limita el ancho del texto */
 }
 
 .main-text h2 {
+    color: #000000;
     font-family: 'Eurostile-Heavy';
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
 }
 
 .main-text p {
     font-family: 'Eurostile-Medium';
     font-size: 1.3rem;
+    text-align: left; /* Asegura que el párrafo esté alineado a la izquierda */
 }
 
-/* Sección de carruseles inferiores */
-.carousel-section {
-    display: flex;
-    gap: 10px;
-    height: 40vh;
-    /* Reduce la altura total de los carruseles */
-    width: 100%;
-}
 
-/* Carrusel izquierdo con texto superpuesto */
-.carousel-izquierdo {
-    width: 70%;
+/* Contenedor del carrusel */
+.carousel-fullwidth {
     position: relative;
-    height: 100%;
-    /* Ajusta la altura al tamaño reducido */
-    overflow: hidden;
-}
-
-
-/* Configuración de cada slide del carrusel */
-.carousel-izquierdo .carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Incrementa el alto del carrusel */
+    overflow: hidden; /* Asegúrate de recortar el contenido excedente */
     display: flex;
-    align-items: center;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-    /* Oculta inicialmente */
-}
-
-/* Imagen del carrusel */
-.carousel-izquierdo img {
-    cursor: pointer;
-    border-radius: 15px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* Imagen detrás del texto */
-}
-
-/* Estilos generales del texto */
-.carousel-text2 {
-    position: relative;
-    z-index: 2;
-    /* Coloca el texto sobre la imagen */
-
-    padding: 20px;
-    width: 43%;
-    /* El texto ocupa el 40% del ancho de la imagen */
-    color: #333;
-}
-
-/* Texto alineado a la izquierda (primer slide) */
-.carousel-text2.text-left {
-    margin-left: 20px;
-    /* Ajuste de margen izquierdo */
-    text-align: left;
-    align-self: center;
-    /* Alinea el texto a la izquierda */
-}
-
-/* Texto alineado a la derecha (segundo slide) */
-.carousel-text2.text-right {
-    margin-left: auto;
-    /* Empuja el texto a la derecha */
-    margin-right: 20px;
-    /* Ajuste de margen derecho */
-    text-align: left;
-    align-self: center;
-    /* Alinea el texto a la derecha */
-}
-
-/* Estilos de los títulos */
-.carousel-text2 h3 {
-    font-family: 'Eurostile-Heavy';
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    color: #333;
-    /* Título en negro */
-}
-
-/* Estilos de los párrafos */
-.carousel-text2 p {
-    font-family: 'Eurostile-Regular';
-    font-size: 1.3rem;
-    margin: 0;
-}
-
-/* Texto en negrita dentro del párrafo */
-.carousel-text2 p strong {
-    font-weight: bold;
-    color: #333;
-}
-
-/* Estilo para la transición de las imágenes */
-.carousel-slide {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Imagen activa, completamente visible */
-.carousel-slide.active {
-    opacity: 1;
-    z-index: 1;
-    /* Asegura que la imagen activa esté encima */
-}
-
-
-
-
-/* Carrusel derecho */
-.carousel-derecho {
-    border-radius: 15px;
-    width: 30%;
-    height: 100%;
-    /* Ajusta la altura para alinearse con el carrusel izquierdo */
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    /* Centra las imágenes verticalmente */
     justify-content: center;
-    /* Centra las imágenes horizontalmente */
+    align-items: center;
+    border-radius: 15px; /* Fuerza el redondeo */
+    background-color: transparent; /* Asegúrate de que no haya fondo detrás */
 }
 
-/* Configuración de la imagen dentro de los carruseles */
-.carousel-izquierdo img {
-    border-radius: 15px;
+/* Pista del carrusel */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
     width: 100%;
+}
+
+/* Imagen de cada ítem */
+.carousel-item {
+    min-width: 100%;
     height: 100%;
-    /* Las imágenes ocupan todo el alto disponible */
-    object-fit: cover;
-    /* Cubre el contenedor sin distorsionarse */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-/* Contenedor del texto superpuesto */
-.carousel_caption {
+
+.carousel-caption {
     position: absolute;
-    bottom: -300px;
-    /* Posiciona el texto en la parte inferior */
-    left: 50%;
-    /* Centra el texto horizontalmente */
-    transform: translateX(-50%);
-    /* Ajusta la posición al centro exacto */
-    width: 70%;
-    /* Reduce el ancho del texto al 70% del contenedor */
+    top: 35%; /* Posición vertical ajustada para que esté más arriba */
+    left: 5%; /* Mantén el texto alineado a la izquierda */
+    color: #000000;
     text-align: left;
-    /* Centra el texto dentro del contenedor */
-    padding: 0;
-    /* Sin padding adicional */
-    box-sizing: border-box;
+  
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+    font-size: 1.2rem; /* Tamaño adecuado para pantallas grandes */
+    max-width: 90%; /* Ajusta el ancho máximo del texto */
+}
+/* Imágenes dentro del carrusel */
+.carousel-item {
+    height: auto; /* Deja que el contenedor ajuste su altura a la imagen */
+    overflow: hidden; /* Asegura que nada salga del contenedor */
+}
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantén las proporciones originales */
+    object-fit: contain;
+    border-radius: 15px;
 }
 
-/* Estilo del título */
-.carousel_caption .carousel_text {
+.carousel-caption p {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+}
+
+/* Texto alineado a la izquierda */
+.caption-left {
+    left: 5%; /* Texto a la izquierda */
+    text-align: left;
+}
+
+/* Texto alineado a la derecha */
+.caption-right {
+    margin-top: -20px;
+    right: 0%; /* Texto a la derecha */
+    text-align: right;
+}
+
+/* Estilo de los títulos */
+.carousel-caption h3 {
     font-family: 'Eurostile-Heavy';
-    /* Fuente definida para títulos */
-    font-size: 1.6rem;
-    /* Tamaño del título */
-    font-weight: bold;
-    margin: 5px 0;
-    /* Espaciado inferior reducido */
-    color: #000;
-    /* Color del texto negro */
-    line-height: 1.2;
-    /* Espaciado entre líneas reducido */
-    text-transform: uppercase;
-    /* Transforma el texto a mayúsculas */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo de las listas */
+.carousel-caption ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.carousel-caption ul li {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Controles del carrusel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+z-index: 1;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
 }
 
 @media (max-width:1780px) {
@@ -248,6 +189,7 @@
     }
 
     .main-text p {
+        color: #000000;
         font-size: 1rem;
     }
 
@@ -286,7 +228,7 @@
         display: flex;
         flex-direction: column;
         height: auto;
-        gap: 20px;
+        gap: 10px;
         padding-top: 12vh;
     }
  
@@ -319,10 +261,7 @@
 }
 @media (max-width: 786px) {
     /* Oscurecer solo las imágenes */
-    .header-main-image img,
-    .carousel-slide img {
-        filter: brightness(50%); /* Oscurece la imagen reduciendo su brillo */
-    }
+   
 
     /* Asegurarse de que el texto esté visible y nítido */
     .header-main-image .main-text,
@@ -409,12 +348,13 @@
     }
 
     .main-text {
+        top: 10%;
         right: -1%;
         max-width: 70%; /* Texto ocupa más espacio respecto a la imagen */
     }
 
     .main-text h2 {
-        font-size: 1.2rem; /* Reduce el tamaño del título */
+        font-size: 1.1rem; /* Reduce el tamaño del título */
     }
 
     .main-text p {
@@ -423,7 +363,51 @@
     }
 
 }
+@media (max-width: 786px) {
+    /* Contenedor del carrusel */
+    .carousel-fullwidth {
+        height: 21vh; /* Reduce la altura del carrusel en dispositivos móviles */
+        
+    }
 
+    /* Pista del carrusel */
+    .carousel-track {
+        flex-direction: row; /* Asegura que las imágenes sigan siendo horizontales */
+    }
+
+    /* Imágenes dentro del carrusel */
+    .carousel-item img {
+        width: 100%;
+        height: auto; /* Asegúrate de mantener las proporciones */
+        object-fit: contain;
+        
+    }
+
+    /* Texto del carrusel */
+    .carousel-caption {
+        top: 50%; /* Baja el texto más cerca del centro */
+        transform: translateY(-50%); /* Centra verticalmente */
+        padding: 10px 15px; /* Ajusta el padding */
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        max-width: 85%; /* Asegura que el texto no ocupe todo el ancho */
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.0rem; /* Reduce el tamaño del título */
+    }
+
+    .carousel-caption ul li {
+        font-size: 0.9rem; /* Reduce el tamaño del listado */
+        line-height: 1.2; /* Reduce el espacio entre líneas */
+    }
+
+    /* Controles del carrusel */
+    .carousel-control {
+        top: 50%; /* Centra las flechas verticalmente */
+        font-size: .5rem; /* Reduce el tamaño de las flechas */
+        padding: 8px; /* Ajusta el tamaño del botón */
+    }
+}
 
 @media (max-width:376px){
     .main-text {

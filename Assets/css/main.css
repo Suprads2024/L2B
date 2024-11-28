@@ -2,10 +2,10 @@
 .main-content {
     display: grid;
     padding-bottom: 0px;
-    gap: 20px;
+    gap: 10px;
     /* Espacio entre las filas */
 
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 15px 20px;
 
 
 
@@ -16,7 +16,7 @@
     .main-content {
     
     
-        padding: 20px 20px 20px 20px;
+        padding: 10px 20px 10px 20px;
     
     
     
@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 70.5% 29.5%;
     /* Primera fila: imagen 70%, carrusel 30% */
-    gap: 20px;
+    gap: 15px;
     /* Espacio entre columnas */
     padding-right: 20px;
 
@@ -527,7 +527,7 @@
     .main-row:nth-child(1) {
         grid-template-columns: 1fr;
         /* Ocupa todo el ancho en pantallas pequeñas */
-        gap: 20px;
+        gap: 10px;
     }
 
     /* Segunda fila: Apilar el carrusel y el texto uno debajo del otro */
@@ -597,7 +597,7 @@
 @media (max-width:431px) {
     .main-cta {
 
-        margin-top: -20px;
+        margin-top: -30px;
         margin-bottom: -15px;
     }
 }
@@ -606,7 +606,7 @@
 @media (max-width:391px) {
     .main-cta {
 
-        margin-top: -25px;
+        margin-top: -35px;
         margin-bottom: -20px;
     }
 }
@@ -614,7 +614,7 @@
 @media (max-width:376px) {
     .main-cta {
 
-        margin-top: -30px;
+        margin-top: -40px;
         margin-bottom: -30px;
     }
 }

@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   /* 3 columnas: izquierda, centro, derecha */
-  gap: 20px;
+  gap: 15px;
   /* Espacio entre columnas */
 
   margin: 0 auto;
@@ -70,7 +70,7 @@
     /* Para evitar restricciones de ancho */
     max-height: none;
     /* Permite que ocupe la altura completa */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
     border: 2px solid #ff5716; /* Borde fino color naranja */
     box-sizing: border-box; /* Asegura que el borde no cambie el tamaño del elemento */
@@ -85,7 +85,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   /* Dos filas iguales */
-  gap: 20px;
+  gap: 10px;
   /* Espacio entre las imágenes */
   height: 100%;
   /* Asegura que la altura de estas columnas sea igual a la central */
@@ -384,7 +384,7 @@
   }
 
   .left-column {
-    gap: 20px;
+    gap: 10px;
     grid-template-rows: 1fr;
     /* Elimina las filas en las columnas izquierda y derecha */
   }
