@@ -500,7 +500,7 @@ a {
 @media (max-width:376px){
       /* Bloque Derecho: Testimonios */
       .bloque-testimonios {
-        height: 45vh;
+        height: 35vh;
         /* Ajusta la altura automáticamente */
         flex-direction: column;
         /* Alinea verticalmente los elementos */

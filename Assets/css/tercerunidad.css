@@ -117,7 +117,31 @@
   object-fit: cover;
   display: block;
 }
+/* Contenedor de botones */
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
 
+/* Estilo de los botones */
+.btn-outline {
+  font-family: 'Eurostile-Medium';
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #000; /* Borde negro */
+  background: transparent;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover de los botones */
+.btn-outline:hover {
+  background: #000; /* Fondo negro */
+  color: #FFD700; /* Texto amarillo */
+}
 /* Superposición de texto */
 .text-overlay-specialist {
 

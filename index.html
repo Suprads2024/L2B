@@ -149,7 +149,7 @@
                 <li><a href="https://life2better.com/fibaro-home-center-app/">Aplicación Fibaro Home Center</a></li>
               </ul>
             </li>
-          
+
           </ul>
         </li>
 
@@ -606,14 +606,22 @@
     <!-- Columna izquierda -->
     <div class="left-column">
       <!-- Primera imagen: intacta -->
-      <div class="image-box">
-        <img src="./Assets/3raunidad/Sosarquitecto/Sos arquitecto con texto.png" class="arquitecto"
+      <div class="image-box-specific">
+        <img src="./Assets/3raunidad/Sosarquitecto/L2B_ Sosarquitecto_Icono.png" class="arquitecto-specific"
           alt="¿SOS ARQUITECTO O DESARROLLADOR?">
-        <!-- Texto superpuesto, solo visible en pantallas pequeñas -->
-        <div class="text-overlay-community">
-          <h1>¿SOS ARQUITECTO O DESARROLLADOR?</h1>
 
+        <!-- Texto superpuesto, visible tanto en PC como móvil -->
+        <div class="text-overlay-specific">
+          <h1>¿SOS ARQUITECTO <br>O DESARROLLADOR?</h1>
           <p>Suma nuestras soluciones, <br> agrega valor a tus proyectos.</p>
+
+          <!-- Botones alineados en columna -->
+          <div class="buttons-specific">
+            <a href="https://life2better.com/arquitecto/" target="_blank"><button
+                class="btn-outline-specific">ARQUITECTO</button></a>
+            <a href="https://life2better.com/desarrolladores/" target="_blank"> <button
+                class="btn-outline-specific">DESARROLLADOR</button></a>
+          </div>
         </div>
       </div>
 
@@ -628,17 +636,347 @@
           </div>
         </div>
       </a>
-      
+
 
     </div>
 
+    <style>
+      a {
+        text-decoration: none;
+      }
 
+      /* Contenedor general de la imagen */
+      .image-box-specific {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        /* Bordes redondeados */
+        overflow: hidden;
+        /* Recortar contenido desbordado */
+      }
+
+      /* Imagen con ajuste de proporciones */
+      .arquitecto-specific {
+        width: 100%;
+        height: auto;
+        /* Mantener proporciones */
+        object-fit: cover;
+        /* Ajustar la imagen sin distorsión */
+      }
+
+      /* Contenedor del texto superpuesto */
+      .text-overlay-specific {
+        position: absolute;
+        top: 70%;
+        /* Centrado verticalmente */
+        left: 10%;
+        /* Alineado a la izquierda */
+        transform: translateY(-50%);
+        /* Ajustar posición vertical */
+        display: flex;
+        flex-direction: column;
+        /* Elementos en columna */
+        align-items: flex-start;
+        /* Alinear contenido a la izquierda */
+        text-align: center;
+        /* Centrar el texto dentro *
+    color: black; /* Color del texto */
+        padding: 20px;
+        font-family: 'Eurostile-Bold', Arial, sans-serif;
+        width: 100%;
+        /* Ajustar para dispositivos móviles */
+      }
+
+      /* Estilo del título */
+      .text-overlay-specific h1 {
+      margin-right:100px;
+        font-family: 'Eurostile-Heavy';
+        font-size: 2.4rem;
+        text-align: left;
+        /* Tamaño ajustado para PC */
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+
+      /* Estilo del párrafo */
+      .text-overlay-specific p {
+        font-family: 'Eurostile-Regular';
+        font-size: 1.2rem;
+        text-align: left;
+        /* Tamaño ajustado */
+        margin-bottom: 20px;
+
+      }
+
+      /* Contenedor de los botones */
+      .buttons-specific {
+        font-family: 'Eurostile-Bold' !important;
+        display: flex;
+        flex-direction: column;
+        /* Botones en columna */
+        gap: 5px;
+        /* Espaciado entre botones */
+      }
+
+      /* Botones con estilo borde */
+      .btn-outline-specific {
+        display: flex;
+        /* Activar Flexbox */
+        justify-content: center;
+        /* Centrar horizontalmente */
+        align-items: center;
+        /* Centrar verticalmente */
+        font-family: 'Eurostile-Heavy';
+        font-size: 1rem;
+        padding: 10px 110px;
+        border: 2px solid #000;
+        /* Borde negro */
+        background: transparent;
+        /* Fondo transparente */
+        color: #000;
+        /* Texto negro */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        /* Transición suave */
+        text-align: center;
+        /* Centrar texto dentro del botón */
+        width: 100%;
+        max-width: 400px;
+        /* Ajuste máximo para móvil */
+      }
+
+      /* Hover en los botones */
+      .btn-outline-specific:hover {
+        background: #000;
+        /* Fondo negro */
+        color: #FFD700;
+        /* Texto amarillo */
+      }
+
+
+      /* Hover en los botones */
+      .btn-outline-specific:hover {
+        background: #000;
+        /* Fondo negro */
+        color: #FFD700;
+        /* Texto amarillo */
+      }
+
+      @media (max-width:1700px) {
+        .image-box-specific {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+          /* Bordes redondeados */
+          overflow: hidden;
+          /* Recortar contenido desbordado */
+        }
+
+        /* Imagen con ajuste de proporciones */
+        .arquitecto-specific {
+          width: 100%;
+          height: auto;
+          /* Mantener proporciones */
+          object-fit: cover;
+          /* Ajustar la imagen sin distorsión */
+        }
+
+        /* Contenedor del texto superpuesto */
+        .text-overlay-specific {
+          position: absolute;
+          top: 70%;
+          /* Centrado verticalmente */
+          left: 10%;
+          /* Alineado a la izquierda */
+          transform: translateY(-50%);
+          /* Ajustar posición vertical */
+          display: flex;
+          flex-direction: column;
+          /* Elementos en columna */
+          align-items: flex-start;
+          /* Alinear contenido a la izquierda */
+          text-align: left;
+          /* Alinear texto a la izquierda */
+          color: black;
+          /* Color del texto */
+          padding: 20px;
+          font-family: 'Eurostile-Bold', Arial, sans-serif;
+          width: 90%;
+          /* Ajustar para dispositivos móviles */
+        }
+
+        /* Estilo del título */
+        .text-overlay-specific h1 {
+          margin-right:0px;
+          font-family: 'Eurostile-Heavy';
+          font-size: 1.5rem;
+          /* Tamaño ajustado para PC */
+          font-weight: 900;
+          margin-bottom: 5px;
+        }
+
+        /* Estilo del párrafo */
+        .text-overlay-specific p {
+          font-family: 'Eurostile-Regular';
+          font-size: 1.2rem;
+          /* Tamaño ajustado */
+          margin-bottom: 10px;
+
+        }
+
+        /* Contenedor de los botones */
+        .buttons-specific {
+          font-family: 'Eurostile-Bold' !important;
+          display: flex;
+          flex-direction: column;
+          /* Botones en columna */
+          gap: 5px;
+          /* Espaciado entre botones */
+        }
+
+        /* Botones con estilo borde */
+        .btn-outline-specific {
+          display: flex;
+          /* Activar Flexbox */
+          justify-content: center;
+          /* Centrar horizontalmente */
+          align-items: center;
+          /* Centrar verticalmente */
+          font-family: 'Eurostile-Heavy';
+          font-size: 1rem;
+          padding: 10px 100px;
+          border: 2px solid #000;
+          /* Borde negro */
+          background: transparent;
+          /* Fondo transparente */
+          color: #000;
+          /* Texto negro */
+          border-radius: 5px;
+          /* Bordes redondeados */
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          /* Transición suave */
+          text-align: center;
+          /* Centrar texto dentro del botón */
+          width: 100%;
+          max-width: 300px;
+          /* Ajuste máximo para móvil */
+        }
+
+        /* Hover en los botones */
+        .btn-outline-specific:hover {
+          background: #000;
+          /* Fondo negro */
+          color: #FFD700;
+          /* Texto amarillo */
+        }
+
+
+        /* Hover en los botones */
+        .btn-outline-specific:hover {
+          background: #000;
+          /* Fondo negro */
+          color: #FFD700;
+          /* Texto amarillo */
+        }
+
+      }
+
+      /* Ajustes para pantallas más pequeñas */
+      @media (max-width: 568px) {
+        .text-overlay-specific {
+          position: absolute;
+          top: 70%;
+          /* Baja el texto al 70% del contenedor */
+          left: 60%;
+          /* Posición inicial en el 50% del ancho */
+          transform: translate(-50%, -50%);
+          /* Ajusta para centrar horizontal y verticalmente */
+          width: 100%;
+          /* Ancho adaptable */
+        }
+
+
+        .text-overlay-specific h1 {
+          margin-right:0px;
+          font-size: 1.8rem;
+          /* Reducir tamaño del título */
+        }
+
+        .text-overlay-specific p {
+          font-size: 1rem;
+          /* Reducir tamaño del párrafo */
+        }
+
+        .btn-outline-specific {
+          padding: 5px 140px;
+          font-size: 0.7rem;
+          /* Reducir tamaño del texto */
+          max-width: 200px;
+          /* Reducir tamaño del botón */
+        }
+
+      }
+
+      /* Ajustes para pantallas más pequeñas */
+      @media (max-width: 391px) {
+        .btn-outline-specific {
+            padding: 5px 110px;
+            font-size: 0.7rem;
+            /* Reducir tamaño del texto */
+            max-width: 200px;
+            /* Reducir tamaño del botón */
+          }
+        .text-overlay-specific h1 {
+          font-size: 1.4rem;
+          /* Reducir tamaño del título */
+        }
+        .text-overlay-specific {
+
+          left: 64%;
+          /* Posición inicial en el 50% del ancho */
+
+        }
+      }
+
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 376px) {
+          .btn-outline-specific {
+            padding: 5px 110px;
+            font-size: 0.7rem;
+            /* Reducir tamaño del texto */
+            max-width: 200px;
+            /* Reducir tamaño del botón */
+          }
+
+          .text-overlay-specific {
+
+            left: 63%;
+            /* Posición inicial en el 50% del ancho */
+
+          }
+        }
+
+
+
+      
+    </style>
 
     <!-- Columna central -->
     <div class="center-column">
       <div class="image-box">
-        <img src="./Assets/3raunidad/Somos especialistas/Somosespecialistas.png" alt="Cocina"
-          class="image-specialist">
+        <img src="./Assets/3raunidad/Somos especialistas/Somosespecialistas.png" alt="Cocina" class="image-specialist">
         <div class="text-overlay-specialist">
           <p>Somos especialistas en tecnología para casas y edificios inteligentes. Ofrecemos soluciones que se adaptan
             a cada proyecto, beneficiando al inversor y al consumidor final. Conocé más sobre nuestra propuesta. Agregá
