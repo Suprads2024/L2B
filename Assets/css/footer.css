@@ -43,7 +43,7 @@
   }
   
   .footer-info a {
-    
+    font-family: 'Eurostile-Regular';
     color: #fff;
     text-decoration: none;
   }
@@ -73,11 +73,15 @@
   }
   
   .footer-articles ul {
+    font-family: 'Eurostile-Regular';
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
+  .footer-articles ul li a{
+    font-family: 'Eurostile-Regular';
+  }
   .footer-articles li {
     font-family: 'Eurostile-Regular';
     margin-bottom: 5px;
