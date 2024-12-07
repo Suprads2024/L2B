@@ -198,4 +198,13 @@ p{
     .custom-text-overlay p {
         font-size: 1rem; /* Reducimos el tamaño del párrafo */
     }
+
+    /* Imagen de hover (oculta por defecto) */
+.custom-hover-image2 .hover-image {
+    
+  margin-right: 0px;
+   
+   
+}
+
 }
