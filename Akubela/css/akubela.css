@@ -7,12 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Contenedor principal con espacios laterales */
+/* Estilos generales del body */
 body {
-    padding: 0 10px;
-    /* Espaciado de 10px en los lados izquierdo y derecho */
-    box-sizing: border-box;
-    /* Asegura que el padding no rompa el layout */
+    padding: 0 10px; /* Padding lateral para todo el cuerpo */
+    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
 }
 
 /* Header section */
@@ -750,6 +748,13 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Quitar el padding específicamente del footer */
+footer {
+    margin-left: -10px; /* Compensa el padding del body */
+    margin-right: -10px; /* Compensa el padding del body */
+    width: calc(100% + 20px); /* Ajusta el ancho para cubrir toda la pantalla */
+    box-sizing: border-box; /* Asegura que el tamaño del footer sea consistente */
+}
 /* Cambiar las imágenes para pantallas móviles */
 @media (max-width: 768px) {
 
