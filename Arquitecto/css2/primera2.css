@@ -35,7 +35,7 @@
 .main-text {
     position: absolute;
     right: 1%;
-    bottom: 20%;
+    bottom: 7%;
     color: #000000;
 
     padding: 20px;
@@ -206,7 +206,7 @@
 /* Contenedor del texto superpuesto */
 .carousel_caption {
     position: absolute;
-    bottom: -300px;
+    bottom: -270px;
     /* Posiciona el texto en la parte inferior */
     left: 50%;
     /* Centra el texto horizontalmente */

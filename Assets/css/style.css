@@ -216,7 +216,7 @@ html {
   display: flex;
   position: relative;
   flex-direction: row;
-  z-index: 2;
+  z-index: 999;
 }
 
 .menu__bar {
@@ -354,10 +354,12 @@ html {
   width: 0;
   height: 0.2rem;
   transition: all 0.2s ease-in-out;
+  
 }
 
 .navigation>li>a:hover {
   background-position: 0;
+  
 }
 
 .navigation>li>a:hover::before {
@@ -368,6 +370,7 @@ html {
 
 /* Rotar flecha hacia arriba cuando se despliega el submenú */
 .navigation li:hover>a::after {
+  
   transform: rotate(180deg);
   /* Rotar la flecha hacia arriba */
   color: #333;
@@ -539,32 +542,21 @@ html {
   }
 
   .navigation--mobile {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     position: fixed;
-    /* Cambia a fixed para ocupar toda la pantalla */
+    top: 50px; /* Espacio desde la parte superior */
+    left: 0; /* Alineado a la izquierda */
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    height: calc(100vh - 50px); /* Ajusta la altura restando el espacio superior */
+    background-color: rgb(253, 253, 253); /* Fondo blanco */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
     display: flex;
-    padding: 0;
-    /* Elimina el padding para centrar correctamente */
-    width: 100vw;
-    /* Ocupa el ancho completo de la pantalla */
-    height: 100vh;
-    /* Ocupa el alto completo de la pantalla */
-    /* Asegura que el menú ocupe toda la altura de la pantalla */
-    background-color: rgb(253, 253, 253);
-    gap: 3rem;
-    flex-direction: column;
-    align-items: center;
-    /* Centra horizontalmente */
-    justify-content: center;
-    /* Centra verticalmente */
-
-
-    z-index: 1000;
-    /* Asegura que el menú esté por encima de otros elementos */
-  }
+    flex-direction: column; /* Elementos en columna */
+    padding: 1rem; /* Espaciado interno */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
+    gap: 1rem; /* Espaciado entre los elementos */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    justify-content: flex-start; /* Ajusta el contenido hacia la parte superior */
+}
 
   /* Slide down animation */
   @keyframes slideDown {

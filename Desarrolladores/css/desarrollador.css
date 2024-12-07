@@ -10,7 +10,9 @@
     /* Centra la imagen */
 }
 
-
+strong{
+  font-family: 'Eurostile-Heavy';
+}
 
 
 /*-----Logo------ */
@@ -143,7 +145,7 @@
   }
   /* Estilo para la flecha desplegable */
   .dropdown-arrow2 {
-    width: 7px; /* Ajusta el tamaño según prefieras */
+    width: 12px; /* Ajusta el tamaño según prefieras */
     height: auto;
     margin-left: 5px; /* Espacio entre el texto y la flecha */
     vertical-align: middle; /* Alinea la imagen con el texto */
@@ -500,3 +502,247 @@
     }
   
   }
+
+  
+.navigation>li>a {
+  font-family: 'Eurostile-Bold';
+  color: rgb(255, 249, 249);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 800;
+  background-image: linear-gradient(to right, var(--primary), var(--primary) 50%, rgb(0, 0, 0) 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 0.2rem 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu__bar.scrolled .navigation>li>a {
+  color: rgb(0, 0, 0) !important;
+}
+
+.navigation>li>a:before {
+  font-family: 'Eurostile-Heavy';
+  content: '';
+  background: var(--primary);
+  display: block;
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.navigation>li>a:hover {
+  background-position: 0;
+  
+}
+
+.navigation>li>a:hover::before {
+  width: 100%;
+}
+
+
+
+/* Rotar flecha hacia arriba cuando se despliega el submenú */
+.navigation li:hover>a::after {
+  
+  transform: rotate(180deg);
+  /* Rotar la flecha hacia arriba */
+  color: #333;
+  /* Cambiar a un color más oscuro */
+}
+
+/* Mantener el fondo azul en el enlace activo al desplegar el submenú */
+.navigation li:hover>a {
+  background-position: 0;
+  color: #fff;
+}
+
+.navigation>li {
+  position: relative;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+}
+
+/* Estilo para los submenús */
+.submenu {
+  border-radius: 15px 15px;
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fondo oscuro para resaltar submenú */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Estilo para los elementos del submenú */
+.submenu li {
+  position: relative;
+}
+
+.submenu a {
+  font-family: 'Eurostile-Bold';
+  padding: 10px 8px;
+  color: #050505;
+  white-space: nowrap;
+}
+
+/* Flecha hacia la derecha para submenús de segundo nivel */
+.submenu li:has(ul)>a::after {
+  content: '❯';
+  /* Flecha fina hacia la derecha */
+  font-size: 10px;
+  margin-left: 5px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  color: #666;
+  /* Color gris para más sutileza */
+}
+
+/* Estilos adicionales para el hover */
+.navigation>li:hover>a::after,
+.submenu li:hover>a::after {
+  color: #000000;
+  /* Oscurece la flecha cuando se hace hover */
+}
+
+/* Opcional: ajustar margen o padding si es necesario */
+.navigation a {
+  padding-right: 25px;
+  /* Asegura que haya espacio para la flecha */
+}
+
+/* Muestra submenús en hover */
+.navigation li:hover>.submenu {
+  
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Fondo oscuro para submenús activos */
+.submenu li:hover {
+  border-radius: 15px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Submenú de segundo nivel (despliega a la derecha) */
+.submenu li .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+}
+
+/* Sombra y transición para el submenú */
+.navigation li:hover>.submenu,
+.submenu li:hover>.submenu {
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 254, 254);
+}
+
+@media (max-width: 600px) {
+  .whatsapp-button img {
+    width: 55px;
+    /* Tamaño del icono de WhatsApp */
+    height: 55px;
+
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navigation--mobile {
+    position: fixed;
+    top: 50px; /* Espacio desde la parte superior */
+    left: 0; /* Alineado a la izquierda */
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    height: calc(100vh - 50px); /* Ajusta la altura restando el espacio superior */
+    background-color: rgb(253, 253, 253)!important; /* Fondo blanco */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    padding: 1rem; /* Espaciado interno */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
+    gap: 1rem; /* Espaciado entre los elementos */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    justify-content: flex-start; /* Ajusta el contenido hacia la parte superior */
+}
+
+  /* Slide down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navigation--mobile {
+    animation: slideDown 300ms ease-out forwards;
+  }
+
+  /* Slide up (fade out) animation */
+  @keyframes slideUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  .navigation--mobile--fadeout {
+    animation: slideUp 300ms ease-out forwards;
+  }
+
+
+
+.submenu li .submenu {
+    position: relative; /* Cambia a relativo para apilar en móvil */
+    top: 0;
+    left: 0; /* No se desplazará hacia la derecha */
+}
+ /* Ajustes de visualización para abrir submenús hacia abajo */
+ .navigation li:hover > .submenu,
+ .submenu li:hover > .submenu {
+     display: block;
+     margin-left: 20px; /* Aumenta el margen izquierdo para identar subniveles */
+ }
+
+}

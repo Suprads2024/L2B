@@ -61,6 +61,34 @@ a {
     transition: background-image 0.3s ease-in-out;
 }
 
+/* Contenedor del texto sobre la imagen */
+.text-overlay-developers {
+    position: absolute;
+    top: 75%; /* Posición vertical */
+    left: 6.5%; /* Alineación hacia la izquierda */
+    transform: translateY(-50%); /* Centrado vertical */
+    text-align: left; /* Alinear el texto a la izquierda */
+    color: #000; /* Color del texto */
+    padding: 5px 15px; /* Reduce el espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+   
+    width: 85%; /* Ajusta el ancho del contenedor */
+    max-width: 650px; /* Limita el ancho máximo */
+}
+
+/* Estilo del título */
+.text-overlay-developers h3 {
+    font-family: 'Eurostile-Heavy';
+    margin: 0; /* Elimina márgenes superiores e inferiores */
+    font-size: 1.4rem; /* Ajusta el tamaño del texto */
+    font-size: 2.1rem; /* Tamaño del texto */
+    color: #000; /* Color del texto */
+    font-weight: bold;
+}
+
+
+
+
 /* Imagen al hacer hover */
 .bloque-testimonios:hover {
     background-image: url('../AssetsDesarrolladores/Assets/Unidad2/WebDesarrolladorL2B_IntegracionTotal_Encendido.png');
@@ -348,7 +376,7 @@ a {
         /* Separación entre las secciones */
         margin-bottom: 100px;
         /* Espaciado inferior */
-        padding: 10px 20px;
+        padding: 20px 20px;
         /* Ajuste del padding */
     }
 
@@ -365,7 +393,7 @@ a {
 
     /* Bloque Izquierdo: Imagen amarilla con texto */
     .bloque-imagen-texto {
-        height: 30vh;
+        height: 28vh;
         /* Ajusta la altura automáticamente */
         padding: 15px;
         background-size: cover;
@@ -376,6 +404,7 @@ a {
         font-size: 1.2rem;
         /* Tamaño de texto reducido */
         margin-left: 0;
+        
     }
 
     .bloque-imagen-texto p {
@@ -449,13 +478,13 @@ a {
     }
 
     .seccion-formulario h3 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         /* Tamaño de texto reducido */
         margin-left: 0;
     }
 
     .seccion-formulario h3 strong {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         /* Tamaño de texto reducido */
         margin-left: 0;
     }
@@ -498,12 +527,49 @@ a {
 }
 
 @media (max-width:376px){
+    /* Estructura principal: Sección testimonios y contacto */
+    .seccion-testimonios-contacto {
+        display: flex;
+        flex-direction: column;
+        /* Los bloques se apilan uno debajo del otro */
+        height: auto;
+        /* Ajusta automáticamente el alto */
+        gap: 10px;
+        /* Separación entre las secciones */
+        margin-bottom: 100px;
+        /* Espaciado inferior */
+        padding: 10px 20px;
+        /* Ajuste del padding */
+    }
       /* Bloque Derecho: Testimonios */
       .bloque-testimonios {
-        height: 35vh;
+        height: 45vh;
         /* Ajusta la altura automáticamente */
         flex-direction: column;
         /* Alinea verticalmente los elementos */
         padding: 15px;
     }
+}/* Ajuste para pantallas móviles */
+@media (max-width: 768px) {
+    .text-overlay-developers {
+        left: 5%; /* Mantiene la alineación */
+        padding: 5px 10px; /* Reduce aún más el espaciado interno */
+      width: 91%;
+    }
+
+    .text-overlay-developers h3 {
+        font-size: 1.0rem; /* Reduce el tamaño del título */
+    }
 }
+@media (max-width: 376px) {
+    .text-overlay-developers {
+        left: 5%; /* Mantiene la alineación */
+        padding: 5px 10px; /* Reduce aún más el espaciado interno */
+      width: 95%;
+    }
+
+    .text-overlay-developers h3 {
+        font-size: 1.0rem; /* Reduce el tamaño del título */
+    }
+}
+

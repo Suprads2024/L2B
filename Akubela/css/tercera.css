@@ -1,0 +1,199 @@
+p{
+    font-size: 1.5rem!important;
+}
+
+@media (max-width:1700px){
+    p{
+        font-size: 1.1rem!important;
+    }
+    
+}
+/* Contenedor principal */
+.custom-section {
+    display: grid;
+    grid-template-columns: 65% 35%; /* 65% para video y texto, 35% para imagen */
+    width: 100%;
+    height: 80vh; /* Ocupa toda la altura de la pantalla */
+    gap: 10px; /* Espaciado entre columnas */
+    padding: 10px 0px;
+    margin-bottom: 150px;
+}
+
+/* Columna izquierda */
+.custom-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre el video y el texto */
+}
+
+/* Video */
+.custom-video-container {
+    flex: 7; /* Aumentamos a 70% la proporción del video en la columna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Texto debajo del video */
+.custom-text-container {
+    flex: 3; /* Reducimos a 30% la proporción del texto en la columna */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Reducimos el padding */
+    color: #000000;
+    text-align: left;
+}
+.custom-text-container p{
+    font-family: 'Eurostile-Medium';
+    font-size: 1.5rem;
+}
+/* Columna derecha */
+.custom-right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen con efecto hover */
+.custom-hover-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Imagen por defecto */
+.custom-hover-image .default-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Imagen de hover (oculta por defecto) */
+.custom-hover-image .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Oculta inicialmente */
+    transition: opacity 0.5s ease-in-out;
+   
+}
+
+/* Texto siempre visible */
+.custom-text-overlay {
+    position: absolute;
+    bottom: 20px; /* Fija el texto en la parte inferior */
+    left: 20px; /* Alineado a la izquierda */
+    color: #000000; /* Texto blanco por defecto */
+    z-index: 2;
+    text-align: left;
+}
+
+.custom-text-overlay h2 {
+    font-family: 'Eurostile-Heavy';
+    font-size: 5rem;
+    margin: 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.custom-text-overlay p {
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    margin: 5px 0 0 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover: Cambiar la imagen y el color del texto */
+.custom-hover-image:hover .default-image {
+    opacity: 0; /* Oculta la imagen por defecto */
+    border-radius: 15px;
+}
+
+.custom-hover-image:hover .hover-image {
+    opacity: 1; /* Muestra la imagen de hover */
+    border-radius: 15px;
+}
+
+.custom-hover-image:hover .custom-text-overlay h2,
+.custom-hover-image:hover .custom-text-overlay p {
+    color: #ff5716; /* Cambia el color del texto al hacer hover */
+}
+@media (max-width: 1700px) {
+    /* Texto debajo del video */
+.custom-text-container {
+    
+    padding: 40px; /* Reducimos el padding */
+   
+}
+    .custom-text-container p{
+        font-family: 'Eurostile-Medium';
+        font-size: 1.2rem;
+    }
+}
+
+/* --------- Media Queries para dispositivos móviles --------- */
+@media (max-width: 768px) {
+    p{
+        font-size: 0.9rem!important;
+    }
+    /* Disposición en una columna */
+    .custom-section {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto; /* Ajusta las alturas automáticamente */
+        height: auto; /* Permite altura dinámica */
+        gap: 15px; /* Espaciado entre elementos */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    /* Orden de los elementos */
+    .custom-right-column {
+        order: 2; /* Imagen de Akubela aparece primero */
+        height: auto; /* Altura dinámica */
+    }
+
+    .custom-text-container {
+        order: 2; /* Caja de texto aparece en segundo lugar */
+        padding: 30px;
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+    }
+
+    .custom-video-container {
+        order: 1; /* Video aparece al final */
+        flex: none;
+        height: 40vh; /* Tamaño ajustado para dispositivos móviles */
+    }
+
+    /* Reducimos el tamaño de la imagen de Akubela */
+    .custom-hover-image {
+        height: 50vh; /* Ajustamos el tamaño de la imagen */
+    }
+
+    /* Texto dentro de la imagen */
+    .custom-text-overlay h2 {
+        font-size: 3rem; /* Reducimos el tamaño del título */
+    }
+
+    .custom-text-overlay p {
+        font-size: 1rem; /* Reducimos el tamaño del párrafo */
+    }
+}

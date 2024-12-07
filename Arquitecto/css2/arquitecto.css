@@ -11,7 +11,9 @@
 }
 
 
-
+strong{
+  font-family: 'Eurostile-Heavy';
+}
 
 /*-----Logo------ */
 .menu__bar2 {
@@ -500,3 +502,100 @@
     }
   
   }
+ 
+
+
+
+
+
+
+
+
+/* Opcional: ajustar margen o padding si es necesario */
+.navigation a {
+  padding-right: 25px;
+  /* Asegura que haya espacio para la flecha */
+}
+
+@media (max-width: 600px) {
+  .whatsapp-button img {
+    width: 55px;
+    /* Tamaño del icono de WhatsApp */
+    height: 55px;
+
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navigation--mobile {
+    position: fixed;
+    top: 50px; /* Espacio desde la parte superior */
+    left: 0; /* Alineado a la izquierda */
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    height: calc(100vh - 50px); /* Ajusta la altura restando el espacio superior */
+    background-color: rgb(253, 253, 253); /* Fondo blanco */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    padding: 1rem; /* Espaciado interno */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede */
+    gap: 1rem; /* Espaciado entre los elementos */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    justify-content: flex-start; /* Ajusta el contenido hacia la parte superior */
+}
+
+  /* Slide down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navigation--mobile {
+    animation: slideDown 300ms ease-out forwards;
+  }
+
+  /* Slide up (fade out) animation */
+  @keyframes slideUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  .navigation--mobile--fadeout {
+    animation: slideUp 300ms ease-out forwards;
+  }
+
+
+
+.submenu li .submenu {
+    position: relative; /* Cambia a relativo para apilar en móvil */
+    top: 0;
+    left: 0; /* No se desplazará hacia la derecha */
+}
+ /* Ajustes de visualización para abrir submenús hacia abajo */
+ .navigation li:hover > .submenu,
+ .submenu li:hover > .submenu {
+     display: block;
+     margin-left: 20px; /* Aumenta el margen izquierdo para identar subniveles */
+ }
+
+}
