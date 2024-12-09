@@ -15,6 +15,7 @@ let autoNextTimeout;
 function showSlider(direction) {
     // Actualizamos los elementos del carrusel (por si cambian dinámicamente)
     items = document.querySelectorAll('.item');
+    console.log('Moviendo carrusel en dirección:', direction);
 
     if (direction === 'next') {
         // Mover al siguiente: El primer elemento se mueve al final
@@ -51,10 +52,24 @@ function resetAutoNext() {
     }, timeAutoNext);
 }
 
+// Configuración inicial del carrusel
+function initializeCarousel() {
+    // Garantiza que el primer elemento siempre sea visible al inicio
+    items = document.querySelectorAll('.item');
+
+    // Colocamos el primer elemento como inicial
+    while (list.firstChild !== items[0]) {
+        list.appendChild(list.firstChild);
+    }
+
+    // Configuramos animaciones iniciales
+    resetTimeAnimation();
+    resetAutoNext();
+}
+
 // Eventos de los botones
 nextBtn.onclick = () => showSlider('next');
 prevBtn.onclick = () => showSlider('prev');
 
-// Configuración inicial
-resetTimeAnimation();
-resetAutoNext();
+// Inicialización del carrusel
+initializeCarousel();

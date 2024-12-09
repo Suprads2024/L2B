@@ -13,10 +13,10 @@ p{
     display: grid;
     grid-template-columns: 65% 35%; /* 65% para video y texto, 35% para imagen */
     width: 100%;
-    height: 80vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
     gap: 10px; /* Espaciado entre columnas */
-    padding: 10px 0px;
-    margin-bottom: 150px;
+    padding: 20px 10px 40px 10px;
+    margin-bottom: 20px;
 }
 
 /* Columna izquierda */
@@ -71,7 +71,7 @@ p{
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -87,7 +87,8 @@ p{
 }
 
 /* Imagen de hover (oculta por defecto) */
-.custom-hover-image2 .hover-image {
+.custom-hover-image2 .hover-image2 {
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +132,7 @@ p{
     border-radius: 15px;
 }
 
-.custom-hover-image2:hover .hover-image {
+.custom-hover-image2:hover .hover-image2 {
     opacity: 1; /* Muestra la imagen de hover */
     border-radius: 15px;
 }
@@ -163,15 +164,18 @@ p{
         grid-template-columns: 1fr; /* Una sola columna */
         grid-template-rows: auto; /* Ajusta las alturas automáticamente */
         height: auto; /* Permite altura dinámica */
-        gap: 15px; /* Espaciado entre elementos */
-        padding: 10px; /* Espaciado interno */
+        gap: 10px; /* Espaciado entre elementos */
+        padding: 10px 10px 40px 10px;
     }
 
     /* Orden de los elementos */
     .custom-right-column {
         order: 2; /* Imagen de Akubela aparece primero */
         height: auto; /* Altura dinámica */
-    }
+        display: inline;
+        justify-content: center;
+        align-items: center;
+    }/* Columna derecha */
 
     .custom-text-container {
         order: 2; /* Caja de texto aparece en segundo lugar */
@@ -200,8 +204,8 @@ p{
     }
 
     /* Imagen de hover (oculta por defecto) */
-.custom-hover-image2 .hover-image {
-    
+.custom-hover-image2 .hover-image2 {
+   
   margin-right: 0px;
    
    

@@ -9,10 +9,27 @@
 
 /* Estilos generales del body */
 body {
-    padding: 0 10px; /* Padding lateral para todo el cuerpo */
+    
     box-sizing: border-box; /* Asegura que el padding no rompa el layout */
 }
 
+
+/* Fondo específico para .features-grid */
+.features-grid {
+    background-image: url('../assets/Assets_Akubela/Fondo_Negro_2y3unidad.jpg'); /* Ruta de la nueva imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo */
+    padding: 0 10px;
+  }
+  
+  /* Fondo específico para .custom-section */
+  .custom-section {
+    background-image: url('../assets/Assets_Akubela/Fondo_Negro_2y3unidad.jpg'); /* Ruta de la nueva imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo */
+  }
 /* Header section */
 
 header {
@@ -63,6 +80,7 @@ header {
 }
 
 .carousel .list .item {
+    
     width: 220px;
     /* Reducimos el ancho */
     height: 160px;
@@ -82,11 +100,35 @@ header {
 
 }
 
+.item1 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Supreme.png');
+}
+
+.item2 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_hypanelf.png');
+}
+
+.item3 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Lite.png');
+}
+
+.item4 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Lux.png');
+}
+
+.item5 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Pro.png');
+}
+
+.item6 {
+    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Ultra.png');
+}
+
 
 .carousel .list .item:nth-child(1),
 .carousel .list .item:nth-child(2) {
+    
     top: 0;
-
     left: 0;
     transform: translate(0, 0);
     border-radius: 0;
@@ -95,32 +137,25 @@ header {
 }
 
 .carousel .list .item:nth-child(3) {
-
-    left: 45%;
-    /* Reduce un poco el centro inicial */
+    left: 57%; /* Primer elemento más a la izquierda */
 }
 
-.carousel .list .item:nth-child(n+4) {
-
-    left: calc(45% + 250px);
-    /* Incrementa la separación inicial */
+.carousel .list .item:nth-child(4) {
+    left: calc(57% + 250px); /* Segundo elemento separado por 250px */
 }
 
 .carousel .list .item:nth-child(5) {
-    left: calc(45% + 500px);
-    /* Amplía más la separación */
+    left: calc(57% + 500px); /* Tercer elemento separado por 500px */
 }
 
-.carousel .list .item:nth-child(6) {
-    left: calc(45% + 750px);
-    /* Mantén mayor distancia */
+/* Ocultamos el cuarto elemento (y los siguientes, si los hubiera) */
+.carousel .list .item:nth-child(n+6) {
+    left: calc(57% + 750px); /* Posición fuera del área visible */
+    opacity: 0; /* Lo ocultamos visualmente */
+    pointer-events: none; /* Evitamos que sea interactivo */
 }
 
-.carousel .list .item:nth-child(n+7) {
-    left: calc(45% + 1000px);
-    /* Espaciado aún mayor para elementos adicionales */
-    opacity: 0;
-}
+
 
 @media (max-width:1700px) {
 
@@ -217,6 +252,7 @@ header {
 }
 
 .content .des {
+    width:700px;
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
@@ -412,7 +448,7 @@ header {
     }
 
     .content .des {
-        font-size: 16px;
+        font-size: 0.9rem;
         width: 270px;
     }
 
@@ -430,7 +466,7 @@ header {
 
     .content .title,
     .content .name {
-        font-size: 2.2rem;
+        font-size: 1.2rem;
     }
 
     .content .btn button {
@@ -552,12 +588,6 @@ header {
 
 @media (max-width:786px) {
     
-.carousel {
-   
-    /* Ancho total */
-    height: 84vh;
-   
-}
 
 
     .carousel .list .item:nth-child(1),
@@ -569,27 +599,23 @@ header {
         width: 100%;
         height: 100%;
     }
-
+    
     .carousel .list .item:nth-child(3) {
         left: 57%;
     }
-
+    
     .carousel .list .item:nth-child(n+4) {
         left: calc(57% + 200px);
     }
-
+    
     .carousel .list .item:nth-child(5) {
         left: calc(57% + 400px);
     }
-
+    
     .carousel .list .item:nth-child(6) {
         left: calc(57% + 600px);
     }
-
-    .carousel .list .item:nth-child(n+7) {
-        left: calc(57% + 800px);
-        opacity: 0;
-    }
+    
 
     .list .item .content {
         position: absolute;
@@ -622,7 +648,7 @@ header {
 
         left: 0px;
         /* Moverlas hacia la izquierda */
-        bottom: -50px;
+        bottom: -70px;
         /* Moverlas hacia abajo */
 
     }
@@ -641,7 +667,7 @@ header {
         height: 40px;
 
         right: 10px;
-        bottom: -50px;
+        bottom: -70px;
         /* Moverlas hacia abajo */
 
     }
@@ -688,7 +714,7 @@ header {
     /* Contenedor principal */
     .info-section {
 
-        height: 60vh;
+        height: 67vh;
         /* Altura de la sección */
 
     }
@@ -697,7 +723,7 @@ header {
     .info-image {
         width: 100%;
         height: 100%;
-        background-image: url('../assets/Assets_Akubela/Unidad1/Ecos/Ecosistemacelu.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Ecos/Responsive_Ecosistema.png');
         /* Ruta de la imagen */
         background-size: cover;
         /* La imagen cubrirá todo el contenedor */
@@ -705,35 +731,6 @@ header {
         /* Centrado de la imagen */
         border-radius: 15px;
     }
-}
-
-/* Estilos por defecto (Escritorio) */
-.item1 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Lux.png');
-}
-
-.item2 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Pro.png');
-}
-
-.item3 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Lite.png');
-}
-
-.item4 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_LiteF.png');
-}
-
-.item5 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Supreme.png');
-}
-
-.item6 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Ultra.png');
-}
-
-.item7 {
-    background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/CarruselL2B_Ultra.png');
 }
 
 
@@ -757,35 +754,52 @@ footer {
 }
 /* Cambiar las imágenes para pantallas móviles */
 @media (max-width: 768px) {
-
-    /* Estilos por defecto (Escritorio) */
+    
+    .carousel {
+        width: 100%; /* Ancho total */
+        height: auto; /* Ajuste automático según el contenido */
+        display: flex; /* Centrado del contenido */
+        align-items: center; 
+        justify-content: center; 
+        min-height: 570px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+    .carousel .list .item {
+        width: 120px;
+        /* Reducimos el ancho */
+        height: 80px;
+        /* Reducimos la altura */
+        position: absolute;
+        top: 92%;
+        transform: translateY(-70%);
+        left: 80%;
+      
+       
+    }
+    /* Estilos por defecto celular */
     .item1 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Supreme.png');
+    }
+
+    .item2 {
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_hy\ panel.png');
     }
 
     .item3 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
-    }
-
-    .item3 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Hypanel-lite.png');
     }
 
     .item4 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Lux.png');
     }
 
     .item5 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_Pro.png');
     }
 
     .item6 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Ultra.png');
     }
 
-    .item7 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/celu3.jpg');
-    }
 
 
     .item {
@@ -794,4 +808,46 @@ footer {
         height: 100px;
         /* Tamaño reducido en móvil */
     }
+}
+
+
+@media (max-width: 431px) {
+    .carousel {
+        
+        min-height: 650px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+    .info-section {
+        height: 52vh;
+    }
+}
+
+@media (max-width: 415px) {
+    .carousel {
+      
+        min-height: 600px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+    .info-section {
+        height: 55vh;
+    }
+
+}
+@media (max-width: 391px) {
+    .carousel {
+       
+        min-height: 580px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+}
+
+@media (max-width: 376px) {
+    .carousel {
+       
+        min-height: 560px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+      
+      .info-section {
+        height: 67vh;
+    }
+
+
 }
