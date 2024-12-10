@@ -8,7 +8,7 @@ let items = document.querySelectorAll('.item'); // Lista actualizada de elemento
 
 // Configuraciones
 const timeRunning = 3000; // Tiempo de animación entre movimientos
-const timeAutoNext = 7000; // Tiempo para avanzar automáticamente
+const timeAutoNext = 70000; // Tiempo para avanzar automáticamente
 let autoNextTimeout;
 
 // Función para mover el carrusel

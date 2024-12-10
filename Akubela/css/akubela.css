@@ -97,6 +97,7 @@ header {
     background-size: cover;
     z-index: 100;
     transition: 1s;
+    
 
 }
 
@@ -217,7 +218,7 @@ header {
     position: absolute;
 
     top: 40%;
-    left: 800px;
+    left: 700px;
     transform: translateY(-50%);
     width: 400px;
     text-align: left;
@@ -252,10 +253,10 @@ header {
 }
 
 .content .des {
-    width:700px;
+    width:600px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-left: 0px;
     font-family: 'Eurostile-Regular';
     opacity: 0;
@@ -460,13 +461,11 @@ header {
         margin-right: 0;
     }
 
-    .list .item .content {
-        top: 40%;
-    }
+    
 
     .content .title,
     .content .name {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .content .btn button {
@@ -552,7 +551,7 @@ header {
     .list .item .content {
         position: absolute;
 
-        top: 50%;
+        top: 45%;
         left: 500px;
         transform: translateY(-50%);
         width: 400px;
@@ -620,7 +619,7 @@ header {
     .list .item .content {
         position: absolute;
 
-        top: 25%;
+        top: 30%;
         left: 20px;
         transform: translateY(-50%);
         width: 400px;
@@ -764,40 +763,43 @@ footer {
         min-height: 570px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
     }
     .carousel .list .item {
-        width: 120px;
-        /* Reducimos el ancho */
-        height: 80px;
-        /* Reducimos la altura */
+        width: 120px; /* Mantén el ancho */
+        height: 80px; /* Mantén la altura */
         position: absolute;
-        top: 92%;
+        top: 92%; /* Posición vertical */
         transform: translateY(-70%);
         left: 80%;
-      
-       
+    
+        /* Ajustes para centrar más el producto */
+        background-position: center 77%; /* Centra horizontalmente y mueve ligeramente hacia arriba */
+        background-size: cover; /* Ajusta para cubrir todo el contenedor */
+        z-index: 100;
+    
     }
+    
     /* Estilos por defecto celular */
     .item1 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Supreme.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Supreme.png');
     }
 
     .item2 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_hy\ panel.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_hy\ panel.png');
     }
 
     .item3 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Hypanel-lite.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Hypanel-lite.png');
     }
 
     .item4 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Lux.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Lux.png');
     }
 
     .item5 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_Pro.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_Pro.png');
     }
 
     .item6 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Ultra.png');
+        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Ultra.png');
     }
 
 
@@ -820,7 +822,16 @@ footer {
         height: 52vh;
     }
 }
+@media (max-width: 421px) {
+    .carousel {
+      
+        min-height: 600px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+    .info-section {
+        height: 56vh;
+    }
 
+}
 @media (max-width: 415px) {
     .carousel {
       
