@@ -104,11 +104,9 @@
                   <img src="Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
               </a>
               <ul class="submenu">
-                  <!-- Akubela 
-                  <li>
-                      <a href="https://your-akubela-website.com" target="_blank" title="Akubela">Akubela</a>
-                  </li>-->
-                  <!-- Fibaro -->
+                <li>
+                  <a href="https://life2better.com/akubela" target="_blank" title="Akubela">Akubela</a>
+              </li>
                   <li>
                       <a href="#" class="dropdown-link" title="Fibaro">Fibaro   
                           
@@ -207,40 +205,40 @@
       });
     });
   </script>
-<script>
-  // Lógica para enlaces internos con desplazamiento suave
-  document.querySelectorAll('.navigation a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          const target = this.getAttribute('href');
-          
-          // Si el enlace es interno (empieza con #), realiza el scroll suave
-          if (target && target.startsWith('#')) {
-              e.preventDefault();
-              document.querySelector(target).scrollIntoView({
-                  behavior: 'smooth'
-              });
-          }
-      });
-  });
+  <script>
+    // Lógica para enlaces internos con desplazamiento suave
+    document.querySelectorAll('.navigation a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = this.getAttribute('href');
 
-  // Lógica para enlaces externos e internos especiales
-  document.querySelectorAll('.navigation a').forEach(link => {
-      link.addEventListener('click', function (event) {
-          const url = this.getAttribute('href');
+            // Si el enlace es interno (empieza con #), realiza el scroll suave
+            if (target && target.startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-          // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-          if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/") {
-              // Navegar dentro de la misma pestaña
-              event.preventDefault(); // Evita el comportamiento predeterminado
-              window.location.href = url; // Navega en la misma pestaña
-          } 
-          // Para otros enlaces externos
-          else if (url && url !== '#' && !url.startsWith('#')) {
-              event.preventDefault(); // Evita el comportamiento predeterminado
-              window.open(url, '_blank'); // Abre en una nueva pestaña
-          }
-      });
-  });
+    // Lógica para enlaces externos e internos especiales
+    document.querySelectorAll('.navigation a').forEach(link => {
+        link.addEventListener('click', function (event) {
+            const url = this.getAttribute('href');
+
+            // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
+            if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/"|| url === "https://life2better.com/akubela") {
+                // Navegar dentro de la misma pestaña
+                event.preventDefault(); // Evita el comportamiento predeterminado
+                window.location.href = url; // Navega en la misma pestaña
+            }
+            // Para otros enlaces externos
+            else if (url && url !== '#' && !url.startsWith('#')) {
+                event.preventDefault(); // Evita el comportamiento predeterminado
+                window.open(url, '_blank'); // Abre en una nueva pestaña
+            }
+        });
+    });
 </script>
 <script>document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.querySelector('.menu-icon');

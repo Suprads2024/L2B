@@ -1,10 +1,10 @@
 p{
-    font-size: 1.5rem!important;
+    font-size: 1.2rem!important;
 }
 
 @media (max-width:1700px){
     p{
-        font-size: 1.1rem!important;
+        font-size: 1.2rem!important;
     }
     
 }
@@ -47,7 +47,7 @@ p{
     flex: 3; /* Reducimos a 30% la proporción del texto en la columna */
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;

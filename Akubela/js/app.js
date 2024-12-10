@@ -8,7 +8,7 @@ let items = document.querySelectorAll('.item'); // Lista actualizada de elemento
 
 // Configuraciones
 const timeRunning = 3000; // Tiempo de animación entre movimientos
-const timeAutoNext = 70000; // Tiempo para avanzar automáticamente
+const timeAutoNext = 7000; // Tiempo para avanzar automáticamente
 let autoNextTimeout;
 
 // Función para mover el carrusel
@@ -70,6 +70,24 @@ function initializeCarousel() {
 // Eventos de los botones
 nextBtn.onclick = () => showSlider('next');
 prevBtn.onclick = () => showSlider('prev');
+
+// Pausar el auto-deslizamiento al pasar el mouse o tocar la pantalla
+function pauseAutoNext() {
+    clearTimeout(autoNextTimeout);
+    runningTime.style.animation = 'none'; // Detiene la animación visual
+}
+
+// Reanudar el auto-deslizamiento al quitar el mouse o detener el toque
+function resumeAutoNext() {
+    resetTimeAnimation();
+    resetAutoNext();
+}
+
+// Añadimos eventos para pausar y reanudar en dispositivos táctiles y escritorio
+carousel.addEventListener('mouseenter', pauseAutoNext); // Pausa en escritorio
+carousel.addEventListener('mouseleave', resumeAutoNext); // Reanuda en escritorio
+carousel.addEventListener('touchstart', pauseAutoNext);  // Pausa en dispositivos táctiles
+carousel.addEventListener('touchend', resumeAutoNext);   // Reanuda en dispositivos táctiles
 
 // Inicialización del carrusel
 initializeCarousel();

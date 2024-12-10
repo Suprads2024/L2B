@@ -16,21 +16,11 @@ body {
 
 /* Fondo específico para .features-grid */
 .features-grid {
-    background-image: url('../assets/Assets_Akubela/Fondo_Negro_2y3unidad.jpg'); /* Ruta de la nueva imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el div */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija el fondo */
+    
     padding: 0 10px;
   }
   
-  /* Fondo específico para .custom-section */
-  .custom-section {
-    background-image: url('../assets/Assets_Akubela/Fondo_Negro_2y3unidad.jpg'); /* Ruta de la nueva imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el div */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija el fondo */
-  }
-/* Header section */
+
 
 header {
     width: 100%;
@@ -450,7 +440,7 @@ header {
 
     .content .des {
         font-size: 0.9rem;
-        width: 270px;
+      
     }
 
 }
@@ -559,7 +549,11 @@ header {
         color: #525252ff;
         display: none;
     }
-
+    .content .des {
+       
+        font-size: 1.1rem;
+       
+    }
 
     /* Texto sobre la imagen, alineado a la derecha */
     .info-text {
@@ -753,7 +747,10 @@ footer {
 }
 /* Cambiar las imágenes para pantallas móviles */
 @media (max-width: 768px) {
-    
+    .content .des {
+        font-size: 1rem;
+        width: 300px;
+    }
     .carousel {
         width: 100%; /* Ancho total */
         height: auto; /* Ajuste automático según el contenido */
