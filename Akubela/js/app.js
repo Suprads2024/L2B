@@ -83,11 +83,3 @@ function resumeAutoNext() {
     resetAutoNext();
 }
 
-// Añadimos eventos para pausar y reanudar en dispositivos táctiles y escritorio
-carousel.addEventListener('mouseenter', pauseAutoNext); // Pausa en escritorio
-carousel.addEventListener('mouseleave', resumeAutoNext); // Reanuda en escritorio
-carousel.addEventListener('touchstart', pauseAutoNext);  // Pausa en dispositivos táctiles
-carousel.addEventListener('touchend', resumeAutoNext);   // Reanuda en dispositivos táctiles
-
-// Inicialización del carrusel
-initializeCarousel();
