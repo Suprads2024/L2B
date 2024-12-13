@@ -1,0 +1,309 @@
+
+/* Contenedor de los módulos superiores */
+.modules-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    height: 35vh; /* Altura del contenedor */
+    gap: 10px; /* Espaciado entre los módulos */
+}
+
+
+/* Estilo base para los módulos */
+.module {
+    position: relative;
+    border-radius: 10px; /* Bordes redondeados */
+    background-size: cover; /* Imagen de fondo ajustada */
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+
+}
+
+.module img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fondo oscuro semitransparente */
+.module .text-overlay {
+    
+margin-bottom: -5px;
+    border-radius: 8px;
+    width: auto; /* Ajusta al contenido por defecto */
+}
+
+/* Expansión del texto en el módulo 2 */
+.module-2 .text-overlay.expanded {
+    width: 100%; /* Expande el ancho del contenedor de texto */
+    
+}
+
+/* Estilos para los títulos */
+.module h2 {
+    
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 2.5rem; /* Tamaño del título */
+    margin: 0 0 10px; /* Margen inferior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    line-height: 1.4; /* Altura de línea */
+    width: 800px;
+}
+
+/* Estilos para los títulos */
+.module-2 h2 {
+  
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 1.8rem; /* Tamaño del título */
+    margin: 0 0 10px; /* Margen inferior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    line-height: 1.4; /* Altura de línea */
+    width: 600px;
+    color: #fec200;
+    
+}
+
+.module-2 p{
+    color: #fec200;
+}
+
+/* Estilos para los párrafos */
+.module p {
+    font-family: 'Eurostile-Medium', Arial, sans-serif;
+    font-size: 1.2rem; /* Tamaño del párrafo */
+    line-height: 1.5; /* Altura de línea */
+    margin: 0; /* Sin margen */
+}
+.module .text-overlay p {
+    font-size: 1.3rem;
+    width: 600px;
+}
+/* Contenedor principal */
+.content-container {
+    display: flex;
+    height: 45vh; /* Altura de carrusel e imagen */
+    gap: 10px;
+}
+
+/* Carrusel */
+.carousel-container {
+    width: 70%; /* Ocupa el 70% del ancho */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.carousel-item .text-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.carousel-item .text-overlay h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carousel-item .text-overlay p,
+.carousel-item .text-overlay ul {
+    font-size: 1rem;
+}
+
+/* Imagen estática */
+.image-container {
+    
+    width: 30%; /* Ocupa el 30% del ancho */
+    height: 100%; /* Altura completa */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Estilo general de los módulos */
+.module {
+    position: relative;
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Recorta contenido excedente */
+}
+
+/* Imagen de fondo */
+.background-image {
+ 
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Escala la imagen para cubrir todo el módulo */
+    background-position: center; /* Centra la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------IMAGEN AMARILLO DE REQUISITOS----------- */
+.image-container {
+    position: relative;
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido fuera de los bordes */
+}
+
+/* Texto superpuesto */
+.text-overlay-requisitos {
+    position: absolute;
+    bottom: 20px; /* Fija el texto a 20px desde el borde inferior */
+    left: 20px; /* Fija el texto a 20px desde el borde izquierdo */
+    
+    border-radius: 8px;
+    max-width: 80%; /* Evita que el texto ocupe todo el ancho */
+    color: #000;
+}
+
+/* Título */
+.text-overlay-requisitos h2 {
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #000;
+}
+
+/* Lista */
+.text-overlay-requisitos ul {
+    list-style-type: disc; /* Puntitos como estilo */
+    padding-left: 20px; /* Sangría para los puntitos */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-overlay-requisitos ul li {
+    margin-bottom: 10px;
+    font-family: 'Eurostile-Medium';
+}
+
+
+
+@media (max-width:1700px){
+    
+    .module h2{
+        font-size:2rem ;
+    }
+    .module-2 h2{
+        font-size: 1.5rem;
+    }
+    .module .text-overlay p{
+        font-size:1rem ;
+    }
+
+
+    /* Título */
+.text-overlay-requisitos h2 {
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 1.2rem;
+  
+}
+
+/* Lista */
+.text-overlay-requisitos ul {
+    font-family: 'Eurostile-Medium';
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.text-overlay-requisitos ul li {
+    margin-bottom: 10px;
+  
+ 
+}
+
+    
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+   
+    .text-overlay h1 {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+
+    .text-overlay p {
+        font-size: 0.9rem; /* Reduce el tamaño del párrafo */
+    }
+    .modules-container {
+        grid-template-columns: 1fr; /* Una columna */
+        height: auto; /* Altura automática */
+        gap: 10px; /* Ajusta el espaciado */
+    }
+    .module-1 {
+        height: 20vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
+    }
+    .module-2 {
+        height: 35vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
+    }
+     /* Configuración del texto */
+    .text-overlay {
+        margin: 0; /* Elimina márgenes innecesarios */
+        max-width: 90%; /* Asegura que el texto no ocupe más del 90% del ancho del módulo */
+    }
+
+    .text-overlay h2 {
+        font-size: 1.1rem; /* Ajusta el tamaño del título */
+        line-height: 1.2; /* Reduce la altura de línea */
+        margin-bottom: 10px; /* Espaciado inferior */
+        width: 300px;
+    }
+    .module .text-overlay p {
+        width: 300px;
+    }
+    .text-overlay p {
+        font-size: 1rem; /* Ajusta el tamaño del párrafo */
+        line-height: 1.4; /* Espaciado entre líneas */
+       
+    }
+}
+
+
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width:376px) {
+   
+   
+    .module-1 {
+        height: 30vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
+    }
+    .module-2 {
+        height: 45vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
+    }
+    
+
+    
+}
+
+

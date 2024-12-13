@@ -14,21 +14,21 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life 2 Better / Arquitecto</title>
+    <title>Life 2 Better / Representante</title>
     <link rel="shortcut icon" href="../Assets/Icono_pestaña.png" type="image/x-icon">
     <link rel="stylesheet" href="../Assets/css/style.css?v=1.1">
     <link rel="stylesheet" href="../Assets/css/header2.css?v=1.1">
     <link rel="stylesheet" href="../Assets/css/main.css?v=1.1">
     <link rel="stylesheet" href="../Assets/css/tercerunidad.css?v=1.1">
     <link rel="stylesheet" href="../Assets/css/footer.css?v=1.1">
-    <link rel="stylesheet" href="../Assets/css/carouselheader.css">
-    <!--Clases de arquitecto -->
-    <!--Clases de arquitecto -->
-    <link rel="stylesheet" href="../arquitecto/css2/arquitecto.css?v=3.1">
-    <link rel="stylesheet" href="../arquitecto/css2/segunda.css?v=2.1">
-    <link rel="stylesheet" href="../arquitecto/css2/primera2.css?v=2.1">
 
-
+    <!--Clases de arquitecto -->
+    <link rel="stylesheet" href="../desarrolladores/css/desarrollador.css">
+    <link rel="stylesheet" href="../desarrolladores/css/primeradesarrollador.css">
+    <link rel="stylesheet" href="../desarrolladores/css/segundadesarrollador.css">
+    <!--Clases de representantes -->
+    <link rel="stylesheet" href="../representante/css/representante.css">
+    <link rel="stylesheet" href="../representante/css/carrouselheader.css">
     <!-- HTML Meta Tags -->
     <meta name="description"
         content="Mejorá tu calidad de vida con las soluciones tecnológicas que sólo L2B te puede brindar.">
@@ -85,7 +85,7 @@
     <div class="menu__wrapper" id="top">
         <div class="menu__bar2">
             <a href="../" title="Logo" class="logo">
-                <img src="../Assets/Footer/L2B_ Logo B.png" alt="Logo" class="logo-img2" id="logo-img">
+                <img src="../Assets/2daUnidad/L2B_Logo menu.png" alt="Logo" class="logo-img2" id="logo-img">
             </a>
             <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
                 onclick="toggleMenu(this)">
@@ -93,7 +93,7 @@
                 <li><a href="https://life2better.com/" title="Inicio">Home</a></li>
                 <li>
                     <a href="#" title="Hogar Fibaro" class="dropdown-link">Profesionales
-                        <img src="../Assets/Flecha_Abajo_Blanco.svg" class="dropdown-arrow2" alt="Desplegar">
+                        <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
                     </a>
 
                     <ul class="submenu">
@@ -106,7 +106,7 @@
 
                 <li>
                     <a href="#" title="Productos" class="dropdown-link">Productos
-                        <img src="../Assets/Flecha_Abajo_Blanco.svg" class="dropdown-arrow2" alt="Desplegar">
+                        <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
                     </a>
                     <ul class="submenu">
 
@@ -184,7 +184,7 @@
 
                 <li>
                     <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img
-                            src="../Assets/Flecha_Abajo_Blanco.svg" class="dropdown-arrow2" alt="Desplegar"></a>
+                            src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar"></a>
                     <ul class="submenu">
                         <li><a href="https://life2better.com/fibaro-argentina/">Sistema FIBARO</a></li>
                         <li><a href="https://life2better.com/z-wave/">Protocolo Z-Wave</a></li>
@@ -217,7 +217,7 @@
             });
         });
     </script>
-     <script>
+    <script>
         // Lógica para enlaces internos con desplazamiento suave
         document.querySelectorAll('.navigation a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -239,7 +239,7 @@
                 const url = this.getAttribute('href');
 
                 // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-                if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/"|| url === "https://life2better.com/akubela") {
+                if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/" || url === "https://life2better.com/akubela") {
                     // Navegar dentro de la misma pestaña
                     event.preventDefault(); // Evita el comportamiento predeterminado
                     window.location.href = url; // Navega en la misma pestaña
@@ -262,7 +262,7 @@
 
 
     <header class="header2">
-        <!-- Botones de navegación superiores (no necesitan cambios) -->
+        <!-- Botones de navegación superiores -->
         <div class="botones">
             <div class="boton">
                 <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
@@ -278,233 +278,210 @@
             </div>
         </div>
 
-        <!-- Sección de la imagen principal con texto superpuesto -->
-        <div class="header-main-image">
-            <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Revolucionatusproyectos.png"
-                alt="Imagen principal">
-            <div class="main-text">
-                <h2>REVOLUCIONÁ <br> TUS PROYECTOS CON L2B.</h2>
-                <p>Ambientación automatizada, seguridad inteligente y ahorro energético son solo algunas de las mejoras
-                    que hoy pueden aplicarse de forma simple y pueden cambiar radicalmente tus espacios. </p>
-            </div>
-        </div>
-
-        <!-- Contenedor de los carruseles inferiores -->
-        <div class="carousel-section">
-            <!-- Carrusel izquierdo con texto superpuesto (2 imágenes) -->
-            <div class="carousel-izquierdo">
-                <div class="carousel-slide active">
-                    <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Olvidatedegrandesobras.png"
-                        alt="Imagen Carrusel Izquierdo 1">
-                    <div class="carousel-text2 text-left">
-                        <h3>¡OLVÍDATE DE REFORMAS Y CABLEADOS!</h3>
-                        <p>Hoy transformar tus espacios con tecnología domótica es más fácil y accesible que nunca.
-                            <br><br>
-                            Nuestras soluciones permiten a los <strong>estudios de arquitectura</strong> brindarle
-                            grandes mejoras en la
-                            experiencia de los usuarios, utilizando la tecnología para mejorar la calidad de vida.</p>
+        <!-- Contenedor superior: Módulos 1 y 2 -->
+        <div class="modules-container">
+            <!-- Módulo 1 -->
+            <div class="module module-1">
+                <div class="background-image"
+                    style="background-image: url('../representante/Assets_Representante/Unidad1/Convertite_en_representante.png');">
+                    <div class="text-overlay">
+                        <h2>CONVERTITE EN <br> REPRESENTANTE L2B</h2>
+                        <p>El sistema de domótica ideal para <br> hogares y oficinas inteligentes.</p>
                     </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="../arquitecto/ArquitectoAssets/Unidad1/WeblandingL2BArquitecto_Comofuncionan.png"
-                        alt="Imagen Carrusel Izquierdo 2">
-                    <div class="carousel-text2 text-right">
-                        <h3>CÓMO FUNCIONAN NUESTRAS SOLUCIONES:</h3>
-                        <p>Teniendo en cuenta los parámetros establecidos por los usuarios, se integran con la
-                            inteligencia artificial del hogar sobre la iluminación, la climatización, la seguridad y
-                            otros, así como a través de dispositivos móviles, pantallas o comandos de voz con asistentes
-                            como <strong>Alexa, Google o Siri</strong>, ya sea de manera <strong>local</strong> o
-                            <strong>remota.</strong>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="module module-2">
+                <div class="background-image"
+                    style="background-image: url('../representante/Assets_Representante/Unidad1/Representante_Tegustariaserrepresentante.png');">
+                    <div class="text-overlay expanded">
+                        <h2>¿TE GUSTARÍA SER REPRESENTANTE Y COMERCIALIZAR NUESTROS PRODUCTOS?</h2>
+                        <p>
+                            Somos distribuidores de domótica en Argentina y Latinoamérica. Si te dedicás a la
+                            construcción,
+                            arquitectura, integración de alarmas, cámaras de seguridad, iluminación o tecnología de
+                            redes WiFi,
+                            esta es la oportunidad para sumar valor a tus proyectos.
                         </p>
                     </div>
                 </div>
             </div>
-
-            <!-- SCRIPT QUE HACE QUE FUNCIONE EL CARROUSEL DE LAS DOS IMAGENES QUE SE OPACAN -->
-            <script>document.addEventListener("DOMContentLoaded", () => {
-                    const slides = document.querySelectorAll(".carousel-izquierdo .carousel-slide");
-                    const carouselContainer = document.querySelector(".carousel-izquierdo");
-                    let currentSlide = 0;
-                    let intervalId;
-
-                    function showNextSlide() {
-                        slides[currentSlide].classList.remove("active");
-                        currentSlide = (currentSlide + 1) % slides.length;
-                        slides[currentSlide].classList.add("active");
-                    }
-
-                    function startCarousel() {
-                        intervalId = setInterval(showNextSlide, 6000);
-                    }
-
-                    function stopCarousel() {
-                        clearInterval(intervalId);
-                    }
-
-                    // Inicia el carrusel al cargar
-                    startCarousel();
-
-                    // Detiene el carrusel cuando el mouse está sobre el contenedor
-                    carouselContainer.addEventListener("mouseenter", stopCarousel);
-
-                    // Cambia de imagen y reinicia el carrusel al salir el mouse
-                    carouselContainer.addEventListener("mouseleave", () => {
-                        showNextSlide(); // Cambia a la siguiente imagen inmediatamente
-                        startCarousel(); // Reinicia el carrusel
-                    });
-                });
-
-            </script>
+        </div>
 
 
-
-            <!-- Carrusel derecho existente -->
-            <div class="carousel-derecho">
-                <div class="carousel">
-                    <div class="carousel_inner">
-                        <div class="carousel_item carousel_item__active">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Diseñosconmayoralcance _Verde1.png"
-                                alt="Imagen Carrusel Derecho 1">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Diseños con mayor alcance. </p>
-                            </div>
+        <!-- Contenedor principal del contenido -->
+        <div class="content-container">
+            <!-- Carrusel -->
+            <div class="carousel-container">
+                <div class="baba">
+                    <div class="carousel">
+                        <div class="slider">
+                            <section>
+                                <div class="text-content">
+                                    <h2 style="    color: #ffffff;">STARTER KIT COMERCIAL</h2>
+                                    <p style="    color: #ffffff;">Aprende, probá y mostrá la experiencia <br> L2B a tus clientes. </p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Starter_kit_comercial.png"
+                                    alt="Imagen 2">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                            <section>
+                                <div class="text-content2">
+                                    <h2>CERTIFICACIÓN OFICIAL</h2>
+                                    <p>Accede a cursos online con videos en español disponibles las 24 horas,
+                                        adquiriendo los conocimientos necesarios para desarrollar proyectos con mayor
+                                        potencial con tecnología inteligente. </p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Certificación_oficial.png"
+                                    alt="Imagen 1">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                         
+                           
+                            <section>
+                                <div class="text-content">
+                                    <h2 style="    color: #ffffff;">Acceso a la Installer App y Project App</h2>
+                                    <p style="    color: #ffffff;">Obtén materiales y guías personalizadas para tu capacitación y trabajo
+                                        profesional.</p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Acceso_a_la_Installer.png"
+                                    alt="Imagen 4">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                            <section>
+                                <div class="text-content2">
+                                    <h2>Canal de soporte técnico exclusivo para representantes. </h2>
+                                    <p>con herramientas para gestionar tus proyectos desde el celular.</p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Canal_de_soporte.png"
+                                    alt="Imagen 3">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                            <section>
+                                <div class="text-content">
+                                    <h2 style="    color: #ffffff;">Acceso a material de marketing</h2>
+                                    <p style="    color: #ffffff;">para promocionarte en tus redes sociales.</p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Acceso_a_material.png"
+                                    alt="Imagen 6">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                            <section>
+                                <div class="text-content2">
+                                    <h2>Esquema de precios diferenciales exclusivos para partners. </h2>
+                                    <p></p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Esquema_de_precios.png"
+                                    alt="Imagen 5">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
+                           
+                            <section>
+                                <div class="text-content">
+                                    <h2  style="    color: #ffffff;">Incorporación al listado de Representantes Autorizados L2B</h2>
+                                    <p  style="    color: #ffffff;"> ser un representante activo en nuestras comunicaciones, con acceso a material
+                                        exclusivo de domótica para soporte de ventas en tu sitio web y redes sociales.
+                                    </p>
+                                </div>
+                                <img src="../representante/Assets_Representante/Unidad1/Slider/Incorporación_al_listado.png"
+                                    alt="Imagen 7">
+                                <div class="carousel-footer">BENEFICIOS DE SER UN REPRESENTANTE OFICIAL L2B.</div>
+                            </section>
                         </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Solucionesamedidadelasdemandasdelmercado_Naranja1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Soluciones a medida de <br> las demandas del mercado. </p>
-                            </div>
+                        <div class="slider-controls">
+                            <span class="arrow left material-icons">
+                                <</span>
+                                    <span class="arrow right material-icons">></span>
+                                    <ul>
+                                        <li class="selected"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
                         </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Ofertamás atractiva_Azul1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Oferta más atractiva. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Prestigiodeestaralavanguardia_Amarillo1.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Prestigio de estar <br> a la vanguardia. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Nuevo estándar para tus proyectos _Verde2.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Nuevo estándar para <br> tus proyectos. </p>
-                            </div>
-                        </div>
-                        <div class="carousel_item">
-                            <img src="../arquitecto/ArquitectoAssets/Unidad1/Carrusel/Carrusel_Complementaciónidealcondiseñodeinteriores_Naranja v2.png"
-                                alt="Imagen Carrusel Derecho 2">
-                            <div class="carousel_caption">
-                                <p class="carousel_text">Complementación ideal con <br> diseño de interiores.</p>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
+
+
+            <!-- Imagen estática con texto superpuesto -->
+            <div class="image-container">
+                <div class="text-overlay-requisitos">
+                    <h2>REQUISITOS</h2>
+                    <ul>
+                        <li>Adquirir alguno de nuestros Starter Kit para probarlo y transmitir la experiencia a tus
+                            clientes o exhibirlo en tu local comercial.</li>
+                        <li>Contar con una página o sitio web donde se comercialicen los productos y se brinde
+                            información de tu empresa o emprendimiento.</li>
+                        <li>Tener redes sociales activas para comunicar y promocionarte como representante oficial L2B.
+                        </li>
+                        <li>Disponer de personal especializado para la instalación de nuestros dispositivos
+                            electrónicos.</li>
+                    </ul>
+                </div>
+                <img src="../representante/Assets_Representante/Unidad1/Representante_Requisitos.png"
+                    alt="Imagen Representantes">
+            </div>
+
         </div>
     </header>
 
 
+
     <section class="seccion-testimonios-contacto">
-        <!-- Sección superior: imagen amarilla con texto a la izquierda y testimonios a la derecha -->
+        <!-- Sección superior: imagen con texto -->
         <div class="grid-container">
-            <!-- Bloque Izquierdo: Imagen amarilla con texto -->
             <div class="bloque-imagen-texto">
-                <a href="https://wa.me/5491136304219?text=¡Hola!%20Quisiera%20más%20información%20acerca%20de%20las%20soluciones%20de%20L2B%20para%20arquitectos."
-                    target="_blank">
-                    <h3>¡NO ESPERES MÁS Y <br> ASESÓRATE CON NOSOTROS!</h3>
-                    <p>
-                        En L2B te acompañamos en cada instancia de tus proyectos para que puedas sacar el máximo
-                        provecho a
-                        la domótica integrando soluciones inteligentes a tu medida. <br>
-                        <br>
-                        Ofrecemos asesoramientos integrales y capacitaciones sobre todos nuestros productos para que
-                        puedas
-                        agregar tanto valor como prestigio a tu oferta profesional.
-                    </p>
-                </a>
-            </div>
-            <!-- Bloque Derecho: Testimonios -->
-            <div class="bloque-testimonios">
-                <div class="contenido-testimonios">
-
-                    <div class="carousel-testimonios">
-
-                        <div class="carousel-item2 active">
-                            <h3>TESTIMONIOS</h3>
-                            <p>
-                                <strong>Estudio Olivares & Asociados:</strong> <br>
-                                "Desde que empezamos a trabajar con los chicos de L2B, sumarle soluciones inteligentes a
-                                nuestros proyectos fue un golazo. A los clientes les encanta la comodidad y el control
-                                que tienen ahora, desde que se ajusta sola la luz hasta el monitoreo de seguridad en
-                                tiempo real. La domótica de L2B nos permite ofrecer un diseño bien moderno que es justo
-                                lo que busca el mercado hoy en día: eficiencia y ahorro energético. La verdad, ¡un
-                                acierto total!”
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <h3>TESTIMONIOS</h3>
-                            <p>
-                                <strong>Arq. Lucía González:</strong> <br>
-                                "Trabajar con la domótica nos cambió totalmente la forma de pensar los espacios que
-                                diseñamos. Con las soluciones de L2B optimizamos el consumo de energía y al mismo tiempo
-                                pudimos mejorar la comodidad de los usuarios, que ahora pueden manejar todo con
-                                asistentes de voz como Alexa o Siri. Estos sistemas además de aportar valor estético
-                                convierten cada proyecto en una solución que se ajusta a las necesidades de cada
-                                familia."
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <h3>TESTIMONIOS</h3>
-                            <p>
-                                <strong>García-Delgado Arquitectura:</strong> <br>
-                                "Las soluciones de L2B son brillantes para proyectos donde no podés ponerte a hacer
-                                obras o cambiar el cableado que ya está. La domótica se instala fácil. No tenés que
-                                romper paredes ni hacer un lío con cables. Es ideal para renovaciones o incluso si te
-                                mudás, porque podés desmontar el sistema y llevarlo a otro lado sin problema. Esta
-                                tecnología te da la simpleza de instalación y todas las ventajas de un hogar
-                                inteligente, lo que marca una gran diferencia para nuestros clientes."
-                            </p>
-                        </div>
-                        <div class="carousel-item2">
-                            <h3>TESTIMONIOS</h3>
-                            <p>
-                                <strong>Arq. Mariano Ledesma:</strong> <br>
-                                "La domótica de L2B fue y es un recurso clave en nuestros proyectos de renovación.
-                                Recientemente, trabajamos con una familia que necesitaba transformar la habitación de un
-                                hijo que se mudó en una oficina moderna y funcional. Con la tecnología de L2B, no sólo
-                                optimizamos el espacio, sino que logramos hacerlo sin alterar la estructura original. La
-                                flexibilidad de estos sistemas permite adaptar cada ambiente a las nuevas necesidades de
-                                los usuarios, integrando automatización en iluminación, climatización y seguridad de
-                                manera rápida y eficiente."
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Controles del carrusel -->
-                    <button class="carousel-control2 prev">‹</button>
-                    <button class="carousel-control2 next">›</button>
+                <!-- Imagen de fondo con texto superpuesto -->
+                <div class="text-overlay-developers">
+                    <h3>DESARROLLADORAS QUE INTEGRARON DOMÓTICA Y AUMENTARON EL VALOR DE SUS PROYECTOS.</h3>
                 </div>
-                <img class="estrellas"
-                    src="../arquitecto/ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_5Estrellas.png"
-                    alt="Estrellas" />
             </div>
+
+            <div class="bloque-testimonios" onclick="redirectToWhatsApp()" style="cursor: pointer;">
+                <!-- Texto e imagen inicial -->
+                <div class="contenido-testimonios default">
+                    <h3 style="color: #ff5716;">INTEGRACIÓN TOTAL <br> PARA TUS DESARROLLOS:</h3>
+                    <p style="color: rgb(158, 158, 158);">Contáctanos y accedé a nuestro asesoramiento personalizado.
+                    </p>
+                </div>
+                <!-- Texto e imagen al hacer hover -->
+                <div class="contenido-testimonios hover">
+                    <h3>TENEMOS TODO LO QUE NECESITÁS:</h3>
+                    <p style="font-family: 'Eurostile-Medium';">
+                        Capacitación, guías y materiales que destacan las ventajas de los intercomunicadores,
+                        controladores inteligentes y más. Con sistemas personalizables que se adaptan a cada proyecto,
+                        te aseguramos una implementación simple y efectiva, pensando en un hogar adaptable y eficiente
+                        para los usuarios. <br><br>
+                        Te acompañamos de principio a fin, en todo el proceso. <br><strong>Contamos con servicio de
+                            post-venta.</strong>
+                    </p>
+                </div>
+            </div>
+
 
 
         </div>
+        <!-- MENSAJE PREDETERMINADO WSP
+            -->
+        <script>
+            function redirectToWhatsApp() {
+                const message = "¡Hola! Quisiera más información acerca de las soluciones de L2B para desarrolladores.";
+                const phoneNumber = "5491136304219"; // Reemplaza con el número de WhatsApp
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank'); // Abre WhatsApp en una nueva pestaña
+            }
+        </script>
 
         <!-- Sección Inferior: Formulario de contacto -->
         <div class="seccion-formulario" id="contact">
-            <h3 style="text-transform: uppercase;">Contactate con nosotros<strong> hoy</strong> y extendé <br>
-                ampliamente el alcance de tus servicios.</h3>
+            <h3 style="text-transform: uppercase;">Contactanos,<strong> sumá nuestras soluciones</strong> y
+                <strong> agrega valor</strong> a tus desarrollos.
+            </h3>
             <form class="contact-form" id="contact-form">
 
                 <input type="text" id="name" name="name" placeholder="NOMBRE" required>
@@ -572,7 +549,7 @@
             }
 
             // Hacer la solicitud POST a HubSpot
-            fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/b0ccf7d2-0eda-4b28-8757-68a594e84311', {
+            fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/23c23880-f4bd-4b98-8121-db992c049f4a', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -597,42 +574,6 @@
 
 
 
-    <!-- SCRIPT QUE HACE QUE FUNCIONEN LOS TESTIMONIOS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll(".carousel-item2");
-            const prevButton = document.querySelector(".carousel-control2.prev");
-            const nextButton = document.querySelector(".carousel-control2.next");
-
-            let currentIndex = 0;
-
-            // Función para mostrar el testimonio activo
-            function showTestimonial(index) {
-                items.forEach((item, i) => {
-                    item.classList.remove("active");
-                    if (i === index) {
-                        item.classList.add("active");
-                    }
-                });
-            }
-
-            // Evento para botón "anterior"
-            prevButton.addEventListener("click", () => {
-                currentIndex = (currentIndex - 1 + items.length) % items.length; // Mueve al anterior
-                showTestimonial(currentIndex);
-            });
-
-            // Evento para botón "siguiente"
-            nextButton.addEventListener("click", () => {
-                currentIndex = (currentIndex + 1) % items.length; // Mueve al siguiente
-                showTestimonial(currentIndex);
-            });
-
-            // Muestra el primer testimonio al cargar
-            showTestimonial(currentIndex);
-        });
-
-    </script>
 
     <footer class="footer">
         <div class="footer-overlay">
@@ -725,8 +666,8 @@
     <script src="../Assets/java/carrousel.js"></script>
     <script src="../Assets/java/preloader.js"></script>
     <script src="../Assets/java/cargadevideo.js"></script>
-    <script src="../Assets/java/carouselheader.js"></script>
 
+    <script src="../representante/js/js.js"></script>
 </body>
 
 </html>

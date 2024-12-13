@@ -12,7 +12,16 @@ body {
     
     box-sizing: border-box; /* Asegura que el padding no rompa el layout */
 }
+/* Estilo general */
+.arquitecto1 {
 
+    background-image: url('../AkubelaCarrusel_Fondo_Negro.jpg');
+    /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el div */
+    background-position: center;
+    /* Centra la imagen */
+}
 
 /* Fondo específico para .features-grid */
 .features-grid {
@@ -34,6 +43,39 @@ header {
 }
 
 
+/* Ocultar el botón en las imágenes pequeñas (las que no están activas) */
+.carousel .list .item .product-download-button {
+    display: none; /* Oculta el botón por defecto */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #ff7800;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Mostrar el botón solo para la imagen activa */
+.carousel .list .item:nth-child(1) .product-download-button,
+.carousel .list .item:nth-child(2) .product-download-button {
+    display: block; /* Solo se muestra en las imágenes principales */
+}
+
+/* Hover del botón */
+.carousel .list .item .product-download-button:hover {
+    background: #ff5716;
+    transform: scale(1.05);
+}
 
 
 /* Header section */
@@ -204,6 +246,18 @@ header {
 }
 
 
+@media (max-width:1500px) {
+    .list .item .content {
+        position: absolute;
+
+        top: 45%;
+        left:600px;
+        transform: translateY(-50%);
+        width: 400px;
+        text-align: left;
+        color: #525252ff;
+        display: none;
+    }}
 .list .item .content {
     position: absolute;
 
@@ -488,7 +542,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/Banner_ControldeAcceso.png');
+    background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_ControldeAcceso_Portada_PC.png');
     /* Ruta de la imagen */
     background-size: cover;
     /* La imagen cubrirá todo el contenedor */
@@ -716,7 +770,7 @@ header {
     .info-image {
         width: 100%;
         height: 100%;
-        background-image: url('../assets/Assets_Akubela/Unidad1/Ecos/Responsive_Ecosistema.png');
+        background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_ControldeAcceso_Portada.png');
         /* Ruta de la imagen */
         background-size: cover;
         /* La imagen cubrirá todo el contenedor */
@@ -776,27 +830,27 @@ footer {
     
     /* Estilos por defecto celular */
     .item1 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Supreme.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Supreme.png');
     }
 
     .item2 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_hy\ panel.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_hy\ panel.png');
     }
 
     .item3 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Hypanel-lite.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Hypanel-lite.png');
     }
 
     .item4 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Lux.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Lux.png');
     }
 
     .item5 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_Pro.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_Pro.png');
     }
 
     .item6 {
-        background-image: url('../assets/Assets_Akubela/Unidad1/Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Ultra.png');
+        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Ultra.png');
     }
 
 

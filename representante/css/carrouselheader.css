@@ -1,0 +1,366 @@
+/* Contenedor general del carrusel */
+.carousel-container {
+    width: 70%;
+    /* Ocupa el 70% del ancho */
+    height: 70vh;
+    /* Ocupa el 70% de la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+    /* Oculta las imágenes fuera del área visible */
+    border-radius: 10px;
+}
+
+/* Contenedor del slider */
+.slider {
+    display: flex;
+    height: 100%;
+    width: calc(100% * 6);
+    /* Ajusta el ancho para 6 imágenes */
+    transition: transform 0.7s ease-in-out;
+    /* Transición suave entre imágenes */
+}
+
+/* Cada sección del slider */
+.slider section {
+    flex: 0 0 100%;
+    /* Cada imagen ocupa el 100% del contenedor visible */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Estilo de las imágenes */
+.slider section img {
+    width: 100%;
+    height: 45VH;
+    object-fit: cover;
+    /* Asegura que las imágenes mantengan sus proporciones */
+    border-radius: 10px;
+
+}
+
+/* Zócalo sobre la imagen */
+.slider section .carousel-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 217, 0);
+    /* Fondo amarillo semitransparente */
+    text-align: center;
+    padding: 20px 20px;
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    border-radius: 20px 20px 10px 10px;
+    /* Bordes inferiores redondeados */
+}
+
+/* Texto sobre la imagen */
+.slider section .text-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+    color: #fff;
+
+    padding: 20px;
+
+    max-width: 40%;
+    text-align: left;
+}
+
+.slider section .text-content h2 {
+    width: 700px;
+    font-family: 'Eurostile-Heavy';
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.slider section .text-content p {
+    color: #000;
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Texto sobre la imagen */
+.slider section .text-content2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    color: #fff;
+
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 40%;
+    text-align: left;
+}
+
+.slider section .text-content2 h2 {
+    width: 600px;
+    font-family: 'Eurostile-Heavy';
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.slider section .text-content2 p {
+    color: #000;
+    font-family: 'Eurostile-Medium';
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Flechas de navegación */
+.slider-controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20%;
+    z-index: 1000;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Indicadores de navegación */
+.slider-controls ul {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.slider-controls ul li {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #414141;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-controls ul li.selected {
+    background: #414141;
+    width: 30px;
+    /* Más alargado cuando está seleccionado */
+    border-radius: 15px;
+    /* Para hacer los bordes redondeados */
+    transform: scale(1);
+    /* Sin escalado adicional */
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width:1700px) {
+
+    /* Texto sobre la imagen */
+    .slider section .text-content {
+        position: absolute;
+        top: 7%;
+        left: 3%;
+        transform: translateY(0%);
+
+    }
+
+    /* Texto sobre la imagen */
+    .slider section .text-content2 {
+        position: absolute;
+        top: 7%;
+        transform: translateY(0%);
+
+    }
+
+    .slider section .text-content h2 {
+        top: 13%;
+        width: 450px;
+        font-size: 1.9rem;
+
+    }
+
+    .slider section .text-content2 h2 {
+
+        width: 400px;
+        font-size: 1.9rem;
+
+    }
+
+    .slider section .text-content p {
+        width: 500px;
+        font-size: 1.2rem;
+
+    }
+
+    .slider section .text-content2 p {
+        width: 400px;
+        font-size: 1.2rem;
+
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Contenedor principal: disposición en columna */
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        /* Uno debajo del otro */
+        gap: 10px;
+        /* Espaciado entre los elementos */
+        height: auto;
+        /* Ajusta automáticamente la altura */
+    }
+
+    /* Carrusel ocupa todo el ancho */
+    .carousel-container {
+        width: 100%;
+        /* Ocupa el 100% del ancho */
+        height: auto;
+        /* Ajusta la altura automáticamente */
+    }
+
+    .slider section img {
+        height: 60vh;
+        /* Deja que la imagen ajuste su altura proporcionalmente */
+    }
+
+    /* Imagen de requisitos ocupa todo el ancho */
+    .image-container {
+        width: 100%;
+        /* Ocupa el 100% del ancho */
+        height: auto;
+        /* Ajusta automáticamente la altura */
+        position: relative;
+    }
+
+    .image-container img {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho */
+        height: 50vh;
+        /* Proporcional al ancho */
+        object-fit: cover;
+        /* Asegura que la imagen no se deforme */
+    }
+
+    /* Texto superpuesto de requisitos */
+    .text-overlay-requisitos {
+        position: absolute;
+        bottom: 20px;
+        /* Espaciado desde abajo */
+        left: 10%;
+        /* Espaciado desde la izquierda */
+        width: 80%;
+        /* Asegura que el texto no ocupe todo el ancho */
+    }
+
+    .text-overlay-requisitos h2 {
+        font-size: 1.5rem;
+        /* Ajusta el tamaño del título */
+    }
+
+    .text-overlay-requisitos ul {
+        font-size: 1rem;
+        /* Ajusta el tamaño de la lista */
+        line-height: 1.4;
+    }
+    .slider section .text-content{
+        left: 1%;
+    }
+      /* Texto sobre la imagen */
+      .slider section .text-content2 {
+       
+        left: 1%;
+        
+    }
+/* Texto sobre la imagen */
+.slider section .text-content2 {
+    position: absolute;
+        top: 7%;
+   
+        transform: translateY(0%);
+}
+    .slider section .text-content h2 {
+        font-size: 1.5rem;
+        width: 300px;
+    }
+
+    .slider section .text-content2 h2 {
+        width: 300px;
+        font-size: 1.5rem;
+    }
+
+    .slider section .text-content p {
+        width: 300px;
+        font-size: 1rem;
+    }
+    .slider section .text-content2 p{
+        width: 300px;
+    }
+    .slider section .carousel-footer{
+        font-size: 1.1rem;
+
+    }
+    .slider-controls ul {
+        bottom: 5px;
+    }
+  
+
+}
+
+
+@media (max-width: 376px) {
+    .image-container img {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho */
+        height: 65vh;
+        /* Proporcional al ancho */
+        object-fit: cover;
+        /* Asegura que la imagen no se deforme */
+    }
+
+    .slider section .text-content2 h2{
+        font-size: 1.2rem;
+        width: 300px;
+    }
+    .slider section .text-content2 p{
+        font-size: 0.9rem;
+        width: 300px;
+    }
+    .slider section .text-content h2{
+        font-size: 1.2rem;
+        width: 300px;
+    }
+    .slider section .text-content p{
+        font-size: 0.9rem;
+        width: 300px;
+    }
+    .slider section .carousel-footer{
+        font-size: 1.1rem;
+
+    }
+    .slider-controls ul {
+        bottom: 5px;
+    }
+}

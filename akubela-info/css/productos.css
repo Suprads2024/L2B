@@ -5,9 +5,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #f0f0f0;
   padding: 0px 10px 10px 10px;
   box-sizing: border-box;
+  margin-bottom: 50px;
 }
 
 /* Fila superior */
@@ -33,7 +33,6 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -74,7 +73,7 @@
 
 /* Título del producto */
 .overlay h2 {
-    font-family: 'Eurostile-Heavy';
+  font-family: 'Eurostile-Heavy';
   font-size: 2.5rem;
   margin: 10px 0;
   color: #000000;
@@ -82,9 +81,9 @@
 
 /* Botón de descarga */
 .download-btn {
-    font-family: 'Eurostile-Regular';
-    width: 200px; /* Ancho fijo */
-    height: 50px; /* Alto fijo */
+  font-family: 'Eurostile-Regular';
+  width: 200px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -94,18 +93,18 @@
   border: none;
   background: #333; /* Fondo oscuro inicial */
   color: #fff;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .download-btn:hover {
-    color: #333;
-    background: linear-gradient(45deg, #ff7800, #ffb84d);
-    transform: scale(1.05);
-  }
+  color: #333;
+  background: linear-gradient(45deg, #ff7800, #ffb84d);
+}
+
 /* Botón de descarga */
 .download-btn2 {
-    font-family: 'Eurostile-Regular';
-    width: 200px; /* Ancho fijo */
-    height: 50px; /* Alto fijo */
+  font-family: 'Eurostile-Regular';
+  width: 200px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -115,14 +114,15 @@
   border: none;
   background: #333; /* Fondo oscuro inicial */
   color: #fff;
-  transition: background 0.3s ease, transform 0.2s ease;
   margin: 0 auto;
 }
+
 /* Efecto hover del botón con gradiente naranja */
-.download-btn2:hover{
+.download-btn2:hover {
+  color: #333;
   background: linear-gradient(45deg, #ff7800, #ffb84d);
-  transform: scale(1.05);
 }
+
 /* Ajustes específicos para las primeras dos cajas */
 .top-row .product:nth-child(1) .overlay,
 .top-row .product:nth-child(2) .overlay {
@@ -133,4 +133,40 @@
   height: 100%; /* Asegura que ocupe toda la altura del contenedor */
   padding: 0 20px; /* Espaciado del borde derecho */
   text-align: right; /* Alinea el texto a la derecha */
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Cambiamos el diseño a columna */
+  .products-section {
+    gap: 10px;
+    margin-bottom: 1200px;
+  }
+  
+  .top-row, .bottom-row {
+    flex-direction: column;
+    height: auto; /* Ajusta automáticamente la altura */
+  }
+
+  /* Ajustamos la altura de los productos */
+  .top-row .product {
+    height: 25vh; /* Primeras dos cajas más bajas */
+  }
+
+  .bottom-row .product {
+    height: 35vh; /* Últimas tres cajas más altas */
+  }
+
+  /* Ajustes para el texto */
+  .overlay h2 {
+    font-size: 1.2rem; /* Título más pequeño */
+  }
+
+  /* Ajustes para el botón */
+  .download-btn, .download-btn2 {
+    width: 150px; /* Botón más estrecho */
+    height: 40px; /* Botón más bajo */
+    font-size: 0.875rem; /* Texto más pequeño */
+  }
 }

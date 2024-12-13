@@ -579,6 +579,18 @@ header {
 }
 
 
+@media (max-width:1500px) {
+    .list .item .content {
+        position: absolute;
+
+        top: 45%;
+        left:600px;
+        transform: translateY(-50%);
+        width: 400px;
+        text-align: left;
+        color: #525252ff;
+        display: none;
+    }}
 @media (max-width:786px) {
     
 

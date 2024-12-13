@@ -129,6 +129,16 @@
     opacity: 1;
     background-color: #00b17b; /* Color específico de control de acceso */
 }
+/* Mostrar el hover cuando se aplica la clase */
+.feature-item.show-hover .feature-bar {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.feature-item.show-hover .feature-hover {
+    top: 0;
+    opacity: 1;
+}
 
 /* Texto dentro del hover */
 .feature-hover h3 {

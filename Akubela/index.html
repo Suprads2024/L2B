@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="../Assets/css/footer.css?v=2.1">
 
   <!-- akubela css -->
-  <link rel="stylesheet" href="../akubela/css/akubela.css">
-  <link rel="stylesheet" href="../akubela/css/segunda.css">
-  <link rel="stylesheet" href="../akubela/css/tercera.css">
+  <link rel="stylesheet" href="../akubela/css/akubela.css?v=3.1">
+  <link rel="stylesheet" href="../akubela/css/segunda.css?v=3.1">
+  <link rel="stylesheet" href="../akubela/css/tercera.css?v=3.1">
 
   <!-- HTML Meta Tags -->
   <meta name="description"
@@ -438,7 +438,21 @@
       </div>
     </div>
   </div>
+<script>// Seleccionamos todos los elementos con la clase "feature-item"
+const featureItems = document.querySelectorAll('.feature-item');
 
+// Función para activar el hover en "touchstart"
+featureItems.forEach((item) => {
+    item.addEventListener('touchstart', () => {
+        item.classList.add('show-hover'); // Agregamos la clase para mostrar el hover
+    });
+
+    // Función para desactivar el hover en "touchend"
+    item.addEventListener('touchend', () => {
+        item.classList.remove('show-hover'); // Quitamos la clase para ocultar el hover
+    });
+});
+</script>
 
   <div class="custom-section">
     <!-- Columna izquierda -->
@@ -556,7 +570,7 @@
   <script src="../Assets/java/preloader.js"></script>
   <script src="../Assets/java/cargadevideo.js"></script>
   <script src="../Assets/java/carouselheader.js"></script>
-  <script src="../akubela/js/app.js"></script>
+  <script src="../akubela/js/app.js?v=3.1"></script>
 
 </body>
 
