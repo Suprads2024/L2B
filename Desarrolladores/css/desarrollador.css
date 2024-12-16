@@ -34,7 +34,7 @@ strong{
   
   .menu__bar2 {
     background-color: transparent;
-  
+    z-index: 5;
     transition: background-color 0.3s, color 0.3s;
   }
   
@@ -42,20 +42,17 @@ strong{
   
   /* Estilos para el menú después de hacer scroll */
   .menu__bar2.scrolled {
+    
     background-color: rgba(255, 255, 255, 0.8);
     /* Color de fondo semitransparente */
     background-image: url('../AssetsDesarrolladores/Assets/Unidad1/L2B_Menu_\ Sin\ texto.jpg');
-    /* Ruta de la imagen de fondo */
     background-size: cover;
-    /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     background-position: center;
-    /* Posiciona la imagen en el centro */
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-    /* Sombra del menú */
-  }
-  
+    z-index: 10; /* Aumenta el z-index */
+}
+
   .menu__bar2.scrolled {
     color: rgb(255, 255, 255) !important;
     /* Color de los enlaces después de hacer scroll */
