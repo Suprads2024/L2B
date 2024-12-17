@@ -123,13 +123,7 @@
     font-family: 'Eurostile-Heavy';
 }
 
-/* Imagen dentro del carousel */
-.carousel-container-second img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   
-}
+
 
 /* Flechas de navegación */
 .slider-controls .arrow {
@@ -239,6 +233,14 @@
 .text-overlay-option h2{
 font-family: 'Eurostile-Heavy';}
 
+
+@media (max-width:1700px){
+    .text-overlay-option h2{
+        font-family: 'Eurostile-Heavy';
+    font-size: 1.5rem;}
+
+ 
+}
 /* Responsive para pantallas de 768px o menos */
 @media (max-width: 768px) {
     /* Contenedor principal */
@@ -248,11 +250,12 @@ font-family: 'Eurostile-Heavy';}
         gap: 10px; /* Espaciado entre elementos */
         height: auto; /* Altura automática */
         padding: 10px 20px; /* Padding reducido */
+        margin-bottom: 0px;
     }
 
     /* Imagen grande a la izquierda */
     .left-image {
-        height: 50vh; /* Ajusta la altura */
+        height: 100%; /* Ajusta la altura */
     }
 
     .left-image img {
@@ -266,10 +269,7 @@ font-family: 'Eurostile-Heavy';}
     .socalo h2{
         font-size: 1.1rem;
     }
-    /* Carrusel a la derecha */
-    .right-carousel {
-        height: 45vh; /* Altura ajustada */
-    }
+   
 
     .carousel-container {
         height: 100%; /* Ocupa toda la altura disponible */
@@ -305,8 +305,5 @@ font-family: 'Eurostile-Heavy';}
         font-size: 0.9rem; /* Reduce el tamaño del texto de las etiquetas */
         padding: 3px 7px; /* Reduce el padding */
     }
-    /* Segundo carrusel: tamaño más grande */
-    .carousel-container-second {
-        height: 60vh; /* Aumenta el tamaño del carrusel */
-    }
+    
 }
