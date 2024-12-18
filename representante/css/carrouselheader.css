@@ -222,11 +222,26 @@
 .slider section img.desktop {
     display: block;
 }
+.slider section img.desktop1700 {
+    display: none;
+}
 
 .slider section img.mobile {
     display: none;
 }
 
+/* Para pantallas de 768px o menos, mostrar las imágenes móviles */
+@media (max-width: 1700px) {
+    .slider section img.desktop {
+        display: none;
+    }
+    .slider section img.desktop1700 {
+        display: block;
+    }
+    .slider section img.mobile {
+        display: none;
+    }
+}
 /* Para pantallas de 768px o menos, mostrar las imágenes móviles */
 @media (max-width: 768px) {
     .slider section img.desktop {

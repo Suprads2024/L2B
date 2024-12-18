@@ -213,8 +213,22 @@ width: 800px;
     border-radius: 5px;
     border: 1px solid #000000;
     font-size: 1rem;
+    
+}
+/* Cambia el color del placeholder a negro */
+.block-4 form input::placeholder,
+.block-4 form textarea::placeholder {
+    color: #000; /* Color negro */
+    font-family: 'Eurostile-Regular'; /* Fuente que estás utilizando */
+    opacity: 1; /* Asegura que el color se vea completamente */
 }
 
+/* Opcional: Si quieres cambiar el estilo del placeholder al enfocar el campo */
+.block-4 form input:focus::placeholder,
+.block-4 form textarea:focus::placeholder {
+    color: #000000; /* Cambia a un tono más claro al enfocar */
+    transition: color 0.3s ease; /* Animación suave */
+}
 .block-4 form button {font-family: 'Eurostile-Heavy';
     background-color: transparent;
     color: #ff6600;
@@ -238,7 +252,7 @@ width: 800px;
     background: none; /* Fondo transparente */
     font-family: 'Eurostile-Regular', Arial, sans-serif; /* Fuente Eurostile */
     border: 2px solid #666; /* Borde gris */
-    color: #fff; /* Texto blanco */
+    color: #000000; /* Texto blanco */
     padding: 10px 15px; /* Espaciado interno */
     border-radius: 8px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor a pointer */
