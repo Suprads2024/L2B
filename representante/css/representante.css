@@ -312,14 +312,12 @@ width: auto;
 }
 
 
-
-
 /* Responsividad para pantallas pequeñas */
-@media (max-width:376px) {
+@media (max-width:390px) {
    
    
     .module-1 {
-        height: 30vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
+        height: 25vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
     }
     .module-2 {
         height: 45vh; /* Ajusta la altura de cada módulo en pantallas pequeñas */
@@ -328,5 +326,7 @@ width: auto;
 
     
 }
+
+
 
 

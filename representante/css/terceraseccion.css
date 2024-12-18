@@ -429,6 +429,12 @@ width: 800px;
         color: #fff; /* Texto blanco */
     }
 }
+@media (max-width:390px){ 
+
+.block-3 {
+    height: auto; /* Altura automática para ajustarse al contenido */
+    min-height: 55vh; /* Aumenta la altura mínima */
+}}
 @media (max-width:376px){ 
 .block-2 {
     height: auto; /* Altura automática para ajustarse al contenido */

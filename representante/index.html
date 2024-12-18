@@ -101,7 +101,8 @@
                     <ul class="submenu">
                         <li><a href="https://life2better.com/arquitecto/">Arquitectos</a></li>
                         <li><a href="https://life2better.com/desarrolladores/">Desarrolladores</a></li>
-                        <li><a href="https://domoticafibaro.com.ar/">Ser Representante</a></li>
+                        <li><a href="https://life2better.com/ser-representante/">Ser Representante</a></li>
+                        <li><a href="#instalador" onclick="scrollToInstalador()">Ser Instalador</a></li>
 
                     </ul>
                 </li>
@@ -553,7 +554,7 @@
 
     </section>
 
-    <div class="landing-final-section">
+    <div class="landing-final-section" id="instalador">
         <!-- Bloque 1: Imagen con texto -->
         <div class="block block-1">
             <img src="Assets_Representante/Unidad3/Certificate_ 925 x 275.png" alt="Certifícate como instalador">
@@ -737,7 +738,7 @@
                         +54 11-4849-7241<br>
                         <a href="mailto:info@life2better.com">info@life2better.com</a>
                     </p>
-                    <button class="cta-button">CONTACTANOS</button>
+                    <a href="#contact"><button class="cta-button">CONTACTANOS</button></a>
                     <script>
                         // Selecciona todos los elementos que deben llevar al formulario, incluyendo el enlace de contacto
                         document.querySelectorAll('.hover-image, .cta-button, a[href="#contact"]').forEach(element => {
@@ -747,14 +748,15 @@
                             });
                         });
 
-                        // Función para desplazarse al formulario con un offset de 130px
-                        function scrollToContact() {
-                            const contactSection = document.getElementById('contact');
-                            const offset = 130; // Ajuste de desplazamiento para una mejor vista
-                            const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+                        // Función para desplazarse a la sección "instalador" con un offset de 130px
+                        function scrollToInstalador() {
+                            const instaladorSection = document.getElementById('instalador');
+                            const offset = 250; // Ajuste de desplazamiento para compensar la barra de navegación
+                            const instaladorPosition = instaladorSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
                             window.scrollTo({
-                                top: contactPosition,
+                                top: instaladorPosition,
                                 behavior: 'smooth' // Desplazamiento suave
                             });
                         }
