@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 /* Estilo de las imágenes */
@@ -37,8 +37,7 @@
     width: 100%;
     height: 45VH;
    
-    /* Asegura que las imágenes mantengan sus proporciones */
-    border-radius: 10px;
+
 
 }
 
@@ -54,7 +53,7 @@
     font-family: 'Eurostile-Heavy', Arial, sans-serif;
     font-size: 1.5rem;
     color: #000;
-    border-radius: 20px 20px 10px 10px;
+    border-radius: 20px 20px 0px 0px;
     /* Bordes inferiores redondeados */
 }
 
@@ -222,6 +221,10 @@
 .slider section img.desktop {
     display: block;
 }
+/* Por defecto, se muestran las imágenes de escritorio */
+.slider section img.desktop1920 {
+    display: block;
+}
 .slider section img.desktop1700 {
     display: none;
 }
@@ -232,7 +235,7 @@
 
 /* Para pantallas de 768px o menos, mostrar las imágenes móviles */
 @media (max-width: 1700px) {
-    .slider section img.desktop {
+    .slider section img.desktop1920 {
         display: none;
     }
     .slider section img.desktop1700 {
@@ -240,16 +243,6 @@
     }
     .slider section img.mobile {
         display: none;
-    }
-}
-/* Para pantallas de 768px o menos, mostrar las imágenes móviles */
-@media (max-width: 768px) {
-    .slider section img.desktop {
-        display: none;
-    }
-
-    .slider section img.mobile {
-        display: block;
     }
 }
 
@@ -359,7 +352,18 @@
     .slider-controls ul {
         bottom: 5px;
     }
-  
+    .slider section img.desktop {
+        display: none;
+    }
+    .slider section img.desktop1920 {
+        display: none;
+    }
+    .slider section img.desktop1700 {
+        display: none;
+    }
+    .slider section img.mobile {
+        display: block;
+    }
 
 }
 

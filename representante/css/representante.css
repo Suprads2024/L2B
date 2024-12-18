@@ -1,4 +1,6 @@
-
+a{
+    text-decoration: none;
+}
 /* Contenedor de los módulos superiores */
 .modules-container {
     display: grid;
@@ -26,7 +28,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 
 /* Fondo oscuro semitransparente */
 .module .text-overlay {
@@ -146,12 +147,12 @@ margin-bottom: -10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 /* Estilo general de los módulos */
 .module {
     position: relative;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     overflow: hidden; /* Recorta contenido excedente */
 }
 
@@ -165,6 +166,7 @@ margin-bottom: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 
 /* ----------IMAGEN AMARILLO DE REQUISITOS----------- */
@@ -207,7 +209,12 @@ margin-bottom: -10px;
     font-family: 'Eurostile-Medium';
 }
 
-
+.reprepc{
+    display: block;
+}
+.reprecelu{
+    display: none;
+}
 
 @media (max-width:1700px){
     
@@ -294,6 +301,13 @@ width: 300px;
 width: auto;
     font-size: 0.9rem;
     line-height: 1.2;
+}
+
+.reprepc{
+    display:  none;
+}
+.reprecelu{
+    display:block;
 }
 }
 

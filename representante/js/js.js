@@ -35,4 +35,12 @@ document.querySelectorAll('.carousel-container').forEach(carousel => {
         sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : numberOfSlides - 1;
         updateSliderPosition();
     });
+
+    // Si el carrusel tiene la clase "autoplay-carousel", activa la reproducción automática
+    if (carousel.classList.contains('autoplay-carousel')) {
+        setInterval(() => {
+            sectionIndex = (sectionIndex < numberOfSlides - 1) ? sectionIndex + 1 : 0;
+            updateSliderPosition();
+        }, 7000); // Cambia de imagen cada 3 segundos
+    }
 });
