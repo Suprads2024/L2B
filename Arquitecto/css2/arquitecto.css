@@ -54,6 +54,7 @@ strong{
     /* Posiciona la imagen en el centro */
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
     /* Sombra del menú */
+    z-index: 10;
   }
   
   .menu__bar2.scrolled {
@@ -65,6 +66,7 @@ strong{
   
   .menu__bar2.scrolled .logo-img2 {
     filter: none;
+    z-index: 10;
     /* Elimina el filtro para que el logo conserve su color original */
   }
   
@@ -72,7 +74,7 @@ strong{
     display: flex;
     position: relative;
     flex-direction: row;
-    z-index: 2;
+   
   }
   
   .menu__bar2 {
@@ -116,10 +118,10 @@ strong{
     /* Transición suave */
   }
   
-  .menu__bar2.scrolled .menu-icon {
+  /*.menu__bar2.scrolled .menu-icon {
     filter: invert(1);
-    /* Hace que el icono sea negro */
-  }
+    
+  } */
   
   
   .navigation2 {

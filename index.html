@@ -95,6 +95,7 @@
                 <li><a href="https://life2better.com/arquitecto/">Arquitectos</a></li>
                 <li><a href="https://life2better.com/desarrolladores/">Desarrolladores</a></li>
                 <li><a href="https://life2better.com/ser-representante/">Ser Representante</a></li>
+                <li><a href="https://life2better.com/ser-representante/#instalador">Ser Instalador</a></li>
             </ul>
         </li>
         
@@ -195,50 +196,48 @@
 
     </div>
   </div>
+
   <script>
-    document.querySelectorAll('.navigation a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-  <script>
-    // Lógica para enlaces internos con desplazamiento suave
-    document.querySelectorAll('.navigation a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const target = this.getAttribute('href');
+    document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
+    link.addEventListener('click', function (event) {
+        const url = this.getAttribute('href');
 
-            // Si el enlace es interno (empieza con #), realiza el scroll suave
-            if (target && target.startsWith('#')) {
-                e.preventDefault();
-                document.querySelector(target).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+        // Verifica si es el enlace a la sección de instalador dentro de ser-representante
+        if (url === "https://life2better.com/ser-representante/#instalador") {
+            event.preventDefault(); // Evita el comportamiento predeterminado
+            window.location.href = url; // Navega dentro de la misma pestaña
+            // Si ya estás en la página correcta, ajusta el scroll
+            if (window.location.pathname === '/ser-representante/') {
+                const targetElement = document.querySelector('#instalador');
+                if (targetElement) {
+                    const offset = 150; // Ajuste del margen superior
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const adjustedPosition = elementPosition - offset;
 
-    // Lógica para enlaces externos e internos especiales
-    document.querySelectorAll('.navigation a').forEach(link => {
-        link.addEventListener('click', function (event) {
-            const url = this.getAttribute('href');
-
-            // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-            if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/"|| url === "https://life2better.com/akubela") {
-                // Navegar dentro de la misma pestaña
-                event.preventDefault(); // Evita el comportamiento predeterminado
-                window.location.href = url; // Navega en la misma pestaña
+                    window.scrollTo({
+                        top: adjustedPosition,
+                        behavior: 'smooth',
+                    });
+                }
             }
-            // Para otros enlaces externos
-            else if (url && url !== '#' && !url.startsWith('#')) {
-                event.preventDefault(); // Evita el comportamiento predeterminado
-                window.open(url, '_blank'); // Abre en una nueva pestaña
-            }
-        });
+        }
+        // Manejo normal para los demás enlaces internos y externos
+        else if (
+            url === "https://life2better.com/arquitecto/" ||
+            url === "https://life2better.com/desarrolladores/" ||
+            url === "https://life2better.com/ser-representante/" ||
+            url === "https://life2better.com/akubela"
+        ) {
+            event.preventDefault();
+            window.location.href = url;
+        } else if (url && url !== '#' && !url.startsWith('#')) {
+            event.preventDefault();
+            window.open(url, '_blank');
+        }
     });
+});
+
+
 </script>
 <script>document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.querySelector('.menu-icon');
@@ -1178,7 +1177,9 @@
   <script src="Assets/java/preloader.js"></script>
   <script src="Assets/java/cargadevideo.js"></script>
   <script src="Assets/java/carouselheader.js"></script>
-
+<style>#instalador {
+  scroll-margin-top: 150px; /* Ajusta este valor al tamaño de tu barra */
+}</style>
 </body>
 
 </html>

@@ -51,11 +51,13 @@ strong{
     background-position: center;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
     z-index: 10; /* Aumenta el z-index */
+ 
 }
 
   .menu__bar2.scrolled {
     color: rgb(255, 255, 255) !important;
     /* Color de los enlaces después de hacer scroll */
+    
   }
   
   
@@ -492,6 +494,13 @@ strong{
     max-height: 60px;
   }
   
+  @media (max-width:1400px) {
+  
+    .logo img {
+      max-height: 50px;
+    }
+  
+  }
   @media (max-width:786px) {
   
     .logo img {

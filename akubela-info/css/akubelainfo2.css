@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos generales del body */
+body {
+
+    box-sizing: border-box;
+    /* Asegura que el padding no rompa el layout */
+}
+
+/* Estilo general */
+.arquitecto1 {
+
+    background-image: url('../AkubelaCarrusel_Fondo_Negro.jpg');
+    /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el div */
+    background-position: center;
+    /* Centra la imagen */
+}
+
+/* Fondo específico para .features-grid */
+.features-grid {
+
+    padding: 0 10px;
+}
+
+
+
+header {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+/* Ocultar el botón en las imágenes pequeñas (las que no están activas) */
+.carousel2 .list .item .product-download-button {
+    display: none;
+    /* Oculta el botón por defecto */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #ff7800;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Mostrar el botón solo para la imagen activa */
+.carousel2 .list .item:nth-child(1) .product-download-button,
+.carousel2 .list .item:nth-child(2) .product-download-button {
+    display: block;
+    /* Solo se muestra en las imágenes principales */
+}
+
+/* Hover del botón */
+.carousel2 .list .item .product-download-button:hover {
+    background: #ff5716;
+    transform: scale(1.05);
+}
+
+
+/* Header section */
+
+
+/* Contenedor principal que organiza el carrusel y la sección debajo */
+.main-container {
+
+    margin: 0 auto;
+    /* Centrar todo el contenido */
+    gap: 10px;
+    /* Separación entre módulos si usas flex o grid */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* Ocupa todo el alto de la pantalla */
+
+}
+
+/* carousel2 */
+
+.carousel2 {
+    position: relative;
+    width: 100%;
+    /* Ancho total */
+    height: 60vh;
+    /* 60% de la altura de la pantalla */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.carousel2 .list .item {
+
+    width: 220px;
+    /* Reducimos el ancho */
+    height: 160px;
+    /* Reducimos la altura */
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    right: 80%;
+
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: left center;
+    /* Ajustamos para enfocar el producto */
+    background-size: cover;
+
+    transition: 1s;
+
+
+}
+
+/* Carrusel de segunda seccion*/
+.item7 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_Dimmer.png');
+}
+
+.item8 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_Dual\ Curtain\ Switch.png');
+}
+
+.item9 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_Switch.png');
+}
+
+.item10 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_Heating_Fan\ Coil\ Thermostat.png');
+}
+
+.item11 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_IR20.png');
+}
+
+.item12 {
+    background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/CarruselL2B_Heating_Thermostat.png');
+}
+
+
+.carousel2 .list .item:nth-child(1),
+.carousel2 .list .item:nth-child(2) {
+
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel2 .list .item:nth-child(3) {
+    right: 57%;
+    /* Primer elemento más a la izquierda */
+}
+
+.carousel2 .list .item:nth-child(4) {
+    right: calc(57% + 250px);
+    /* Segundo elemento separado por 250px */
+}
+
+.carousel2 .list .item:nth-child(5) {
+    right: calc(57% + 500px);
+    /* Tercer elemento separado por 500px */
+}
+
+/* Ocultamos el cuarto elemento (y los siguientes, si los hubiera) */
+.carousel2 .list .item:nth-child(n+6) {
+    right: calc(57% + 750px);
+    /* Posición fuera del área visible */
+    opacity: 0;
+    /* Lo ocultamos visualmente */
+    pointer-events: none;
+    /* Evitamos que sea interactivo */
+}
+
+
+
+@media (max-width:1700px) {
+
+
+    .carousel2 .list .item {
+        width: 120px;
+        /* Reducimos el ancho */
+        height: 80px;
+        /* Reducimos la altura */
+        position: absolute;
+        top: 80%;
+        transform: translateY(-70%);
+        left: 80%;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        background-position: left center;
+        /* Ajustamos para enfocar el producto */
+        background-size: cover;
+
+        transition: 1s;
+    }
+
+    .carousel2 .list .item:nth-child(1),
+    .carousel2 .list .item:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel2 .list .item:nth-child(3) {
+        left: 47%;
+    }
+
+    .carousel2 .list .item:nth-child(n+4) {
+        left: calc(47% + 200px);
+    }
+
+    .carousel2 .list .item:nth-child(5) {
+        left: calc(47% + 400px);
+    }
+
+    .carousel2 .list .item:nth-child(6) {
+        left: calc(47% + 600px);
+    }
+
+    .carousel2 .list .item:nth-child(n+7) {
+        left: calc(47% + 800px);
+        opacity: 0;
+    }
+
+
+}
+
+
+
+
+.list .item .content {
+    position: absolute;
+
+    top: 40%;
+    left: 700px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #525252ff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .title {
+    font-size: 2.5rem;
+    font-family: 'Eurostile-Heavy';
+    color: #525252ff;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .title2 {
+    font-size: 1.8rem;
+    font-family: 'Eurostile-Heavy';
+
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des {
+    width: 600px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-left: 0px;
+    font-family: 'Eurostile-Regular';
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+.content .btn {
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1) {
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2) {
+    background: transparent;
+
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover {
+    background-color: #535353cb;
+    color: #fff;
+    border-color: #414141cb;
+}
+
+
+@keyframes animate {
+
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* carousel2 */
+
+
+
+
+
+
+/* next prev arrows */
+/* Estilos de los botones de navegación */
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows .prev {
+    width: 45px;
+    /* Tamaño más pequeño */
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    color: #000;
+    /* Color de texto negro */
+    border: 2px solid #dcdcdc;
+    /* Borde gris claro */
+    outline: none;
+    font-size: 18px;
+    /* Texto más pequeño */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    /* Para posicionarlas en la página */
+    left: -180px;
+    /* Moverlas hacia la izquierda */
+    bottom: -50px;
+    /* Moverlas hacia abajo */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra más pronunciada */
+    transition: all 0.3s ease;
+    /* Transición suave para hover */
+}
+
+.arrows .prev:hover {
+    background-color: #e6e6e6;
+    /* Fondo gris claro en hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    /* Más sombra en hover */
+}
+
+/* Ajustes similares para el botón "next" */
+.arrows .next {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #dcdcdc;
+    outline: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 380px;
+    bottom: -50px;
+    /* Moverlas hacia abajo */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra más pronunciada */
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.arrows .next:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    /* Más sombra en hover */
+}
+
+
+
+
+/* time running */
+.carousel2 .timeRunning {
+    position: absolute;
+
+    width: 0%;
+    height: 4px;
+    background-color: #ff6e14da;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 999px) {
+
+    header {
+        padding-left: 50px;
+    }
+
+    .list .item .content {
+        left: 50px;
+    }
+
+    .content .title,
+    .content .name {
+        font-size: 70px;
+    }
+
+    .content .des {
+        font-size: 0.9rem;
+
+    }
+
+}
+
+@media screen and (max-width: 690px) {
+    header nav a {
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+
+
+    .content .title,
+    .content .name {
+        font-size: 1.8rem;
+    }
+
+    .content .btn button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Espaciado vertical entre secciones */
+.carousel2 {
+    margin-bottom: 10px;
+    /* Espacio entre módulos */
+}
+
+
+
+/* Texto sobre la imagen, alineado a la derecha */
+.info-text {
+    position: absolute;
+    /* Posición absoluta dentro de .info-image */
+    top: 50%;
+    /* Centrado vertical */
+    right: 200px;
+    /* Separación del borde derecho */
+    transform: translateY(-50%);
+    /* Ajuste para centrar perfectamente */
+    width: 700px;
+    /* Ancho máximo del texto */
+    color: #fff;
+    /* Texto blanco para contraste */
+
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+
+}
+
+/* Estilo del título */
+.info-text h2 {
+    text-transform: uppercase;
+    font-family: 'Eurostile-Bold';
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo del párrafo */
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Eurostile-Regular';
+    color: #858484;
+    /* Texto blanco para contraste */
+}
+
+
+
+
+
+@media (max-width:786px) {
+
+
+
+    .carousel2 .list .item:nth-child(1),
+    .carousel2 .list .item:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel2 .list .item:nth-child(3) {
+        left: 57%;
+    }
+
+    .carousel2 .list .item:nth-child(n+4) {
+        left: calc(57% + 200px);
+    }
+
+    .carousel2 .list .item:nth-child(5) {
+        left: calc(57% + 400px);
+    }
+
+    .carousel2 .list .item:nth-child(6) {
+        left: calc(57% + 600px);
+    }
+
+
+    .list .item .content {
+        position: absolute;
+
+        top: 30%;
+        left: 20px;
+        transform: translateY(-50%);
+        width: 400px;
+        text-align: left;
+        color: #525252ff;
+        display: none;
+    }
+
+    .arrows {
+        position: absolute;
+        top: 80%;
+        right: 52%;
+        z-index: 100;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .arrows .prev {
+        width: 40px;
+        /* Tamaño más pequeño */
+        height: 40px;
+
+        left: 0px;
+        /* Moverlas hacia la izquierda */
+        bottom: -70px;
+        /* Moverlas hacia abajo */
+
+    }
+
+    .arrows .prev:hover {
+        background-color: #e6e6e6;
+        /* Fondo gris claro en hover */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        /* Más sombra en hover */
+    }
+
+    /* Ajustes similares para el botón "next" */
+    .arrows .next {
+        width: 40px;
+        /* Tamaño más pequeño */
+        height: 40px;
+
+        right: 10px;
+        bottom: -70px;
+        /* Moverlas hacia abajo */
+
+    }
+
+    .arrows .next:hover {
+        background-color: #e6e6e6;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        /* Más sombra en hover */
+    }
+
+
+
+    /* Estilo del título */
+    .info-text h2 {
+        text-transform: uppercase;
+        font-family: 'Eurostile-Bold';
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .info-text {
+        position: absolute;
+        /* Posición absoluta dentro de .info-image */
+        bottom: 10%;
+        /* Separación inferior relativa al tamaño de la imagen */
+        left: 5%;
+        /* Separación izquierda relativa al tamaño del contenedor */
+        transform: translateY(0);
+        /* Elimina transformaciones innecesarias */
+        width: 90%;
+        /* Ajustamos el ancho relativo al contenedor */
+        color: #fff;
+        /* Texto blanco para contraste */
+        padding: 10px;
+        /* Espaciado interno */
+
+        border-radius: 8px;
+        /* Bordes redondeados */
+        text-align: left;
+        /* Centrado del texto */
+    }
+
+
+  
+}
+
+
+/* Estilos comunes para todos los elementos */
+.item {
+    width: 220px;
+    height: 160px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+/* Quitar el padding específicamente del footer */
+footer {
+    margin-left: -10px;
+    /* Compensa el padding del body */
+    margin-right: -10px;
+    /* Compensa el padding del body */
+    width: calc(100% + 20px);
+    /* Ajusta el ancho para cubrir toda la pantalla */
+    box-sizing: border-box;
+    /* Asegura que el tamaño del footer sea consistente */
+}
+
+/* Cambiar las imágenes para pantallas móviles */
+@media (max-width: 768px) {
+    .content .des {
+        font-size: 1rem;
+        width: 300px;
+    }
+
+    .carousel2 {
+        width: 100%;
+        /* Ancho total */
+        height: auto;
+        /* Ajuste automático según el contenido */
+        display: flex;
+        /* Centrado del contenido */
+        align-items: center;
+        justify-content: center;
+        min-height: 570px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+    .carousel2 .list .item {
+        width: 120px;
+        /* Mantén el ancho */
+        height: 80px;
+        /* Mantén la altura */
+        position: absolute;
+        top: 92%;
+        /* Posición vertical */
+        transform: translateY(-70%);
+        left: 80%;
+
+        /* Ajustes para centrar más el producto */
+        background-position: center 77%;
+        /* Centra horizontalmente y mueve ligeramente hacia arriba */
+        background-size: cover;
+        /* Ajusta para cubrir todo el contenedor */
+        z-index: 100;
+
+    }
+
+    /* Estilos por defecto celular */
+    .item7 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_Dimmer.png');
+    }
+
+    .item8 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_Dual\ Curtain\ Switch.png');
+    }
+
+    .item9 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_Switch.png');
+    }
+
+    .item10 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_Heating_FanCoilThermostat.png');
+    }
+
+    .item11 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_IR20.png');
+    }
+
+    .item12 {
+        background-image: url('../Assets_Akubelainfo/4_Carrusel_Iluminacion/responsive/Carrusel-L2B-v1-Responsive_Heating_Thermostat.png');
+    }
+
+    .item {
+        width: 150px;
+        /* Tamaño reducido en móvil */
+        height: 100px;
+        /* Tamaño reducido en móvil */
+    }
+}
+
+
+@media (max-width: 431px) {
+    .carousel2 {
+
+        min-height: 650px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+    
+}
+
+@media (max-width: 421px) {
+    .carousel2 {
+
+        min-height: 600px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+    
+
+}
+
+@media (max-width: 415px) {
+    .carousel2 {
+
+        min-height: 600px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+   
+
+}
+
+@media (max-width: 391px) {
+    .carousel2 {
+
+        min-height: 580px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+}
+
+@media (max-width: 376px) {
+    .carousel2 {
+
+        min-height: 560px;
+        /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    }
+
+
+
+}

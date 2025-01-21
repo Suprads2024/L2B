@@ -16,15 +16,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life 2 Better / Akubela info</title>
   <link rel="shortcut icon" href="../Assets/Icono_pestaña.png" type="image/x-icon">
-  <link rel="stylesheet" href="../Assets/css/style.css?v=2.1">
-  <link rel="stylesheet" href="../Assets/css/header2.css?v=1.1">
-  <link rel="stylesheet" href="../Assets/css/main.css?v=1.1">
-  <link rel="stylesheet" href="../Assets/css/tercerunidad.css?v=1.1">
-  <link rel="stylesheet" href="../Assets/css/footer.css?v=2.1">
+  <link rel="stylesheet" href="../Assets/css/style.css?v=6.1">
+  <link rel="stylesheet" href="../Assets/css/header2.css?v=6.1">
+  <link rel="stylesheet" href="../Assets/css/main.css?v=6.1">
+  <link rel="stylesheet" href="../Assets/css/tercerunidad.css?v=6.1">
+  <link rel="stylesheet" href="../Assets/css/footer.css?v=6.1">
 
+
+  <link rel="stylesheet" href="../arquitecto/css2/arquitecto.css?v=6.2">
   <!-- akubela css -->
-  <link rel="stylesheet" href="../akubela-info/css/akubelainfo.css">
-  <link rel="stylesheet" href="../akubela-info/css/productos.css">
+  <!-- akubela css -->
+  <link rel="stylesheet" href="../akubela-info/css/akubelainfo.css?v=3.3">
+  <link rel="stylesheet" href="../akubela-info/css/akubelainfo2.css?v=2.3">
+  <link rel="stylesheet" href="../akubela-info/css/productos.css?v=2.3">
+  <link rel="stylesheet" href="../akubela-info/css/productos2.css?v=3.5">
+  <link rel="stylesheet" href="../akubela-info/css/climatizacion.css?v=2.1">
   <link rel="stylesheet" href="../akubela/css/tercera.css?v=3.1">
 
   <!-- HTML Meta Tags -->
@@ -63,7 +69,7 @@
 
 </head>
 
-<body class="arquitecto1">
+<body class="akubelainfo">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -81,9 +87,9 @@
     </a>
   </div>
   <div class="menu__wrapper" id="top">
-    <div class="menu__bar">
+    <div class="menu__bar2">
       <a href="../" title="Logo" class="logo">
-        <img src="../Assets/2daUnidad/L2B_Logo menu.png" alt="Logo" class="logo-img2" id="logo-img">
+        <img src="../Assets/Footer/L2B_ Logo B.png" alt="Logo" class="logo-img2" id="logo-img">
       </a>
       <img class="menu-icon" src="../Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
@@ -91,29 +97,29 @@
         <li><a href="https://life2better.com/" title="Inicio">Home</a></li>
         <li>
           <a href="#" title="Hogar Fibaro" class="dropdown-link">Profesionales
-            <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
+            <img src="../Assets/Flecha_Abajo_Blanco.svg" class="dropdown-arrow2" alt="Desplegar">
           </a>
 
           <ul class="submenu">
             <li><a href="https://life2better.com/arquitecto/">Arquitectos</a></li>
             <li><a href="https://life2better.com/desarrolladores/">Desarrolladores</a></li>
-            <li><a href="https://domoticafibaro.com.ar/">Ser Representante</a></li>
+            <li><a href="https://life2better.com/ser-representante/">Ser Representante</a></li>
+            <li><a href="https://life2better.com/ser-representante/#instalador">Ser Instalador</a></li>
 
           </ul>
         </li>
 
         <li>
           <a href="#" title="Productos" class="dropdown-link">Productos
-            <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
+            <img src="../Assets/Flecha_Abajo_Blanco.svg" class="dropdown-arrow2" alt="Desplegar">
           </a>
           <ul class="submenu">
 
             <li>
-              <a href="#top" target="_blank" title="Akubela">Akubela</a>
+              <a href="https://life2better.com/akubela" target="_blank" title="Akubela">AKUBELA</a>
             </li>
-            <!-- Fibaro -->
             <li>
-              <a href="#" class="dropdown-link" title="Fibaro">Fibaro
+              <a href="#" class="dropdown-link" title="Fibaro">FIBARO
 
               </a>
               <ul class="submenu">
@@ -181,8 +187,8 @@
 
 
         <li>
-          <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img src="../Assets/Flecha_Abajo.svg"
-              class="dropdown-arrow" alt="Desplegar"></a>
+          <a href="#" title="Hogar Fibaro" class="dropdown-link">Smart Home<img src="../Assets/Flecha_Abajo_Blanco.svg"
+              class="dropdown-arrow2" alt="Desplegar"></a>
           <ul class="submenu">
             <li><a href="https://life2better.com/fibaro-argentina/">Sistema FIBARO</a></li>
             <li><a href="https://life2better.com/z-wave/">Protocolo Z-Wave</a></li>
@@ -237,7 +243,7 @@
         const url = this.getAttribute('href');
 
         // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-        if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/") {
+        if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/" || url === "https://life2better.com/akubela") {
           // Navegar dentro de la misma pestaña
           event.preventDefault(); // Evita el comportamiento predeterminado
           window.location.href = url; // Navega en la misma pestaña
@@ -268,7 +274,8 @@
 
         <!-- Primer elemento del carrusel -->
         <div class="item item1">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/Akubela HyPanel Supreme Datasheet_20231229_V1.0.pdf"
+            download="Hy_Panel_Supreme.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel Supreme</div>
             <div class="des">Este modelo premium de akubela posee una pantalla de 12.36 pulgadas es perfecto para
@@ -280,7 +287,8 @@
 
         <!-- Segundo elemento del carrusel -->
         <div class="item item2">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/Akubela_HyPanel_PS51.pdf"
+            download="Hy_Panel.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel</div>
             <div class="des">Este dispositivo de automatización posee una pantalla táctil de 4 pulgadas que permite
@@ -292,7 +300,8 @@
 
         <!-- Tercer elemento del carrusel -->
         <div class="item item3">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/akubela HyPanel Lite Datasheet_20231130_V1.8.pdf"
+            download="Hy_Lite.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel Lite</div>
             <div class="des">El Hy Panel Lite ofrece una solución funcional para quienes desean iniciar la
@@ -304,7 +313,8 @@
 
         <!-- Cuarto elemento del carrusel -->
         <div class="item item4">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/Akubela HyPanel Lux Datasheet_20230103_V1.1.pdf"
+            download="Hy_Lux.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel Lux</div>
             <div class="des">Diseñado para hogares de lujo, el Hy Panel Lux permite a los usuarios disfrutar de una
@@ -316,7 +326,8 @@
 
         <!-- Quinto elemento del carrusel -->
         <div class="item item5">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/HyPanel-Pro-PG71-R2-EU.pdf"
+            download="Hy_Panel_Pro.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel Pro</div>
             <div class="des">Ideal para usuarios avanzados que necesitan un sistema de control centralizado y
@@ -328,7 +339,8 @@
 
         <!-- Sexto elemento del carrusel -->
         <div class="item item6">
-          <a href="ruta-del-archivo1.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <a href="../akubela-info/Assets_Akubelainfo/1_Header_Carrusel/pdfs/Akubela HyPanel Ultra Datasheet_20230927_V1.0.pdf"
+            download="Hy_Panel_Ultra.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
           <div class="content">
             <div class="title">Hy Panel Ultra</div>
             <div class="des">El Hy Panel Ultra es el panel definitivo para aplicaciones comerciales de alta exigencia,
@@ -353,80 +365,334 @@
     </div>
 
     <!-- Nueva Sección: Imagen con Texto -->
-    <div class="info-section">
+    <div class="info-section" id="Control_Acceso">
       <!-- Imagen de fondo -->
       <div class="info-image">
         <!-- Texto sobre la imagen -->
         <div class="info-text">
           <h2></h2>
           <p>
-            
+
           </p>
         </div>
       </div>
     </div>
   </div>
-  <!-- segunda seccion -->
 
   <section class="products-section">
     <div class="top-row">
       <div class="product product-1">
         <div class="product-content">
-          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxA02 (1).png" alt="Akuvox A02" />
+          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxA02 (1).png"
+            alt="Akuvox A02" />
           <div class="overlay">
             <h2>AKUVOX A02</h2>
-            <button class="download-btn orange">DESCARGAR PDF</button>
+
+            <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akuvox A02.pdf" download="A02.pdf"
+              target="_blank" class="download-btn orange">DESCARGAR PDF </a>
           </div>
         </div>
       </div>
       <div class="product product-2">
         <div class="product-content">
-          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxA05 (1).png" alt="Akuvox A05" />
+          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxA05 (1).png"
+            alt="Akuvox A05" />
           <div class="overlay">
             <h2>AKUVOX A05</h2>
-            <button class="download-btn black">DESCARGAR PDF</button>
+            <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akuvox A05.pdf" download="A05.pdf"
+              target="_blank" class="download-btn orange">DESCARGAR PDF </a>
           </div>
         </div>
       </div>
     </div>
-  
+
     <div class="bottom-row">
       <div class="product product-3">
         <div class="product-content">
-          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE12 (1).png" alt="Akuvox E12" />
+          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE12 (1).png"
+            alt="Akuvox E12" />
           <div class="overlay">
             <h2>AKUVOX E12</h2>
-            <button class="download-btn2 black">DESCARGAR PDF</button>
+            <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akuvox E12.pdf" download="E12.pdf"
+              target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
           </div>
         </div>
       </div>
       <div class="product product-4">
         <div class="product-content">
-          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE16 (1).png" alt="Akuvox E16" />
+          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE16 (1).png"
+            alt="Akuvox E16" />
           <div class="overlay">
             <h2>AKUVOX E16</h2>
-            <button class="download-btn2 black">DESCARGAR PDF</button>
+            <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akuvox E16.pdf" download="E16.pdf"
+              target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
           </div>
         </div>
       </div>
       <div class="product product-5">
         <div class="product-content">
-          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE18 (1).png" alt="Akuvox E18" />
+          <img src="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_AkuvoxE18 (1).png"
+            alt="Akuvox E18" />
           <div class="overlay">
             <h2>AKUVOX E18</h2>
-            <button class="download-btn2 black">DESCARGAR PDF</button>
+            <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akuvox E18.pdf" download="E18.pdf"
+              target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
-  
- 
 
+
+
+
+  <div class="smartlock-section">
+    <!-- Imagen principal superior -->
+    <div class="main-image"></div>
+    <div class="mobile-image"></div>
+
+
+    <!-- Fila inferior con dos productos -->
+    <div class="product-row">
+      <!-- Producto 1 -->
+      <div class="product-card"
+        style="background-image: url('../akubela-info/Assets_Akubelainfo/3_SmartlockSeries/F2.png');">
+        <div class="product-overlay">
+          <h3>F2</h3>
+          <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akubela SmartLock F2.pdf" download="F2.pdf"
+            target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="product-card"
+        style="background-image: url('../akubela-info/Assets_Akubelainfo/3_SmartlockSeries/SL50.png');">
+        <div class="product-overlay">
+          <h3>SL50</h3>
+          <a href="../akubela-info/Assets_Akubelainfo/2_ControldeAcceso/pdfs/Akubela SmartLock SL50.pdf"
+            download="SL50.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="main-banner" id="Climatizacion-e-Iluminacion?v=2.1"></div>
+    <div class="mobile-banner" id="Climatizacion-e-Iluminacion?v=2.1"></div>
+    
+
+  </div>
+
+  <div class="main-container2" style="padding: 0px 10px 0px 10px;" >
+
+    <div class="carousel">
+      <div class="list">
+
+        <!-- Primer elemento del carrusel -->
+        <div class="item item7" >
+          <a href="https://wa.me/5491136304219?text=Quiero%20mas%20informacion%20acerca%20del%20Dimmer" target="_blank"
+            class="product-download-button">Información</a>
+          <div class="content">
+            <div class="title" style="color: #fec200;">Iluminación</div>
+            <div class="title2" style="color: white;">Dimmer</div>
+            <div class="des" style="color: white;">Controlá la intensidad de tus luces para crear ambientes
+              personalizados. Compatible con automatización, ofrece confort, ahorro energético y fácil instalación.
+            </div>
+          </div>
+        </div>
+
+        <!-- Segundo elemento del carrusel -->
+        <div class="item item8">
+          <a href="../akubela-info/Assets_Akubelainfo/4_Carrusel_Iluminacion/pdfs/Akubela Switch doble.pdf"
+            download="Dual_Switch" target="_blank" class="product-download-button">Descargar PDF</a>
+          <div class="content">
+            <div class="title" style="color: #fec200;">Iluminación</div>
+            <div class="title2" style="color: white;">Dual Curtain Switch</div>
+            <div class="des" style="color: white;">Manejá dos cortinas o persianas eléctricas de forma remota. Ideal
+              para automatizar la luz natural, con diseño moderno y sencilla integración en sistemas inteligentes.</div>
+          </div>
+        </div>
+
+        <!-- Tercer elemento del carrusel -->
+        <div class="item item9">
+          <a href="https://wa.me/5491136304219?text=Quiero%20mas%20informacion%20acerca%20del%20Switch" target="_blank"
+            class="product-download-button">Información</a>
+          <div class="content">
+            <div class="title" style="color: #fec200;">Iluminación</div>
+            <div class="title2" style="color: white;">Switch</div>
+            <div class="des" style="color: white;">Automatizá el control de luces y electrodomésticos con este
+              interruptor inteligente. Permite manejo remoto, ahorro energético y se integra fácilmente con sistemas
+              inteligentes.</div>
+          </div>
+        </div>
+
+        <!-- Cuarto elemento del carrusel -->
+        <div class="item item10">
+          <a href="../akubela-info/Assets_Akubelainfo/5_CarruselClimatizacion/pdfs/Akubela fancoil thermostat.pdf"
+            download="Fan_Coil_Thermostat.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <div class="content">
+            <div class="title" style="color: #ff5716;">Climatización</div>
+            <div class="title2">Fan Coil Thermostat</div>
+            <div class="des">Controlá equipos fan coil para calefacción y refrigeración.
+              Ajustalo desde tu celular, optimizá la climatización y ahorrá energía en tu hogar o negocio.</div>
+          </div>
+        </div>
+
+        <!-- Quinto elemento del carrusel -->
+        <div class="item item11">
+          <a href="../akubela-info/Assets_Akubelainfo/5_CarruselClimatizacion/pdfs/Akubela IR Controller.pdf"
+            download="Controlador_Infrarrojo.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <div class="content">
+            <div class="title" style="color: #ff5716;">Climatización</div>
+            <div class="title2">Controlador Infrarrojo</div>
+            <div class="des">Transformá tus dispositivos convencionales con este controlador IR.
+              Manejá aires y TVs desde una app y hacé tu hogar más inteligente.</div>
+          </div>
+        </div>
+
+        <!-- Sexto elemento del carrusel -->
+        <div class="item item12">
+          <a href="../akubela-info/Assets_Akubelainfo/5_CarruselClimatizacion/pdfs/Akubela Heating thermostat.pdf"
+            download="Heating_Thermostat.pdf" target="_blank" class="product-download-button">Descargar PDF</a>
+          <div class="content">
+            <div class="title" style="color: #ff5716;">Climatización</div>
+            <div class="title2">Heating Thermostat</div>
+            <div class="des">Controlá la temperatura de tu hogar con este termostato inteligente para calefacción.
+              Programá horarios, manejalo desde tu celular y ahorrá energía sin perder confort.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botones del carrusel -->
+      <div class="arrows">
+        <button class="prev">
+          <</button>
+            <button class="next">></button>
+      </div>
+
+      <!-- Indicador de tiempo -->
+      <div class="timeRunning"></div>
+    </div>
+
+
+  </div>
 
 
   <script src="app.js"></script>
+
+  <section class="security-products" id="Seguridad">
+    <!-- Primera fila (50vh) -->
+    <div class="security-row-renamed">
+      <!-- Imagen de fondo con zócalo -->
+      <div class="security-feature-renamed"
+        style="background-image: url('../akubela-info/Assets_Akubelainfo/6_Seguridad/Seguridad.png');">
+        <div class="security-feature-bar-renamed">
+          <h3>SEGURIDAD</h3>
+        </div>
+      </div>
+      <!-- Producto 1 -->
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Sensor_de_movimiento_inteligente.png"
+            alt="Sensor de Movimiento Inteligente">
+          <div class="product-overlay-renamed">
+            <h3>SENSOR DE MOVIMIENTO INTELIGENTE</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Sensor de movimiento.pdf"
+              download="SENSOR_MOVIMIENTO.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Detector_de_presencia_humana.png"
+            alt="Detector de Presencia Humana">
+          <div class="product-overlay-renamed">
+            <h3>DETECTOR DE PRESENCIA HUMANA</h3>
+            <a href="https://wa.me/5491136304219?text=Quiero%20mas%20informacion%20acerca%20del%20Detector%20de%20presencia%20humana."
+              target="_blank" class="download-btn2 orange">INFORMACIÓN </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda fila (50vh) -->
+    <div class="security-grid-renamed">
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Botón_de_emergencia.png" alt="Botón de Emergencia">
+          <div class="product-overlay-renamed">
+            <h3>BOTÓN DE EMERGENCIA</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Botón de emergencia.pdf"
+              download="EMERGENCIA.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Válvula_inteligente.png" alt="Válvula Inteligente">
+          <div class="product-overlay-renamed">
+            <h3>VÁLVULA INTELIGENTE</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Valvula inteligente.pdf"
+              download="VALVULA_INTELIGENTE.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Sensor_de_inundaciones.png"
+            alt="Sensor de Inundaciones">
+          <div class="product-overlay-renamed">
+            <h3>SENSOR DE INUNDACIONES</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Sensor de inundación.pdf"
+              download="SENSOR_INUNDACIONES.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tercera fila (50vh - Últimos productos) -->
+    <div class="security-grid-short-renamed">
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Sensor_de_humo.png" alt="Sensor de Humo">
+          <div class="product-overlay-renamed">
+            <h3>SENSOR DE <br> HUMO</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Sensor de humo.pdf" download="SENSOR_HUMO.pdf"
+              target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Sensor_de_monóxido_de_carbono.png"
+            alt="Sensor de Monóxido de Carbono">
+          <div class="product-overlay-renamed">
+            <h3>SENSOR DE MONÓXIDO DE CARBONO</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/sensor de co.pdf" download="SENSOR_CO.pdf"
+              target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card-renamed">
+        <div class="product-content-renamed">
+          <img src="../akubela-info/Assets_Akubelainfo/6_Seguridad/Sensores_de_puertas_y_ventanas.png"
+            alt="Sensores de Puertas y Ventanas">
+          <div class="product-overlay-renamed">
+            <h3>SENSORES DE PUERTAS Y VENTANAS</h3>
+            <a href="../akubela-info/Assets_Akubelainfo/6_Seguridad/pdfs/Sensor de puerta y venta.pdf"
+              download="SENSOR_PUERTAS_VENTANAS.pdf" target="_blank" class="download-btn2 orange">DESCARGAR PDF </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
   <footer class="footer">
     <div class="footer-overlay">
       <div class="footer-container">
@@ -490,21 +756,21 @@
       /* Cambia a amarillo en hover */
     }
   </style>
-  <!-- Popup 1 -->
-  <!-- Popup 1 -->
+
 
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="../java/script.js"></script>
   <script src="../Assets/java/nav.js"></script>
-  <script src="../Assets/java/logo.js"></script>
+
   <script src="../Assets/java/scrollnav.js"></script>
-  <script src="../Assets/java/scrolnav.js"></script>
+  <script src="../Assets/java/scrolnav.js?v=1.3"></script>
   <script src="../Assets/java/carrousel.js"></script>
   <script src="../Assets/java/preloader.js"></script>
   <script src="../Assets/java/cargadevideo.js"></script>
   <script src="../Assets/java/carouselheader.js"></script>
-  <script src="../akubela/js/app.js?v=3.1"></script>
+  <script src="../akubela/js/app.js"></script>
+  <script src="../akubela/js/app2.js?v=2.1"></script>
 
 </body>
 

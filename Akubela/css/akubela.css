@@ -579,7 +579,7 @@ header {
 }
 
 
-@media (max-width:1500px) {
+@media (max-width:1681px) {
     .list .item .content {
         position: absolute;
 
@@ -697,7 +697,7 @@ header {
     .info-text {
         position: absolute;
         /* Posición absoluta dentro de .info-image */
-        bottom: 10%;
+        bottom: 15%;
         /* Separación inferior relativa al tamaño de la imagen */
         left: 5%;
         /* Separación izquierda relativa al tamaño del contenedor */
@@ -847,7 +847,12 @@ footer {
         min-height: 600px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
     }
     .info-section {
-        height: 55vh;
+        height: 62vh;
+    }
+    .info-text {
+        
+        top: 55%;
+      
     }
 
 }
@@ -856,7 +861,18 @@ footer {
        
         min-height: 580px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
     }
-
+  /* Imagen de fondo */
+  .info-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Assets_Akubela/Unidad1/Ecos/Responsive_Ecosistema.png');
+    /* Ruta de la imagen */
+    background-size: cover;
+    /* La imagen cubrirá todo el contenedor */
+    background-position: center;
+    /* Centrado de la imagen */
+    border-radius: 15px;
+}
 }
 
 @media (max-width: 376px) {
@@ -866,7 +882,20 @@ footer {
     }
       
       .info-section {
-        height: 67vh;
+        height: 65vh;
+    }
+    .info-text {
+        
+        top: 50%;
+      
+    }
+
+}
+
+@media (max-width: 373px) {
+   
+      .info-section {
+        height: 80vh;
     }
 
 

@@ -1,13 +1,13 @@
 /* Contenedor principal de la sección */
 .products-section {
   width: 100%;
-  height: 100vh;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0px 10px 10px 10px;
   box-sizing: border-box;
-  margin-bottom: 50px;
+
 }
 
 /* Fila superior */
@@ -82,8 +82,7 @@
 /* Botón de descarga */
 .download-btn {
   font-family: 'Eurostile-Regular';
-  width: 200px; /* Ancho fijo */
-  height: 50px; /* Alto fijo */
+
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -93,6 +92,9 @@
   border: none;
   background: #333; /* Fondo oscuro inicial */
   color: #fff;
+  text-decoration: none;
+  text-align: center;
+
 }
 
 .download-btn:hover {
@@ -100,28 +102,6 @@
   background: linear-gradient(45deg, #ff7800, #ffb84d);
 }
 
-/* Botón de descarga */
-.download-btn2 {
-  font-family: 'Eurostile-Regular';
-  width: 200px; /* Ancho fijo */
-  height: 50px; /* Alto fijo */
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  background: #333; /* Fondo oscuro inicial */
-  color: #fff;
-  margin: 0 auto;
-}
-
-/* Efecto hover del botón con gradiente naranja */
-.download-btn2:hover {
-  color: #333;
-  background: linear-gradient(45deg, #ff7800, #ffb84d);
-}
 
 /* Ajustes específicos para las primeras dos cajas */
 .top-row .product:nth-child(1) .overlay,
@@ -141,22 +121,35 @@
   /* Cambiamos el diseño a columna */
   .products-section {
     gap: 10px;
-    margin-bottom: 1200px;
+   
   }
+  .top-row {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    gap: 10px;
+  }
+.bottom-row {
+  display: flex;
+  width: 100%;
+  height: 150vh;
+  gap: 10px;
+}
   
   .top-row, .bottom-row {
     flex-direction: column;
-    height: auto; /* Ajusta automáticamente la altura */
+    
   }
 
-  /* Ajustamos la altura de los productos */
-  .top-row .product {
-    height: 25vh; /* Primeras dos cajas más bajas */
-  }
+ /* Ajustes específicos para las primeras dos cajas */
+.top-row .product:nth-child(1) .overlay,
+.top-row .product:nth-child(2) .overlay {
 
-  .bottom-row .product {
-    height: 35vh; /* Últimas tres cajas más altas */
-  }
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+  padding: 0 10px; /* Espaciado del borde derecho */
+  right: 3%;
+
+}
 
   /* Ajustes para el texto */
   .overlay h2 {
@@ -164,7 +157,7 @@
   }
 
   /* Ajustes para el botón */
-  .download-btn, .download-btn2 {
+  .download-btn {
     width: 150px; /* Botón más estrecho */
     height: 40px; /* Botón más bajo */
     font-size: 0.875rem; /* Texto más pequeño */

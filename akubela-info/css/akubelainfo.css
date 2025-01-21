@@ -6,29 +6,29 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+:root {
+    scroll-padding-top: 120px; /* Ajusta al tamaño de tu barra */
+  }
 /* Estilos generales del body */
 body {
-    
-    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
-}
-/* Estilo general */
-.arquitecto1 {
 
-    background-image: url('../AkubelaCarrusel_Fondo_Negro.jpg');
-    /* Reemplaza con la URL de tu imagen */
-    background-size: cover;
-    /* Asegura que la imagen cubra todo el div */
-    background-position: center;
-    /* Centra la imagen */
+    box-sizing: border-box;
+    /* Asegura que el padding no rompa el layout */
+}
+
+/* Estilo general */
+.akubelainfo {
+
+    background-image: url('../Assets_Akubelainfo/WeblandingL2BArquitecto_Fondo.jpg');
+    
 }
 
 /* Fondo específico para .features-grid */
 .features-grid {
-    
+
     padding: 0 10px;
-  }
-  
+}
+
 
 
 header {
@@ -45,7 +45,8 @@ header {
 
 /* Ocultar el botón en las imágenes pequeñas (las que no están activas) */
 .carousel .list .item .product-download-button {
-    display: none; /* Oculta el botón por defecto */
+    display: none;
+    /* Oculta el botón por defecto */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -68,7 +69,8 @@ header {
 /* Mostrar el botón solo para la imagen activa */
 .carousel .list .item:nth-child(1) .product-download-button,
 .carousel .list .item:nth-child(2) .product-download-button {
-    display: block; /* Solo se muestra en las imágenes principales */
+    display: block;
+    /* Solo se muestra en las imágenes principales */
 }
 
 /* Hover del botón */
@@ -112,7 +114,7 @@ header {
 }
 
 .carousel .list .item {
-    
+
     width: 220px;
     /* Reducimos el ancho */
     height: 160px;
@@ -127,9 +129,9 @@ header {
     background-position: left center;
     /* Ajustamos para enfocar el producto */
     background-size: cover;
-    z-index: 100;
+
     transition: 1s;
-    
+
 
 }
 
@@ -158,9 +160,11 @@ header {
 }
 
 
+
+
 .carousel .list .item:nth-child(1),
 .carousel .list .item:nth-child(2) {
-    
+
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -170,22 +174,28 @@ header {
 }
 
 .carousel .list .item:nth-child(3) {
-    left: 57%; /* Primer elemento más a la izquierda */
+    left: 57%;
+    /* Primer elemento más a la izquierda */
 }
 
 .carousel .list .item:nth-child(4) {
-    left: calc(57% + 250px); /* Segundo elemento separado por 250px */
+    left: calc(57% + 250px);
+    /* Segundo elemento separado por 250px */
 }
 
 .carousel .list .item:nth-child(5) {
-    left: calc(57% + 500px); /* Tercer elemento separado por 500px */
+    left: calc(57% + 500px);
+    /* Tercer elemento separado por 500px */
 }
 
 /* Ocultamos el cuarto elemento (y los siguientes, si los hubiera) */
 .carousel .list .item:nth-child(n+6) {
-    left: calc(57% + 750px); /* Posición fuera del área visible */
-    opacity: 0; /* Lo ocultamos visualmente */
-    pointer-events: none; /* Evitamos que sea interactivo */
+    left: calc(57% + 750px);
+    /* Posición fuera del área visible */
+    opacity: 0;
+    /* Lo ocultamos visualmente */
+    pointer-events: none;
+    /* Evitamos que sea interactivo */
 }
 
 
@@ -207,7 +217,7 @@ header {
         background-position: left center;
         /* Ajustamos para enfocar el producto */
         background-size: cover;
-        z-index: 100;
+
         transition: 1s;
     }
 
@@ -246,18 +256,6 @@ header {
 }
 
 
-@media (max-width:1500px) {
-    .list .item .content {
-        position: absolute;
-
-        top: 45%;
-        left:600px;
-        transform: translateY(-50%);
-        width: 400px;
-        text-align: left;
-        color: #525252ff;
-        display: none;
-    }}
 .list .item .content {
     position: absolute;
 
@@ -297,7 +295,7 @@ header {
 }
 
 .content .des {
-    width:600px;
+    width: 600px;
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -439,6 +437,7 @@ header {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     /* Sombra más pronunciada */
     transition: all 0.3s ease;
+    z-index: -1;
 }
 
 .arrows .next:hover {
@@ -453,7 +452,7 @@ header {
 /* time running */
 .carousel .timeRunning {
     position: absolute;
-    z-index: 500;
+
     width: 0%;
     height: 4px;
     background-color: #ff6e14da;
@@ -494,7 +493,7 @@ header {
 
     .content .des {
         font-size: 0.9rem;
-      
+
     }
 
 }
@@ -505,7 +504,7 @@ header {
         margin-right: 0;
     }
 
-    
+
 
     .content .title,
     .content .name {
@@ -530,7 +529,7 @@ header {
     position: relative;
     width: 100%;
     /* Ancho completo de la pantalla */
-    height: 40vh;
+
     /* Altura de la sección */
     overflow: hidden;
     margin-bottom: 10px;
@@ -541,8 +540,8 @@ header {
 .info-image {
     position: relative;
     width: 100%;
-    height: 100%;
-    background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_ControldeAcceso_Portada_PC.png');
+    height: 20vh;
+    background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_control_acceso.png');
     /* Ruta de la imagen */
     background-size: cover;
     /* La imagen cubrirá todo el contenedor */
@@ -603,38 +602,35 @@ header {
         color: #525252ff;
         display: none;
     }
-    .content .des {
-       
-        font-size: 1.1rem;
-       
-    }
 
-    /* Texto sobre la imagen, alineado a la derecha */
-    .info-text {
+  
+
+
+
+}
+
+@media (max-width:1681px) {
+    .list .item .content {
         position: absolute;
-        /* Posición absoluta dentro de .info-image */
-        top: 50%;
-        /* Centrado vertical */
-        right: 70px;
-        /* Separación del borde derecho */
-        transform: translateY(-50%);
-        /* Ajuste para centrar perfectamente */
-        width: 600px;
-        /* Ancho máximo del texto */
-        color: #fff;
-        /* Texto blanco para contraste */
 
-        padding: 20px;
-        border-radius: 8px;
-        /* Bordes redondeados */
+        top: 45%;
+        left: 600px;
+        transform: translateY(-50%);
+        width: 400px;
+        text-align: left;
+        color: #525252ff;
+        display: none;
+    }
+    .content .des {
+
+        font-size: 1.1rem!important;
 
     }
-
 }
 
 
 @media (max-width:786px) {
-    
+
 
 
     .carousel .list .item:nth-child(1),
@@ -646,23 +642,23 @@ header {
         width: 100%;
         height: 100%;
     }
-    
+
     .carousel .list .item:nth-child(3) {
         left: 57%;
     }
-    
+
     .carousel .list .item:nth-child(n+4) {
         left: calc(57% + 200px);
     }
-    
+
     .carousel .list .item:nth-child(5) {
         left: calc(57% + 400px);
     }
-    
+
     .carousel .list .item:nth-child(6) {
         left: calc(57% + 600px);
     }
-    
+
 
     .list .item .content {
         position: absolute;
@@ -736,180 +732,167 @@ header {
         margin-bottom: 10px;
     }
 
-    .info-text {
-        position: absolute;
-        /* Posición absoluta dentro de .info-image */
-        bottom: 10%;
-        /* Separación inferior relativa al tamaño de la imagen */
-        left: 5%;
-        /* Separación izquierda relativa al tamaño del contenedor */
-        transform: translateY(0);
-        /* Elimina transformaciones innecesarias */
-        width: 90%;
-        /* Ajustamos el ancho relativo al contenedor */
-        color: #fff;
-        /* Texto blanco para contraste */
-        padding: 10px;
-        /* Espaciado interno */
 
-        border-radius: 8px;
-        /* Bordes redondeados */
-        text-align: left;
-        /* Centrado del texto */
-    }
 
-    /* Contenedor principal */
-    .info-section {
 
-        height: 67vh;
-        /* Altura de la sección */
 
-    }
 
-    /* Imagen de fondo */
     .info-image {
         width: 100%;
-        height: 100%;
-        background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_ControldeAcceso_Portada.png');
-        /* Ruta de la imagen */
+     
+        
+        background-image: url('../Assets_Akubelainfo/2_ControldeAcceso/ProductoAkubela_Baner-Responsive_250x350_0000_Control-de-acceso.png');
+        height: 35vh;
         background-size: cover;
-        /* La imagen cubrirá todo el contenedor */
+       
         background-position: center;
-        /* Centrado de la imagen */
+      
         border-radius: 15px;
     }
-}
-
-
-/* Estilos comunes para todos los elementos */
-.item {
-    width: 220px;
-    height: 160px;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    background-size: cover;
-    background-position: center;
-    transition: all 0.3s ease;
-}
-
-/* Quitar el padding específicamente del footer */
-footer {
-    margin-left: -10px; /* Compensa el padding del body */
-    margin-right: -10px; /* Compensa el padding del body */
-    width: calc(100% + 20px); /* Ajusta el ancho para cubrir toda la pantalla */
-    box-sizing: border-box; /* Asegura que el tamaño del footer sea consistente */
-}
-/* Cambiar las imágenes para pantallas móviles */
-@media (max-width: 768px) {
-    .content .des {
-        font-size: 1rem;
-        width: 300px;
-    }
-    .carousel {
-        width: 100%; /* Ancho total */
-        height: auto; /* Ajuste automático según el contenido */
-        display: flex; /* Centrado del contenido */
-        align-items: center; 
-        justify-content: center; 
-        min-height: 570px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
-    }
-    .carousel .list .item {
-        width: 120px; /* Mantén el ancho */
-        height: 80px; /* Mantén la altura */
-        position: absolute;
-        top: 92%; /* Posición vertical */
-        transform: translateY(-70%);
-        left: 80%;
-    
-        /* Ajustes para centrar más el producto */
-        background-position: center 77%; /* Centra horizontalmente y mueve ligeramente hacia arriba */
-        background-size: cover; /* Ajusta para cubrir todo el contenedor */
-        z-index: 100;
-    
-    }
-    
-    /* Estilos por defecto celular */
-    .item1 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Supreme.png');
-    }
-
-    .item2 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_hy\ panel.png');
-    }
-
-    .item3 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Hypanel-lite.png');
-    }
-
-    .item4 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Lux.png');
-    }
-
-    .item5 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_Pro.png');
-    }
-
-    .item6 {
-        background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Ultra.png');
     }
 
 
-
+    /* Estilos comunes para todos los elementos */
     .item {
-        width: 150px;
-        /* Tamaño reducido en móvil */
-        height: 100px;
-        /* Tamaño reducido en móvil */
-    }
-}
-
-
-@media (max-width: 431px) {
-    .carousel {
-        
-        min-height: 650px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
-    }
-    .info-section {
-        height: 52vh;
-    }
-}
-@media (max-width: 421px) {
-    .carousel {
-      
-        min-height: 600px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
-    }
-    .info-section {
-        height: 56vh;
+        width: 220px;
+        height: 160px;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        background-size: cover;
+        background-position: center;
+        transition: all 0.3s ease;
     }
 
-}
-@media (max-width: 415px) {
-    .carousel {
-      
-        min-height: 600px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
-    }
-    .info-section {
-        height: 55vh;
-    }
-
-}
-@media (max-width: 391px) {
-    .carousel {
-       
-        min-height: 580px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+    /* Quitar el padding específicamente del footer */
+    footer {
+        margin-left: -10px;
+        /* Compensa el padding del body */
+        margin-right: -10px;
+        /* Compensa el padding del body */
+        width: calc(100% + 20px);
+        /* Ajusta el ancho para cubrir toda la pantalla */
+        box-sizing: border-box;
+        /* Asegura que el tamaño del footer sea consistente */
     }
 
-}
+    /* Cambiar las imágenes para pantallas móviles */
+    @media (max-width: 768px) {
+        .content .des {
+            font-size: 1rem;
+            width: 300px;
+        }
 
-@media (max-width: 376px) {
-    .carousel {
-       
-        min-height: 560px; /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        .carousel {
+            width: 100%;
+            /* Ancho total */
+            height: auto;
+            /* Ajuste automático según el contenido */
+            display: flex;
+            /* Centrado del contenido */
+            align-items: center;
+            justify-content: center;
+            min-height: 570px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
+        .carousel .list .item {
+            width: 120px;
+            /* Mantén el ancho */
+            height: 80px;
+            /* Mantén la altura */
+            position: absolute;
+            top: 92%;
+            /* Posición vertical */
+            transform: translateY(-70%);
+            left: 80%;
+
+            /* Ajustes para centrar más el producto */
+            background-position: center 77%;
+            /* Centra horizontalmente y mueve ligeramente hacia arriba */
+            background-size: cover;
+            /* Ajusta para cubrir todo el contenedor */
+            z-index: 100;
+
+        }
+
+        /* Estilos por defecto celular */
+        .item1 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0003_Supreme.png');
+        }
+
+        .item2 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0001_hy\ panel.png');
+        }
+
+        .item3 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0000_Hypanel-lite.png');
+        }
+
+        .item4 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0005_Lux.png');
+        }
+
+        .item5 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0004_Pro.png');
+        }
+
+        .item6 {
+            background-image: url('../Assets_Akubelainfo/1_Header_Carrusel/carrouselresponsive/Carrusel-L2B-v1-Responsive_0002_Ultra.png');
+        }
+
+
+
+        .item {
+            width: 150px;
+            /* Tamaño reducido en móvil */
+            height: 100px;
+            /* Tamaño reducido en móvil */
+        }
     }
-      
-      .info-section {
-        height: 67vh;
+
+
+    @media (max-width: 431px) {
+        .carousel {
+
+            min-height: 650px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
     }
 
+    @media (max-width: 421px) {
+        .carousel {
 
-}
+            min-height: 600px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
+    }
+
+    @media (max-width: 415px) {
+        .carousel {
+
+            min-height: 600px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
+
+    }
+
+    @media (max-width: 391px) {
+        .carousel {
+
+            min-height: 580px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
+    }
+
+    @media (max-width: 376px) {
+        .carousel {
+
+            min-height: 560px;
+            /* Altura mínima para asegurarnos de que el carrusel siempre sea visible */
+        }
+
+    }

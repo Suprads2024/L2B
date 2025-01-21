@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="../Assets/css/footer.css?v=2.1">
 
   <!-- akubela css -->
-  <link rel="stylesheet" href="../akubela/css/akubela.css?v=3.1">
-  <link rel="stylesheet" href="../akubela/css/segunda.css?v=3.1">
-  <link rel="stylesheet" href="../akubela/css/tercera.css?v=3.1">
+  <link rel="stylesheet" href="../akubela/css/akubela.css?v=3.6">
+  <link rel="stylesheet" href="../akubela/css/segunda.css?v=3.2">
+  <link rel="stylesheet" href="../akubela/css/tercera.css?v=3.2">
 
   <!-- HTML Meta Tags -->
   <meta name="description"
@@ -98,6 +98,7 @@
             <li><a href="https://life2better.com/arquitecto/">Arquitectos</a></li>
             <li><a href="https://life2better.com/desarrolladores/">Desarrolladores</a></li>
             <li><a href="https://life2better.com/ser-representante/">Ser Representante</a></li>
+            <li><a href="https://life2better.com/ser-representante/#instalador">Ser Instalador</a></li>
 
           </ul>
         </li>
@@ -216,40 +217,49 @@
     });
   </script>
   <script>
-    // Lógica para enlaces internos con desplazamiento suave
-    document.querySelectorAll('.navigation a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = this.getAttribute('href');
-
-        // Si el enlace es interno (empieza con #), realiza el scroll suave
-        if (target && target.startsWith('#')) {
-          e.preventDefault();
-          document.querySelector(target).scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Lógica para enlaces externos e internos especiales
-    document.querySelectorAll('.navigation a').forEach(link => {
-      link.addEventListener('click', function (event) {
+    document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
+    link.addEventListener('click', function (event) {
         const url = this.getAttribute('href');
 
-        // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-        if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/") {
-          // Navegar dentro de la misma pestaña
-          event.preventDefault(); // Evita el comportamiento predeterminado
-          window.location.href = url; // Navega en la misma pestaña
+        // Verifica si es el enlace a la sección de instalador dentro de ser-representante
+        if (url === "https://life2better.com/ser-representante/#instalador") {
+            event.preventDefault(); // Evita el comportamiento predeterminado
+            window.location.href = url; // Navega dentro de la misma pestaña
+            // Si ya estás en la página correcta, ajusta el scroll
+            if (window.location.pathname === '/ser-representante/') {
+                const targetElement = document.querySelector('#instalador');
+                if (targetElement) {
+                    const offset = 150; // Ajuste del margen superior
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const adjustedPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: adjustedPosition,
+                        behavior: 'smooth',
+                    });
+                }
+            }
         }
-        // Para otros enlaces externos
-        else if (url && url !== '#' && !url.startsWith('#')) {
-          event.preventDefault(); // Evita el comportamiento predeterminado
-          window.open(url, '_blank'); // Abre en una nueva pestaña
+        // Manejo normal para los demás enlaces internos y externos
+        else if (
+            url === "https://life2better.com/arquitecto/" ||
+            url === "https://life2better.com/desarrolladores/" ||
+            url === "https://life2better.com/ser-representante/" ||
+            url === "https://life2better.com/akubela" ||
+            url === "https://life2better.com/"
+            
+        ) {
+            event.preventDefault();
+            window.location.href = url;
+        } else if (url && url !== '#' && !url.startsWith('#')) {
+            event.preventDefault();
+            window.open(url, '_blank');
         }
-      });
     });
-  </script>
+});
+
+
+</script>
   <style>
     #logo-img {
       transition: all 0.3s ease;
@@ -369,7 +379,8 @@
     <!-- Imagen 1 -->
     <div class="feature-item control-acceso"
       style="background-image: url('../akubela/assets/Assets_Akubela/Unidad2/Control\ de\ acceso.png');">
-      <div class="feature-bar">
+     <a  href="../akubela-info/#Control_Acceso"style="text-decoration: none;">
+       <div class="feature-bar">
         <h3>CONTROL DE ACCESO</h3>
       </div>
       <div class="feature-hover">
@@ -381,12 +392,13 @@
           configuración está simplificado para que cualquiera pueda interactuar con facilidad y vivir una experiencia
           amena de hogar inteligente.
         </p>
-      </div>
+      </div></a>
     </div>
 
     <!-- Imagen 2 -->
     <div class="feature-item iluminacion"
       style="background-image: url('../akubela/assets/Assets_Akubela/Unidad2/Iluminacion.png');">
+      <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1" style="text-decoration: none;">
       <div class="feature-bar">
         <h3>ILUMINACIÓN</h3>
       </div>
@@ -400,11 +412,13 @@
           comandos de voz.
         </p>
       </div>
+    </a>
     </div>
 
     <!-- Imagen 3 -->
     <div class="feature-item climatizacion"
       style="background-image: url('../akubela/assets/Assets_Akubela/Unidad2/Climatizacion.png');">
+      <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1" style="text-decoration: none;">
       <div class="feature-bar">
         <h3>CLIMATIZACIÓN</h3>
       </div>
@@ -418,11 +432,13 @@
           muy sencillo.
         </p>
       </div>
+      </a>
     </div>
-
+ 
     <!-- Imagen 4 -->
     <div class="feature-item seguridad"
       style="background-image: url('../akubela/assets/Assets_Akubela/Unidad2/Seguridad.png');">
+      <a href="../akubela-info/#Seguridad" style="text-decoration: none;">
       <div class="feature-bar">
         <h3>SEGURIDAD</h3>
       </div>
@@ -436,6 +452,7 @@
           atiendan emergencias de inmediato.
         </p>
       </div>
+      </a>
     </div>
   </div>
 <script>// Seleccionamos todos los elementos con la clase "feature-item"
@@ -479,12 +496,11 @@ featureItems.forEach((item) => {
     <!-- Columna derecha -->
     <div class="custom-right-column">
       <div class="custom-hover-image2">
-        <img src="../akubela/assets/Assets_Akubela/Unidad3/Akubela_Apagado.png" alt="Akubela" class="default-image">
-        <img src="../akubela/assets/Assets_Akubela/Unidad3/Akubela_Encendido.png" alt="Akubela Hover"
+        <img src="../akubela/assets/Assets_Akubela/Unidad3/Web Responsive L2B  Akubela_Boton Akubela_Blanco.png" alt="Akubela" class="default-image">
+        <img src="../akubela/assets/Assets_Akubela/Unidad3/Web Responsive L2B  Akubela_Boton Akubela_Negro.png" alt="Akubela Hover"
           class="hover-image2">
         <div class="custom-text-overlay">
-          <h2>AKUBELA</h2>
-          <p>Conectividad inteligente para todo tu hogar.</p>
+          
         </div>
       </div>
     </div>
@@ -571,6 +587,11 @@ featureItems.forEach((item) => {
   <script src="../Assets/java/cargadevideo.js"></script>
   <script src="../Assets/java/carouselheader.js"></script>
   <script src="../akubela/js/app.js?v=3.1"></script>
+  <style>
+    #instalador {
+scroll-margin-top: 100px; /* Ajusta este valor al tamaño de tu barra */
+}
+  </style>
 
 </body>
 

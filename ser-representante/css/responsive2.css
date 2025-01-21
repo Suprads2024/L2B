@@ -1,0 +1,122 @@
+@media (max-width: 1400px) {
+    .module .text-overlay{
+        margin-bottom: 0px;
+    }
+    .text-overlay h2{
+        font-size: 1.3rem;
+        margin-bottom: 0px;
+    }
+
+
+    .text-overlay-requisitos ul{
+        font-family: 'Eurostile-Medium';
+        width: 250px;}
+    
+        .text-overlay-requisitos ul li{
+            font-size: 0.75rem;
+        }    
+        .slider section .text-content h2{
+            font-size: 1.3rem;
+        }
+        .slider section .text-content2 h2{
+            font-size: 1.3rem;
+        }
+        .slider section .text-content p{
+            font-size: 1rem;
+        }
+        .slider section .text-content2 p{
+        font-size: 1rem;}
+
+        .slider section .carousel-footer{
+            font-size: 1.3rem;
+        }
+
+        .socalo h2{
+            font-size: 1.3rem;
+        }
+
+        .socalo-green h2
+        {
+            font-size: 1.3rem;
+        }
+
+        .block-1 .text-overlay h2{
+            font-size: 1.3rem;
+        }
+
+        .block-2 .text-content h2{
+            font-size: 1.3rem;
+        }
+       
+
+        .block-3 .text-content h2{
+            font-size: 1.5rem;
+        }
+        .block-3 .text-content{
+            width: 600px;
+        }
+        .block-3 .text-content p{
+            font-size: 1rem;
+        }
+
+        .block-4 h2{
+            font-size: 1.3rem;
+        }
+        .form-options{
+            margin-bottom:5px;
+        }
+
+        input, textarea{
+            margin-bottom: 5px;
+        }
+
+        .footer-logo img{
+            width: 100px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .text-overlay-requisitos ul li{
+            font-size: 0.9rem;
+        }    
+
+        .text-overlay h2{
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .slider section .carousel-footer{
+            font-size: 1.1rem;
+        }
+        .module-2 {
+            display: none;
+          position: relative;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+           
+            height: 100%;  
+        }
+        
+        .module-2 .text-overlay {
+            position: static !important; /* Resetea el posicionamiento absoluto */
+        
+            padding: 20px 5px; /* Opcional: Ajusta el espaciado */
+        }
+
+        .block-2 .text-content h2{
+            font-size: 1.1rem;
+        }
+
+        .block-3 .text-content{
+            width: 300px;
+        }
+
+        .block-3 .text-content h2{
+            font-size: 1.1rem;
+        }
+
+        .block-3 .text-content p{
+            font-size: 0.9rem;
+        }
+    }

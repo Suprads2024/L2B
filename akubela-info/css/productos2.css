@@ -1,0 +1,214 @@
+/* Contenedor principal de la sección */
+.smartlock-section {
+    width: calc(100% - 20px); /* Resta 20px para dejar 10px de borde a ambos lados */
+    margin: 0 auto; /* Centrado horizontal */
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 10px 0px;
+
+    
+   
+  }
+  
+ /* Estilo para pantalla de escritorio */
+.main-image {
+  background-image: url('../Assets_Akubelainfo/3_SmartlockSeries/ProductoAkubela_SmartLock_Series.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 20vh; /* Ajusta el tamaño según tu necesidad */
+}
+
+.mobile-image {
+  display: none; /* Oculto por defecto */
+  background-image: url('../Assets_Akubelainfo/3_SmartlockSeries/ProductoAkubela_Baner-Responsive_250x350_0001_SmartLock-Series.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 35vh; /* Igual al anterior */
+  border-radius: 10px;
+}
+
+/* Estilo para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .main-image {
+      display: none; /* Ocultar imagen de escritorio */
+  }
+  
+  .mobile-image {
+      display: block; /* Mostrar imagen de móvil */
+  }
+}
+
+  .smartlock-title {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Eurostile-Heavy';
+    font-size: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  /* Fila inferior con dos productos */
+  .product-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 40vh; /* Ajuste proporcional (50vh -> 40vh) */
+  }
+  
+  /* Cada producto (tarjeta) */
+  .product-card {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content:right; /* Imagen a la izquierda */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Overlay con texto y botón */
+  .product-overlay {
+    width: 50%; /* Ajuste para que el texto y botón ocupen el 50% derecho */
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right; /* Texto alineado a la derecha */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  
+  /* Título del producto */
+  .product-overlay h3 {
+    text-align: center;
+    font-family: 'Eurostile-Heavy';
+     font-size: 2.5rem;
+  margin: 10px 0;
+  color: #000000;
+  }
+  
+  /* Botón de descarga */
+  .download-btn2 {
+
+    font-family: 'Eurostile-Regular';
+    font-size: 0.9rem;
+    padding: 10px 20px;
+text-decoration: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: center; /* Alinea el botón a la derecha */
+   
+  }
+  
+  /* Hover del botón */
+  .download-btn2:hover {
+    background: linear-gradient(45deg, #ff7800, #ffb84d);
+    color: #000000;
+  }
+  
+
+
+/* Tablets (pantallas menores a 1024px) */
+@media (max-width: 1024px) {
+    
+
+    .product-row {  height: 60vh;
+        flex-direction: column; /* Cambiamos a columna */
+        gap: 10px;
+    }
+
+   
+
+    .product-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Sin recortes */
+    }
+
+    .product-overlay h3 {
+        font-size: 1.3rem;
+    }
+
+    .download-btn2 {
+      width: 150px;
+      
+        font-size: 0.875rem;
+      text-align: center;
+    }
+}
+
+/* Celulares (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    
+
+    .product-card {
+        height: 60vh;
+        background-position: 20% center;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .product-overlay {
+        bottom: 5px;
+        right: 10px;
+        
+    }
+
+    .product-overlay h3 {
+        font-size: 1rem;
+    }
+
+    .download-btn2 {
+      
+        font-size: 0.875rem;
+  
+    }
+}
+
+/* Estilo para pantalla de escritorio */
+.main-banner {
+  background-image: url('../Assets_Akubelainfo/5_CarruselClimatizacion/ProductoAkubela__Clima+Iluminacion.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 20vh; /* Ajusta el tamaño según tu necesidad */
+}
+
+.mobile-banner {
+  display: none; /* Oculto por defecto */
+  background-image: url('../Assets_Akubelainfo/5_CarruselClimatizacion/ProductoAkubela_Baner\ Responsive_355\ x\ 125.png'); /* Sustituye por tu imagen para móvil */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 18vh; /* Igual al anterior */
+  border-radius: 10px;
+}
+
+/* Estilo para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .main-banner {
+      display: none; /* Ocultar banner de escritorio */
+  }
+  
+  .mobile-banner {
+      display: block; /* Mostrar banner de móvil */
+  }
+}
