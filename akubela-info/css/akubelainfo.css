@@ -606,7 +606,28 @@ header {
   
 
 
-
+    @media (max-width:1700px) {
+        .list .item .content {
+            position: absolute;
+    
+            top: 45%;
+            left: 500px;
+            transform: translateY(-50%);
+            width: 400px;
+            text-align: left;
+            color: #525252ff;
+            display: none;
+        }
+    
+        .content .des {
+    
+            font-size: 1.1rem;
+    
+        }
+    
+    
+    
+    }
 }
 
 @media (max-width:1681px) {

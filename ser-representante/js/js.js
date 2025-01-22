@@ -3,15 +3,23 @@ document.querySelectorAll('.carousel-container').forEach(carousel => {
     const slider = carousel.querySelector(".slider");
     const leftArrow = carousel.querySelector(".arrow.left");
     const rightArrow = carousel.querySelector(".arrow.right");
-    const indicatorParents = carousel.querySelector('.slider-controls ul');
-    const indicators = carousel.querySelectorAll('.slider-controls li');
+
+    // Detecta si es un carrusel con slider-controls o slider-controls2
+    const indicatorParents = carousel.querySelector('.slider-controls ul') || 
+                             carousel.querySelector('.slider-controls2 ul');
+    const indicators = carousel.querySelectorAll('.slider-controls li') || 
+                       carousel.querySelectorAll('.slider-controls2 li');
     const slides = carousel.querySelectorAll('.slider section');
     let sectionIndex = 0;
     const numberOfSlides = slides.length;
 
     // Actualiza la posición del slider
     function updateSliderPosition() {
-        carousel.querySelector('.slider-controls .selected').classList.remove('selected');
+        const selectedIndicator = carousel.querySelector('.slider-controls .selected') || 
+                                  carousel.querySelector('.slider-controls2 .selected');
+        if (selectedIndicator) {
+            selectedIndicator.classList.remove('selected');
+        }
         indicatorParents.children[sectionIndex].classList.add('selected');
         slider.style.transform = `translateX(-${sectionIndex * 100}%)`;
     }
@@ -41,6 +49,6 @@ document.querySelectorAll('.carousel-container').forEach(carousel => {
         setInterval(() => {
             sectionIndex = (sectionIndex < numberOfSlides - 1) ? sectionIndex + 1 : 0;
             updateSliderPosition();
-        }, 7000); // Cambia de imagen cada 3 segundos
+        }, 7000); // Cambia de imagen cada 7 segundos
     }
 });

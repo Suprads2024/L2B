@@ -93,10 +93,10 @@
     font-family: 'Eurostile-Heavy', Arial, sans-serif;
     font-size: 1.2rem;
     position: absolute;
-    bottom: 0;
+    top: 0; /* Cambia bottom por top */
     width: 100%;
-    border-radius: 20px 20px 0px 0px; /* Bordes inferiores redondeados */
-    
+    border-radius: 0px 0px 20px 20px; /* Bordes superiores rectos, inferiores redondeados */
+    z-index: 1; /* Asegúrate de que el socalo esté por encima del contenido */
     transition: transform 0.6s ease, color 0.6s ease; /* Suavidad en la transición */
 }
 
@@ -124,7 +124,17 @@
     border-radius: 20%;
 
 }
+.slider-controls2 .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20%;
 
+}
 .arrow.left {
     left: 10px;
 }
@@ -160,7 +170,35 @@
     transform: scale(1); /* Sin escalado adicional */
     transition: all 0.3s ease;
 }
+.slider-controls2 ul {
+    position: absolute;
+    top: 20px; /* Cambia bottom por top */
+    right: 20px;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 2; /* Asegúrate de que estén por encima del socalo */
+}
 
+.slider-controls2 ul li {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #414141;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-controls2 ul li.selected {
+    background: #414141;
+    width: 30px; /* Más alargado cuando está seleccionado */
+    border-radius: 15px; /* Para hacer los bordes redondeados */
+    transform: scale(1); /* Sin escalado adicional */
+    transition: all 0.3s ease;
+}
 
 /* Opciones abajo */
 .options {
