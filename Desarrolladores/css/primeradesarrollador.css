@@ -36,7 +36,7 @@
     position: absolute;
     left: 5%;
     /* Cambia 'right' a 'left' para posicionarlo en el lado izquierdo */
-    bottom: 10%;
+    bottom: 0%;
     /* Mantén la distancia inferior */
     color: #000000;
 
@@ -60,6 +60,26 @@
     font-size: 1.3rem;
     text-align: left;
     /* Asegura que el párrafo esté alineado a la izquierda */
+}
+.cta-button-inverse {
+    display: inline-block;
+  margin-top: 10px;
+    padding: 5px 20px;
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    border: 2px solid #ffffff; /* Borde negro */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Suavidad en la transición */
+}
+
+.cta-button-inverse:hover {
+    background-color: transparent; /* Fondo transparente al pasar el mouse */
+    color: #fff; /* Texto blanco */
+    border-color: #fff; /* Borde blanco */
 }
 
 
@@ -256,15 +276,17 @@
 
     }
 }
-
+@media (max-width:1681px) {
+    .main-text {
+        bottom: 0%;
+    }}
 /* MEDIA QUERIES para pantallas pequeñas (celulares y tablets) */
 @media (max-width: 768px) {
     .header2 {
         display: flex;
         flex-direction: column;
         height: auto;
-        gap: 10px;
-        padding-top: 12vh;
+       
     }
 
     .header-main-image img {
@@ -423,10 +445,15 @@
 
     /* Imagen principal con texto superpuesto */
     .header-main-image {
-        height: 30vh;
+        height: 35vh;
         /* Reduce la altura de la imagen principal */
+        
     }
-
+    .cta-button-inverse{
+        padding: 4.5% 4% 3% 4%;
+    font-family: 'Eurostile-Heavy', Arial, sans-serif;
+    font-size: 0.8rem;
+    }
     .main-text {
         top: 10%;
         right: -1%;
@@ -449,13 +476,7 @@
 
 @media (max-width: 786px) {
 
-    /* Contenedor del carrusel */
-    .carousel-fullwidth {
-        margin: -10px 0px;
-       
-        /* Reduce la altura del carrusel en dispositivos móviles */
-
-    }
+  
 
     /* Pista del carrusel */
     .carousel-track {
@@ -500,7 +521,23 @@
         /* Ajusta el tamaño del botón */
     }
 }
+@media (max-width:500px) {  
 
+      /* Imagen principal con texto superpuesto */
+      .header-main-image {
+        height: 33vh;
+        /* Reduce la altura de la imagen principal */
+        
+    }
+/* Contenedor del carrusel */
+  .carousel-fullwidth {
+    margin: 0px 0px -10px 0px;
+   
+    /* Reduce la altura del carrusel en dispositivos móviles */
+
+}
+
+}
 @media (max-width:376px) {
     .header2 {
         display: flex;
@@ -508,6 +545,13 @@
         height: auto;
         gap: 10px;
         padding-top: 12vh;
+    }
+
+     /* Imagen principal con texto superpuesto */
+     .header-main-image {
+        height: 35vh;
+        /* Reduce la altura de la imagen principal */
+        
     }
     /* Texto del carrusel */
 .carousel-caption {

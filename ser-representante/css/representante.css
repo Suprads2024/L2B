@@ -5,7 +5,7 @@ a{
 .modules-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    height: 35vh; /* Altura del contenedor */
+    height: 45vh; /* Altura del contenedor */
     gap: 10px; /* Espaciado entre los módulos */
 }
 

@@ -2,7 +2,7 @@
 .carousel-container2 {
     position: relative;
     width: 100%;
-    height: 65vh; /* Ocupa todo el alto de la ventana para asegurar que no queden espacios grises */
+    height: 80vh; /* Ocupa todo el alto de la ventana para asegurar que no queden espacios grises */
     overflow: hidden;
     border-radius: 15px;
     display: flex;

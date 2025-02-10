@@ -6,7 +6,7 @@
 }
 
 /* Botones de navegación */
-header .botones {
+header {
  
   justify-content: space-around;
   height: 15vh;
@@ -87,7 +87,7 @@ header {
     
    
     color: white;
-    height: 65vh; /* Asegura que el formulario también ocupe su 100% del espacio */
+    height: 80vh; /* Asegura que el formulario también ocupe su 100% del espacio */
     border-radius: 20px; /* Bordes redondeados para el formulario */
 }
 

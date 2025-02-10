@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../desarrolladores/css/primeradesarrollador.css">
     <link rel="stylesheet" href="../desarrolladores/css/segundadesarrollador.css">
     <!--Clases de representantes -->
-    <link rel="stylesheet" href="../ser-representante/css/representante.css?v=5.1">
+    <link rel="stylesheet" href="../ser-representante/css/representante.css?v=5.2">
     <link rel="stylesheet" href="../ser-representante/css/carrouselheader.css?v=7.2">
     <link rel="stylesheet" href="../ser-representante/css/segundaseccion.css?v=5.3">
     <link rel="stylesheet" href="../ser-representante/css/terceraseccion.css?v=6.3">
@@ -113,9 +113,32 @@
                         <img src="../Assets/Flecha_Abajo.svg" class="dropdown-arrow" alt="Desplegar">
                     </a>
                     <ul class="submenu">
-
                         <li>
-                            <a href="https://life2better.com/akubela" target="_blank" title="Akubela">AKUBELA</a>
+                            <a href="https://life2better.com/akubela/" class="dropdown-link">AKUBELA</a>
+                            <ul class="submenu">
+                                <!-- Hy Panels -->
+                                <li>
+                                    <a href="#">Hy Panels</a>
+                                    <ul class="submenu">
+                                        <li><a href="https://life2better.com/hy-panel/">Hy Panel</a></li>
+                                        <li><a href="https://life2better.com/hy-panel-lux/">Hy Panel Lux</a></li>
+                                        <li><a href="https://life2better.com/hy-panel-supreme/">Hy Panel Supreme</a>
+                                        </li>
+                                        <li><a href="https://life2better.com/hy-panel-pro/">Hy Panel Pro</a></li>
+                                        <li><a href="https://life2better.com/hy-panel-ultra/">Hy Panel Ultra</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Control de Acceso -->
+                                <li>
+                                    <a href="#">Control de Acceso</a>
+                                    <ul class="submenu">
+                                        <li><a href="https://life2better.com/a05/">A05</a></li>
+                                        <li><a href="https://life2better.com/e12/">E12</a></li>
+                                        <li><a href="https://life2better.com/e16/">E16</a></li>
+                                        <li><a href="https://life2better.com/e18/">E18</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#" class="dropdown-link" title="Fibaro">FIBARO
@@ -212,24 +235,41 @@
     </div>
 
     <script>
-
-
-
-        // Lógica para enlaces externos e internos especiales
-        document.querySelectorAll('.navigation a').forEach(link => {
+        document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
             link.addEventListener('click', function (event) {
                 const url = this.getAttribute('href');
-
-                // Verifica si el enlace es "Arquitectos" o "Desarrolladores"
-                if (url === "https://life2better.com/arquitecto/" || url === "https://life2better.com/desarrolladores/" || url === "https://life2better.com/" || url === "https://life2better.com/akubela" || url === "https://life2better.com/ser-representante") {
-                    // Navegar dentro de la misma pestaña
-                    event.preventDefault(); // Evita el comportamiento predeterminado
-                    window.location.href = url; // Navega en la misma pestaña
+    
+                // Verifica si es el enlace a la sección de instalador dentro de ser-representante
+                if (url === "https://life2better.com/ser-representante/#instalador") {
+                    event.preventDefault();
+                    window.location.href = url;
+    
+                    // Si ya estás en la página correcta, ajusta el scroll
+                    if (window.location.pathname === '/ser-representante/') {
+                        const targetElement = document.querySelector('#instalador');
+                        if (targetElement) {
+                            const offset = 150;
+                            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                            const adjustedPosition = elementPosition - offset;
+    
+                            window.scrollTo({
+                                top: adjustedPosition,
+                                behavior: 'smooth',
+                            });
+                        }
+                    }
                 }
-                // Para otros enlaces externos
+                // Manejo normal para los enlaces internos que deben abrirse en la misma pestaña
+                else if (
+                    url.startsWith("https://life2better.com/")
+                ) {
+                    event.preventDefault();
+                    window.location.href = url;
+                } 
+                // Para cualquier otro enlace (externo), se abre en una nueva ventana
                 else if (url && url !== '#' && !url.startsWith('#')) {
-                    event.preventDefault(); // Evita el comportamiento predeterminado
-                    window.open(url, '_blank'); // Abre en una nueva pestaña
+                    event.preventDefault();
+                    window.open(url, '_blank');
                 }
             });
         });
@@ -244,21 +284,7 @@
 
 
     <header class="header2">
-        <!-- Botones de navegación superiores -->
-        <div class="botones">
-            <div class="boton">
-                <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Ahorro.png" alt="Ahorro">
-            </div>
-            <div class="boton">
-                <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Ambientacion.png" alt="Ambientación">
-            </div>
-            <div class="boton">
-                <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Seguridad.png" alt="Seguridad">
-            </div>
-            <div class="boton">
-                <img src="../Assets/Header/Decoracion_Boton/L2B_ boton Confort.png" alt="Confort">
-            </div>
-        </div>
+        
 
         <!-- Contenedor superior: Módulos 1 y 2 -->
         <div class="modules-container">
