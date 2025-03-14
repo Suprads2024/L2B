@@ -179,7 +179,7 @@
     gap: 10px;
     padding: 0;
     margin: 0;
-    z-index: 2; /* Asegúrate de que estén por encima del socalo */
+    z-index: 1; /* Asegúrate de que estén por encima del socalo */
 }
 
 .slider-controls2 ul li {

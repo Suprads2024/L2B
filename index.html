@@ -134,6 +134,16 @@
                     <li><a href="https://life2better.com/e18/">E18</a></li>
                   </ul>
                 </li>
+
+                <li>
+                  <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1">Iluminación</a>
+                </li>
+                <li>
+                  <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1">Climatización</a>
+                </li>
+                <li>
+                  <a href="../akubela-info/#Seguridad">Seguridad</a>
+                </li>
               </ul>
             </li>
 
@@ -224,40 +234,39 @@
       link.addEventListener('click', function (event) {
         const url = this.getAttribute('href');
 
-        // Verifica si es el enlace a la sección de instalador dentro de ser-representante
-        if (url === "https://life2better.com/ser-representante/#instalador") {
+        // Verifica si el enlace es una ancla interna de la misma página (ej: #Seguridad)
+        if (url.startsWith("#")) {
           event.preventDefault();
-          window.location.href = url;
+          const targetElement = document.querySelector(url);
+          if (targetElement) {
+            const offset = 150; // Margen superior para evitar que lo tape el menú
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const adjustedPosition = elementPosition - offset;
 
-          // Si ya estás en la página correcta, ajusta el scroll
-          if (window.location.pathname === '/ser-representante/') {
-            const targetElement = document.querySelector('#instalador');
-            if (targetElement) {
-              const offset = 150;
-              const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-              const adjustedPosition = elementPosition - offset;
-
-              window.scrollTo({
-                top: adjustedPosition,
-                behavior: 'smooth',
-              });
-            }
+            window.scrollTo({
+              top: adjustedPosition,
+              behavior: 'smooth',
+            });
           }
         }
-        // Manejo normal para los enlaces internos que deben abrirse en la misma pestaña
-        else if (
-          url.startsWith("https://life2better.com/")
-        ) {
+        // Verifica si es un enlace interno relativo (ej: ../akubela-info/#Seguridad)
+        else if (url.startsWith("../")) {
+          event.preventDefault();
+          window.location.href = url; // Se abre en la misma pestaña
+        }
+        // Verifica si es un enlace absoluto interno (ej: https://life2better.com/)
+        else if (url.startsWith("https://life2better.com/")) {
           event.preventDefault();
           window.location.href = url;
         }
-        // Para cualquier otro enlace (externo), se abre en una nueva ventana
+        // Si es un enlace externo, se abre en una nueva pestaña
         else if (url && url !== '#' && !url.startsWith('#')) {
           event.preventDefault();
           window.open(url, '_blank');
         }
       });
     });
+
   </script>
 
   <script>document.addEventListener('DOMContentLoaded', () => {

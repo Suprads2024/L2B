@@ -29,7 +29,7 @@
     <!--Clases de representantes -->
     <link rel="stylesheet" href="../ser-representante/css/representante.css?v=5.2">
     <link rel="stylesheet" href="../ser-representante/css/carrouselheader.css?v=7.2">
-    <link rel="stylesheet" href="../ser-representante/css/segundaseccion.css?v=5.4">
+    <link rel="stylesheet" href="../ser-representante/css/segundaseccion.css?v=5.5">
     <link rel="stylesheet" href="../ser-representante/css/terceraseccion.css?v=6.3">
     <link rel="stylesheet" href="../ser-representante/css/responsive.css?v=4.1">
     <link rel="stylesheet" href="../ser-representante/css/popups.css">
@@ -122,6 +122,7 @@
                                     <a href="https://life2better.com/akubela/">Sobre AKUBELA</a>
 
                                 </li>
+
                                 <!-- Hy Panels -->
                                 <li>
                                     <a href="#">Hy Panels</a>
@@ -143,6 +144,15 @@
                                         <li><a href="https://life2better.com/e16/">E16</a></li>
                                         <li><a href="https://life2better.com/e18/">E18</a></li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1">Iluminación</a>
+                                </li>
+                                <li>
+                                    <a href="../akubela-info/#Climatizacion-e-Iluminacion?v=2.1">Climatización</a>
+                                </li>
+                                <li>
+                                    <a href="../akubela-info/#Seguridad">Seguridad</a>
                                 </li>
                             </ul>
                         </li>
@@ -241,44 +251,43 @@
     </div>
 
     <script>
-        document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
-            link.addEventListener('click', function (event) {
-                const url = this.getAttribute('href');
+      document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
+    link.addEventListener('click', function (event) {
+        const url = this.getAttribute('href');
 
-                // Verifica si es el enlace a la sección de instalador dentro de ser-representante
-                if (url === "https://life2better.com/ser-representante/#instalador") {
-                    event.preventDefault();
-                    window.location.href = url;
+        // Verifica si el enlace es una ancla interna de la misma página (ej: #Seguridad)
+        if (url.startsWith("#")) {
+            event.preventDefault();
+            const targetElement = document.querySelector(url);
+            if (targetElement) {
+                const offset = 150; // Margen superior para evitar que lo tape el menú
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const adjustedPosition = elementPosition - offset;
 
-                    // Si ya estás en la página correcta, ajusta el scroll
-                    if (window.location.pathname === '/ser-representante/') {
-                        const targetElement = document.querySelector('#instalador');
-                        if (targetElement) {
-                            const offset = 150;
-                            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                            const adjustedPosition = elementPosition - offset;
+                window.scrollTo({
+                    top: adjustedPosition,
+                    behavior: 'smooth',
+                });
+            }
+        }
+        // Verifica si es un enlace interno relativo (ej: ../akubela-info/#Seguridad)
+        else if (url.startsWith("../")) {
+            event.preventDefault();
+            window.location.href = url; // Se abre en la misma pestaña
+        }
+        // Verifica si es un enlace absoluto interno (ej: https://life2better.com/)
+        else if (url.startsWith("https://life2better.com/")) {
+            event.preventDefault();
+            window.location.href = url;
+        }
+        // Si es un enlace externo, se abre en una nueva pestaña
+        else if (url && url !== '#' && !url.startsWith('#')) {
+            event.preventDefault();
+            window.open(url, '_blank');
+        }
+    });
+});
 
-                            window.scrollTo({
-                                top: adjustedPosition,
-                                behavior: 'smooth',
-                            });
-                        }
-                    }
-                }
-                // Manejo normal para los enlaces internos que deben abrirse en la misma pestaña
-                else if (
-                    url.startsWith("https://life2better.com/")
-                ) {
-                    event.preventDefault();
-                    window.location.href = url;
-                }
-                // Para cualquier otro enlace (externo), se abre en una nueva ventana
-                else if (url && url !== '#' && !url.startsWith('#')) {
-                    event.preventDefault();
-                    window.open(url, '_blank');
-                }
-            });
-        });
     </script>
 
     <style>
@@ -437,7 +446,7 @@
                         </div>
                         <div class="slider-controls">
                             <span class="arrow left material-icons">
-                                << /span>
+                                <</span>
                                     <span class="arrow right material-icons">></span>
                                     <ul>
                                         <li class="selected"></li>
@@ -532,7 +541,7 @@
                     </div>
                 </div>
 
-         
+
 
             </div>
 
@@ -587,9 +596,9 @@
                 <h2><strong>Incluye un Yubii Home Controller</strong></h2>
                 <p>Recomendado para espacios de hasta 120 m², capacidad máxima de 35 dispositivos integrados.</p>
                 <a href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Yubii%20Home%20para%20representantes."
-                target="_blank" class="whatsapp-popup-button">
-                Consultar por WhatsApp
-            </a>
+                    target="_blank" class="whatsapp-popup-button">
+                    Consultar por WhatsApp
+                </a>
             </div>
         </div>
 
@@ -600,9 +609,9 @@
                 <p>Capacidad máxima de 250 dispositivos. El controlador de casas inteligente más poderoso del mercado.
                 </p>
                 <a href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Home%20Center%203%20para%20representantes."
-                target="_blank" class="whatsapp-popup-button">
-                Consultar por WhatsApp
-            </a>
+                    target="_blank" class="whatsapp-popup-button">
+                    Consultar por WhatsApp
+                </a>
             </div>
         </div>
 
