@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../ser-representante/css/segundaseccion.css?v=5.3">
     <link rel="stylesheet" href="../ser-representante/css/terceraseccion.css?v=6.3">
     <link rel="stylesheet" href="../ser-representante/css/responsive.css?v=4.1">
+    <link rel="stylesheet" href="../ser-representante/css/popups.css">
     <!-- HTML Meta Tags -->
     <meta name="description"
         content="Mejorá tu calidad de vida con las soluciones tecnológicas que sólo L2B te puede brindar.">
@@ -70,15 +71,15 @@
 </head>
 
 <body class="arquitecto1">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
-    style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="preloader">
-<div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
-<div class="bar" style="background-color: #ff5716;"></div> <!-- Naranja -->
-<div class="bar" style="background-color: #0083c9;"></div> <!-- Azul -->
-<div class="bar" style="background-color: #fec200;"></div> <!-- Amarillo -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="preloader">
+        <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
+        <div class="bar" style="background-color: #ff5716;"></div> <!-- Naranja -->
+        <div class="bar" style="background-color: #0083c9;"></div> <!-- Azul -->
+        <div class="bar" style="background-color: #fec200;"></div> <!-- Amarillo -->
     </div>
 
     <div class="whatsapp-button2">
@@ -116,11 +117,11 @@
                         <li>
                             <a href="" class="dropdown-link">AKUBELA</a>
                             <ul class="submenu">
-                              <!-- SOBRE AKUBELA -->
-                              <li>
-                                <a href="https://life2better.com/akubela/">Sobre AKUBELA</a>
-              
-                              </li>
+                                <!-- SOBRE AKUBELA -->
+                                <li>
+                                    <a href="https://life2better.com/akubela/">Sobre AKUBELA</a>
+
+                                </li>
                                 <!-- Hy Panels -->
                                 <li>
                                     <a href="#">Hy Panels</a>
@@ -243,12 +244,12 @@
         document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
             link.addEventListener('click', function (event) {
                 const url = this.getAttribute('href');
-    
+
                 // Verifica si es el enlace a la sección de instalador dentro de ser-representante
                 if (url === "https://life2better.com/ser-representante/#instalador") {
                     event.preventDefault();
                     window.location.href = url;
-    
+
                     // Si ya estás en la página correcta, ajusta el scroll
                     if (window.location.pathname === '/ser-representante/') {
                         const targetElement = document.querySelector('#instalador');
@@ -256,7 +257,7 @@
                             const offset = 150;
                             const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                             const adjustedPosition = elementPosition - offset;
-    
+
                             window.scrollTo({
                                 top: adjustedPosition,
                                 behavior: 'smooth',
@@ -270,7 +271,7 @@
                 ) {
                     event.preventDefault();
                     window.location.href = url;
-                } 
+                }
                 // Para cualquier otro enlace (externo), se abre en una nueva ventana
                 else if (url && url !== '#' && !url.startsWith('#')) {
                     event.preventDefault();
@@ -289,7 +290,7 @@
 
 
     <header class="header2">
-        
+
 
         <!-- Contenedor superior: Módulos 1 y 2 -->
         <div class="modules-container">
@@ -436,7 +437,7 @@
                         </div>
                         <div class="slider-controls">
                             <span class="arrow left material-icons">
-                                <</span>
+                                << /span>
                                     <span class="arrow right material-icons">></span>
                                     <ul>
                                         <li class="selected"></li>
@@ -495,28 +496,28 @@
         <!-- Carrousel a la derecha -->
         <div class="carousel-container carousel-container-second">
             <div class="baba">
+
+
+                <div class="socalo-green" id="open-popup">
+                    <h2>EL STARTER KIT FIBARO INCLUYE:</h2>
+                </div>
+
                 <div class="carousel">
                     <div class="slider">
                         <section>
-                            <img class="desktop1920"
-                                src="./Assets_Representante/Unidad2/starterpantalla1900.png"
+                            <img class="desktop1920" src="./Assets_Representante/Unidad2/starterpantalla1900.png"
                                 alt="RGBW Controller Desktop">
-                            <img class="desktop1700"
-                                src="./Assets_Representante/Unidad2/starterpantalla1900.png"
+                            <img class="desktop1700" src="./Assets_Representante/Unidad2/starterpantalla1900.png"
                                 alt="RGBW Controller Desktop">
-                            <img class="mobile"
-                                src="./Assets_Representante/Unidad2/responsive.png"
+                            <img class="mobile" src="./Assets_Representante/Unidad2/responsive.png"
                                 alt="RGBW Controller Mobile">
                         </section>
                         <section>
-                            <img class="desktop1920"
-                                src="./Assets_Representante/Unidad2/starterpantalla19000(2).png"
+                            <img class="desktop1920" src="./Assets_Representante/Unidad2/starterpantalla19000(2).png"
                                 alt="Motion Sensor Desktop">
-                            <img class="desktop1700"
-                                src="./Assets_Representante/Unidad2/starterpantalla1700(2).png"
+                            <img class="desktop1700" src="./Assets_Representante/Unidad2/starterpantalla1700(2).png"
                                 alt="RGBW Controller Desktop">
-                            <img class="mobile"
-                                src="./Assets_Representante/Unidad2/responsivd2.png"
+                            <img class="mobile" src="./Assets_Representante/Unidad2/responsivd2.png"
                                 alt="Motion Sensor Mobile">
                         </section>
                     </div>
@@ -530,38 +531,81 @@
                                 </ul>
                     </div>
                 </div>
+
+         
+
+            </div>
+
+
+        </div>
+
+        <!-- Popup mejorado -->
+        <div id="popup-container" class="popup-container">
+            <div class="popup-content">
+                <!-- Botón de cierre con una "X" más visible -->
+                <span id="close-popup" class="close-popup">&times;</span>
+
+                <h2><strong>Ambos KIT FIBARO incluyen:</strong></h2>
+                <p>1 Switch, 1 Dimmer 2, Roller Shutter 3, 1 RGBW Controller,<br>
+                    1 Motion Sensor, 1 Door/Window Sensor, 1 KeyFob.</p>
+
                 <a href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20Fibaro%20para%20representantes."
-                    target="_blank">
-                    <div class="socalo-green">
-                        <h2>STARTER KIT FIBARO</h2>
-                    </div>
+                    target="_blank" class="whatsapp-popup-button">
+                    Consultar por WhatsApp
                 </a>
             </div>
         </div>
 
+
+
+
         <!-- Opciones abajo -->
         <div class="options">
-            <div class="option"><a
-                    href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Yubii%20Home%20para%20representantes."
-                    target="_blank">
-                    <img src="./Assets_Representante/Unidad2/Representante_Opcion1.png" alt="Yubii Home">
-                    <div class="option-label">OPCIÓN 1</div>
-                    <div class="text-overlay-option">
-                        <h2>CON <br> YUBII HOME</h2>
-                    </div>
-                </a>
+            <!-- Opción 1: Yubii Home -->
+            <div class="option" id="open-popup-yubii">
+                <img src="./Assets_Representante/Unidad2/Representante_Opcion1.png" alt="Yubii Home">
+                <div class="option-label">OPCIÓN 1</div>
+                <div class="text-overlay-option">
+                    <h2>CON <br> YUBII HOME</h2>
+                </div>
             </div>
-            <div class="option"><a
-                    href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Home%20Center%203%20para%20representantes."
-                    target="_blank">
-                    <img src="./Assets_Representante/Unidad2/Representante_Opcion2.png" alt="Home Center 3">
-                    <div class="option-label">OPCIÓN 2</div>
-                    <div class="text-overlay-option">
-                        <h2>CON FIBARO <br> HOME CENTER 3</h2>
-                    </div>
-                </a>
+
+            <!-- Opción 2: FIBARO Home Center 3 -->
+            <div class="option" id="open-popup-fibaro">
+                <img src="./Assets_Representante/Unidad2/Representante_Opcion2.png" alt="Home Center 3">
+                <div class="option-label">OPCIÓN 2</div>
+                <div class="text-overlay-option">
+                    <h2>CON FIBARO <br> HOME CENTER 3</h2>
+                </div>
             </div>
         </div>
+
+        <!-- Popups -->
+        <div id="popup-container-yubii" class="popup-container">
+            <div class="popup-content">
+                <span class="close-popup" id="close-popup-yubii">&times;</span>
+                <h2><strong>Incluye un Yubii Home Controller</strong></h2>
+                <p>Recomendado para espacios de hasta 120 m², capacidad máxima de 35 dispositivos integrados.</p>
+                <a href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Yubii%20Home%20para%20representantes."
+                target="_blank" class="whatsapp-popup-button">
+                Consultar por WhatsApp
+            </a>
+            </div>
+        </div>
+
+        <div id="popup-container-fibaro" class="popup-container">
+            <div class="popup-content">
+                <span class="close-popup" id="close-popup-fibaro">&times;</span>
+                <h2><strong>Incluye un FIBARO Home Center 3</strong></h2>
+                <p>Capacidad máxima de 250 dispositivos. El controlador de casas inteligente más poderoso del mercado.
+                </p>
+                <a href="https://wa.me/5491136304219?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20kit%20de%20FIBARO%20con%20Home%20Center%203%20para%20representantes."
+                target="_blank" class="whatsapp-popup-button">
+                Consultar por WhatsApp
+            </a>
+            </div>
+        </div>
+
 
     </section>
 
@@ -806,6 +850,7 @@
 
     <script src="../ser-representante/js/js.js?v=2.2"></script>
     <script src="../ser-representante/js/espacio.js"></script>
+    <script src="../ser-representante/js/popups.js"></script>
 
     <script>document.querySelectorAll('.scroll-link').forEach(link => {
             link.addEventListener('click', function (e) {

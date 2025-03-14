@@ -10,7 +10,7 @@ header {
  
   justify-content: space-around;
   height: 15vh;
- margin-top: 10px;
+ 
 }
 /* Estructura principal del header */
 .header2 {
@@ -23,9 +23,9 @@ header {
 header {
     display: grid;
     grid-template-rows: 20% 70%;
-    height: 94vh;
+    height: 93vh;
     padding: 20px 20px 0px 20px;
-    padding-top: 5%; /* Añadimos espacio superior entre el nav y los botones */
+    padding-top: 9vh; /* Añadimos espacio superior entre el nav y los botones */
     gap: 10px; /* Añadimos espacio entre la fila de botones y el contenido (GIF y formulario) */
   
 }
@@ -271,7 +271,7 @@ input:valid, textarea:valid {
         flex-direction: column;
         height: auto;
         gap: 10px;
-        padding-top: 12vh;
+        padding-top: 10vh;
     }
 
     .botones {
@@ -327,3 +327,9 @@ input:valid, textarea:valid {
     height: auto;
   }
 }
+
+@media (max-width: 377px) {
+  header {
+     
+      padding-top: 14vh;
+  }  }

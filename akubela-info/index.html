@@ -123,30 +123,30 @@
                   <a href="https://life2better.com/akubela/">Sobre AKUBELA</a>
 
                 </li>
-                  <!-- Hy Panels -->
-                  <li>
-                      <a href="#">Hy Panels</a>
-                      <ul class="submenu">
-                          <li><a href="https://life2better.com/hy-panel/">Hy Panel</a></li>
-                          <li><a href="https://life2better.com/hy-panel-lux/">Hy Panel Lux</a></li>
-                          <li><a href="https://life2better.com/hy-panel-supreme/">Hy Panel Supreme</a>
-                          </li>
-                          <li><a href="https://life2better.com/hy-panel-pro/">Hy Panel Pro</a></li>
-                          <li><a href="https://life2better.com/hy-panel-ultra/">Hy Panel Ultra</a></li>
-                      </ul>
-                  </li>
-                  <!-- Control de Acceso -->
-                  <li>
-                      <a href="#">Control de Acceso</a>
-                      <ul class="submenu">
-                          <li><a href="https://life2better.com/a05/">A05</a></li>
-                          <li><a href="https://life2better.com/e12/">E12</a></li>
-                          <li><a href="https://life2better.com/e16/">E16</a></li>
-                          <li><a href="https://life2better.com/e18/">E18</a></li>
-                      </ul>
-                  </li>
+                <!-- Hy Panels -->
+                <li>
+                  <a href="#">Hy Panels</a>
+                  <ul class="submenu">
+                    <li><a href="https://life2better.com/hy-panel/">Hy Panel</a></li>
+                    <li><a href="https://life2better.com/hy-panel-lux/">Hy Panel Lux</a></li>
+                    <li><a href="https://life2better.com/hy-panel-supreme/">Hy Panel Supreme</a>
+                    </li>
+                    <li><a href="https://life2better.com/hy-panel-pro/">Hy Panel Pro</a></li>
+                    <li><a href="https://life2better.com/hy-panel-ultra/">Hy Panel Ultra</a></li>
+                  </ul>
+                </li>
+                <!-- Control de Acceso -->
+                <li>
+                  <a href="#">Control de Acceso</a>
+                  <ul class="submenu">
+                    <li><a href="https://life2better.com/a05/">A05</a></li>
+                    <li><a href="https://life2better.com/e12/">E12</a></li>
+                    <li><a href="https://life2better.com/e16/">E16</a></li>
+                    <li><a href="https://life2better.com/e18/">E18</a></li>
+                  </ul>
+                </li>
               </ul>
-          </li>
+            </li>
             <li>
               <a href="#" class="dropdown-link" title="Fibaro">FIBARO
 
@@ -250,46 +250,46 @@
       });
     });
   </script>
-   <script>
+  <script>
     document.querySelectorAll('.navigation a, .submenu a').forEach(link => {
-        link.addEventListener('click', function (event) {
-            const url = this.getAttribute('href');
+      link.addEventListener('click', function (event) {
+        const url = this.getAttribute('href');
 
-            // Verifica si es el enlace a la sección de instalador dentro de ser-representante
-            if (url === "https://life2better.com/ser-representante/#instalador") {
-                event.preventDefault();
-                window.location.href = url;
+        // Verifica si es el enlace a la sección de instalador dentro de ser-representante
+        if (url === "https://life2better.com/ser-representante/#instalador") {
+          event.preventDefault();
+          window.location.href = url;
 
-                // Si ya estás en la página correcta, ajusta el scroll
-                if (window.location.pathname === '/ser-representante/') {
-                    const targetElement = document.querySelector('#instalador');
-                    if (targetElement) {
-                        const offset = 150;
-                        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                        const adjustedPosition = elementPosition - offset;
+          // Si ya estás en la página correcta, ajusta el scroll
+          if (window.location.pathname === '/ser-representante/') {
+            const targetElement = document.querySelector('#instalador');
+            if (targetElement) {
+              const offset = 150;
+              const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+              const adjustedPosition = elementPosition - offset;
 
-                        window.scrollTo({
-                            top: adjustedPosition,
-                            behavior: 'smooth',
-                        });
-                    }
-                }
+              window.scrollTo({
+                top: adjustedPosition,
+                behavior: 'smooth',
+              });
             }
-            // Manejo normal para los enlaces internos que deben abrirse en la misma pestaña
-            else if (
-                url.startsWith("https://life2better.com/")
-            ) {
-                event.preventDefault();
-                window.location.href = url;
-            } 
-            // Para cualquier otro enlace (externo), se abre en una nueva ventana
-            else if (url && url !== '#' && !url.startsWith('#')) {
-                event.preventDefault();
-                window.open(url, '_blank');
-            }
-        });
+          }
+        }
+        // Manejo normal para los enlaces internos que deben abrirse en la misma pestaña
+        else if (
+          url.startsWith("https://life2better.com/")
+        ) {
+          event.preventDefault();
+          window.location.href = url;
+        }
+        // Para cualquier otro enlace (externo), se abre en una nueva ventana
+        else if (url && url !== '#' && !url.startsWith('#')) {
+          event.preventDefault();
+          window.open(url, '_blank');
+        }
+      });
     });
-</script>
+  </script>
   <style>
     #logo-img {
       transition: all 0.3s ease;
@@ -390,7 +390,7 @@
       <!-- Botones del carrusel -->
       <div class="arrows">
         <button class="prev">
-          <</button>
+          << /button>
             <button class="next">></button>
       </div>
 
@@ -513,17 +513,17 @@
 
     <div class="main-banner" id="Climatizacion-e-Iluminacion?v=2.1"></div>
     <div class="mobile-banner" id="Climatizacion-e-Iluminacion?v=2.1"></div>
-    
+
 
   </div>
 
-  <div class="main-container2" style="padding: 0px 10px 0px 10px;" >
+  <div class="main-container2" style="padding: 0px 10px 0px 10px;">
 
     <div class="carousel">
       <div class="list">
 
         <!-- Primer elemento del carrusel -->
-        <div class="item item7" >
+        <div class="item item7">
           <a href="https://wa.me/5491136304219?text=Quiero%20mas%20informacion%20acerca%20del%20Dimmer" target="_blank"
             class="product-download-button">Información</a>
           <div class="content">
@@ -602,7 +602,7 @@
       <!-- Botones del carrusel -->
       <div class="arrows">
         <button class="prev">
-          <</button>
+          << /button>
             <button class="next">></button>
       </div>
 

@@ -72,7 +72,7 @@
     justify-content: space-between; /* Distribuye los elementos (h1 arriba, h2 abajo) */
     flex-direction: column;
     color: white;
-    padding: 20px;
+    padding: 50px;
     z-index: 1;
 }
 
@@ -103,16 +103,7 @@
     z-index: -1; /* Envía el fondo oscuro detrás del texto */
 }
 
-/* Adaptación para pantallas pequeñas */
-@media (max-width: 768px) {
-    .carousel-text h1 {
-        font-size: 2rem;
-    }
 
-    .carousel-text h2 {
-        font-size: 1.2rem;
-    }
-}
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Ajustes para el contenedor */
@@ -126,14 +117,14 @@
     }
 
     .carousel-text h1 {
-        font-size: 1.5rem; /* Reducimos el tamaño del título */
-        
+        font-size: 1.8rem; /* Reducimos el tamaño del título */
+        padding: 20px 40px;
         margin-top: 10px;
     }
 
     .carousel-text h2 {
         font-size: 1rem; /* Reducimos el tamaño del subtítulo */
-    
+        padding: 20px 40px;
         margin-bottom: 10px; /* Espacio inferior ajustado */
     }
 
