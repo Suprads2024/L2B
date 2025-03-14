@@ -302,7 +302,10 @@ font-family: 'Eurostile-Heavy';}
         font-size: 1.1rem;
     }
    
-
+    .slider-controls2 ul{
+        top: 40px; /* Cambia bottom por top */
+        right: 20px;
+    }
     .carousel-container {
         height: 100%; /* Ocupa toda la altura disponible */
     }
