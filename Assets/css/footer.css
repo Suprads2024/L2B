@@ -13,7 +13,7 @@
   
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Tres columnas iguales */
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -50,6 +50,7 @@
   
  /* Botón de contacto: solo borde y texto blanco */
 .cta-button {
+  margin-top: 10px;
     padding: 10px 20px;
     background-color: transparent; /* Fondo transparente */
     color: #fff; /* Texto blanco */
@@ -87,6 +88,37 @@
     margin-bottom: 5px;
     font-size: 14px;
   }
+
+  .footer-social {
+    font-family: 'Eurostile-Regular';
+    text-align: center;
+      margin-top: auto;
+  }
+  
+  .footer-social h4 {
+    font-family: 'Eurostile-bold';
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Blanco */
+    transition: filter 0.3s ease;
+  }
+  
+  .social-icons a:hover img {
+    filter: invert(59%) sepia(96%) saturate(749%) hue-rotate(1deg) brightness(106%) contrast(101%);
+  }
+  
   
   /* Responsivo para pantallas más pequeñas */
   @media (max-width: 768px) {

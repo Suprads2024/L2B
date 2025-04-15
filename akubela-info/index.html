@@ -741,7 +741,7 @@
       <div class="footer-container">
         <!-- Columna izquierda: Logo -->
         <div class="footer-logo">
-          <a href="#top"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
+          <a href="../"><img src="../Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
 
         </div>
 
@@ -752,18 +752,29 @@
             +54 11-4849-7241<br>
             <a href="mailto:info@life2better.com">info@life2better.com</a>
           </p>
-          <button class="cta-button" onclick="redirectToContact()">CONTACTANOS</button>
+          <button class="cta-button">CONTACTANOS</button>
+          <script>
+            // Selecciona todos los elementos con las clases .hover-image y .cta-button
+            document.querySelectorAll('.hover-image, .cta-button').forEach(element => {
+              element.addEventListener('click', function () {
+                scrollToContact();
+              });
+            });
+
+            // Función para desplazarse al formulario con un offset de 50px
+            function scrollToContact() {
+              const contactSection = document.getElementById('contact');
+              const offset = 130;
+              const contactPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+              window.scrollTo({
+                top: contactPosition,
+                behavior: 'smooth'
+              });
+            }
+
+          </script>
         </div>
-
-        <script>
-          // Redirige al usuario al formulario en la página externa
-          function redirectToContact() {
-            // Redirige a la URL con el anclaje al formulario
-            window.location.href = "https://life2better.com/#contact";
-          }
-        </script>
-
-
 
         <!-- Columna derecha: Artículos recientes -->
         <div class="footer-articles">
@@ -771,19 +782,36 @@
           <ul>
             <li><a href="https://life2better.com/jardin-inteligente-fibaro/" target="_blank">Jardín inteligente.</a>
             </li>
-            <li><a href="https://life2better.com/quick-app-fibaro-home-center-3-y-yubii-home/" target="_blank">Quick
-                App
+            <li><a href="https://life2better.com/quick-app-fibaro-home-center-3-y-yubii-home/" target="_blank">Quick App
                 FIBARO Home center 3 y Yubii Home.</a></li>
             <li><a href="https://life2better.com/asociacion-z-wave/" target="_blank">Asociaciones Z-Wave.</a></li>
-            <li><a href="https://life2better.com/escenas-de-bloque-home-center-3-yubii-home/" target="_blank">Escenas
-                de
+            <li><a href="https://life2better.com/escenas-de-bloque-home-center-3-yubii-home/" target="_blank">Escenas de
                 bloque Home Center 3 / Yubii Home.</a></li>
             <li><a href="https://life2better.com/3-casos-concretos-por-los-que-deberias-instalar-domotica-en-tu-hogar/"
                 target="_blank">3 Casos concretos por los que deberías instalar domótica en tu hogar.</a></li>
           </ul>
         </div>
+        <div class="footer-social">
+          <h4>Nuestras Redes</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/life2better" target="_blank" aria-label="Facebook">
+              <img src="../Assets/Footer/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/life2better" target="_blank" aria-label="Instagram">
+              <img src="../Assets/Footer/inst.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/life2better" target="_blank" aria-label="LinkedIn">
+              <img src="../Assets/Footer/ln.svg" alt="LinkedIn">
+            </a>
+            <a href="https://www.tiktok.com/@life2better" target="_blank" aria-label="Tiktok">
+              <img src="../Assets/Footer/tiktok.svg" alt="Tiktok">
+            </a>
+          </div>
+        </div>
       </div>
+      
     </div>
+    
   </footer>
   <style>
     .footer-articles ul li a {
