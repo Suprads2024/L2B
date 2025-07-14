@@ -118,7 +118,7 @@
 /* Media query para pantallas de 586px o menos */
 @media (max-width: 586px) {
     .responsive-image {
-        content: url('../2daUnidad/futuro/futurocelu.png');
+        content: url('../2daUnidad/futuro/futuro.webp');
     }
 }
 
@@ -356,7 +356,7 @@
 @media (max-width: 560px) {
    
     .experience-image-overlay img { /* Usa la nueva clase única */
-        content: url('../2daUnidad/VivilaexperienciaL2B/Responsive_\ Vivi\ la\ exp\ mas\ grande.png');
+        content: url('../2daUnidad/VivilaexperienciaL2B/Responsive_\ Vivi\ la\ exp\ mas\ grande.webp');
         border-radius: 15px;
     }
 }
@@ -500,7 +500,7 @@
 .hover-image {
     width: 100%;
 
-    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Apagado.png');
+    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Apagado.webp');
     background-size: cover;
     /* Asegura que la imagen de fondo ocupe todo el contenedor */
     background-position: center;
@@ -512,7 +512,7 @@
 
 /* Cambiar la imagen cuando se hace hover */
 .hover-image:hover {
-    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Encendido.png');
+    background-image: url('../2daUnidad/BotonContacto/L2B_\ Boton\ contacto_\ Encendido.webp');
 }
 
 @media (max-width: 768px) {

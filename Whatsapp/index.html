@@ -66,12 +66,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div id="preloader">
-    <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
-    <div class="bar" style="background-color: #ff5716;"></div> <!-- Naranja -->
-    <div class="bar" style="background-color: #0083c9;"></div> <!-- Azul -->
-    <div class="bar" style="background-color: #fec200;"></div> <!-- Amarillo -->
-  </div>
 
   <div class="menu__wrapper" id="top">
     <div class="menu__bar">
@@ -315,125 +309,129 @@
   </style>
 
 
-<main class="contact-page">
-  <section class="contact-container">
-    <h1>Contactános</h1>
-    <form class="contact-form" id="contact-form">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" placeholder="" required>
+  <main class="contact-page">
+    <section class="contact-container">
+    <h1>Te vamos a derivar a WhatsApp<br> para brindarte la mejor atención.</h1>
+<h4 style="font-family: 'Eurostile-Medium';">Por favor, te pedimos que antes completes el siguiente formulario.</h4>
 
-      <label for="lastname">Apellido:</label>
-      <input type="text" id="lastname" name="lastname" placeholder="" required>
+      <form class="contact-form" id="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="" required>
 
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" placeholder="" required>
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="" required>
 
-      <label for="phone">Teléfono:</label>
-      <input type="tel" id="phone" name="phone" placeholder="" required>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="" required>
 
-      <!-- Campos seleccionables -->
-      <label for="userType">¿Qué tipo de usuario sos?</label>
-      <div class="form-options">
-        <button type="button" class="option" data-value="Consumidor final" style="color: black;">Consumidor final</button>
-        <button type="button" class="option" data-value="Instalador" style="color: black;">Instalador</button>
-        <button type="button" class="option" data-value="Representante" style="color: black;">Representante</button>
-        <button type="button" class="option" data-value="Arquitecto/Desarrollador" style="color: black;">Arquitecto/Desarrollador</button>
-      </div>
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" placeholder="" required>
 
-      <!-- Campo oculto para guardar la opción elegida -->
-      <input type="hidden" id="userType" name="userType" value="Consumidor final">
+        <!-- Campos seleccionables -->
+        <label for="userType">¿Qué tipo de usuario sos?</label>
+        <div class="form-options">
+          <button type="button" class="option" data-value="Consumidor final" style="color: black;">Consumidor
+            final</button>
+          <button type="button" class="option" data-value="Instalador" style="color: black;">Instalador</button>
+          <button type="button" class="option" data-value="Representante" style="color: black;">Representante</button>
+          <button type="button" class="option" data-value="Arquitecto/Desarrollador"
+            style="color: black;">Arquitecto/Desarrollador</button>
+        </div>
 
-      <button type="submit" class="submit-button">Dirigirte a WhatsApp</button>
-    </form>
-  </section>
-</main>
+        <!-- Campo oculto para guardar la opción elegida -->
+        <input type="hidden" id="userType" name="userType" value="Consumidor final">
+
+        <button type="submit" class="submit-button">Dirigirte a WhatsApp</button>
+      </form>
+    </section>
+  </main>
 
 
-<script>
-  // Manejo de opciones de tipo de usuario
-  const optionButtons = document.querySelectorAll('.form-options .option');
-  const userTypeInput = document.getElementById('userType');
+  <script>
+    // Manejo de opciones de tipo de usuario
+    const optionButtons = document.querySelectorAll('.form-options .option');
+    const userTypeInput = document.getElementById('userType');
 
-  optionButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      // Remover clase activa de todos
-      optionButtons.forEach(btn => btn.classList.remove('active'));
-      // Agregar clase activa al clicado
-      this.classList.add('active');
-      // Guardar el valor seleccionado en el input oculto
-      userTypeInput.value = this.getAttribute('data-value');
+    optionButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        // Remover clase activa de todos
+        optionButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar clase activa al clicado
+        this.classList.add('active');
+        // Guardar el valor seleccionado en el input oculto
+        userTypeInput.value = this.getAttribute('data-value');
+      });
     });
-  });
 
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
 
-    // Validación del número de teléfono
-    const phoneNumber = document.getElementById('phone').value.trim();
-    const cleanedNumber = phoneNumber.replace(/\D/g, '');
+      // Validación del número de teléfono
+      const phoneNumber = document.getElementById('phone').value.trim();
+      const cleanedNumber = phoneNumber.replace(/\D/g, '');
 
-    if (cleanedNumber.length < 10) {
-      alert('Por favor, ingresa un número de teléfono válido con al menos 10 dígitos.');
-      return;
-    }
+      if (cleanedNumber.length < 10) {
+        alert('Por favor, ingresa un número de teléfono válido con al menos 10 dígitos.');
+        return;
+      }
 
-    // Armar los datos del formulario
-    const formData = {
-      fields: [
-        {
-          name: 'firstname',
-          value: document.getElementById('name').value
-        },
-        {
-          name: 'lastname',
-          value: document.getElementById('lastname').value
-        },
-        {
-          name: 'email',
-          value: document.getElementById('email').value
-        },
-        {
-          name: 'phone',
-          value: phoneNumber
-        },
-        {
-          name: 'tipo_de_usuario', // Este campo debe existir en HubSpot
-          value: document.getElementById('userType').value
+      // Armar los datos del formulario
+      const formData = {
+        fields: [
+          {
+            name: 'firstname',
+            value: document.getElementById('name').value
+          },
+          {
+            name: 'lastname',
+            value: document.getElementById('lastname').value
+          },
+          {
+            name: 'email',
+            value: document.getElementById('email').value
+          },
+          {
+            name: 'phone',
+            value: phoneNumber
+          },
+          {
+            name: 'tipo_de_cliente', // Este campo debe existir en HubSpot
+            value: document.getElementById('userType').value
+          }
+        ],
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title
         }
-      ],
-      context: {
-        pageUri: window.location.href,
-        pageName: document.title
-      }
-    };
+      };
 
-    // Enviar a HubSpot
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/8e0d2c40-2a76-4b5e-ba7f-dda58225f22f', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('¡Formulario enviado con éxito!');
-        document.getElementById('contact-form').reset();
+      // Enviar a HubSpot
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/46939457/8e0d2c40-2a76-4b5e-ba7f-dda58225f22f', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('¡Formulario enviado con éxito!');
+            document.getElementById('contact-form').reset();
 
-        // Redirigir a WhatsApp
-        const whatsappNumber = "5491136304219";
-        const message = encodeURIComponent("¡Hola! Quisiera obtener más información.");
-        window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
-      } else {
-        throw new Error('Error en la respuesta');
-      }
-    })
-    .catch(error => {
-      alert('Hubo un error al enviar el formulario.');
-      console.error('Error:', error);
+            // Redirigir a WhatsApp
+            const whatsappNumber = "5491136304219";
+            const message = encodeURIComponent("¡Hola! Quisiera obtener más información.");
+            window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+          } else {
+            throw new Error('Error en la respuesta');
+          }
+        })
+        .catch(error => {
+          alert('Hubo un error al enviar el formulario.');
+          console.error('Error:', error);
+        });
     });
-  });
-</script>
+  </script>
 
 
   <footer class="footer">
@@ -509,9 +507,9 @@
           </div>
         </div>
       </div>
-      
+
     </div>
-    
+
   </footer>
   <style>
     .footer-articles ul li a {

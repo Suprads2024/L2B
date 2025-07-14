@@ -42,7 +42,7 @@
   max-height: 100%;
   /* Controlar el tamaño máximo del alto */
 
-  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Apagado.png');
+  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Apagado.webp');
   background-size: contain;
   /* Asegura que la imagen completa se vea sin que se corte */
   background-position: center;
@@ -54,7 +54,7 @@
 
 /* Cambiar la imagen al hacer hover */
 .conoce-mas:hover {
-  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Encendido.png');
+  background-image: url('../3raunidad/Conocemas/L2B_\ Conoce\ mas_\ Encendido.webp');
 }
 
 @media (max-width: 768px) {
@@ -187,7 +187,7 @@
 @media (max-width: 568px) {
   /* Cambiar la imagen para dispositivos móviles */
   .image-community {
-      content: url('../3raunidad/Sumate a la comunidad/Responsive_\ \ No\ te\ quedes\ con\ la\ duda.png'); /* Nueva imagen para móviles */
+      content: url('../3raunidad/Sumate a la comunidad/Responsive_\ \ No\ te\ quedes\ con\ la\ duda.webp'); /* Nueva imagen para móviles */
   }
 
   /* Mostrar el texto solo en pantallas pequeñas */
@@ -244,7 +244,7 @@
 
    /* Cambia la imagen cuando la pantalla sea menor o igual a 586px */
    .image-specialist {
-    content: url('../3raunidad/Somos especialistas/Responsive_\ Somos\ especialistas.png');
+    content: url('../3raunidad/Somos especialistas/Responsive_\ Somos\ especialistas.webp');
     /* Reemplaza la imagen por la versión para móviles */
 }
 
@@ -267,7 +267,7 @@
  }
   /* Cambia la imagen cuando la pantalla sea menor o igual a 586px */
   .academia {
-    content: url('../3raunidad/AcademiaFibaro/Responsive_\ Academia\ Fibaro.png');
+    content: url('../3raunidad/AcademiaFibaro/Responsive_\ Academia\ Fibaro.webp');
     /* Reemplaza la imagen por la versión para móviles */
 }
 }

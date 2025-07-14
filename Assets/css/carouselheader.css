@@ -77,15 +77,15 @@
 }
 
 .carousel-text h1 {
-    font-family: 'Eurostile-Bold';
-    font-size: 2.5rem;
+    font-family: 'Eurostile-Heavy';
+    font-size: 3.5rem;
     margin: 0;
     align-self: center; /* Coloca el título en la parte superior */
 }
 
 .carousel-text h2 {
-    font-family: 'Eurostile-Medium';
-    font-size: 1.5rem;
+    font-family: 'Eurostile-Bold';
+    font-size: 2.0rem;
     margin: 0;
     align-self: center; /* Coloca el subtítulo en la parte inferior */
     margin-bottom: 20px; /* Añade espacio entre el subtítulo y el borde inferior */
@@ -117,14 +117,14 @@
     }
 
     .carousel-text h1 {
-        font-size: 1.8rem; /* Reducimos el tamaño del título */
-        padding: 20px 40px;
+        font-size: 1.6rem; /* Reducimos el tamaño del título */
+        padding: 20px 10px;
         margin-top: 10px;
     }
 
     .carousel-text h2 {
         font-size: 1rem; /* Reducimos el tamaño del subtítulo */
-        padding: 20px 40px;
+        padding: 20px 30px;
         margin-bottom: 10px; /* Espacio inferior ajustado */
     }
 

@@ -15,7 +15,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life 2 Better</title>
-  <link rel="shortcut icon" href="Assets/Icono_pestaña.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Assets/Icono_pestaña.webp" type="image/x-icon">
   <link rel="stylesheet" href="Assets/css/style.css?v=2.1">
   <link rel="stylesheet" href="Assets/css/header2.css?v=2.3">
   <link rel="stylesheet" href="Assets/css/main.css?v=2.1">
@@ -64,23 +64,25 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX4ST8T" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript)
   <div id="preloader">
-    <div class="bar" style="background-color: #00b17b;"></div> <!-- Verde -->
-    <div class="bar" style="background-color: #ff5716;"></div> <!-- Naranja -->
-    <div class="bar" style="background-color: #0083c9;"></div> <!-- Azul -->
-    <div class="bar" style="background-color: #fec200;"></div> <!-- Amarillo -->
-  </div>
+    <div class="bar" style="background-color: #00b17b;"></div> 
+    <div class="bar" style="background-color: #ff5716;"></div> 
+    <div class="bar" style="background-color: #0083c9;"></div> 
+    <div class="bar" style="background-color: #fec200;"></div> 
+  </div> -->
 
   <div class="whatsapp-button2">
     <a href="./Whatsapp/" target="_blank">
-      <img src="Assets/whatsapp.png" alt="WhatsApp">
+      <img src="Assets/whatsapp.webp" alt="WhatsApp">
     </a>
   </div>
+
+
   <div class="menu__wrapper" id="top">
     <div class="menu__bar">
       <a href="#top" title="Logo" class="logo">
-        <img src="Assets/2daUnidad/L2B_Logo menu.png" alt="Logo" class="logo-img2" id="logo-img">
+        <img src="Assets/2daUnidad/L2B_Logo menu.webp" alt="Logo" class="logo-img2" id="logo-img">
       </a>
       <img class="menu-icon" src="Assets/burger-menu.svg" title="Burger Menu" alt="Burger Menu"
         onclick="toggleMenu(this)">
@@ -303,37 +305,44 @@
   <header class="header2">
 
     <div class="contenido-header">
-
       <div class="carousel-container2">
         <div class="carousel-inner">
           <div class="carousel-item carousel-item-active">
-            <img src="Assets/Header/Tecnologia y calidad/928x590 Pc_ 2.jpg" alt="Imagen 1">
+
+            <!-- Imagen para PC -->
+            <img class="img-desktop" src="Assets/Header/Tecnologia-y-calidad/pcweb.webp" alt="Imagen PC">
+
+            <!-- Imagen para móvil -->
+            <img class="img-mobile" src="Assets/Header/Tecnologia-y-calidad/celweb.webp" alt="Imagen Mobile">
+
             <div class="carousel-text">
-              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
-              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="Assets/Header/Tecnologia y calidad/620x480_ cel 1.jpg" alt="Imagen 2">
-            <div class="carousel-text">
-              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
-              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="Assets/Header/Tecnologia y calidad/928x590 Pc_ 3.jpg" alt="Imagen 3">
-            <div class="carousel-text">
-              <h1>TECNOLOGÍA Y CALIDAD DE VIDA</h1>
-              <h2>TRANSFORMÁ TUS ESPACIOS <br>CON TECNOLOGÍA INTELIGENTE</h2>
+              <h1 style="text-transform:uppercase;">Tu hogar Inteligente</h1>
+              <h2 style="text-transform:uppercase;">Confort, seguridad y eficiencia con la <br> mejor solución domótica del mercado.</h2>
             </div>
           </div>
         </div>
-
-        <!-- Controles -->
-        <div class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</div>
-        <div class="carousel-control next" onclick="moveSlide(1)">&#10095;</div>
       </div>
 
+      <style>
+        /* Por defecto ocultamos la imagen móvil */
+        .img-mobile {
+          display: none !important;
+        }
+
+        /* En pantallas menores a 620px, ocultamos la imagen de escritorio y mostramos la móvil */
+        @media (max-width: 620px) {
+          .img-desktop {
+            display: none !important;
+          }
+
+          .img-mobile {
+            display: block !important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      </style>
 
 
 
@@ -447,7 +456,7 @@
           }
         }
       </style>
-      <div class="formulario" id="contact" style=" background-image: url('./Assets/Header/Contacto/fondo.png');
+      <div class="formulario" id="contact" style=" background-image: url('./Assets/Header/Contacto/fondo.webp');
       background-size: cover; /* Asegura que la imagen de fondo ocupe todo el contenedor */
       background-position: center;">
         <h2>OBTENÉ LA <strong>SOLUCIÓN</strong> QUE MEJOR SE ADAPTE A TUS NECESIDADES.</h2>
@@ -561,7 +570,7 @@
     <section class="main-row">
       <div class="main-item main-image">
         <div class="image-text-overlay">
-          <img src="./Assets/2daUnidad/futuro/futuro.png" alt="El futuro al alcance de todos">
+          <img src="./Assets/2daUnidad/futuro/futuro.webp" alt="El futuro al alcance de todos">
           <div class="text-overlay">
             <h1>EL FUTURO<br>AL ALCANCE DE TODOS.</h1>
             <p>La domótica dejó de ser algo complejo y lejano.</p>
@@ -577,28 +586,28 @@
               <div class="carousel">
                 <div class="carousel_inner">
                   <div class="carousel_item carousel_item__active">
-                    <img src="./Assets/2daUnidad/Slider/Portable.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Portable.webp" alt="" class="carousel_img">
                     <div class="carousel_caption">
 
                     </div>
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Soluciones modulares.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Soluciones modulares.webp" alt="" class="carousel_img">
                     <div class="carousel_caption">
 
                     </div>
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Apto para cualquier espacio.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Apto para cualquier espacio.webp" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Inalámbrico2.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Inalámbrico2.webp" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Control centralizado.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Control centralizado.webp" alt="" class="carousel_img">
                   </div>
                   <div class="carousel_item">
-                    <img src="./Assets/2daUnidad/Slider/Costo Asequible.png" alt="" class="carousel_img">
+                    <img src="./Assets/2daUnidad/Slider/Costo Asequible.webp" alt="" class="carousel_img">
                   </div>
 
                 </div>
@@ -645,7 +654,7 @@
       <!-- Segunda Sección: Vivi la Experiencia L2B -->
       <div class="main-item main-info">
         <div class="experience-image-overlay"> <!-- Cambia a un nombre único -->
-          <img src="Assets/2daUnidad/VivilaexperienciaL2B/Vivi la experiencia_Sintexto.png"
+          <img src="Assets/2daUnidad/VivilaexperienciaL2B/Vivi la experiencia_Sintexto.webp"
             alt="VIVÍ LA EXPERIENCIA L2B">
           <div class="experience-content">
             <div class="experience-text">
@@ -682,7 +691,7 @@
     <div class="left-column">
       <!-- Primera imagen: intacta -->
       <div class="image-box-specific">
-        <img src="./Assets/3raunidad/Sosarquitecto/L2B_ Sosarquitecto_Icono.png" class="arquitecto-specific"
+        <img src="./Assets/3raunidad/Sosarquitecto/L2B_ Sosarquitecto_Icono.webp" class="arquitecto-specific"
           alt="¿SOS ARQUITECTO O DESARROLLADOR?">
 
         <!-- Texto superpuesto, visible tanto en PC como móvil -->
@@ -699,10 +708,10 @@
         </div>
       </div>
 
-      <a href="https://domoticafibaro.com.ar/" class="image-link" target="_blank">
+      <a href="https://domoticas.com.ar/" class="image-link" target="_blank">
         <div class="image-box image-text-overlay-community">
-          <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.png" alt="SUMATE A LA COMUNIDAD"
-            class="image-community">
+          <img src="./Assets/3raunidad/Sumate a la comunidad/L2b_ Sumate a la comunidad.webp"
+            alt="SUMATE A LA COMUNIDAD" class="image-community">
           <div class="text-overlay-community">
             <h1>SUMATE</h1>
             <h2>A LA COMUNIDAD</h2>
@@ -1063,7 +1072,7 @@
     <!-- Columna central -->
     <div class="center-column">
       <div class="image-box">
-        <img src="./Assets/3raunidad/Somos especialistas/Somosespecialistas.png" alt="Cocina" class="image-specialist">
+        <img src="./Assets/3raunidad/Somos especialistas/Somosespecialistas.webp" alt="Cocina" class="image-specialist">
         <div class="text-overlay-specialist">
           <p>Somos especialistas en tecnología para casas y edificios inteligentes. Ofrecemos soluciones que se adaptan
             a cada proyecto, beneficiando al inversor y al consumidor final. Conocé más sobre nuestra propuesta. Agregá
@@ -1085,7 +1094,7 @@
 
       </script>
       <div class="image-box ">
-        <img src="./Assets/3raunidad/AcademiaFibaro/L2B_ Academia Fibaro_ Sin texto.png" class="academia"
+        <img src="./Assets/3raunidad/AcademiaFibaro/L2B_ Academia Fibaro_ Sin texto.webp" class="academia"
           alt="Academia FIBARO">
         <div class="overlay-text2">
           <h3>Academia FIBARO</h3>
@@ -1111,7 +1120,7 @@
       <div class="footer-container">
         <!-- Columna izquierda: Logo -->
         <div class="footer-logo">
-          <a href="#top"><img src="./Assets/Footer/L2B_ Logo B.png" alt="L2B Logo"></a>
+          <a href="#top"><img src="./Assets/Footer/L2B_ Logo B.webp" alt="L2B Logo"></a>
 
         </div>
 
@@ -1178,16 +1187,16 @@
             <a href="https://www.tiktok.com/@life2better" target="_blank" aria-label="Tiktok">
               <img src="./Assets/Footer/tiktok.svg" alt="Tiktok">
             </a>
-            
+
           </div>
-          
+
         </div>
       </div>
-      
+
     </div>
-   
+
   </footer>
-  
+
   <style>
     .footer-articles ul li a {
       text-decoration: none;

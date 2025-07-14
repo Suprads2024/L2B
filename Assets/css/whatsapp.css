@@ -5,8 +5,8 @@
     justify-content: center;
     min-height: 100vh; /* Ocupa toda la altura de la pantalla */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semitransparente */
-  background-image: url('../Header/L2B_\ Fondo\ header.jpg'); /* Ruta de la imagen de fondo */
+
+  background-image: url('../Header/L2B_\ Fondo\ header.webp'); /* Ruta de la imagen de fondo */
   background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   }

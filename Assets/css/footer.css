@@ -2,7 +2,7 @@
 .footer {
   margin-top: -30px;
     position: relative;
-    background-image: url('../Footer/footerpc.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url('../Footer/footerpc.webp'); /* Ruta de la imagen de fondo */
     background-size: cover;
 
     padding: 40px 0;
@@ -125,7 +125,7 @@
     .footer {
       margin-top: -30px;
       position: relative;
-      background-image: url('../Responsive_Footer.jpg');
+      background-image: url('../Responsive_Footer.webp');
       background-position: center; /* Centra la imagen */
       background-repeat: no-repeat; /* Evita que la imagen se repita */
     

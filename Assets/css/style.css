@@ -44,7 +44,7 @@
 html,
 body {
 
-  background-color: #000000;
+
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ body {
 
 body {
   
-  background-image: url('../Header/L2B_\ Fondo\ header.jpg');
+  background-image: url('../L2B_Fondo\ entero.webp');
   /* Reemplaza con la URL de tu imagen */
   background-size: cover;
   /* Asegura que la imagen cubra todo el div */
@@ -189,7 +189,7 @@ html {
 .menu__bar.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
   /* Color de fondo semitransparente */
-  background-image: url('../Header/L2B_\ Fondo\ header.jpg');
+  background-image: url('../Header/L2B_\ Fondo\ header.webp');
   /* Ruta de la imagen de fondo */
   background-size: cover;
   /* Ajusta la imagen para cubrir todo el fondo */
@@ -637,4 +637,31 @@ section>h2 {
     max-height: 40px;
   }
 
+}
+
+/* Secciones principales fuera del primer viewport */
+.main-row {
+  content-visibility: auto!important;
+  contain-intrinsic-size: 800px; /* altura estimada, ajustá si hace falta */
+}
+
+.image-grid-section {
+  content-visibility: auto!important;
+  contain-intrinsic-size: 1200px;
+}
+
+/* Columnas internas de la sección de grilla */
+.left-column,
+.center-column,
+.right-column {
+  content-visibility: auto!important;
+  contain-intrinsic-size: 600px;
+}
+
+/* Carruseles pesados */
+.carousel-container,
+.carousel-slide,
+.carousel_inner {
+  content-visibility: auto!important;
+  contain-intrinsic-size: 500px;
 }
