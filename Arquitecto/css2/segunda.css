@@ -30,7 +30,7 @@ a {
    
     /* Tus estilos existentes */
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v1.png');
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v1.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ a {
 }
 /* Cambiar la imagen de fondo y agregar sombra al contenedor al hacer hover */
 .bloque-imagen-texto:hover {
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v2.png');
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Noesperesmas_v2.webp');
     /* Imagen negra al hacer hover */
     box-shadow: 0px 0px 15px rgba(243, 200, 10, 0.2);
     /* Sombra blanca suave */
@@ -81,7 +81,7 @@ a {
 /* Bloque Derecho: Testimonios */
 .bloque-testimonios {
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/testimonio.png');
+    background-image: url('../ArquitectoAssets/Unidad2/testimonio.webp');
     background-size: cover;
     border-radius: 15px;
     background-position: center;
@@ -199,7 +199,7 @@ a {
 .seccion-formulario {
     border-radius: 15px;
     position: relative;
-    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Formulario.png');
+    background-image: url('../ArquitectoAssets/Unidad2/WeblandingL2BArquitecto_Formulario.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
